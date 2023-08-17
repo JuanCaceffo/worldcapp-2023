@@ -1,0 +1,21 @@
+/* CSS HSL */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap');
+
+:root {
+  --ut-orange: hsla(30, 100%, 53%, 1);
+  --jasmine: hsla(44, 86%, 70%, 1);
+  --linen: hsla(30, 100%, 96%, 1);
+  --verdigris: hsla(178, 40%, 47%, 1);
+  --space-cadet: hsla(254, 31%, 27%, 1);
+  --primary-font: 'Mulish', 'sans-serif', 'opensans', 'Arial';
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--primary-font);
+}
