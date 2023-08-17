@@ -7,7 +7,7 @@
   --linen: hsla(30, 100%, 96%, 1);
   --verdigris: hsla(178, 40%, 47%, 1);
   --space-cadet: hsla(254, 31%, 27%, 1);
-  --primary-font: 'Mulish', 'sans-serif', 'opensans', 'Arial';
+  --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
 }
 
 * {
