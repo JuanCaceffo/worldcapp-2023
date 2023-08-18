@@ -15,3 +15,21 @@ desarrolladores:
 - Mobile first design
 - Reutilizacion de componentes y de variables
 - Medidas (dentro de lo posible): REM, EM , VW, VH
+
+## Estructura de directorios
+--src
+  main page
+  Readme.md
+  --styles
+    css global
+  --pages
+    --p1->pN
+    código y estilos de páginas
+  --components
+    código y estilos de componentes compuestos (cards, menus, etc)
+  --commons
+    código y estilos de componentes comunes ( botones, checkbox, etc)
+  --images
+    imagenes a usar en la web, ( definir estructuras superiores, ej: cartas, avatar de ser necesarias)
+
+
