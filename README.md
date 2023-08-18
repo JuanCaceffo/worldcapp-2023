@@ -23,7 +23,7 @@ desarrolladores:
   - **styles**: Archivo de estilos globales
   - **pages**: Directorio para las páginas individuales y sus estilos
   - **components**: Directorio de componentes y sus estilos reutilizables (cards, menus, etc)
-  - **commons**: Directorio de componentes comunes y sus estilos ( botones, checkbox, etc)
+    - **commons**: Directorio de componentes comunes y sus estilos ( botones, checkbox, etc)
   - **images**: Imagenes a usar en la web
     - **tipos de imagen**: Para separar por categoria ( si fuese necesario )
   - **data**: Json o archivos de datos ( futuro )
