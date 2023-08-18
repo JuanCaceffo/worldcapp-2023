@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap');
 
 :root {
-  /*#ff8811*/
-  --ut-orange: hsla(30, 100%, 53%, 1);
-  /*#f4d06f*/
-  --jasmine: hsla(44, 86%, 70%, 1);
+
+  /*#e87c0f*/
+  --tangerine: hsla(30, 88%, 48%, 1);
+  /*#faac40*/
+  --orange-web: hsla(35, 95%, 62%, 1);
   /*#fff8f0*/
-  --linen: hsla(30, 100%, 96%, 1);
-  /*#48a9a6*/
-  --verdigris: hsla(178, 40%, 47%, 1);
-  /*#392f5a*/
-  --space-cadet: hsla(254, 31%, 27%, 1);
+  --floral-white: hsla(32, 100%, 97%, 1);
+  /*#1b1825*/
+  --raisin-black: hsla(254, 21%, 12%, 1);
+  /*#48a2a2*/
+  --verdigris: hsla(180, 38%, 46%, 1);
+  /*#416c80*/
+  --paynes-gray: hsla(199, 33%, 38%, 1);
+  /*#3a375f*/
+  --space-cadet: hsla(245, 27%, 29%, 1);
   --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
 
   /* 
