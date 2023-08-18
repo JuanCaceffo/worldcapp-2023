@@ -17,19 +17,15 @@ desarrolladores:
 - Medidas (dentro de lo posible): REM, EM , VW, VH
 
 ## Estructura de directorios
--src
-  main page
-  Readme.md
-  -styles
-    css global
-  -pages
-    -p1->pN
-      código y estilos de páginas
-    -components
-      código y estilos de componentes compuestos (cards, menus, etc)
-    -commons
-      código y estilos de componentes comunes ( botones, checkbox, etc)
-    -images
-      imagenes a usar en la web, ( definir estructuras superiores, ej: cartas, avatar de ser necesarias)
+- **src**: Directorio Raíz del proyecto
+  - **main page**: Página principal
+    **Readme.md**: Descrición del proyecto
+  - **styles**: Archivo de estilos globales
+  - **pages**: Directorio para las páginas individuales y sus estilos
+  - **components**: Directorio de componentes y sus estilos reutilizables (cards, menus, etc)
+  - **commons**: Directorio de componentes comunes y sus estilos ( botones, checkbox, etc)
+  - **images**: Imagenes a usar en la web
+    - **tipos de imagen**: Para separar por categoria ( si fuese necesario )
+  - **data**: Json o archivos de datos ( futuro )
 
 
