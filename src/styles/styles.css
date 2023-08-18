@@ -17,6 +17,7 @@
   --paynes-gray: hsla(199, 33%, 38%, 1);
   /*#3a375f*/
   --space-cadet: hsla(245, 27%, 29%, 1);
+
   --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
 
   /* 
@@ -40,4 +41,5 @@
 
 html {
   font-family: var(--primary-font);
+  font-size: 10px;
 }
