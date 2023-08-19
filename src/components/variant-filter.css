@@ -1,0 +1,46 @@
+@import url('../styles/styles.css');
+
+h3, h4{
+    text-align: center;
+}
+.variant-filter-a__h3{
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid var(--floral-white);
+}
+.variant-filter-a__h4{
+    padding: 0.75em;
+}
+.solo-maqueta{
+    text-align: center;
+    padding-top: 0.4em;
+    padding-bottom: 0.75em;
+}
+.variant-filter-a{
+    background-color: var(--verdigris);
+    color: var(--floral-white);
+    padding: 0.5rem;
+    padding-bottom: 4rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.variant-filter-a__valoration{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.variant-filter-a__label{
+    display: block;
+
+}
+.variant-filter-a__input{
+    min-width: 10em;
+    max-width: 12.5em;
+    height: 3em;
+    box-shadow: 0.2em 0.4em 1em var(--space-cadet);
+    padding-left: 0.4em;
+    color: var(--paynes-gray);
+    border-radius: 0.35em;
+}
+.border{
+    border: 1px solid black;
+}
