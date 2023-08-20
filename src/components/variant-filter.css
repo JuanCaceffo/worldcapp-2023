@@ -1,46 +1,47 @@
 @import url('../styles/styles.css');
 
 h3, h4{
+    font-size: 1.2em;
+    padding: 0.75em 0 0.2em 0;
     text-align: center;
 }
 .variant-filter-a__h3{
-    padding-bottom: 0.2em;
+    /* Agregar hr para division o asi esta bien? */
     border-bottom: 1px solid var(--floral-white);
 }
-.variant-filter-a__h4{
-    padding: 0.75em;
-}
 .solo-maqueta{
-    text-align: center;
     padding-top: 0.4em;
-    padding-bottom: 0.75em;
+    text-align: center;
 }
-.variant-filter-a{
+.variant-filter-a{  
     background-color: var(--verdigris);
-    color: var(--floral-white);
-    padding: 0.5rem;
-    padding-bottom: 4rem;
     border-radius: 0 0 0.5rem 0.5rem;
+    color: var(--floral-white);
+    padding: 0.5rem 0.5rem 4rem 0.5rem;
 }
 .variant-filter-a__valoration{
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 0.75em;
+    /* Al achicar se desea que wrap, no, o libre eleccion??  */
+    /* flex-wrap: wrap; */
 }
-.variant-filter-a__label{
+.variant-filter-a__container{
+    flex-grow: 1;
+}
+.variant-filter-a__container__label{
     display: block;
-
+    padding-bottom: 0.3em;
 }
-.variant-filter-a__input{
-    min-width: 10em;
-    max-width: 12.5em;
-    height: 3em;
-    box-shadow: 0.2em 0.4em 1em var(--space-cadet);
-    padding-left: 0.4em;
-    color: var(--paynes-gray);
+.variant-filter-a__container__input{
     border-radius: 0.35em;
+    box-shadow: 0.2em 0.4em 1em var(--space-cadet);
+    color: var(--paynes-gray);
+    height: 3em;
+    margin-bottom: 1.2em;
+    padding-left: 0.4em;
+    width: 100%;
 }
+/* Borrar al terminar el componente */
 .border{
     border: 1px solid black;
 }
