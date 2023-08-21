@@ -1,3 +1,5 @@
+@import url(../../styles/styles.css);
+
 .user-card{
   display: flex;
   flex-direction: column;
@@ -7,8 +9,8 @@
 }
 .user-image{
   border-radius: 50%;
-  width: 8em;
-  height: 8em;
+  width: 15em;
+  height: 15em;
   background: black center/contain no-repeat url(https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg);
 }
 
@@ -18,7 +20,7 @@
   align-items: center;
   gap: 1.5em;
   align-content: space-between;
-  font-family: var(--primary-font);
+  font-size: 1.5em;
 }
 
 .name{
@@ -32,7 +34,7 @@
   background: center/cover no-repeat url(../../images/pen.svg);
 }
 .separator{
-  width: 20em;
+  width: 30em;
   height: 1px;
   background-color: rgba(128, 128, 128, 0.397);
   border-radius: 2em;
