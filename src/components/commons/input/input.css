@@ -1,0 +1,7 @@
+.input{
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-md);
+    height: 3em;
+    margin-bottom: 1.2em;
+    padding-left: 0.4em;
+}
