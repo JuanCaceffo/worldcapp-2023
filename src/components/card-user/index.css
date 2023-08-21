@@ -3,18 +3,17 @@
 .user-card{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 1.5em;
 }
-.user-image{
+.user-card--image{
   border-radius: 50%;
   width: 15em;
   height: 15em;
   background: black center/contain no-repeat url(https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg);
 }
 
-.user-data{
+.user-card--data{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,20 +22,23 @@
   font-size: 1.5em;
 }
 
-.name{
+.data-name{
   display: flex;
+  align-items: center;
+  gap: 0.2em;
   font-weight: bold;
   font-size: 2em;
 }
-.user-name-edit{
-  width: 1em;
-  height: 1em;
+.name-edit{
+  width: 0.6em;
+  height: 0.6em;
+  margin-top: 0.15em;
   background: center/cover no-repeat url(../../images/pen.svg);
 }
-.separator{
+.user-card-separator{
   width: 30em;
   height: 1px;
-  background-color: rgba(128, 128, 128, 0.397);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 2em;
 }
 
