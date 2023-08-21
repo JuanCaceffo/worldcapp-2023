@@ -1,38 +1,31 @@
 /* CSS HSL */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800&family=Roboto&display=swap');
+
 :root {
-
-  /*#e87c0f*/
-  --tangerine: hsla(30, 88%, 48%, 1);
-  /*#faac40*/
-  --orange-web: hsla(35, 95%, 62%, 1);
-  /*#fff8f0*/
+  /* Colores */
+  --hover-color: hsla(30, 88%, 48%, 1);
+  --focus-color: hsla(35, 95%, 62%, 1);
   --floral-white: hsla(32, 100%, 97%, 1);
-  /*#1b1825*/
   --raisin-black: hsla(254, 21%, 12%, 1);
-  /*#48a2a2*/
-  --verdigris: hsla(180, 38%, 46%, 1);
-  /*#416c80*/
-  --paynes-gray: hsla(199, 33%, 38%, 1);
-  /*#3a375f*/
-  --space-cadet: hsla(245, 27%, 29%, 1);
+  --primary-color: hsla(180, 38%, 46%, 1);
+  --secondary-color: hsla(199, 33%, 38%, 1);
+  --terciary-color: hsla(245, 27%, 29%, 1);
 
+  /* Fuentes */
   --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
   --secondary-font: 'Roboto', 'Open Sans', 'Verdana','sans-serif';
 
-  /* 
-    POSIBLE ALTERNATIVA A LA PALETA ORIGINAL SI NO FUNCIONA
-    --tangerine: hsla(30, 88%, 48%, 1);
-    --orange-web: hsla(35, 95%, 62%, 1);
-    --floral-white: hsla(32, 100%, 97%, 1);
-    --raisin-black: hsla(254, 21%, 12%, 1);
-    --verdigris: hsla(180, 38%, 46%, 1);
-    --paynes-gray: hsla(199, 33%, 38%, 1);
-    --space-cadet: hsla(245, 27%, 29%, 1); 
-  */
+  /* Border Radius */
+  --border-radius-xs: 0.2em;
+  --border-radius-md: 0.5em;
+  --border-radius-xl: 1em;
 
+  /* Box Shadow */
+  --box-shadow-xs: 0.1em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  --box-shadow-md: 0.2em 0.4em 0.5em rgba(0, 0, 0, 0.5);
+  --box-shadow-xl: 0.5em 0.8em 0.8em rgba(0, 0, 0, 0.7);
 }
-
+ 
 * {
   padding: 0px;
   margin: 0px;
