@@ -10,7 +10,8 @@ desarrolladores:
 ## Buenas practicas
 
 - Todo el codigo en ingles
-- Clases: minuscula y se separa con guiones (ver si implementar BEM)
+- Clases: Convención BEM
+![Diagrama de BEN](./src/assets/convencion-BEM.png)
 - Manejo de tareas con issues
 - Mobile first design
 - Reutilizacion de componentes y de variables
