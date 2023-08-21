@@ -4,13 +4,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20em;
-  height: 20em;
+  gap: 1em;
 }
 
 .user-image{
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
+  width: 8em;
+  height: 8em;
   background: black center/contain no-repeat url(https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg);
 }
+
+.user-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  align-content: space-between;
+  font-family: var(--primary-font);
+}
+
+.name{
+  font-weight: bold;
+}
+
+.separator{
+  width: 20em;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.397);
+  border-radius: 1m;
+}
+
