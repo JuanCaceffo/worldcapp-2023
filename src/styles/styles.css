@@ -12,24 +12,12 @@
   /*#1b1825*/
   --raisin-black: hsla(254, 21%, 12%, 1);
   /*#48a2a2*/
-  --verdigris: hsla(180, 38%, 46%, 1);
+  --primary-color: hsla(180, 38%, 46%, 1);
   /*#416c80*/
-  --paynes-gray: hsla(199, 33%, 38%, 1);
+  --secondary-color: hsla(199, 33%, 38%, 1);
   /*#3a375f*/
-  --space-cadet: hsla(245, 27%, 29%, 1);
+  --terciary-color: hsla(245, 27%, 29%, 1);
   --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
-
-  /* 
-    POSIBLE ALTERNATIVA A LA PALETA ORIGINAL SI NO FUNCIONA
-    --tangerine: hsla(30, 88%, 48%, 1);
-    --orange-web: hsla(35, 95%, 62%, 1);
-    --floral-white: hsla(32, 100%, 97%, 1);
-    --raisin-black: hsla(254, 21%, 12%, 1);
-    --verdigris: hsla(180, 38%, 46%, 1);
-    --paynes-gray: hsla(199, 33%, 38%, 1);
-    --space-cadet: hsla(245, 27%, 29%, 1); 
-  */
-
 }
 
 * {

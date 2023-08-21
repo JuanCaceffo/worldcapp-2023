@@ -14,7 +14,7 @@ h3, h4{
     text-align: center;
 }
 .variant-filter-a{  
-    background-color: var(--verdigris);
+    background-color: var(--primary-color);
     border-radius: 0 0 0.5rem 0.5rem;
     color: var(--floral-white);
     padding: 0.5rem 0.5rem 4rem 0.5rem;
@@ -32,13 +32,27 @@ h3, h4{
     display: block;
     padding-bottom: 0.3em;
 }
-.variant-filter-a__container__input{
+/* .variant-filter-a__container__input{
     border-radius: 0.35em;
-    box-shadow: 0.2em 0.4em 1em var(--space-cadet);
-    color: var(--paynes-gray);
+    box-shadow: 0.2em 0.4em 1em var(--terciary-color);
+    color: var(--secondary-color);
     height: 3em;
     margin-bottom: 1.2em;
     padding-left: 0.4em;
+    width: 100%;
+} */
+
+.input{
+    border-radius: 0.5em;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.2em;
+    padding-left: 0.4em;
+}
+
+.variant-filter-a__container__input{
+    color: var(--secondary-color);
+    height: 3em;
     width: 100%;
 }
 /* Borrar al terminar el componente */
