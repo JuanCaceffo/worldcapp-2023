@@ -1,3 +1,9 @@
 @import url(../logo/logo.css);
-@import url(../../../styles/styles.css)
+@import url(../../../styles/styles.css);
+
+.header-box{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
 
