@@ -1,5 +1,16 @@
+
 .user-card{
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 20em;
+}
+
+.user-image{
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  background: black center/contain no-repeat url(https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg);
 }
