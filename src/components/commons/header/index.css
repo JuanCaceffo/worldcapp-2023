@@ -4,6 +4,21 @@
 .header-box{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 7rem;
   background-color: var(--primary-color);
 }
+.header-box--logo.logo{
+  margin-left: 0.5em;
+  font-size: 3em;
+}
 
+/*TODO: PARAMETRIZAR EL COLOR DEL SVG DEL MENU HAMBURGUESA*/
+.header-box--navbar.--responsive{
+  width: 3.5em;
+  height: 3.5em;
+  background: url(../../../images/nav-bar-start.svg) center/cover no-repeat;
+  margin-right: 1em;
+}
