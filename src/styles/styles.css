@@ -16,14 +16,14 @@
   --secondary-font: 'Roboto', 'Open Sans', 'Verdana','sans-serif';
 
   /* Border Radius */
-  --border-radius-xs: 0.2em;
-  --border-radius-md: 0.5em;
-  --border-radius-xl: 1em;
+  --border-radius-xs: 0.5em;
+  --border-radius-md: 1em;
+  --border-radius-xl: 1.5em;
 
   /* Box Shadow */
-  --box-shadow-xs: 0.1em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  --box-shadow-xs: 0.0em 0.1em 1em rgba(0, 0, 0, 0.2);
   --box-shadow-md: 0.2em 0.4em 0.5em rgba(0, 0, 0, 0.5);
-  --box-shadow-xl: 0.5em 0.8em 0.8em rgba(0, 0, 0, 0.7);
+  --box-shadow-xl: 0.5em 0.5em 2em rgba(0, 0, 0, 0.4);
 }
  
 * {
