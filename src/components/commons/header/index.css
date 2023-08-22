@@ -22,3 +22,7 @@
   background: url(../../../images/nav-bar-start.svg) center/cover no-repeat;
   margin-right: 1em;
 }
+
+.navegation-list{
+  list-style-type: none;
+}
