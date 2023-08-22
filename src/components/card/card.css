@@ -61,25 +61,21 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 0.9em;
-  font-weight: bold;  
-  border: 1px solid gray;
+  font-weight: bold;
 }
-
-.card__content_player-data__card-number{
+.card__content__player-data__header__icons{
   display: flex;
   justify-content: center;
-  border: 1px solid gray;
+  align-items: center;
 }
 
-.card__content_player-data__icon{
-  display: flex;
-  justify-content: center;
-  border: 1px solid gray;
-}
-
-.card__content__player-data__header i{
+.card__content__player-data__header__icons i{
   color: var(--secondary-color);
-  padding-left: 0.15em;
+  padding-left: 0.1em;
+}
+
+.card__content__player-data__header__icons h2{
+  padding-left: 0.25em;
 }
 
 .fa-solid.fa-star {
