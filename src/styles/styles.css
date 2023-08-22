@@ -3,6 +3,7 @@
 
 :root {
   /* Colores */
+  --hot-color: hsla(0, 70%, 50%, 1);
   --hover-color: hsla(30, 88%, 48%, 1);
   --focus-color: hsla(35, 95%, 62%, 1);
   --floral-white: hsla(32, 100%, 97%, 1);
@@ -35,4 +36,5 @@
 html {
   font-family: var(--primary-font);
   font-size: 10px;
+  color: var(--raisin-black)
 }
