@@ -1,0 +1,36 @@
+@import url("../../styles/styles.css");
+@import url("../commons/input/input.css");
+
+.form{
+    display: flex;
+    justify-content:center;
+    align-items: baseline;
+    gap: 0.8em;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--focus-color);
+    border-radius: 0.5rem;
+    padding: 0.2em 0.2em 0.2em 1em;
+    margin-bottom: 2em;
+
+}
+.input{
+    display: flex;
+    margin: auto;
+    border-radius: 0 0.5em 0.5em 0;
+}
+.container-icon{
+    height: 2.2em;
+    width: 2.2em;
+    background: center no-repeat ;
+    margin:auto;
+}
+
+.container-icon.--user{
+    background-image: url("../../images/icons-login/user-solid.svg");
+}
+
+.container-icon.--password{
+    background-image: url("../../images/icons-login/key-solid.svg");
+}
+
