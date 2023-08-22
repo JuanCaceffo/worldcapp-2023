@@ -1,0 +1,5 @@
+@import url('../../styles/styles.css');
+
+.card{
+  display: flex;
+}
