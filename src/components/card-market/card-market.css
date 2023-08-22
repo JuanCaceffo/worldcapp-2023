@@ -1,0 +1,58 @@
+@import url("../../styles/styles.css");
+
+.card-market{
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+    border-radius: var(--border-radius-xl);
+    background-color: var(--floral-white);
+    box-shadow: var(--box-shadow-xs);
+    cursor: default;
+    transition: all 40ms ease;
+    margin: 10px   ;
+}
+
+.card-market:hover{
+    box-shadow: var(--box-shadow-xl);
+    transform: translateY(-3%);
+}
+
+.card-market--name{
+    min-height: 4em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--floral-white);
+}
+
+.card-market--name{
+    text-align: center;
+}
+
+.card-market--content{
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.card-market--attribute{
+    font-weight: bolder;
+}
+
+.card-market--info.location{
+    padding: 0.5em;
+}
+
+.card-market--info.stock{
+    padding: 0.5em;
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.card-market--info.price{
+    padding: 0.5em;
+    text-align: center;
+}
