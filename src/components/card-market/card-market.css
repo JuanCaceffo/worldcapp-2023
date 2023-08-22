@@ -1,15 +1,18 @@
 @import url("../../styles/styles.css");
 
 .card-market{
+    /* Sizing */
     font-size: 1rem;
+    margin: 5rem;
     width: 100%;
     max-width: 280px;
-    border-radius: var(--border-radius-xl);
+
+    /* Display */
     background-color: var(--floral-white);
+    border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
     cursor: default;
     transition: all 40ms ease;
-    margin: 10px   ;
 }
 
 .card-market:hover{
@@ -18,24 +21,32 @@
 }
 
 .card-market--name{
+    /* Sizing */
     min-height: 4em;
+
+    /* Display */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+
+    /* colors */
     background-color: var(--secondary-color);
     color: var(--floral-white);
 }
 
-.card-market--name{
-    text-align: center;
-}
 
 .card-market--content{
+    /* Sizing */
     font-size: 1.2em;
+    padding: 0.5em 1em 0.5em 1em;
+
+    /* Display */
     display: flex;
     flex-direction: column;
     gap: 0.2em;
-    padding: 0.5em 1em 0.5em 1em;
+    border-radius: var(--border-radius-xl);
 }
 
 .card-market--attribute{
@@ -52,7 +63,12 @@
     border-bottom: solid;
 }
 
+.less-important-text{
+    opacity: 0.6;
+}
+
 .card-market--info.price{
+    font-size: 1.2em;
     padding: 0.5em;
     text-align: center;
 }
