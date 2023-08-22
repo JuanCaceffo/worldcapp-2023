@@ -1,3 +1,5 @@
+@import url('../../../styles/styles.css');
+
 .input{
     border-radius: var(--border-radius-md);
     box-shadow: var(--box-shadow-md);
