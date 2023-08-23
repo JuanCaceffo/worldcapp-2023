@@ -16,7 +16,7 @@
 }
 
 /*TODO: PARAMETRIZAR EL COLOR DEL SVG DEL MENU HAMBURGUESA*/
-.header-box--navbar.--responsive{
+.header-box--navbar{
   width: 3.5em;
   height: 3.5em;
   background: url(../../../images/nav-bar-start.svg) center/cover no-repeat;
@@ -25,4 +25,15 @@
 
 .navegation-list{
   list-style-type: none;
+}
+
+
+@media (min-width: 769px){
+  .header-box--navbar.--responsive{
+    background-image: none;
+  }
+  .navegation-list{
+    display: flex;
+    width: 40em;
+  }
 }
