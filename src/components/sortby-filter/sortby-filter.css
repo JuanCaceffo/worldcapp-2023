@@ -15,11 +15,11 @@
     border-bottom: 1px solid var(--floral-white);
 }
 
-.option-list{
+.sortby-list{
     font-size: 1.5em;
     padding: 1em;
 }
 
-.option-list label:hover{
+.sortby-list label:hover{
     opacity: 0.5;
 }
