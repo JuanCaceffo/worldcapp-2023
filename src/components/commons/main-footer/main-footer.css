@@ -1,12 +1,5 @@
 @import url('../../../styles/styles.css');
 
-.cuadrado{
-    font-size: 3rem;
-    background-color: lightpink;
-    height: 100px;
-    width: 100px;
-}
-
 .main-footer {
     font-size: 2rem;
 
