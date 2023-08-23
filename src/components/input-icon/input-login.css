@@ -4,35 +4,28 @@
 .form{
     display: flex;
     justify-content:center;
-    align-items: baseline;
-    gap: 0.8em;
+    align-items: center;
     width: fit-content;
     height: fit-content;
     background-color: var(--focus-color);
     border-radius: 0.5em;
-    padding: 0.2em 0.2em 0.2em 1em;
+    padding: 0.2em 0.2em 0.2em 0;
     margin-bottom: 2em;
     box-shadow: var(--box-shadow-md);
-
 }
-.input{
+.form-input.input{
     display: flex;
     margin: auto;
-    border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.3em 0.3em 0;
+    border: none;
     box-shadow: none;
 }
 .container-icon{
-    height: 2.2em;
-    width: 2.2em;
-    background: center no-repeat ;
-    margin:auto;
+    font-size: 2.5em;
+    padding: 0 0.5em 0 0.5em;
+    color: var(--floral-white)
 }
 
-.container-icon.--user{
-    background-image: url("../../images/icons-login/user-solid.svg");
+.fa-user{
+    font-size: 2.6em;
 }
-
-.container-icon.--password{
-    background-image: url("../../images/icons-login/key-solid.svg");
-}
-
