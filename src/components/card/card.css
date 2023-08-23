@@ -89,7 +89,7 @@ body {
   color: var(--hot-color);
 }
 
-.player-card__body p:nth-child(2),.player-card__body p:nth-child(4){
+.player-card__body p:nth-child(even){
   flex-basis: 60%;
   text-align: right;
 }
