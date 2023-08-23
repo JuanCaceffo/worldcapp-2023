@@ -49,10 +49,6 @@
     border-radius: var(--border-radius-xl);
 }
 
-.card-market--attribute{
-    font-weight: bolder;
-}
-
 .card-market--info.location{
     padding: 0.5em;
 }
