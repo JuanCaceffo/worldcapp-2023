@@ -15,11 +15,11 @@
     border-bottom: 1px solid var(--floral-white);
 }
 
-.sortby-list{
+.radio-filter{
     font-size: 1.5em;
     padding: 1em;
 }
 
-.sortby-list label:hover{
+.radio-filter label:hover{
     opacity: 0.5;
 }
