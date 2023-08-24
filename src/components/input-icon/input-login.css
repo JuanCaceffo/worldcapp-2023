@@ -1,0 +1,31 @@
+@import url("../../styles/styles.css");
+@import url("../commons/input/input.css");
+
+.form{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--focus-color);
+    border-radius: 0.5em;
+    padding: 0.2em 0.2em 0.2em 0;
+    margin-bottom: 2em;
+    box-shadow: var(--box-shadow-md);
+}
+.form-input.input{
+    display: flex;
+    margin: auto;
+    border-radius: 0 0.3em 0.3em 0;
+    border: none;
+    box-shadow: none;
+}
+.container-icon{
+    font-size: 2.5em;
+    padding: 0 0.5em 0 0.5em;
+    color: var(--floral-white)
+}
+
+.fa-user{
+    font-size: 2.6em;
+}
