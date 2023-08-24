@@ -109,6 +109,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
-  background-image: linear-gradient(to bottom, var(--floral-white),rgba(0,0,0,0.05));
+  background-image: var(--card-bg-gradient);
   padding-top: 0em;
 }

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800&family=Roboto&display=swap');
 
 :root {
-  /* Colores */
+  /* Colors */
   --hot-color: hsla(0, 70%, 50%, 1);
   --hover-color: hsla(30, 88%, 48%, 1);
   --focus-color: hsla(35, 95%, 62%, 1);
@@ -12,7 +12,11 @@
   --secondary-color: hsla(199, 33%, 38%, 1);
   --terciary-color: hsla(245, 27%, 29%, 1);
 
-  /* Fuentes */
+  /* Card Background Color */
+  --card-bg-gradient: linear-gradient(to bottom, var(--floral-white),rgba(0,0,0,0.05));
+  
+
+  /* Fonts */
   --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
   --secondary-font: 'Roboto', 'Open Sans', 'Verdana','sans-serif';
 
@@ -27,6 +31,7 @@
   --box-shadow-md: 0.2rem 0.4rem 0.5rem rgba(0, 0, 0, 0.5);
   --box-shadow-xl: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
 
+  /* Box Padding */
   --box-padding: 1.6rem;
 }
  

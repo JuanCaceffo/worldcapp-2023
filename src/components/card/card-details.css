@@ -4,14 +4,28 @@
 .detail-card__header{
   display: block;
   width: 100%;
-  border: 1px solid black;
   text-align: center;
+  font-size: 1.8em;
+  background-image: var(--card-bg-gradient);
+}
+
+.detail-card__header h2{
+  padding-bottom: 0.25em;
 }
 
 .detail-card__header small{
-  font-size: 1em;
+  font-size: 0.5em;
 }
 
 .detail-card__atributtes{
   display: flex;
+  justify-content: center;
+}
+
+.player-card__header h2:nth-child(1){
+  flex-basis: 0%;
+}
+
+.player-card__body{
+  border-bottom: 1px solid var(--raisin-black);
 }
