@@ -1,9 +1,0 @@
-.container {
-  display: flex; /* Establece el contenedor como un contenedor flex */
-  flex-direction: column; /* Cambia la dirección de los elementos a columna */
-}
-
-.item {
-  flex-grow: 1; /* Hace que cada input ocupe todo el espacio disponible en altura */
-  margin-bottom: 10px; /* Opcional: agrega margen inferior entre los inputs */
-}
