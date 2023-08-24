@@ -8,6 +8,7 @@
   --focus-color: hsla(35, 95%, 62%, 1);
   --floral-white: hsla(32, 100%, 97%, 1);
   --raisin-black: hsla(254, 21%, 12%, 1);
+  --disabled-color: hsla(254, 21%, 12%, 0.2);
   --primary-color: hsla(180, 38%, 46%, 1);
   --secondary-color: hsla(199, 33%, 38%, 1);
   --terciary-color: hsla(245, 27%, 29%, 1);
@@ -28,6 +29,8 @@
   --box-shadow-xl: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
 
   --box-padding: 1.6rem;
+
+  --transition-time: 0.4s;
 }
  
 * {

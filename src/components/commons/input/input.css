@@ -1,9 +1,79 @@
 @import url('../../../styles/styles.css');
 
-.input{
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--box-shadow-md);
-    height: 3em;
-    margin-bottom: 1.2em;
-    padding-left: 0.4em;
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: var(--floral-white);
+  gap: 2rem;
+  
+}
+
+.input__icon {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.input__primary,
+.input__secondary,
+.input__icon{
+  border-radius: var(--border-radius-xs);
+  box-shadow: var(--box-shadow-2xs);
+  min-width: 20em;
+}
+
+.input__primary,
+.input__icon--input,
+.input__icon--icon-left,
+.input__secondary {
+  font-family: var(--primary-font);
+  background-color: var(--floral-white);
+  font-size: 1.2em;
+  min-height: 2.5em;
+  outline: none;
+  padding: 1em;
+  transition: border var(--transition-time) ease;
+}
+
+.input__icon--input,
+.input__secondary {
+  border: 1px solid var(--floral-white);
+}
+
+.input__primary {
+  border: 1px solid var(--primary-color);  
+}
+
+.input__icon--input {
+  flex: 1 0 16.4em;
+  min-width: 0;
+}
+
+.input__icon--icon-left {
+  background-color: var(--primary-color);
+  font-size: 1.2em;
+  padding: 1.1em 0.8em;
+  cursor: text;
+  transition: background-color var(--transition-time) ease;
+}
+
+.input__primary:focus,
+.input__secondary:focus {
+  border: 1px solid var(--focus-color);
+}
+
+.input__icon--input:focus+label {
+  background-color: var(--focus-color);
+}
+
+.input__primary::placeholder,
+.input__icon--input::placeholder,
+.input__secondary::placeholder {
+  color: var(--disabled-color)
+}
+
+.fa-solid.fa-magnifying-glass {
+  color: var(--floral-white)
 }

@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input</title>
-    <link rel="stylesheet" href="./input.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input</title>
+  <link rel="stylesheet" href="./input.css">
 </head>
+
 <body>
-    <input class="input" type="text" placeholder="placeholder">
+  <div class="container">
+    <input class="input__primary" type="text" placeholder="texto aquí" />
+    <form action="/search" method="get" class="input__icon">
+      <input id="main-search" type="text" name="main-search" class="input__icon--input" placeholder="Buscar:" />
+      <label class="input__icon--icon-left" for="main-search">
+        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+      </label>
+    </form>
+    <input class="input__secondary" type="text" placeholder="texto aquí" />
+    <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+  </div>
 </body>
+
 </html>
