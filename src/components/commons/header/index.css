@@ -1,5 +1,5 @@
-@import url(../logo/logo.css);
 @import url(../../../styles/styles.css);
+@import url(../logo/logo.css);
 
 .header-box{
   display: flex;
@@ -28,7 +28,7 @@
 
 
 @media (min-width: 769px){
-  .header-box--navbar.--responsive{
+  .header-box--navbar{
     display: flex;
     align-items: center;
     background-image: none;
