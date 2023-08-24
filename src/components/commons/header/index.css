@@ -7,7 +7,7 @@
   align-items: center;
   position: fixed;
   width: 100vw;
-  height: 8rem;
+  height: 13vh;
   padding: 0 1rem 0 1rem;
   background-color: var(--primary-color);
   z-index: 99;
