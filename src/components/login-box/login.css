@@ -1,0 +1,29 @@
+@import url("../../styles/styles.css");
+@import url("../input-icon/input-login.css");
+@import url("../commons/button/button.css");
+@import url("../commons/logo/logo.css");
+
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 3em;
+    background-color: var(--floral-white);
+}
+
+.label{
+    font-size: 1.5em;
+}
+
+.form-login{
+    margin: 2em 0;
+}
+
+.button-login{
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
