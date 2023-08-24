@@ -24,16 +24,21 @@
 }
 
 .navegation-list{
-  list-style-type: none;
+  display: none;
 }
 
 
 @media (min-width: 769px){
   .header-box--navbar.--responsive{
+    display: flex;
+    align-items: center;
     background-image: none;
+    width: fit-content;
   }
   .navegation-list{
     display: flex;
-    width: 40em;
+    gap: 2em;
+    list-style: none;
+    font-size: 2em;
   }
 }
