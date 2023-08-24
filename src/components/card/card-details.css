@@ -1,0 +1,17 @@
+@import url('../../styles/styles.css');
+@import url('./card.css');
+
+.detail-card__header{
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.detail-card__header small{
+  font-size: 1em;
+}
+
+.detail-card__atributtes{
+  display: flex;
+}
