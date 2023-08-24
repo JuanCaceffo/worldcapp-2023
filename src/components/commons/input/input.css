@@ -1,9 +1,64 @@
 @import url('../../../styles/styles.css');
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: var(--floral-white);
+    gap: 1em;
+}
+
+.input__container{
+    display: flex;
+    align-items: center;
+}
+
+.input, .input__search, .input__icon{
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    background-color: var(--floral-white);
+    border-radius: var(--border-radius-xs);
+    box-shadow: var(--box-shadow-2xs);    
+    min-height: 2.5em;
+}
+
+.input, .input__search{
+    padding:1em;
+    outline: none;
+}
+
 .input{
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--box-shadow-md);
-    height: 3em;
-    margin-bottom: 1.2em;
-    padding-left: 0.4em;
+    border: 1px solid var(--primary-color);
+    transition: border var(--transition-time) ease;
+}
+
+.input__search{
+    border-radius: var(--border-radius-xs) 0 0 var(--border-radius-xs);
+    border: none;
+}
+
+.input__icon{
+    border-radius: 0 var(--border-radius-xs) var(--border-radius-xs) 0; 
+    background-color: var(--primary-color);
+    padding: 1.02em 0.6em;
+    cursor: text;
+    transition: background-color var(--transition-time) ease;
+}
+
+.input:focus{
+    border: 1px solid var(--focus-color);
+}
+
+.input__search:focus + label {
+    background-color: var(--focus-color);
+}
+
+.input::placeholder, .input__search::placeholder{
+    color: var(--disabled-color)    
+}
+
+.fa-solid.fa-magnifying-glass{
+    color: var(--floral-white)
 }

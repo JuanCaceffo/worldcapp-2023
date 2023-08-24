@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,18 @@
     <title>Input</title>
     <link rel="stylesheet" href="./input.css">
 </head>
+
 <body>
-    <input class="input" type="text" placeholder="placeholder"/>
-    <form action="">
-        <input type="text"/>
-    </form>
-    <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+    <div class="container">
+        <input class="input" type="text" placeholder="texto aquí" />
+        <form action="/search" method="get">
+            <span class="input__container">
+                <input id="main-search" type="text" name="main-search" class="input__search" placeholder="Buscar:"/>
+                <label class="input__icon" for="main-search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></label>
+            </span>
+        </form>
+        <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+    </div>
 </body>
+
 </html>
