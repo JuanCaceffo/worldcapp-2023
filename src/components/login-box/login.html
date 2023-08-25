@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./login.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section class="login-box">
-      <div class="logo">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./login.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <article class="login-box">
+    <form class="form-login">
+      <section class="form__header">
         <img src="../../images/logo.png" alt="WorldCapp" />
         <div class="logo-text">
-          <span class="first-part">world</span><span class="center-dot">.</span
-          ><span class="last-part">capp</span>
+          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
         </div>
-      </div>
-  
-      <div class="form-login">
-        <label class="label --user" for="user">Usuario</label>
-        <form class="form --username">
-          <i class="container-icon fa-solid fa-user"></i>
-          <input class="form-input input" type="text" placeholder="Usuario" />
-        </form>
-  
-        <label class="label --password" for="password">Contraseña</label>
-        <form class="form --password">
-          <i class="container-icon fa-solid fa-key"></i>
-          <input
-            class="form-input input"
-            type="text"
-            placeholder="Contraseña"
-          />
-        </form>
-      </div>
-  
-      <div class="button-login">
-        <button class="button button--primary">Ingresar</button>
-      </div>
-      
-    </section>
+      </section>
 
-  </body>
-  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+      <section class="form__content">
+        <label class="form__label">Usuario</label>
+        <section class="form__input">
+          <input name="user" class="form__input--icon-left" type="text" placeholder="Usuario:" />
+          <i class="form__icon--left fa-solid fa-user"></i>
+        </section>
+
+        <label class="form__label">Contraseña</label>
+        <section class="form__input">
+          <input name="password" id="password" class="form__input--icon-left" type="password"
+            placeholder="Contraseña:" />
+          <i class="form__icon--left fa-solid fa-key"></i>
+        </section>
+      </section>
+
+      <section class="form__actions">
+        <button class="button--primary">Ingresar</button>
+        <section>
+    </form>
+  </article>
+
+  <footer class="main-footer">
+    <nav class="social-media">
+      <a class="circle icon">
+        <i class="fa-brands fa-facebook-f fa-sm"></i>
+      </a>
+      <a class="circle icon">
+        <i class="fa-brands fa-instagram fa-sm"></i>
+      </a>
+      <a class="circle icon">
+        <i class="fa-brands fa-twitter fa-sm"></i>
+      </a>
+      <a class="circle icon">
+        <i class="fa-brands fa-at fa-sm"></i>
+      </a>
+    </nav>
+
+    <section class="logo">
+      <img src="../../images/logo.png" alt="WorldCapp">
+      <div class="logo-text">
+        <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
+      </div>
+    </section>
+  </footer>
+</body>
+<script>
+  function toPassword() {
+    var inputClave = document.getElementById("password");
+    inputClave.type = "password";
+    inputClave.value = "";
+  }
+</script>
+<script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+
 </html>
