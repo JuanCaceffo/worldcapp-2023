@@ -38,7 +38,7 @@ body{
   font-family: var(--primary-font);
   font-size: 1.2em;
   line-height: 1.5em;
-  color: var(--lighter-text);
+  color: var(--medium-text);
   /*Visual*/
   background-color: var(--clear-color-lighter);
   border: 1px solid var(--clear-color);
@@ -54,7 +54,7 @@ body{
 .form__input--icon-left::placeholder,
 .form__input--icon-right::placeholder {
   /*Visual*/
-  color: var(--disabled-color)
+  color: var(--lighter-text)
 }
 
 .form__input--icon-left {
