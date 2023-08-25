@@ -1,6 +1,6 @@
 @import url('../../../styles/styles.css');
 
-.container {
+.container-button {
   display: flex;
   justify-content: space-around;
   max-width: 400px;

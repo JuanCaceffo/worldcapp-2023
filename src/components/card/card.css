@@ -9,7 +9,7 @@ body {
   background-color: var(--clear-color);
 }
 
-.container {
+.container-card {
   display: flex;
   flex-direction: column;  
   gap: 2rem;
