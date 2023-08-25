@@ -11,6 +11,8 @@
     /* Display Flex */
     display: flex;
     justify-content: space-evenly;
+    padding: 0 0.5em;
+    gap: 0.5em;
 }
 
 .social-media{
