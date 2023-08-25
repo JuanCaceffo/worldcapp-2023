@@ -1,0 +1,54 @@
+html {
+    font-family: var(--primary-font);
+    font-size: 10px;
+    color: var(--dark-text);
+}
+
+body{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    
+    grid-template-rows: 10vh 10vh auto 10vh;
+    grid-template-areas: 
+        "header"
+        "aside"
+        "article"
+        "footer";
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    grid-area: header;
+    background-color: red;
+}
+
+aside{
+    grid-area: aside;
+    background-color: blueviolet;
+}
+
+article{
+    grid-area: article;
+    background-color: blue;
+}
+
+footer{
+    height: 10vh;
+    grid-area: footer;
+    background-color: aquamarine;
+}
+
+@media screen and (min-width:768px){
+    body{
+        grid-template-columns: 20vw 80vw;
+        grid-template-rows: 10vh auto 10vh;
+        grid-template-areas: 
+            "header header"
+            "aside article"
+            "footer footer";
+    }
+}
