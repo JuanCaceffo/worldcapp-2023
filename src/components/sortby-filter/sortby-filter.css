@@ -2,7 +2,8 @@
 
 .variant-filter-b{
     background-color: var(--primary-color);
-    border-radius: 0 0 0.5rem 0.5rem;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--box-shadow-xs);
     color: var(--floral-white);
     font-size: 1rem;
     padding: 1rem;
