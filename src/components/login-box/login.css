@@ -7,11 +7,14 @@
 .login-box{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    row-gap: 3em;
+    row-gap: 1em;
     background-color: var(--floral-white);
+}
+.logo{
+    padding-top: 2em;
+    font-size: 3em;
 }
 
 .label{
