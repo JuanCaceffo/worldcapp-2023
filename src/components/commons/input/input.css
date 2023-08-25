@@ -1,4 +1,5 @@
 @import url('../../../styles/styles.css');
+
 body{
   display:flex;
   justify-content: center;
@@ -65,8 +66,10 @@ body{
 .form__icon--right {
   /*Layout*/
   position: absolute;
-  padding: 0 0.6rem;
+  width: 2.8rem;
   height: max-content;
+  /*typeface*/
+  text-align: center;
   /*Visual*/
   background-color: var(--primary-color);
   cursor: text;
@@ -83,7 +86,6 @@ body{
 
 .form__icon--left {
   /*Layout*/
-
   left: 0;
   /*Visual*/
   border-radius: var(--border-radius-xs) 0 0 var(--border-radius-xs);
