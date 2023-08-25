@@ -9,7 +9,7 @@
 .variant-filter-a{  
     background-color: var(--primary-color);
     border-radius: 0 0 0.5rem 0.5rem;
-    color: var(--floral-white);
+    color: var(--clear-color);
     font-size: 1.25em;
     padding: 0.5rem 0.5rem 4rem 0.5rem;
 }
@@ -20,7 +20,7 @@
 }
 .variant-filter-a__h--h3{
     /* Agregar hr para division o asi esta bien? */
-    border-bottom: 1px solid var(--floral-white);
+    border-bottom: 1px solid var(--clear-color);
 }
 .variant-filter-a__section{
     display: flex;

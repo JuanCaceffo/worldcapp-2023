@@ -3,7 +3,7 @@
 .variant-filter-b{
     background-color: var(--primary-color);
     border-radius: 0 0 0.5rem 0.5rem;
-    color: var(--floral-white);
+    color: var(--clear-color);
     font-size: 1rem;
     padding: 1rem 1rem 1rem 1rem;
 }
@@ -12,7 +12,7 @@
     font-size: 2em;
     padding: 0.6em 0 0.4em 0;
     text-align: center;
-    border-bottom: 1px solid var(--floral-white);
+    border-bottom: 1px solid var(--clear-color);
 }
 
 .radio-filter{

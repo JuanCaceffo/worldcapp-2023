@@ -11,7 +11,7 @@
   font-family: var(--primary-font);
   font-weight: bold;
   font-size: 1.6em;
-  color: var(--floral-white);
+  color: var(--clear-color);
   padding: 1.2em 2.5em;
   border-radius: var(--border-radius-md);
   cursor: pointer;
@@ -25,7 +25,7 @@
 }
 
 .button--secondary {
-  background-color: var(--floral-white);
+  background-color: var(--clear-color);
   color: var(--focus-color);
 }
 
@@ -36,5 +36,5 @@
 }
 
 .button--secondary:hover {
-  color: var(--floral-white);
+  color: var(--clear-color);
 }

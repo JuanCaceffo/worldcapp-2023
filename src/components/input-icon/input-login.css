@@ -13,6 +13,7 @@
     margin-bottom: 2em;
     box-shadow: var(--box-shadow-md);
 }
+
 .form-input.input{
     display: flex;
     margin: auto;
@@ -20,10 +21,11 @@
     border: none;
     box-shadow: none;
 }
+
 .container-icon{
     font-size: 2.5em;
     padding: 0 0.5em 0 0.5em;
-    color: var(--floral-white)
+    color: var(--clear-color)
 }
 
 .fa-user{
