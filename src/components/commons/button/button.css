@@ -9,6 +9,8 @@
   gap: 2rem;
   max-width: 400px;
   padding: 1em;
+  /*Visual*/
+  background-color: var(--primary-color);
 }
 
 .button--primary,
@@ -74,7 +76,7 @@
 .button--icon,
 .button--circle{
   /*Layout*/ 
-  padding: 0.8rem;
+  padding: 0.6rem;
 }
 
 .button--text{
