@@ -1,0 +1,53 @@
+/* CSS HSL */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800&family=Roboto&display=swap');
+
+:root {
+  /* Colors */
+  --hot-color: hsla(0, 70%, 50%, 1);
+  --hover-color: hsla(30, 88%, 48%, 1);
+  --focus-color: hsla(35, 95%, 62%, 1);
+  --clear-color: hsla(32, 100%, 97.7%, 1);
+  --clear-color-lighter: hsla(32, 100%, 99.2%, 1);
+  --dark-text: hsla(254, 21%, 12%, 1);
+  --medium-text: hsla(254, 21%, 12%, 0.7);
+  --lighter-text: hsla(254, 21%, 12%, 0.25);
+  --primary-color: hsla(180, 38%, 46%, 1);
+  --secondary-color: hsla(199, 33%, 38%, 1);
+  --terciary-color: hsla(245, 27%, 29%, 1);
+
+  /* Card Background Color */
+  --card-bg-gradient: linear-gradient(to bottom, var(--floral-white),rgba(0,0,0,0.05));
+  
+
+  /* Fonts */
+  --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
+  --secondary-font: 'Roboto', 'Open Sans', 'Verdana','sans-serif';
+
+  /* Border Radius */
+  --border-radius-xs: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-xl: 1.5rem;
+
+  /* Box Shadow */
+  --box-shadow-2xs: 0.0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
+  --box-shadow-xs: 0.0rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  --box-shadow-md: 0.25rem 0.25rem 1.2rem rgba(0, 0, 0, 0.3);
+  --box-shadow-xl: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+
+  /* Box Padding */
+  --box-padding: 1.6rem;
+
+  --transition-time: 0.4s;
+}
+ 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--primary-font);
+  font-size: 10px;
+  color: var(--dark-text)
+}

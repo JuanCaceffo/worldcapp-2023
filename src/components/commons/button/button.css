@@ -1,0 +1,131 @@
+@import url('../../../styles/styles.css');
+
+
+.test__container--button {
+  /*Layout*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 400px;
+  padding: 1em;
+  /*Visual*/
+  background-color: var(--primary-color);
+}
+
+.button--primary,
+.button--secondary,
+.button--icon,
+.button--circle,
+.button--text{
+  /*Layout*/
+  padding: 1.4rem;
+  /*Typeface*/
+  font-size: 1.6em;
+  /*Visual*/
+  cursor: pointer;
+}
+
+.button--primary,
+.button--secondary,
+.button--text{
+  /*Typeface*/
+  font-family: var(--primary-font);
+  font-weight: bold;
+}
+
+.button--primary,
+.button--secondary{
+  /*Visual*/
+  border: 1px solid var(--hover-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-2xs);
+}
+
+.button--primary,
+.button--circle {
+  /*Visual*/  
+  color: var(--clear-color);
+}
+
+.button--primary{
+  /*Visual*/ 
+  background-color: var(--hover-color);
+}
+
+.button--circle{
+  /*Visual*/ 
+  background-color: var(--terciary-color);
+}
+
+.button--secondary {
+  /*Visual*/
+  background-color: var(--clear-color);
+  color: var(--hover-color);
+}
+
+.button--icon,
+.button--text,
+.button--circle{  
+  /*Layout*/ 
+  width: fit-content;
+  /*Visual*/ 
+  color: var(--clear-color); 
+}
+
+.button--icon,
+.button--circle{
+  /*Layout*/ 
+  padding: 0.6rem;
+}
+
+.button--text{
+  /*Layout*/ 
+  padding: 0.1em;
+}
+
+.button--circle{  
+  /*Visual*/ 
+  border-radius: 50%;
+}
+
+.button--primary:hover,
+.button--secondary:hover,
+.button--icon:hover,
+.button--text:hover,
+.button--circle:hover {
+  /*Layout*/
+  transform: translateY(-0.2em);
+  /*Animation*/
+  transition: all var(--transition-time) ease;
+}
+
+.button--primary:hover,
+.button--secondary:hover,
+.button--circle:hover{    
+  /*Visual*/
+  background-color: var(--focus-color);
+  box-shadow: var(--box-shadow-md); 
+}
+
+.button--circle:hover{
+  /*Visual*/ 
+  background-color: var(--secondary-color);
+}
+
+.button--primary:hover,
+.button--secondary:hover{
+  /*Visual*/ 
+  border: 1px solid var(--focus-color);
+}
+
+.button--icon:hover,
+.button--text:hover {
+  /*Visual*/ 
+  color: var(--secondary-color);
+}
+
+.button--secondary:hover {
+  /*Visual*/ 
+  color: var(--clear-color);
+}

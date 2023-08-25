@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input</title>
+  <link rel="stylesheet" href="./input.css">
+</head>
+
+<body>
+  <form class="form__container" autocomplete="off">
+    <section class="form__row">
+      <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+    </section>
+    <section class="form__row">
+      <input name="search" class="form__input--icon-right" type="text" placeholder="Buscar:" />
+      <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
+    </section>
+    <section class="form__row">
+      <input name="user" class="form__input--icon-left" type="text" placeholder="Usuario:" />
+      <i class="form__icon--left fa-solid fa-user"></i>
+    </section>
+    <section class="form__row">
+      <input name="password" id="password" class="form__input--icon-left" type="text" onfocus="toPassword()" placeholder="Contraseña:" />
+      <i class="form__icon--left fa-solid fa-key"></i>
+    </section>
+    <section class="form__row">
+      <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" autocomplete="off" />
+    </section>
+  </form>
+  <script>
+    function toPassword() {
+        var inputClave = document.getElementById("password");
+        inputClave.type = "password";
+        inputClave.value = "";
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
