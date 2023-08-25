@@ -13,7 +13,7 @@
     font-size: 2em;
     padding-bottom: inherit;
     text-align: center;
-    border-bottom: 1px solid var(--floral-white);
+    border-bottom: 1px solid var(--clear-color);
 }
 
 .radio-filter{

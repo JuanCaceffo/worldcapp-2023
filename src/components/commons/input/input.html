@@ -10,17 +10,33 @@
 </head>
 
 <body>
-  <div class="container">
-    <input class="input__primary" type="text" placeholder="texto aquí" />
-    <form action="/search" method="get" class="input__icon">
-      <input id="main-search" type="text" name="main-search" class="input__icon--input" placeholder="Buscar:" />
-      <label class="input__icon--icon-left" for="main-search">
-        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-      </label>
-    </form>
-    <input class="input__secondary" type="text" placeholder="texto aquí" />
-    <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
-  </div>
+  <form class="form__container" autocomplete="off">
+    <section class="form__row">
+      <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+    </section>
+    <section class="form__row">
+      <input name="search" class="form__input--icon-right" type="text" placeholder="Buscar:" />
+      <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
+    </section>
+    <section class="form__row">
+      <input name="user" class="form__input--icon-left" type="text" placeholder="Usuario:" />
+      <i class="form__icon--left fa-solid fa-user"></i>
+    </section>
+    <section class="form__row">
+      <input name="password" id="password" class="form__input--icon-left" type="text" onfocus="toPassword()" placeholder="Contraseña:" />
+      <i class="form__icon--left fa-solid fa-key"></i>
+    </section>
+    <section class="form__row">
+      <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" autocomplete="off" />
+    </section>
+  </form>
+  <script>
+    function toPassword() {
+        var inputClave = document.getElementById("password");
+        inputClave.type = "password";
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
