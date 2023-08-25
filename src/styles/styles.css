@@ -31,7 +31,7 @@
   /* Box Shadow */
   --box-shadow-2xs: 0.0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
   --box-shadow-xs: 0.0rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
-  --box-shadow-md: 0.2rem 0.4rem 0.5rem rgba(0, 0, 0, 0.5);
+  --box-shadow-md: 0.25rem 0.25rem 1.2rem rgba(0, 0, 0, 0.3);
   --box-shadow-xl: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
 
   /* Box Padding */
