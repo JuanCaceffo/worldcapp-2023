@@ -1,3 +1,5 @@
+@import url(../main-footer/main-footer.css);
+
 html {
     font-family: var(--primary-font);
     font-size: 10px;
