@@ -3,12 +3,12 @@
 .card-market{
     /* Sizing */
     font-size: 1rem;
-    margin: 5rem;
+    /* margin: 5rem; */
     width: 100%;
-    max-width: 280px;
+    /* max-width: 280px; */
 
     /* Display */
-    background-color: var(--floral-white);
+    background-color: var(--clear-color);
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
     cursor: default;
@@ -33,7 +33,7 @@
 
     /* colors */
     background-color: var(--secondary-color);
-    color: var(--floral-white);
+    color: var(--clear-color);
 }
 
 
@@ -60,7 +60,7 @@
 }
 
 .less-important-text{
-    opacity: 0.6;
+    color: var(--medium-text);
 }
 
 .card-market--info.price{
