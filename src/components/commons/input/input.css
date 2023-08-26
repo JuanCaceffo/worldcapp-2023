@@ -1,9 +1,9 @@
 @import url('../../../styles/styles.css');
 
-body{
+/* body{
   display:flex;
   justify-content: center;
-}
+} */
 
 .form__container {
   /*Layout*/
@@ -14,6 +14,8 @@ body{
   min-width: 25rem;
   height: fit-content;
   padding: 2rem;
+  /* Agrego FACU */
+  margin: auto;
   gap: 2rem;
   /*Visual*/
   background-color: var(--clear-color);

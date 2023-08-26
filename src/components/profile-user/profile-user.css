@@ -1,0 +1,14 @@
+@import url('../../styles/styles.css');
+@import url('../card-user/index.css');
+@import url('../commons/input/input.css');
+@import url('../commons/button/button.css');
+
+.general-info{
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 1em;
+}
+
+.form__section{
+
+}
