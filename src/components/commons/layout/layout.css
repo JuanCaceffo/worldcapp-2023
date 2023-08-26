@@ -8,7 +8,7 @@ body{
     width: 100vw;
     height: 100vh;
     
-    grid-template-rows: 10vh 10vh auto 10vh;
+    grid-template-rows: 10vh auto auto 10vh;
     grid-template-areas: 
         "header"
         "aside"
@@ -24,11 +24,26 @@ body header{
 body aside{
     grid-area: aside;
     background-color: blueviolet;
+    /* OPCIONAL EL PADDING */
+    padding: 1rem;
 }
 
 body article{
     grid-area: article;
     background-color: blue;
+
+    /* OPCIONAL EL PADDING */
+    padding: 1rem;
+
+    /* LES DEJO POR SI QUIEREN PROBARLO EL CODIGO PARA HACER EL GRID DE LOS ELEMENTOS QUE TENEMOS Q MOSTRAR
+    OSEA EL GRID PARA SCROLLEAR ENTRE LOS ITEMS */
+    /* TIP: PARA QUE FUNKE LINDO EL AUTO-FIT LOS CONTAINERS DE LO QUE LE PONGAN ADENTRO TIENEN QUE TENES WIDTH:100% */
+    /* display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: max-content;
+    gap: 2em; */
 }
 
 body footer{
