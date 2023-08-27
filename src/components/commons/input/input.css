@@ -29,7 +29,8 @@ body{
 .form__input--primary,
 .form__input--secondary,
 .form__input--icon-left,
-.form__input--icon-right {
+.form__input--icon-right,
+.form__select--primary {
   /*Layout*/
   flex: 1;
   min-width: 0;
@@ -52,7 +53,8 @@ body{
 .form__input--primary::placeholder,
 .form__input--secondary::placeholder,
 .form__input--icon-left::placeholder,
-.form__input--icon-right::placeholder {
+.form__input--icon-right::placeholder,
+.form__select--primary {
   /*Visual*/
   color: var(--lighter-text)
 }
