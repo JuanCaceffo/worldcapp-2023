@@ -6,8 +6,10 @@
   --hot-color: hsla(0, 70%, 50%, 1);
   --hover-color: hsla(30, 88%, 48%, 1);
   --focus-color: hsla(35, 95%, 62%, 1);
-  --clear-color: hsla(32, 100%, 97.7%, 1);
-  --clear-color-lighter: hsla(32, 100%, 99.2%, 1);
+  --clear-color-lighter: hsla(32, 100%, 99.5%, 1);
+  --clear-color: hsla(32, 100%, 96%, 1);
+  --clear-color-darker: hsla(32, 100%, 92%, 1);
+  --clear-color-2darker: hsla(32, 100%, 84%, 1);
   --dark-text: hsla(254, 21%, 12%, 1);
   --medium-text: hsla(254, 21%, 12%, 0.7);
   --lighter-text: hsla(254, 21%, 12%, 0.25);
@@ -16,12 +18,12 @@
   --terciary-color: hsla(245, 27%, 29%, 1);
 
   /* Card Background Color */
-  --card-bg-gradient: linear-gradient(to bottom, var(--floral-white),rgba(0,0,0,0.05));
-  
+  --card-bg-gradient: linear-gradient(to bottom, var(--clear-color-lighter), rgba(0, 0, 0, 0.05));
+  --user-info-background: linear-gradient(to bottom, var(--clear-color), var(--clear-color-lighter));
 
   /* Fonts */
   --primary-font: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
-  --secondary-font: 'Roboto', 'Open Sans', 'Verdana','sans-serif';
+  --secondary-font: 'Roboto', 'Open Sans', 'Verdana', 'sans-serif';
 
   /* Border Radius */
   --border-radius-xs: 0.5rem;
@@ -39,11 +41,17 @@
 
   --transition-time: 0.4s;
 }
- 
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 html {

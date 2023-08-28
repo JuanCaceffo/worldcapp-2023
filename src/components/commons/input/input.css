@@ -9,7 +9,6 @@
   /*Layout*/
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 80vw;
   min-width: 25rem;
   height: fit-content;
