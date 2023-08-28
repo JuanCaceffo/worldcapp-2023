@@ -3,9 +3,7 @@
 .card-market{
     /* Sizing */
     font-size: 1rem;
-    /* margin: 5rem; */
     width: 100%;
-    /* max-width: 280px; */
 
     /* Display */
     background-color: var(--clear-color);
