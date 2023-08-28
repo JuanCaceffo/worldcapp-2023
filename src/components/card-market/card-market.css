@@ -3,12 +3,11 @@
 .card-market{
     /* Sizing */
     font-size: 1rem;
-    margin: 5rem;
     width: 100%;
     max-width: 280px;
 
     /* Display */
-    background-color: var(--floral-white);
+    background-color: var(--clear-color);
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
     cursor: default;
@@ -20,7 +19,7 @@
     transform: translateY(-3%);
 }
 
-.card-market--name{
+.card-market__name{
     /* Sizing */
     min-height: 4em;
 
@@ -33,37 +32,37 @@
 
     /* colors */
     background-color: var(--secondary-color);
-    color: var(--floral-white);
+    color: var(--clear-color);
 }
 
 
-.card-market--content{
+.card-market__content{
     /* Sizing */
     font-size: 1.2em;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5em 1em;
 
     /* Display */
     display: flex;
     flex-direction: column;
-    gap: 0.2em;
+    gap: 0.5em;
     border-radius: var(--border-radius-xl);
 }
 
-.card-market--info.location{
+.card-market__info.location{
     padding: 0.5em;
 }
 
-.card-market--info.stock{
+.card-market__info.stock{
     padding: 0.5em;
     border-top: solid;
     border-bottom: solid;
 }
 
-.less-important-text{
-    opacity: 0.6;
+.card-market__status{
+    color: var(--medium-text);
 }
 
-.card-market--info.price{
+.card-market__info.price{
     font-size: 1.2em;
     padding: 0.5em;
     text-align: center;
