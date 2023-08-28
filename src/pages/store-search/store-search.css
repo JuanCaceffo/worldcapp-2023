@@ -4,15 +4,17 @@
 @import url(../../components/sortby-filter/sortby-filter.css);
 @import url(../../components/card-market/card-market.css);
 @import url(../../components/commons/header/header.css);
+@import url(../../components/commons/input/input.css);
 
 .wrapper{
     display: grid;
     width: 100vw;
     height: 100vh;
     
-    grid-template-rows: 10vh auto auto 10vh;
+    grid-template-rows: 10vh auto auto auto 10vh;
     grid-template-areas: 
         "header"
+        "search"
         "aside"
         "article"
         "footer";
@@ -26,9 +28,15 @@
     grid-area: header;
 }
 
+.wrapper search{
+    grid-area: search;
+    padding: 1rem;
+    padding-top: 2em;
+}
+
 .wrapper aside{
     grid-area: aside;
-    padding: 2em 1em;
+    padding: 1em;
 }
 
 .wrapper article{
@@ -51,11 +59,16 @@
 @media screen and (min-width:768px){
     .wrapper{
         grid-template-columns: minmax(200px, 20vw) auto;
-        grid-template-rows: 10vh auto 10vh;
+        grid-template-rows: 10vh 10vh auto 10vh;
         grid-template-areas: 
             "header header"
+            "search article"
             "aside article"
             "footer footer";
+    }
+
+    .wrapper aside{
+        padding: 1em;
     }
 
     .wrapper article{
