@@ -17,21 +17,25 @@
 .button--secondary,
 .button--icon,
 .button--circle,
-.button--text{
+.button--text,
+.button--tab-on,
+.button--tab-off{
   /*Layout*/
   padding: 1.4rem;
   /*Typeface*/
-  font-size: 1.6em;
+  font-size: 1.2em;
   /*Visual*/
   cursor: pointer;
 }
 
 .button--primary,
 .button--secondary,
-.button--text{
+.button--text,
+.button--tab-on,
+.button--tab-off{
   /*Typeface*/
   font-family: var(--primary-font);
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .button--primary,
@@ -58,10 +62,24 @@
   background-color: var(--terciary-color);
 }
 
-.button--secondary {
+.button--secondary,
+.button--tab-on {
   /*Visual*/
-  background-color: var(--clear-color);
-  color: var(--hover-color);
+  background-color: var(--clear-color-darker);
+  color: var(--dark-text);
+}
+
+.button--tab-on,
+.button--tab-off{
+  /*Visual*/
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0 ;
+  border: none;
+}
+
+.button--tab-off{
+  /*Visual*/
+  background-color: var(--clear-color-2darker);
+  color: var(--lighter-text);
 }
 
 .button--icon,
