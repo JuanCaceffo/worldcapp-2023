@@ -5,71 +5,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./user-profile.css">
-  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script> 
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
   <title>User profile</title>
 </head>
 
 <body>
-  <header class="header-box">
-    <!-- ESTRUCUTRE COMPONENT LOGO -->
-    <figure class="header-box--logo logo">
-      <img src="../../images/logo.png" alt="WorldCapp"></img>
-      <div class="logo-text">
-        <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-      </div>
-    </figure>
-    <!-- ESTRUCUTRE COMPONENT LOGO -->
-    <nav class="header-box--navbar">
-      <button class="navbar-burger-button"></button>
-      <ul class="burger-button-list">
-        <a class="list-item --card">figuritas</a>
-        <a class="list-item --packs">sobres</a>
-        <a class="list-item --profile">perfil</a>
-        <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
-      </ul>
-    </nav>
-  </header>
+  <div class="wrapper">
+    <header class="header-box">
+      <!-- ESTRUCUTRE COMPONENT LOGO -->
+      <figure class="header-box--logo logo">
+        <img src="../../images/logo.png" alt="WorldCapp"></img>
+        <div class="logo-text">
+          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
+        </div>
+      </figure>
+      <!-- ESTRUCUTRE COMPONENT LOGO -->
+      <nav class="header-box--navbar">
+        <button class="navbar-burger-button"></button>
+        <ul class="burger-button-list">
+          <a class="list-item --card">figuritas</a>
+          <a class="list-item --packs">sobres</a>
+          <a class="list-item --profile">perfil</a>
+          <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
+        </ul>
+      </nav>
+    </header>
 
-  <aside>
-    <div class="user-card">
-      <figure class="user-card--image"></figure>
-      <div class="user-card--data">
-        <h2 class="data-name">
-          elMuñe
-          <figure class="name-edit"></figure>
-        </h2>
-        <p class="age"><b>Edad:</b> 73 años</p>
-        <p class="addres"><b>Ubicacion:</b> Parque Chacabuco</p>
-      </div>
-    </div>
-  </aside>
-  <article>article</article>
+    <aside>
+      <div class="gato"></div>
+      <header class="form-user-info__header user-card">
+        <figure class="user-card--image"></figure>
+        <div class="user-card--data">
+          <h2 class="data-name">
+            elMuñe
+            <figure class="name-edit"></figure>
+          </h2>
+          <p class="age"><b>Edad:</b> 73 años</p>
+          <p class="addres"><b>Ubicacion:</b> Parque Chacabuco</p>
+        </div>
+        <div class="sep"></div>
+      </header>
+    </aside>
 
-  <footer class="main-footer">
+    <article>
+      <form class="form-user-info" autocomplete="off">
+        <nav class="form__user-info__nav">
+          <i class="button--icon fa-solid fa-chevron-left"></i>
+          <button class="button--tab-on">Perfil Usuario</button>
+          <i class="button--icon fa-solid fa-chevron-right"></i>
+        </nav>
+        <article class="form-user-info__body">
+          <h2 class="form__row-title">Información general</h2>
+          <h3>Nombre</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h3>Apellido</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h3>Correo electrónico</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h3>Fecha de nacimiento</h3>
+          <div class="form__row">
+            <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h2 class="form__row-title">Dirección</h2>
+          <h3>Provincia</h3>
+          <div class="form__row">
+            <select class="form__input--primary">
+              <option>Seleccione una opción</option>
+              <option>Opción 1</option>
+              <option>Opción 2</option>
+              <option>Opción 3</option>
+            </select>
+          </div>
+          <h3>Localidad</h3>
+          <div class="form__row">
+            <select class="form__input--primary">
+              <option>Seleccione una opción</option>
+              <option>Opción 1</option>
+              <option>Opción 2</option>
+              <option>Opción 3</option>
+            </select>
+          </div>
+          <h3>Calle</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h3>Altura</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h2 class="form__row-title">Ubicación Geográfica</h2>
+          <h3>Latitud</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h3>Longitud</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h3>Distancia máxima de cercanía para intercambio</h3>
+          <div class="form__row">
+            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+          </div>
+          <h2 class="form__row-title">Criterio para el intercambio</h2>
+          <h3>Criterio</h3>
+          <div class="form__row">
+            <select class="form__input--primary">
+              <option>Seleccione una opción</option>
+              <option>Opción 1</option>
+              <option>Opción 2</option>
+              <option>Opción 3</option>
+            </select>
+          </div>
+        </article>
+        <footer class="form-user-info__actions">
+          <button class="button button--primary ">Guardar</button>
+          <button class="button button--secondary">Resetear</button>
+        </footer>
+      </form>
+    </article>
 
-    <nav class="social-media">
-      <a class="circle icon">
-        <i class="fa-brands fa-facebook-f fa-sm"></i>
-      </a>
-      <a class="circle icon">
-        <i class="fa-brands fa-instagram fa-sm"></i>
-      </a>
-      <a class="circle icon">
-        <i class="fa-brands fa-twitter fa-sm"></i>
-      </a>
-      <a class="circle icon">
-        <i class="fa-brands fa-at fa-sm"></i>
-      </a>
-    </nav>
+    <footer class="main-footer">
 
-    <section class="logo">
-      <img src="../../images/logo.png" alt="WorldCapp">
-      <div class="logo-text">
-        <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-      </div>
-    </section>
+      <nav class="social-media">
+        <a class="circle icon">
+          <i class="fa-brands fa-facebook-f fa-sm"></i>
+        </a>
+        <a class="circle icon">
+          <i class="fa-brands fa-instagram fa-sm"></i>
+        </a>
+        <a class="circle icon">
+          <i class="fa-brands fa-twitter fa-sm"></i>
+        </a>
+        <a class="circle icon">
+          <i class="fa-brands fa-at fa-sm"></i>
+        </a>
+      </nav>
 
-  </footer>
+      <section class="logo">
+        <img src="../../images/logo.png" alt="WorldCapp">
+        <div class="logo-text">
+          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
+        </div>
+      </section>
 
+    </footer>
+  </div>
 </body>
+<script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+
 </html>
