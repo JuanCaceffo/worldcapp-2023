@@ -4,7 +4,7 @@
     background-color: var(--primary-color);
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
-    color: var(--floral-white);
+    color: var(--clear-color);
     font-size: 1rem;
     padding: 1rem;
 }
@@ -18,7 +18,7 @@
 
 .radio-filter{
     font-size: 1.5em;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .radio-filter label:hover{
