@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  
+  <div class="wrapper">
+
+    <header class="header-box">
+      <!-- ESTRUCUTRE COMPONENT LOGO -->
+      <figure class="header-box--logo logo">
+        <img src="/src/images/logo.png" alt="WorldCapp"></img>
+        <div class="logo-text">
+          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
+        </div>
+      </figure>
+      <!-- ESTRUCUTRE COMPONENT LOGO -->
+      <nav class="header-box--navbar">
+        <button class="navbar-burger-button"></button>
+        <ul class="burger-button-list">
+          <a class="list-item --card">figuritas</a>
+          <a class="list-item --packs">sobres</a>
+          <a class="list-item --profile">perfil</a>
+          <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+        <form class="variant-filter-a">
+            <section class="form__row">
+                <input name="search" class="form__input--icon-right" type="text" placeholder="Buscar:" />
+                <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
+            </section>
+    
+            <h3 class="variant-filter-a__h variant-filter-a__h--h3">Filtros</h3>
+            <h4 class="variant-filter-a__h">Valoración</h4>
+            <section class="variant-filter-a__section">
+                <div class="variant-filter-a__container">
+                    <label class="variant-filter-a__container__label" for="">Desde</label>
+                    <input class="input variant-filter-a__container__input" type="text" placeholder="placeholder">
+                </div>
+                <div class="variant-filter-a__container">
+                    <label class="variant-filter-a__container__label" for="">Hasta</label>
+                    <input class="input variant-filter-a__container__input" type="text" placeholder="placeholder">
+                </div>
+            </section>
+                <div>
+                    <input id="onFire" type="checkbox"> 
+                    <label for="onFire">On fire</label>
+                </div>
+                <div>
+                    <input id="promise" type="checkbox">
+                    <label for="promise">Es promesa</label>
+                </div>
+        </form>
+    </aside>
+    <article>
+        <div class="container-card">
+            <article class="player-card">
+              <section class="player-card__img">
+                <img src="../../images/dibu.png" alt="Emiliano Martinez" />
+              </section>
+              <section class="player-card__content">
+                <header class="player-card__header">
+                  <h2>Emiliano Martinez</h2>
+                  <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+                  <h2>
+                    <i class="fas fa-trophy fa-sm"></i><!--
+                    --><i class="fas fa-fire fa-sm"></i><!--
+                    --><i class="fas fa-star fa-sm"></i><!--
+                    --> 124
+                  </h2>
+                  <p>
+                    <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+                  </p>
+                  <p>
+                    <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                      Altura:</strong> 1.7 metros
+                  </p>
+                </header>
+                <section class="player-card__body">
+                  <p><strong>Casaca:</strong> 23</p>
+                  <p><strong>Nacimiento:</strong> 02/09/92 (30 años)</p>
+                  <p><strong>Selección:</strong> Argentina</p>
+                  <p><strong>Posición:</strong> Arquero</p>
+                  <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+                </section>
+                <footer class="player-card__footer">
+                  <h2>CEDIDA POR:</h2>
+                  <p>JUAN "CACHO" CACHEFFO</p>
+                </footer>
+              </section>
+            </article>
+          </div>
+    </article>
+
+    <footer class="main-footer">
+
+      <nav class="social-media">
+        <a class="circle icon">
+          <i class="fa-brands fa-facebook-f fa-sm"></i>
+        </a>
+        <a class="circle icon">
+          <i class="fa-brands fa-instagram fa-sm"></i>
+        </a>
+        <a class="circle icon">
+          <i class="fa-brands fa-twitter fa-sm"></i>
+        </a>
+        <a class="circle icon">
+          <i class="fa-brands fa-at fa-sm"></i>
+        </a>
+      </nav>
+
+      <section class="logo">
+        <img src="/src/images/logo.png" alt="WorldCapp">
+        <div class="logo-text">
+          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
+        </div>
+      </section>
+    
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
