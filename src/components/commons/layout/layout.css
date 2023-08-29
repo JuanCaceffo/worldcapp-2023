@@ -3,7 +3,8 @@
 @import url(../header/header.css);
 
 
-.wrapper{
+.wrapper,
+.wrapper--search{
     display: grid;
     min-width: 330px;
     width: 100vw;
@@ -18,25 +19,34 @@
         "footer";
 }
 
-.wrapper header{
-    grid-area: header;
-    position: fixed;
-    top: 0;
+.wrapper--search{    
+    grid-template-rows: minmax(6rem, 10vh) 5.2rem auto auto minmax(6rem, 10vh);
+    grid-template-areas: 
+        "header"
+        "search"
+        "aside"
+        "article"
+        "footer";
 }
 
-/* .wrapper search{
-    grid-area: search;
-    padding: 1rem;
-    padding-top: 2em;
-} */
+.wrapper header, 
+.wrapper--search header{
+    grid-area: header;
+}
 
-.wrapper aside{
+.wrapper--search .main-header__search{
+    grid-area: search;
+}
+
+.wrapper aside,
+.wrapper--search aside{
     grid-area: aside;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
 }
 
-.wrapper article{
+.wrapper article, 
+.wrapper--search article{
     grid-area: article;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
@@ -52,7 +62,8 @@
     gap: 2em; */
 }
 
-.wrapper footer{
+.wrapper footer,
+.wrapper--search footer{
     grid-area: footer;
 }
 
@@ -62,7 +73,16 @@
         grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
             "header header"
-            /* "search article" AGREGAR SI TU PAGINA TIENE SEARCH BAR Y AGREGA UN 10VH MAS EN grid-template-rows */
+            "aside article"
+            "footer footer";
+    }
+
+    .wrapper--search{
+        grid-template-columns: minmax(200px, 20vw) auto;
+        grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
+        grid-template-areas: 
+            "header header"
+            "search search"
             "aside article"
             "footer footer";
     }

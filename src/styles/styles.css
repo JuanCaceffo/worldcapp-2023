@@ -1,10 +1,17 @@
 /* CSS HSL */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800&family=Roboto:wght@900&display=swap');
 
 :root {
+  /* New Colors */
+  --typeface-color:hsla(0, 0%, 100%, 1);
+  --color-primary:hsla(207, 100%, 25%, 1);
+  --color-secondary:hsla(207, 66%, 43%, 1);
+  --color-terciary:hsla(197, 96%, 46%, 1);
+  --hover-color: hsla(30, 88%, 48%, 1);
+
+
   /* Colors */
   --hot-color: hsla(0, 70%, 50%, 1);
-  --hover-color: hsla(30, 88%, 48%, 1);
   --focus-color: hsla(35, 95%, 62%, 1);
   --clear-color-lighter: hsla(32, 100%, 99.5%, 1);
   --clear-color: hsla(32, 100%, 96%, 1);
@@ -18,6 +25,7 @@
   --terciary-color: hsla(245, 27%, 29%, 1);
 
   /* Card Background Color */
+  --gradient-primary: linear-gradient(to right, var(--color-secondary) 20%, var(--color-primary) 80%);
   --card-bg-gradient: linear-gradient(to bottom, var(--clear-color-lighter), rgba(0, 0, 0, 0.05));
   --user-info-background: linear-gradient(to bottom, var(--clear-color), var(--clear-color-lighter));
 
