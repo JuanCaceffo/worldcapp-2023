@@ -18,7 +18,7 @@
         "footer";
 }
 
-.wrapper header{
+.wrapper-header{
     grid-area: header;
     position: fixed;
     top: 0;
@@ -30,13 +30,13 @@
     padding-top: 2em;
 } */
 
-.wrapper aside{
+.wrapper-aside{
     grid-area: aside;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
 }
 
-.wrapper article{
+.wrapper-article{
     grid-area: article;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
@@ -52,7 +52,7 @@
     gap: 2em; */
 }
 
-.wrapper footer{
+.wrapper-footer{
     grid-area: footer;
 }
 
