@@ -1,55 +1,43 @@
-@import url(../../../styles/styles.css);
 @import url(../logo/logo.css);
 
-.header-box{
+.header-main{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  padding: 0 1rem 0 1rem;
-  background-color: var(--primary-color);
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  width: 100vw;
+  height: auto;
+  gap: 2rem;
   z-index: 99;
-  font-size: 0.8rem;
-}
-.header-box--logo.logo{
-  font-size: 3em;
+  box-shadow: var(--box-shadow-xs);
+  background-image: var(--gradient-primary);
 }
 
-/*TODO: PARAMETRIZAR EL COLOR DEL SVG DEL MENU HAMBURGUESA*/
-.navbar-burger-button{
-  all: unset;
-  width: 3.5em;
-  height: 3.5em;
-  background: url(../../../images/nav-bar-start.svg) center/cover no-repeat;
+.header-main__menu{
+  display: flex;
+  font-size: 3.5em;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.burger-button-list{
+.header-main__burger-menu,
+.header-main__text-menu{
+  list-style: none;
+}
+
+.header-main__text-menu{
   display: none;
 }
 
+.header-main__text-menu .button--text,
+.header-main__text-menu .button--icon,
+.header-main__burger-menu .button--icon{
+    font-size: 0.7em;
+}
 
-@media (min-width: 769px){
-  .navbar-burger-button{
-    background-image: none;
-  }
-  .header-box--navbar{
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    padding: 0 3rem 0 3rem;
-  }
-  .burger-button-list{
-    display: flex;
-    align-items: center;
-    gap: 3em;
-    font-size: 2.5em;
-    list-style: none;
-  }
-  .fa-right-from-bracket{
-    padding-top: 0.2em;
-    font-size: 1.2em;
-    margin-left: -1em;
-  }
+
+.header-main__search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

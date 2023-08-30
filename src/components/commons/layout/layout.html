@@ -4,40 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/">
-  <link rel="stylesheet" href="./layout.css">
+  <link rel="stylesheet" href="/src/styles/styles.css">
+  <link rel="stylesheet" href="layout.css">
   <title>Layout</title>
 </head>
 
-<body>
-  
+<body>  
   <div class="wrapper">
-
-    <header class="wrapper-header header-box">
-      <!-- ESTRUCUTRE COMPONENT LOGO -->
-      <figure class="header-box--logo logo">
-        <img src="../../../images/logo.png" alt="WorldCapp"></img>
-        <div class="logo-text">
-          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-        </div>
-      </figure>
-      <!-- ESTRUCUTRE COMPONENT LOGO -->
-      <nav class="header-box--navbar">
-        <button class="navbar-burger-button"></button>
-        <ul class="burger-button-list">
-          <a class="list-item --card">figuritas</a>
-          <a class="list-item --packs">sobres</a>
-          <a class="list-item --profile">perfil</a>
-          <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
-        </ul>
-      </nav>
+    <header class="wrapper__header header-main">
+      <section class="header-main__menu">
+        <figure class="logo">
+          <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+          <section class="logo__text">
+            <span class="logo__left-text">world</span><span class="logo__center-dot">.</span><span class="logo__right-text">capp</span>
+          </section>
+        </figure>
+        <nav>
+          <ul class="header-main__text-menu">
+            <li class="button--text">Figuritas</li>
+            <li class="button--text">Sobres</li>
+            <li class="button--text">Perfil</li>
+            <li class="button--icon"><i class="fa-solid fa-right-from-bracket"></i></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul class="header-main__burger-menu">
+            <li class="button--icon"><i class="fa-solid fa-bars"></i></li>
+          </ul>
+        </nav>
+      </section>
     </header>
-
+    
     <aside class="wrapper-aside">aside</aside>
+
     <article class="wrapper-article">article</article>
 
     <footer class="wrapper-footer main-footer">
-
       <nav class="social-media">
         <a class="circle icon">
           <i class="fa-brands fa-facebook-f fa-sm"></i>
@@ -52,18 +54,14 @@
           <i class="fa-brands fa-at fa-sm"></i>
         </a>
       </nav>
-
       <section class="logo">
         <img src="../../../images/logo.png" alt="WorldCapp">
         <div class="logo-text">
           <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
         </div>
-      </section>
-    
+      </section>    
     </footer>
-
   </div>
-
 </body>
 <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
 </html>

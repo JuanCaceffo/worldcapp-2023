@@ -1,5 +1,5 @@
-@import url(../main-footer/main-footer.css);
 @import url(../header/header.css);
+@import url(../main-footer/main-footer.css);
 
 .wrapper{
     display: grid;
@@ -25,23 +25,23 @@
         "footer";
 }
 
-.wrapper-header{
+.wrapper__header{
     grid-area: header;
 }
 
-.wrapper-aside{
+.wrapper__aside{
     grid-area: aside;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
 }
 
-.wrapper-article{
+.wrapper__article{
     grid-area: article;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
 }
 
-.wrapper-footer{
+.wrapper__footer{
     grid-area: footer;
 }
 
