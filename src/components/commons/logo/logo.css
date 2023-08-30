@@ -1,32 +1,39 @@
 @import url('../../../styles/styles.css');
 
 .logo {
-  font-size: 2rem;
+  /*Layout*/
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /*Typeface*/
+  color: var(--typeface-color);
+  text-shadow: var(--box-shadow-md);
 }
 
-.logo__text{
-  padding: 0.12em 0 0.25em 0.3em;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+.logo__text {
+  /*Layout*/
+  cursor: default;
 }
 
-.logo__img{
-  width: 1.8em;
-  height: auto;
+.logo__img {
+  /*Layout*/
+  width: 1.4em;
+  margin-right: 0.4em;
 }
 
 .logo__left-text {
+  /*Typeface*/
   font-weight: 800;
 }
 
-.logo__center-dot{
-  font-family:var(--secondary-font);
-  font-weight: bold;
-  color:var(--verdigris);
+.logo__center-dot {
+  /*Layout*/
+  margin: 0 0.05em;
+  /*Typeface*/
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  color: var(--focus-color);
 }
 
 .logo__right-text {
+  /*Typeface*/
   font-weight: 400;
 }
