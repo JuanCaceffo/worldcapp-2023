@@ -1,4 +1,3 @@
-@import url(../../../styles/styles.css);
 @import url(../main-footer/main-footer.css);
 @import url(../header/header.css);
 
@@ -9,13 +8,15 @@
     width: 100vw;
     height: 100vh;
     
-    grid-template-rows: 10vh auto auto 10vh;
-    grid-template-areas: 
-        "header"
-        /* "search" AGREGAR SI TU PAGINA TIENE SEARCH BAR Y AGREGA UN 'auto' MAS EN grid-template-rows */
-        "aside"
-        "article"
-        "footer";
+   
+}
+
+.wrapper--basic{
+
+}
+
+.wrapper--search{
+
 }
 
 .wrapper-header{
