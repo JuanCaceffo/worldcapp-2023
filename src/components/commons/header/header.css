@@ -1,6 +1,6 @@
 @import url(../logo/logo.css);
 
-.header-main{
+.header-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,31 +13,53 @@
   background-image: var(--gradient-primary);
 }
 
-.header-main__menu{
+.header-main__menu {
   display: flex;
   font-size: 3.5em;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-main__burger-menu,
-.header-main__text-menu{
-  list-style: none;
+.header-main__burger-menu-items,
+.header-main__text-menu-items {
+  display: flex;
+  
+  list-style: none;  
 }
 
-.header-main__text-menu{
+.header-main__text-menu {
   display: none;
 }
 
 .header-main__text-menu .button--text,
 .header-main__text-menu .button--icon,
-.header-main__burger-menu .button--icon{
-    font-size: 0.7em;
+.header-main__burger-menu .button--icon {
+  font-size: 0.7em;
+}
+
+.header-main__text-menu .button--text {
+  margin-right: 1em;
 }
 
 
-.header-main__search{
+.header-main__search {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: var(--color-terciary);
+}
+
+.main-header__search form {
+  min-width: 70vw;
+}
+
+@media screen and (min-width:768px) {
+  .header-main__text-menu {
+    display: flex;
+  }
+
+  .header-main__burger-menu {    
+    display: none;
+  }
 }
