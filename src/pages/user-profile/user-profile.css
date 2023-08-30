@@ -3,9 +3,6 @@
 @import url(../../components/card-user/card-user.css);
 @import url(../../components/profile-user/profile-user.css);
 
-.wrapper{
-  grid-auto-flow: column ;
-}
 .form-user-info__header.user-card{
   padding: 0;
   background-image: none;
