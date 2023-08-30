@@ -1,35 +1,33 @@
 @import url(../main-footer/main-footer.css);
 @import url(../header/header.css);
 
-
 .wrapper{
     display: grid;
-    min-width: 330px;
+    min-width: 33rem;
     width: 100vw;
     height: 100vh;
-    
-   
-}
 
-.wrapper--basic{
-
+    grid-template-rows: minmax(6rem, 10vh) auto auto minmax(6rem, 10vh);
+    grid-template-areas: 
+        "header"
+        "aside"
+        "article"
+        "footer";
 }
 
 .wrapper--search{
-
+    grid-template-rows: minmax(6rem, 10vh) 5.2rem auto auto minmax(6rem, 10vh);
+    grid-template-areas: 
+        "header"
+        "search"
+        "aside"
+        "article"
+        "footer";
 }
 
 .wrapper-header{
     grid-area: header;
-    position: fixed;
-    top: 0;
 }
-
-/* .wrapper search{
-    grid-area: search;
-    padding: 1rem;
-    padding-top: 2em;
-} */
 
 .wrapper-aside{
     grid-area: aside;
@@ -41,16 +39,6 @@
     grid-area: article;
     /* OPCIONAL EL PADDING */
     padding: 1rem;
-
-    /* LES DEJO POR SI QUIEREN PROBARLO EL CODIGO PARA HACER EL GRID DE LOS ELEMENTOS QUE TENEMOS Q MOSTRAR
-    OSEA EL GRID PARA SCROLLEAR ENTRE LOS ITEMS */
-    /* TIP: PARA QUE FUNKE LINDO EL AUTO-FIT LOS CONTAINERS DE LO QUE LE PONGAN ADENTRO TIENEN QUE TENES WIDTH:100% */
-    /* display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-auto-rows: max-content;
-    gap: 2em; */
 }
 
 .wrapper-footer{
@@ -59,11 +47,20 @@
 
 @media screen and (min-width:768px){
     .wrapper{
-        grid-template-columns: minmax(200px, 20vw) auto;
-        grid-template-rows: 10vh auto 10vh;
+        grid-template-columns: minmax(20rem, 20vw) auto;
+        grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
         grid-template-areas: 
             "header header"
-            /* "search article" AGREGAR SI TU PAGINA TIENE SEARCH BAR Y AGREGA UN 10VH MAS EN grid-template-rows */
+            "aside article"
+            "footer footer";
+    }
+
+    .wrapper--search{
+        grid-template-columns: minmax(20rem, 20vw) auto;
+        grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
+        grid-template-areas: 
+            "header header"
+            "search search"
             "aside article"
             "footer footer";
     }
