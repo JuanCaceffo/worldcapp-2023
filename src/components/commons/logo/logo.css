@@ -8,7 +8,7 @@
   text-shadow: var(--box-shadow-md);
 }
 
-.logo img{
+.logo__img{
   /*Layout*/
   width: 1.4em;
   margin-right: 0.4em;  
@@ -19,12 +19,12 @@
   cursor: default;
 }
 
-.text__first-part {
+.logo__first-part {
   /*Typeface*/
   font-weight: 800;
 }
 
-.text__center-dot {
+.logo__center-dot {
   /*Layout*/
   margin: 0 0.05em;
   /*Typeface*/
@@ -33,7 +33,7 @@
   color:var(--focus-color);
 }
 
-.text__last-part {
+.logo__last-part {
   /*Typeface*/
   font-weight: 400;
 }
