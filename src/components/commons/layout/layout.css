@@ -13,6 +13,7 @@
         "aside"
         "article"
         "footer";
+
 }
 
 .wrapper--search{
@@ -29,15 +30,17 @@
     grid-area: header;
 }
 
+.wrapper__search{
+    grid-area: search;
+}
+
 .wrapper__aside{
     grid-area: aside;
-    /* OPCIONAL EL PADDING */
     padding: 1rem;
 }
 
 .wrapper__article{
     grid-area: article;
-    /* OPCIONAL EL PADDING */
     padding: 1rem;
 }
 
@@ -56,7 +59,7 @@
     }
 
     .wrapper--search{
-        grid-template-columns: minmax(20rem, 20vw) auto;
+        grid-template-columns: minmax(200px, 20vw) auto;
         grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
         grid-template-areas: 
             "header header"

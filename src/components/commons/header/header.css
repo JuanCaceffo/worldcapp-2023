@@ -9,8 +9,11 @@
   height: auto;
   gap: 2rem;
   z-index: 99;
-  box-shadow: var(--box-shadow-xs);
-  background-image: var(--gradient-primary);
+  font-size: 0.8rem;
+}
+
+.header-box--logo.logo{
+  font-size: 3em;
 }
 
 .header-main__menu {
@@ -31,10 +34,24 @@
   display: none;
 }
 
-.header-main__text-menu .button--text,
-.header-main__text-menu .button--icon,
-.header-main__burger-menu .button--icon {
-  font-size: 0.7em;
+
+@media (min-width: 769px){
+  .navbar-burger-button{
+    background-image: none;
+  }
+  .header-box--navbar{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0 3rem 0 3rem;
+  }
+  .burger-button-list{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    font-size: 2.5em;
+    list-style: none;
+  }
 }
 
 .header-main__text-menu .button--text {

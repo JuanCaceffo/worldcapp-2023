@@ -1,6 +1,6 @@
 @import url('../../../styles/styles.css');
 
-.logo {
+.logo{
   /*Layout*/
   display: flex;
   /*Typeface*/
@@ -8,18 +8,18 @@
   text-shadow: var(--box-shadow-md);
 }
 
-.logo__text {
+.logo__img{
+  /*Layout*/
+  width: 1.4em;
+  margin-right: 0.4em;  
+}
+
+.logo__text{
   /*Layout*/
   cursor: default;
 }
 
-.logo__img {
-  /*Layout*/
-  width: 1.4em;
-  margin-right: 0.4em;
-}
-
-.logo__left-text {
+.logo__first-part {
   /*Typeface*/
   font-weight: 800;
 }
@@ -28,12 +28,12 @@
   /*Layout*/
   margin: 0 0.05em;
   /*Typeface*/
-  font-family: var(--secondary-font);
+  font-family:var(--secondary-font);
   font-weight: 800;
-  color: var(--focus-color);
+  color:var(--focus-color);
 }
 
-.logo__right-text {
+.logo__last-part {
   /*Typeface*/
   font-weight: 400;
 }

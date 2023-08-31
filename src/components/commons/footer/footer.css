@@ -1,5 +1,4 @@
-@import url('../../../styles/styles.css');
-@import url(../logo/logo.css);
+@import url(/src/components/commons/logo/logo.css);
 
 .main-footer {
     font-size: 2rem;
