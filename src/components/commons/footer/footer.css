@@ -9,6 +9,5 @@
   width: 100vw;
   height: 100%;
   z-index: 99;
-  background-color: var(--color-secondary);  
   font-size: 2rem;  
 }

@@ -19,13 +19,12 @@
   display: flex;
   justify-content: center;
   height: 100%;
-  background-color: var(--color-terciary);
 }
 
 .form__row {
   /*Layout*/
   flex: 1;
-  max-width: 70vw;
+  max-width: 65vw;
   display: flex;
   align-items: center;
   position: relative;

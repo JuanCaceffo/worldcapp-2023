@@ -9,7 +9,15 @@
   --color-terciary:hsla(197, 96%, 46%, 1);
   --hover-color: hsla(30, 88%, 48%, 1);
 
+  --color-terciary-complementary-lighter:	hsla(17, 100%, 99.5%, 1);
+  --color-terciary-complementary:	hsla(17, 100%, 97%, 1);
 
+  --opacity-background-lighter: opacity(0.1);
+  --opacity-background-base: opacity(0.12);
+  --opacity-background-darker: opacity(0.2);
+  
+
+    
   /* Colors */
   --hot-color: hsla(0, 70%, 50%, 1);
   --focus-color: hsla(35, 95%, 62%, 1);

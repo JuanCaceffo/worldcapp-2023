@@ -33,28 +33,38 @@
     /*Layout*/
     grid-area: header;
     z-index: 99;
+    /*styles*/
+    background-image: var(--gradient-primary);
 }
 
 .wrapper__search{
     /*Layout*/
     grid-area: search;
+    /*styles*/
+    background-color: var(--color-terciary);
 }
 
 .wrapper__aside{
     /*Layout*/
     grid-area: aside;
+    background-color: var(--color-terciary-complementary);
     padding: 1rem;
+    /*styles*/
 }
 
 .wrapper__article{
     /*Layout*/
     grid-area: article;
     padding: 1rem;
+    /*styles*/
+    background-color: var(--color-terciary-complementary-lighter);
 }
 
 .wrapper__footer{
     /*Layout*/
     grid-area: footer;
+    /*styles*/
+    background-color: var(--color-secondary);
 }
 
 @media screen and (min-width:768px){
