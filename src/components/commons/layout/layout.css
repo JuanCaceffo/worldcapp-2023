@@ -31,6 +31,7 @@
 .wrapper__header{
     /*Layout*/
     grid-area: header;
+    z-index: 99;
 }
 
 .wrapper__search{
