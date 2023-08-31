@@ -1,5 +1,6 @@
 @import url("/src/components/commons/header/header.css");
 @import url("/src/components/commons/footer/footer.css");
+@import url("/src/components/commons/input/input.css");
 
 .wrapper{
     /*Layout*/
