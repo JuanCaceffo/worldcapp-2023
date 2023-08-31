@@ -1,31 +1,74 @@
-@import url(../../../styles/styles.css);
-@import url(../logo/logo.css);
+@import url(/src/components/commons/logo/logo.css);
+@import url(/src/components/commons/navbar/navbar.css);
+@import url(/src/components/commons/button/button.css);
 
-.header-box{
+
+.header-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  padding: 0 1rem 0 1rem;
-  background-color: var(--primary-color);
+  padding: 2rem;
+  width: 100vw;
+  height: 100%;
+  z-index: 99;
+  box-shadow: var(--box-shadow-xs);
+  background-image: var(--gradient-primary);
+  font-size: 3.5rem;
+}
+
+.header-main__web{
+  display: none;
+}
+
+.header-main__navbar{
+  font-size: 0.7em;
+}
+
+.header-main__navbar .navbar__buttons{
+  gap: 1.2em;
+}
+
+@media screen and (min-width:768px) {
+  .header-main__web {
+    display: flex;
+  }
+
+  .header-main__mobile {    
+    display: none;
+  }
+}
+
+/* .header-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  width: 100vw;
+  height: auto;
+  gap: 2rem;
   z-index: 99;
   font-size: 0.8rem;
 }
+
 .header-box--logo.logo{
   font-size: 3em;
 }
 
-/*TODO: PARAMETRIZAR EL COLOR DEL SVG DEL MENU HAMBURGUESA*/
-.navbar-burger-button{
-  all: unset;
-  width: 3.5em;
-  height: 3.5em;
-  background: url(../../../images/nav-bar-start.svg) center/cover no-repeat;
+.header-main__menu {
+  display: flex;
+  font-size: 3.5em;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.burger-button-list{
+.header-main__burger-menu-items,
+.header-main__text-menu-items {
+  display: flex;
+  
+  list-style: none;  
+}
+
+.header-main__text-menu {
   display: none;
 }
 
@@ -47,9 +90,31 @@
     font-size: 2.5em;
     list-style: none;
   }
-  .fa-right-from-bracket{
-    padding-top: 0.2em;
-    font-size: 1.2em;
-    margin-left: -1em;
-  }
 }
+
+.header-main__text-menu .button--text {
+  margin-right: 1em;
+}
+
+
+.header-main__search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-terciary);
+}
+
+.main-header__search form {
+  min-width: 70vw;
+}
+
+@media screen and (min-width:768px) {
+  .header-main__text-menu {
+    display: flex;
+  }
+
+  .header-main__burger-menu {    
+    display: none;
+  }
+} */

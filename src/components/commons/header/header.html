@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="/src/styles/styles.css">
+  <link rel="stylesheet" href="header.css">
   <title>Header</title>
 </head>
+
 <body>
-  <header class="header-box">
-    <!-- ESTRUCTURE COMPONENT LOGO -->
-    <figure class="header-box--logo logo">
-      <img src="/src/images/logo.png" alt="WorldCapp"></img>
-      <div class="logo-text">
-        <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-      </div>
-    </figure>
-    <!-- ESTRUCUTRE COMPONENT LOGO -->
-    <nav class="header-box--navbar">
-      <button class="navbar-burger-button"></button>
-      <ul class="burger-button-list">
-        <a class="list-item --card">figuritas</a>
-        <a class="list-item --packs">sobres</a>
-        <a class="list-item --profile">perfil</a>
-        <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
-      </ul>
-    </nav>
+  <header class="header-main">
+    <section class="header-main__logo">
+      <figure class="logo">
+        <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+        <section class="logo__text">
+          <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+            class="logo__last-part">capp</span>
+        </section>
+      </figure>
+    </section>
+    <section class="header-main__navbar">
+      <section class="header-main__web">
+        <nav class="navbar--tabs">
+          <ul class="navbar__buttons">
+            <li class="button--text"><a class="button__link" href="">Figuritas</a></li>
+            <li class="button--text"><a class="button__link" href="">Sobres</a></li>
+            <li class="button--text"><a class="button__link" href="">Perfil</a></li>
+            <li class="button--icon"><a class="button__link" href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="header-main__mobile">
+        <div class="button--icon">
+          <a class="button__link" href="">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </div>
+      </section>
+    </section>
   </header>
 </body>
 <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
