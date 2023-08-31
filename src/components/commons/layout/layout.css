@@ -1,5 +1,6 @@
 @import url("/src/components/commons/header/header.css");
 @import url("/src/components/commons/footer/footer.css");
+@import url("/src/components/commons/input/input.css");
 
 .wrapper{
     /*Layout*/
@@ -31,6 +32,7 @@
 .wrapper__header{
     /*Layout*/
     grid-area: header;
+    z-index: 99;
 }
 
 .wrapper__search{

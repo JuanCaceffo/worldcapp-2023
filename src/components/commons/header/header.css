@@ -10,7 +10,6 @@
   padding: 2rem;
   width: 100vw;
   height: 100%;
-  z-index: 99;
   box-shadow: var(--box-shadow-xs);
   background-image: var(--gradient-primary);
   font-size: 3.5rem;
