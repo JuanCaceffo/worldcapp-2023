@@ -1,11 +1,6 @@
 @import url('../../styles/styles.css');
 @import url('../commons/input/input.css');
 
-/* Cambiar por input Search */
-.solo-maqueta{
-    padding-top: 0.4em;
-    text-align: center;
-}
 .variant-filter-a{  
     background-color: var(--primary-color);
     border-radius: 0 0 0.5rem 0.5rem;
@@ -40,3 +35,6 @@
     height: 3em;
     width: 100%;
 }
+.form__container {
+    gap: 1rem;
+  }
