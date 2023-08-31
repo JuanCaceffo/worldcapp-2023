@@ -1,0 +1,10 @@
+@import url('../../styles/styles.css');
+@import url('../../components/commons/layout/layout.css');
+@import url('../../components/commons/main-footer/main-footer.css');
+@import url('../../components/commons/header/header.css');
+@import url('../../components/filter/variant-filter.css');
+@import url('../../components/card/card.css');
+
+body{
+    display: block;
+}
