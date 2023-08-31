@@ -1,4 +1,5 @@
-@import url(../logo/logo.css);
+@import url(/src/components/commons/logo/logo.css);
+@import url(/src/components/commons/navbar/navbar.css);
 
 .header-main {
   display: flex;

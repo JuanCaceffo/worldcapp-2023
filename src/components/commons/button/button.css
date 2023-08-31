@@ -1,6 +1,3 @@
-@import url('../../../styles/styles.css');
-
-
 .test__container--button {
   /*Layout*/
   display: flex;
@@ -88,18 +85,21 @@
   color: var(--lighter-text);
 }
 
-.button--icon,
-.button--text,
-.button--circle {
-  /*Layout*/
-  width: fit-content;
-  /*Visual*/
-  color: var(--clear-color);
+.button--circle,
+.button--icon{
+  list-style: none;
 }
 
-.button--circle {
+.button--circle{
   /*Layout*/
-  padding: 0.6rem;
+  text-align: center;
+  line-height: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.button__link{
+  color: var(--typeface-color);
 }
 
 .button--text,
@@ -134,7 +134,7 @@
 
 .button--circle:hover {
   /*Visual*/
-  background-color: var(--secondary-color);
+  background-color: var(--color-terciary);
 }
 
 .button--primary:hover,

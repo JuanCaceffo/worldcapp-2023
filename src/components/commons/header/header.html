@@ -8,24 +8,30 @@
   <title>Header</title>
 </head>
 <body>
-  <header class="header-box">
-    <!-- ESTRUCUTRE COMPONENT LOGO -->
-    <figure class="header-box--logo logo">
-      <img src="../../../images/logo.png" alt="WorldCapp"></img>
-      <div class="logo-text">
-        <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-      </div>
-    </figure>
-    <!-- ESTRUCUTRE COMPONENT LOGO -->
-    <nav class="header-box--navbar">
-      <button class="navbar-burger-button"></button>
-      <ul class="burger-button-list">
-        <a class="list-item --card">figuritas</a>
-        <a class="list-item --packs">sobres</a>
-        <a class="list-item --profile">perfil</a>
-        <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
-      </ul>
-    </nav>
+  <header class="header-main">
+    <section class="header-main__logo">
+      <figure class="logo">
+        <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+        <section class="logo__text">
+          <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span class="logo__last-part">capp</span>
+        </section>
+      </figure>
+    </section>
+    <section class="header-main__navbar">
+      <nav>
+        <ul>
+          <li class="button--text">Figuritas</li>
+          <li class="button--text">Sobres</li>
+          <li class="button--text">Perfil</li>
+          <li class="button--icon"><i class="fa-solid fa-right-from-bracket"></i></li>
+        </ul>
+      </nav>
+      <nav class="main-header__burguer">
+        <li class="button--icon"><i class="fa-solid fa-bars"></i></li>
+      </nav>
+    </section> 
+    
+    
   </header>
 </body>
 <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>

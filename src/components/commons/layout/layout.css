@@ -1,5 +1,5 @@
-@import url(../header/header.css);
-@import url(../main-footer/main-footer.css);
+@import url("/src/components/commons/header/header.css");
+@import url("/src/components/commons/footer/footer.css");
 
 .wrapper{
     display: grid;
