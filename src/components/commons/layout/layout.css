@@ -2,6 +2,7 @@
 @import url("/src/components/commons/footer/footer.css");
 
 .wrapper{
+    /*Layout*/
     display: grid;
     min-width: 33rem;
     width: 100vw;
@@ -17,6 +18,7 @@
 }
 
 .wrapper--search{
+    /*Layout*/
     grid-template-rows: minmax(6rem, 10vh) 5.2rem auto auto minmax(6rem, 10vh);
     grid-template-areas: 
         "header"
@@ -27,29 +29,35 @@
 }
 
 .wrapper__header{
+    /*Layout*/
     grid-area: header;
 }
 
 .wrapper__search{
+    /*Layout*/
     grid-area: search;
 }
 
 .wrapper__aside{
+    /*Layout*/
     grid-area: aside;
     padding: 1rem;
 }
 
 .wrapper__article{
+    /*Layout*/
     grid-area: article;
     padding: 1rem;
 }
 
 .wrapper__footer{
+    /*Layout*/
     grid-area: footer;
 }
 
 @media screen and (min-width:768px){
     .wrapper{
+        /*Layout*/
         grid-template-columns: minmax(20rem, 20vw) auto;
         grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
         grid-template-areas: 
@@ -59,6 +67,7 @@
     }
 
     .wrapper--search{
+        /*Layout*/
         grid-template-columns: minmax(200px, 20vw) auto;
         grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
         grid-template-areas: 

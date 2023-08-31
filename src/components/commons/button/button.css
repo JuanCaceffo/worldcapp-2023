@@ -86,8 +86,14 @@
 }
 
 .button--circle,
+.button--text,
 .button--icon{
-  list-style: none;
+  list-style: none;  
+}
+
+.button__link{
+  color: var(--typeface-color);
+  text-decoration: none;
 }
 
 .button--circle{
@@ -104,7 +110,7 @@
 
 .button--text,
 .button--icon {
-  /*Layout*/
+  /*Layout*/  
   padding: 0.1em;
 }
 
@@ -144,7 +150,9 @@
 }
 
 .button--icon:hover,
-.button--text:hover {
+.button--text:hover,
+.button--text .button__link:hover,
+.button--icon .button__link:hover {
   /*Visual*/
   color: var(--color-terciary);
 }
