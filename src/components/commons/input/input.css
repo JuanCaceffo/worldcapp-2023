@@ -24,7 +24,7 @@
 .form__row {
   /*Layout*/
   flex: 1;
-  max-width: 65vw;
+  max-width: 55vw;
   display: flex;
   align-items: center;
   position: relative;

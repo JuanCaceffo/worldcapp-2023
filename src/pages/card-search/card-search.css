@@ -1,4 +1,22 @@
-@import url('../../components/commons/layout/layout.css');
-@import url('../../components/commons/input/input.css');
-@import url('../../components/commons/button/button.css');
+@import url(/src/components/commons/layout/layout.css);
+@import url(/src/components/commons/input/input.css);
+@import url(/src/components/commons/button/button.css);
+@import url(/src/components/filter/variant-filter.css);
+@import url(/src/components/card/card.css);
+
+
+.wrapper__container{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: var(--box-padding);  
+}
+
+@media screen and (min-width:401px){
+  .wrapper__article{
+    overflow-x: auto
+  }  
+}
 

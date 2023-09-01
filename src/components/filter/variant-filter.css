@@ -7,12 +7,20 @@
     text-align: center;
 }
 .variant-filter-a{  
-    background-color: var(--primary-color);
-    border-radius: 0 0 0.5rem 0.5rem;
+    /* background-color: var(--primary-color); */
+    /* border-radius: 0 0 0.5rem 0.5rem; */
+        
+    /*agregado por pablo*/
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-md);
+    width: 100%;
+    /*end*/
+    
     color: var(--clear-color);
     font-size: 1.25em;
     padding: 0.5rem 0.5rem 4rem 0.5rem;
 }
+
 .variant-filter-a__h{
     font-size: 2em;
     padding: 0.6em 0 0.4em 0;
