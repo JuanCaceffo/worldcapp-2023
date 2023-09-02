@@ -19,8 +19,6 @@
 .variant-filter-a__section{
     display: flex;
     gap: 1em;
-    /* Al achicar se desea que wrap, no, o libre eleccion??  */
-    /* flex-wrap: wrap; */
 }
 .variant-filter-a__container{
     flex-grow: 1;
