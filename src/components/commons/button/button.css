@@ -7,7 +7,7 @@
   max-width: 400px;
   padding: 1em;
   /*Visual*/
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
 }
 
 .button--primary,
@@ -52,7 +52,7 @@
 .button--primary,
 .button--circle {
   /*Visual*/
-  color: var(--clear-color);
+  color: var(--color-clear);
 }
 
 .button--primary {
@@ -62,14 +62,14 @@
 
 .button--circle {
   /*Visual*/
-  background-color: var(--terciary-color);
+  background-color: var(--color-terciary);
 }
 
 .button--secondary,
 .button--tab-on {
   /*Visual*/
-  background-color: var(--clear-color-darker);
-  color: var(--dark-text);
+  background-color: var(--color-clear-darker);
+  color: var(--text-color);
 }
 
 .button--tab-on,
@@ -81,8 +81,8 @@
 
 .button--tab-off {
   /*Visual*/
-  background-color: var(--clear-color-2darker);
-  color: var(--lighter-text);
+  background-color: var(--color-clear-2darker);
+  color: var(--text-color-lighter);
 }
 
 .button--circle,
@@ -134,7 +134,7 @@
 .button--secondary:hover,
 .button--circle:hover {
   /*Visual*/
-  background-color: var(--focus-color);
+  background-color: var(--color-focus);
   box-shadow: var(--box-shadow-md);
 }
 
@@ -146,7 +146,7 @@
 .button--primary:hover,
 .button--secondary:hover {
   /*Visual*/
-  border: 1px solid var(--focus-color);
+  border: 1px solid var(--color-focus);
 }
 
 .button--icon:hover,
@@ -159,5 +159,5 @@
 
 .button--secondary:hover {
   /*Visual*/
-  color: var(--clear-color);
+  color: var(--color-clear);
 }

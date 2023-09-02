@@ -2,9 +2,9 @@
 @import url('../commons/input/input.css');
 
 .variant-filter-a {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   border-radius: 0 0 0.5rem 0.5rem;
-  color: var(--clear-color);
+  color: var(--color-clear-medium);
   font-size: 1.25em;
   padding: 0.5rem 0.5rem 4rem 0.5rem;
   width: 100%;
@@ -24,7 +24,7 @@
 }
 
 .variant-filter-a__title--primary {
-  border-bottom: 1px solid var(--clear-color);
+  border-bottom: 1px solid var(--color-clear-medium);
   margin-bottom: 0.8em;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .variant-filter-a__container__input {
-  color: var(--secondary-color);
+  color: var(--color-secondary);
   height: 3em;
   width: 100%;
 }

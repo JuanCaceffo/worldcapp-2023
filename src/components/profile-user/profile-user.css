@@ -29,7 +29,7 @@
   padding: 1.4em;
   gap: 0.3em;
   /*Visual*/ 
-  background-color: var(--clear-color-darker);
+  background-color: var(--color-clear-darker);
 }
 
 .form-user-info__body--cards{
@@ -52,8 +52,8 @@
   min-height: 50vh;
   margin-top: 1.4em;
   /*Visual*/   
-  background-color: var(--clear-color-lighter);
-  color: var(--dark-text);
+  background-color: var(--color-clear-lighter);
+  color: var(--text-color);
 }
 
 .form-user-info__header.user-card {
@@ -73,7 +73,7 @@
 
 .form-user-info__body h2, h3 {
   /*Visual*/   
-  color: var(--medium-text)
+  color: var(--text-color-medium)
 }
 
 .form-user-info__body h2 {
@@ -95,14 +95,14 @@
   font-size: 1.4em;
   /*Visual*/ 
   cursor: default;
-  background-color: var(--clear-color-darker);
+  background-color: var(--color-clear-darker);
 }
 
 .form__user-info__nav i {
   /*Layout*/ 
   padding: 1em;
   /*Visual*/ 
-  color: var(--dark-text);  
+  color: var(--text-color);  
 }
 
 .form-user-info__actions .button {
@@ -116,8 +116,8 @@
   margin: 2em 0;
   /*Visual*/ 
   box-shadow: var(--box-shadow-2xs);  
-  border-top: 1px solid var(--clear-color-ligther);
-  border-bottom: 1px solid var(--clear-color-darker);
+  border-top: 1px solid var(--color-clear-ligther);
+  border-bottom: 1px solid var(--color-clear-darker);
 }
 
 .form-user-info__body--cards .button--icon{
@@ -127,11 +127,11 @@
 }
 
 .form-user-info__body--cards .button--icon:hover{
-  color: var(--hot-color);
+  color: var(--color-hot);
 }
 
 .form-user-info__actions .button--circle{
-  background-color: var(--medium-text);
+  background-color: var(--text-color-medium);
   padding: 0.6em;
   font-size: 2em;
 }

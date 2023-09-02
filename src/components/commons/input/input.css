@@ -1,22 +1,11 @@
-@import url('../../../styles/styles.css');
-
-/* body{
-  display:flex;
-  justify-content: center;
-} */
-
 .form__container {
   /*Layout*/
   display: flex;
-  flex-direction: column;
-  width: 80vw;
+  flex-wrap: wrap;
+  width: 100%;
   min-width: 25rem;
-  height: fit-content;
-  padding: 2rem;
-  margin: auto;
-  gap: 2rem;
-  /*Visual*/
-  background-color: var(--clear-color);
+  padding: var(--box-padding);
+  gap: var(--box-padding);
 }
 
 .form--search{
@@ -27,8 +16,7 @@
 
 .form__row {
   /*Layout*/
-  flex: 1;
-  max-width: 55vw;
+  width: 100%;  
   display: flex;
   align-items: center;
   position: relative;
@@ -38,19 +26,21 @@
 .form__input--secondary,
 .form__input--icon-left,
 .form__input--icon-right,
-.form__select--primary {
+.form__select {
   /*Layout*/
   flex: 1;
-  min-width: 0;
-  padding: 1rem;
+  min-width: 0;  
+  min-height: 3.6rem;
   /*Typeface*/
-  font-family: var(--primary-font);
+  font-family: var(--typeface-primary);
   font-size: 1.2em;
-  line-height: 1.5em;
-  color: var(--medium-text);
+  line-height: 3em;
+  text-indent: 1em;
+  padding-right: 1em;
+  color: var(--text-color);
   /*Visual*/
-  background-color: var(--clear-color-lighter);
-  border: 1px solid var(--clear-color);
+  background-color: var(--color-clear);
+  border: 1px solid var(--color-clear);
   border-radius: var(--border-radius-xs);
   outline: none;
   box-shadow: var(--box-shadow-2xs);
@@ -62,29 +52,33 @@
 .form__input--secondary::placeholder,
 .form__input--icon-left::placeholder,
 .form__input--icon-right::placeholder,
-.form__select--primary {
+.form__select{
   /*Visual*/
-  color: var(--lighter-text)
-}
-
-.form__input--icon-left {
-  /*Typeface*/
-  text-indent: 1.9em;
+  color: var(--text-color-2lighter);
 }
 
 .form__icon--left,
 .form__icon--right {
-  /*Layout*/
+  /*Layout*/  
   position: absolute;
-  width: 2.8rem;
-  height: max-content;
+  width: 3rem;
+  height: 3.8rem;
   /*typeface*/
   text-align: center;
   /*Visual*/
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   cursor: text;
   /*Animation*/
   transition: background-color var(--transition-time) ease;
+}
+
+.form__input--icon-right {
+  padding-right: 3.2em;
+}
+
+.form__input--icon-left {
+  /*Typeface*/
+  text-indent: 3em;
 }
 
 .form__icon--right {
@@ -101,29 +95,48 @@
   border-radius: var(--border-radius-xs) 0 0 var(--border-radius-xs);
 }
 
-.form__input--primary {
+.form__select{
+  cursor: pointer;
+  height: 3em;
+}
+
+.form__input--primary,
+.form__input--icon-left,
+.form__input--icon-right {
   /* Visual*/
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--color-primary);
 }
 
 .form__input--primary:focus,
-.form__input--secondary:focus {
+.form__input--secondary:focus,
+.form__input--icon-left:focus,
+.form__input--icon-right:focus,
+.form__select:focus {
   /* Visual*/
-  border: 1px solid var(--focus-color);
+  border: 1px solid var(--color-focus);
 }
 
 .form__input--icon-left:focus+i,
 .form__input--icon-right:focus+i {
   /*Visual*/
-  background-color: var(--focus-color);
+  background-color: var(--color-focus);
 }
 
-.form__icon--left.fa-user,
-.form__icon--left.fa-key,
-.form__icon--right.fa-magnifying-glass {
+.form__icon--left.fa-solid,
+.form__icon--right.fa-solid {
   /*Typeface*/
   font-size: 1.4em;
   line-height: 4rem;
   /*Visual*/
-  color: var(--clear-color);
+  color: var(--color-clear);
+}
+
+@media (min-width: 768px) {
+  .form__row{
+    width: 48%
+  }
+  
+  .form__row--long{
+    width: 100%;
+  }  
 }

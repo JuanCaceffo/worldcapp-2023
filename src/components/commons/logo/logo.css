@@ -30,7 +30,7 @@
   /*Typeface*/
   font-family:var(--secondary-font);
   font-weight: 800;
-  color:var(--focus-color);
+  color:var(--color-focus);
 }
 
 .logo__last-part {
