@@ -53,7 +53,7 @@
   margin-top: 1.4em;
   /*Visual*/   
   background-color: var(--color-clear-lighter);
-  color: var(--dark-text);
+  color: var(--text-color);
 }
 
 .form-user-info__header.user-card {
@@ -73,7 +73,7 @@
 
 .form-user-info__body h2, h3 {
   /*Visual*/   
-  color: var(--medium-text)
+  color: var(--text-color-medium)
 }
 
 .form-user-info__body h2 {
@@ -102,7 +102,7 @@
   /*Layout*/ 
   padding: 1em;
   /*Visual*/ 
-  color: var(--dark-text);  
+  color: var(--text-color);  
 }
 
 .form-user-info__actions .button {
@@ -131,7 +131,7 @@
 }
 
 .form-user-info__actions .button--circle{
-  background-color: var(--medium-text);
+  background-color: var(--text-color-medium);
   padding: 0.6em;
   font-size: 2em;
 }

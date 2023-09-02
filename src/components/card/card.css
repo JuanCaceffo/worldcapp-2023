@@ -104,12 +104,12 @@
 }
 
 .player-card__header i {
-  color: var(--primary-color);
+  color: var(--color-primary);
   padding-left: 0.1em;
 }
 
 .player-card__header .fas.fa-star {
-  color: var(--focus-color);
+  color: var(--color-focus);
 }
 
 .player-card__header .fas.fa-fire {

@@ -9,7 +9,7 @@
     background-color: var(--color-clear);
 =======
     max-width: 330px;
-    background-color: var(--clear-color);
+    background-color: var(--color-clear-medium);
 >>>>>>> development
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
@@ -33,11 +33,11 @@
 <<<<<<< HEAD
 
     /* colors */
-    background-color: var(--secondary-color);
+    background-color: var(--color-secondary);
     color: var(--color-clear);
 =======
     background-color: var(--color-primary);
-    color: var(--clear-color);
+    color: var(--color-clear-medium);
 >>>>>>> development
 }
 
@@ -61,7 +61,7 @@
 }
 
 .card-market__status{
-    color: var(--medium-text);
+    color: var(--text-color-medium);
 }
 
 .card-market__info.price{

@@ -63,6 +63,6 @@ body{
 
 .form__label{
     font-size: 1.5em;
-    color: var(--medium-text);
+    color: var(--text-color-medium);
     margin: 0.6em 0 0.3em 0;
 }
