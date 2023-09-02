@@ -29,6 +29,8 @@
   gap: 0.3em;
   /*Visual*/ 
   background-color: var(--clear-color-darker);
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+
 }
 
 .form-user-info__body--cards{
@@ -118,7 +120,10 @@
 }
 
 .form-user-info__actions .button--circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
   background-color: var(--medium-text);
-  padding: 0.6em;
   font-size: 2em;
 }
