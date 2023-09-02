@@ -1,0 +1,69 @@
+@import url('../../components/commons/layout/layout.css');
+@import url('../../components/commons/input/input.css');
+@import url('../../components/commons/button/button.css');
+
+
+.main-header,
+.main-header__menu,
+.main-header__search {
+  display: flex;
+}
+
+.main-header,
+.main-header__search {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-header {
+  padding: 2rem;
+  width: 100vw;
+  height: auto;
+  gap: 2rem;
+  z-index: 99;
+  box-shadow: var(--box-shadow-xs);
+  background-image: var(--gradient-primary);
+}
+
+.main-header__menu {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__menu nav ul,
+.main-header__burguer {
+  list-style: none;
+}
+
+.main-header__menu nav ul {
+  display: none;
+}
+
+.main-header__menu nav ul li {
+  font-size: 0.7em;
+}
+
+.main-header__menu nav ul li.button--text {
+  margin-right: 1em;
+  font-size: 0.7em;
+}
+
+.main-header__search {
+  align-items: center;
+  background-color: var(--color-terciary);
+}
+
+.main-header__search form {
+  min-width: 70vw;
+}
+
+
+@media screen and (min-width:768px) {
+  .main-header__menu nav ul {
+    display: flex;
+  }
+
+  .main-header__burguer {    
+    display: none;
+  }
+}

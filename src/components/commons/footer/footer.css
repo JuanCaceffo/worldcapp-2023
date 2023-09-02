@@ -1,0 +1,14 @@
+@import url(/src/components/commons/logo/logo.css);
+@import url(/src/components/commons/button/button.css);
+@import url(/src/components/commons/navbar/navbar.css);
+
+.footer-main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  z-index: 99;
+  background-color: var(--color-secondary);  
+  font-size: 2rem;  
+}

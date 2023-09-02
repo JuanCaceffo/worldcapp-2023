@@ -1,10 +1,5 @@
 @import url('../../../styles/styles.css');
 
-/* body{
-  display:flex;
-  justify-content: center;
-} */
-
 .form__container {
   /*Layout*/
   display: flex;
@@ -20,8 +15,17 @@
   background-color: var(--clear-color);
 }
 
+.form--search{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--color-terciary);
+}
+
 .form__row {
   /*Layout*/
+  flex: 1;
+  max-width: 70vw;
   display: flex;
   align-items: center;
   position: relative;
@@ -74,7 +78,7 @@
   /*typeface*/
   text-align: center;
   /*Visual*/
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   cursor: text;
   /*Animation*/
   transition: background-color var(--transition-time) ease;

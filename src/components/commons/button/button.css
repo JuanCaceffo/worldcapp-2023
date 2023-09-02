@@ -1,6 +1,3 @@
-@import url('../../../styles/styles.css');
-
-
 .test__container--button {
   /*Layout*/
   display: flex;
@@ -15,15 +12,21 @@
 
 .button--primary,
 .button--secondary,
-.button--icon,
-.button--circle,
 .button--text,
 .button--tab-on,
-.button--tab-off{
+.button--tab-off {
   /*Layout*/
   padding: 1.4rem;
-  /*Typeface*/
-  font-size: 1.2em;
+}
+
+
+.button--primary,
+.button--secondary,
+.button--text,
+.button--icon,
+.button--circle,
+.button--tab-on,
+.button--tab-off {
   /*Visual*/
   cursor: pointer;
 }
@@ -32,14 +35,14 @@
 .button--secondary,
 .button--text,
 .button--tab-on,
-.button--tab-off{
+.button--tab-off {
   /*Typeface*/
   font-family: var(--primary-font);
   font-weight: 800;
 }
 
 .button--primary,
-.button--secondary{
+.button--secondary {
   /*Visual*/
   border: 1px solid var(--hover-color);
   border-radius: var(--border-radius-md);
@@ -48,17 +51,17 @@
 
 .button--primary,
 .button--circle {
-  /*Visual*/  
+  /*Visual*/
   color: var(--clear-color);
 }
 
-.button--primary{
-  /*Visual*/ 
+.button--primary {
+  /*Visual*/
   background-color: var(--hover-color);
 }
 
-.button--circle{
-  /*Visual*/ 
+.button--circle {
+  /*Visual*/
   background-color: var(--terciary-color);
 }
 
@@ -70,40 +73,49 @@
 }
 
 .button--tab-on,
-.button--tab-off{
+.button--tab-off {
   /*Visual*/
-  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0 ;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   border: none;
 }
 
-.button--tab-off{
+.button--tab-off {
   /*Visual*/
   background-color: var(--clear-color-2darker);
   color: var(--lighter-text);
 }
 
-.button--icon,
+.button--circle,
 .button--text,
-.button--circle{  
-  /*Layout*/ 
-  width: fit-content;
-  /*Visual*/ 
-  color: var(--clear-color); 
+.button--icon{
+  list-style: none;  
 }
 
-.button--icon,
+.button__link{
+  color: var(--typeface-color);
+  text-decoration: none;
+}
+
 .button--circle{
-  /*Layout*/ 
-  padding: 0.6rem;
+  /*Layout*/
+  text-align: center;
+  line-height: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
-.button--text{
-  /*Layout*/ 
+.button__link{
+  color: var(--typeface-color);
+}
+
+.button--text,
+.button--icon {
+  /*Layout*/  
   padding: 0.1em;
 }
 
-.button--circle{  
-  /*Visual*/ 
+.button--circle {
+  /*Visual*/
   border-radius: 50%;
 }
 
@@ -120,30 +132,32 @@
 
 .button--primary:hover,
 .button--secondary:hover,
-.button--circle:hover{    
+.button--circle:hover {
   /*Visual*/
   background-color: var(--focus-color);
-  box-shadow: var(--box-shadow-md); 
+  box-shadow: var(--box-shadow-md);
 }
 
-.button--circle:hover{
-  /*Visual*/ 
-  background-color: var(--secondary-color);
+.button--circle:hover {
+  /*Visual*/
+  background-color: var(--color-terciary);
 }
 
 .button--primary:hover,
-.button--secondary:hover{
-  /*Visual*/ 
+.button--secondary:hover {
+  /*Visual*/
   border: 1px solid var(--focus-color);
 }
 
 .button--icon:hover,
-.button--text:hover {
-  /*Visual*/ 
-  color: var(--secondary-color);
+.button--text:hover,
+.button--text .button__link:hover,
+.button--icon .button__link:hover {
+  /*Visual*/
+  color: var(--color-terciary);
 }
 
 .button--secondary:hover {
-  /*Visual*/ 
+  /*Visual*/
   color: var(--clear-color);
 }

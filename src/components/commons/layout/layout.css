@@ -1,69 +1,130 @@
-@import url(../../../styles/styles.css);
-@import url(../main-footer/main-footer.css);
-@import url(../header/header.css);
-
+@import url("/src/components/commons/header/header.css");
+@import url("/src/components/commons/footer/footer.css");
+@import url("/src/components/commons/input/input.css");
 
 .wrapper{
+    /*Layout*/
     display: grid;
-    min-width: 330px;
+    min-width: 33rem;
     width: 100vw;
     height: 100vh;
-    
-    grid-template-rows: 10vh auto auto 10vh;
+
+    grid-template-rows: minmax(6rem, 10vh) auto auto minmax(6rem, 10vh);
     grid-template-areas: 
         "header"
-        /* "search" AGREGAR SI TU PAGINA TIENE SEARCH BAR Y AGREGA UN 'auto' MAS EN grid-template-rows */
+        "aside"
+        "article"
+        "footer";
+
+}
+
+.wrapper--search{
+    /*Layout*/
+    grid-template-rows: minmax(6rem, 10vh) 5.2rem auto auto minmax(6rem, 10vh);
+    grid-template-areas: 
+        "header"
+        "search"
         "aside"
         "article"
         "footer";
 }
 
-.wrapper-header{
+.wrapper--no-aside{
+    /*Layout*/
+    grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
+    grid-template-areas: 
+        "header"
+        "article"
+        "footer";
+}
+
+.wrapper--no-header{
+    grid-template-rows: auto minmax(6rem, 10vh);
+    grid-template-areas: 
+        "article"
+        "footer";  
+}
+
+.wrapper__header{
+    /*Layout*/
     grid-area: header;
-    position: fixed;
-    top: 0;
+    z-index: 99;
 }
 
-/* .wrapper search{
+.wrapper__search{
+    /*Layout*/
     grid-area: search;
-    padding: 1rem;
-    padding-top: 2em;
-} */
-
-.wrapper-aside{
-    grid-area: aside;
-    /* OPCIONAL EL PADDING */
-    padding: 1rem;
 }
 
-.wrapper-article{
-    grid-area: article;
-    /* OPCIONAL EL PADDING */
-    padding: 1rem;
+.wrapper__aside,
+.wrapper__article{
+    display: flex;
+    align-items: flex-start;
+}
 
-    /* LES DEJO POR SI QUIEREN PROBARLO EL CODIGO PARA HACER EL GRID DE LOS ELEMENTOS QUE TENEMOS Q MOSTRAR
-    OSEA EL GRID PARA SCROLLEAR ENTRE LOS ITEMS */
-    /* TIP: PARA QUE FUNKE LINDO EL AUTO-FIT LOS CONTAINERS DE LO QUE LE PONGAN ADENTRO TIENEN QUE TENES WIDTH:100% */
-    /* display: grid;
-    justify-items: center;
+.wrapper__article--no-header,
+.wrapper__article--no-aside{
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-auto-rows: max-content;
-    gap: 2em; */
+    justify-content: center;
 }
 
-.wrapper-footer{
+
+.wrapper__aside{
+    /*Layout*/
+    justify-content:center;
+    grid-area: aside;
+    padding: 1rem;
+}
+
+.wrapper__article{
+    /*Layout*/
+    grid-area: article;
+    padding: 1rem;
+}
+
+.wrapper__footer{
+    /*Layout*/
     grid-area: footer;
 }
 
 @media screen and (min-width:768px){
     .wrapper{
-        grid-template-columns: minmax(200px, 20vw) auto;
-        grid-template-rows: 10vh auto 10vh;
+        /*Layout*/
+        grid-template-columns: minmax(20rem, 20vw) auto;
+        grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
         grid-template-areas: 
             "header header"
-            /* "search article" AGREGAR SI TU PAGINA TIENE SEARCH BAR Y AGREGA UN 10VH MAS EN grid-template-rows */
             "aside article"
             "footer footer";
+    }
+    
+    .wrapper--search{
+        /*Layout*/
+        grid-template-columns: minmax(200px, 20vw) auto;
+        grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
+        grid-template-areas: 
+            "header header"
+            "search search"
+            "aside article"
+            "footer footer";
+    }
+
+    .wrapper--no-aside{
+        /*Layout*/
+        grid-template-columns: auto;
+        grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
+        grid-template-areas: 
+            "header"
+            "article"
+            "footer";
+    }
+
+    .wrapper--no-header{
+        /*Layout*/
+        grid-template-columns: auto;
+        grid-template-rows: auto minmax(6rem, 10vh);
+        grid-template-areas: 
+            "article"
+            "footer";
     }
 }
