@@ -19,8 +19,16 @@
   background-color: var(--clear-color);
 }
 
+.form--search{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
 .form__row {
   /*Layout*/
+  flex: 1;
+  max-width: 55vw;
   display: flex;
   align-items: center;
   position: relative;
