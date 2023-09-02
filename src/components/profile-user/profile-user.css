@@ -64,6 +64,7 @@
 .form-user-info__actions {
   /*Visual*/   
   border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  flex-direction: row-reverse;
 }
 
 .form-user-info__body h2, h3 {
