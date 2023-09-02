@@ -53,6 +53,7 @@
 
 .card-market__info.price{
     font-size: 1.2em;
+    color: var(--color-secondary);
     padding: 0.5em;
     text-align: center;
 }
