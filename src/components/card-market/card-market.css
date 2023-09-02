@@ -1,16 +1,8 @@
-@import url("../../styles/styles.css");
-
 .card-market{
     font-size: 1rem;
     width: 100%;
-<<<<<<< HEAD
-
-    /* Display */
-    background-color: var(--color-clear);
-=======
     max-width: 330px;
     background-color: var(--color-clear-medium);
->>>>>>> development
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
     cursor: default;
@@ -30,15 +22,8 @@
     align-items: center;
     text-align: center;
     border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
-<<<<<<< HEAD
-
-    /* colors */
-    background-color: var(--color-secondary);
-    color: var(--color-clear);
-=======
     background-color: var(--color-primary);
-    color: var(--color-clear-medium);
->>>>>>> development
+    color: var(--color-clear);
 }
 
 .card-market__content{
