@@ -33,18 +33,14 @@
 
 }
 
-.form-user-info__body--cards{
-  gap: 1.4em;
-}
-
 
 .form-user-info {
   /*Layout*/   
   grid-template-areas:
-    "form-user-info__header"
-    "form-user-info__nav"
-    "form-user-info__body"
-    "form-user-info__actions";
+  "form-user-info__header"
+  "form-user-info__nav"
+  "form-user-info__body"
+  "form-user-info__actions";
   min-width: 32rem;
   min-height: 50vh;
   margin-top: 1.4em;
@@ -58,9 +54,8 @@
   min-width: 100%;
 }
 
-.form-user-info__body {
-  /*Visual*/   
-  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+.form-user-info__body--cards{
+  gap: 1.4em;
 }
 
 .form-user-info__actions {
