@@ -5,20 +5,19 @@
 .wrapper{
     /*Layout*/
     display: grid;
-    min-width: 33rem;
+    min-width: 35rem;
     width: 100vw;
     height: 100vh;
-
+        
     grid-template-rows: minmax(6rem, 10vh) auto auto minmax(6rem, 10vh);
     grid-template-areas: 
         "header"
         "aside"
         "article"
         "footer";
-
 }
 
-.wrapper--search{
+.wrapper--search{    
     /*Layout*/
     grid-template-rows: minmax(6rem, 10vh) 5.2rem auto auto minmax(6rem, 10vh);
     grid-template-areas: 
@@ -49,11 +48,16 @@
     /*Layout*/
     grid-area: header;
     z-index: 99;
+    /*styles*/
+    background-image: var(--gradient-primary);
 }
 
 .wrapper__search{
     /*Layout*/
     grid-area: search;
+    padding: 0.5em var(--box-padding);
+    /*styles*/
+    background-color: var(--color-terciary);
 }
 
 .wrapper__aside,
@@ -73,24 +77,30 @@
     /*Layout*/
     justify-content:center;
     grid-area: aside;
-    padding: 1rem;
+    background-color: var(--color-terciary-complementary);
+    padding: var(--box-padding);
+    /*styles*/
 }
 
 .wrapper__article{
     /*Layout*/
     grid-area: article;
-    padding: 1rem;
+    padding: var(--box-padding);
+    /*styles*/
+    background-color: var(--color-terciary-complementary-lighter);
 }
 
 .wrapper__footer{
     /*Layout*/
     grid-area: footer;
+    /*styles*/
+    background-color: var(--color-secondary);
 }
 
 @media screen and (min-width:768px){
     .wrapper{
         /*Layout*/
-        grid-template-columns: minmax(20rem, 20vw) auto;
+        grid-template-columns: max(20rem, 20vw) auto;
         grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
         grid-template-areas: 
             "header header"
@@ -100,7 +110,7 @@
     
     .wrapper--search{
         /*Layout*/
-        grid-template-columns: minmax(200px, 20vw) auto;
+        grid-template-columns: max(20rem, 20vw) auto;
         grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
         grid-template-areas: 
             "header header"

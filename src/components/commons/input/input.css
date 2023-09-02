@@ -1,5 +1,10 @@
 @import url('../../../styles/styles.css');
 
+/* body{
+  display:flex;
+  justify-content: center;
+} */
+
 .form__container {
   /*Layout*/
   display: flex;
@@ -8,7 +13,6 @@
   min-width: 25rem;
   height: fit-content;
   padding: 2rem;
-  /* Agrego FACU */
   margin: auto;
   gap: 2rem;
   /*Visual*/
@@ -19,13 +23,12 @@
   display: flex;
   justify-content: center;
   height: 100%;
-  background-color: var(--color-terciary);
 }
 
 .form__row {
   /*Layout*/
   flex: 1;
-  max-width: 70vw;
+  max-width: 55vw;
   display: flex;
   align-items: center;
   position: relative;
@@ -78,7 +81,7 @@
   /*typeface*/
   text-align: center;
   /*Visual*/
-  background-color: var(--color-primary);
+  background-color: var(--primary-color);
   cursor: text;
   /*Animation*/
   transition: background-color var(--transition-time) ease;

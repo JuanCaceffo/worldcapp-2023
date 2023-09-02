@@ -1,11 +1,9 @@
 @import url("../../styles/styles.css");
 
 .card-market{
-    /* Sizing */
     font-size: 1rem;
     width: 100%;
-
-    /* Display */
+    max-width: 330px;
     background-color: var(--clear-color);
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
@@ -19,28 +17,20 @@
 }
 
 .card-market__name{
-    /* Sizing */
-    min-height: 4em;
-
-    /* Display */
+    font-size: 0.8em;
+    padding: 1em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
     border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
-
-    /* colors */
-    background-color: var(--secondary-color);
+    background-color: var(--color-primary);
     color: var(--clear-color);
 }
 
-
 .card-market__content{
-    /* Sizing */
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
     padding: 0.5em 1em;
-
-    /* Display */
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -63,6 +53,7 @@
 
 .card-market__info.price{
     font-size: 1.2em;
+    color: var(--color-secondary);
     padding: 0.5em;
     text-align: center;
 }
