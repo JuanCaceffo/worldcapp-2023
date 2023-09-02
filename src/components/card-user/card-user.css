@@ -19,7 +19,7 @@
   align-items: center;
   gap: 1.5em;
   align-content: space-between;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .user-card__data-name{
@@ -27,18 +27,11 @@
   align-items: center;
   gap: 0.2em;
   font-weight: bold;
-  font-size: 2em;
 }
 .user-card__edit-icon{
   width: 0.6em;
   height: 0.6em;
   margin-top: 0.15em;
   background: center/cover no-repeat url(../../images/pen.svg);
-}
-.user-card-separator{
-  width: 30em;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 2em;
 }
 

@@ -1,9 +1,11 @@
-@import url(../../styles/styles.css);
 @import url(../../components/commons/layout/layout.css);
 @import url(../../components/card-user/card-user.css);
 @import url(../../components/profile-user/profile-user.css);
 
-.form-user-info__header.user-card{
-  padding: 0;
-  background-image: none;
+.wrapper__aside{
+  margin: 2em 0;
 }
+.wrapper__article{
+  justify-content: center;
+}
+

@@ -35,10 +35,6 @@
   gap: 1.4em;
 }
 
-.form-user-info__actions {
-  /*Layout*/ 
-  flex-wrap: wrap;  
-}
 
 .form-user-info {
   /*Layout*/   
@@ -53,11 +49,11 @@
   /*Visual*/   
   background-color: var(--clear-color-lighter);
   color: var(--dark-text);
+  width: 100%;
 }
 
-.form-user-info__header.user-card {
-  padding: 2em;
-  background-image: var(--user-info-background);
+.form__row{
+  min-width: 100%;
 }
 
 .form-user-info__body {
@@ -109,15 +105,6 @@
   flex-basis: 29em;
 }
 
-.form-user-info__header .sep{
-  /*Layout*/
-  width: 100%;
-  margin: 2em 0;
-  /*Visual*/ 
-  box-shadow: var(--box-shadow-2xs);  
-  border-top: 1px solid var(--clear-color-ligther);
-  border-bottom: 1px solid var(--clear-color-darker);
-}
 
 .form-user-info__body--cards .button--icon{
   position: absolute;

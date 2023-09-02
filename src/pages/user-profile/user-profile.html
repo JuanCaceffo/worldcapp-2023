@@ -1,162 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./user-profile.css">
-  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
-  <title>User profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <link rel="stylesheet" href="user-profile.css">
+    <title>User profile</title>
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="wrapper-header header-box">
-      <!-- ESTRUCUTRE COMPONENT LOGO -->
-      <figure class="header-box--logo logo">
-        <img src="../../images/logo.png" alt="WorldCapp"></img>
-        <div class="logo-text">
-          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-        </div>
-      </figure>
-      <!-- ESTRUCUTRE COMPONENT LOGO -->
-      <nav class="header-box--navbar">
-        <button class="navbar-burger-button"></button>
-        <ul class="burger-button-list">
-          <a class="list-item --card">figuritas</a>
-          <a class="list-item --packs">sobres</a>
-          <a class="list-item --profile">perfil</a>
-          <i class="list-item --logout fa-solid fa-right-from-bracket"></i>
-        </ul>
-      </nav>
-    </header>
+<div class="wrapper">  <!--Borrar wrapper--search si tu web no tiene search-->
+    <div class="wrapper__header">
+        <header class="header-main">
+            <section class="header-main__logo">
+                <figure class="logo">
+                    <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+                    <section class="logo__text">
+                        <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                            class="logo__last-part">capp</span>
+                    </section>
+                </figure>
+            </section>
+            <section class="header-main__navbar">
+                <section class="header-main__web">
+                    <nav class="navbar--tabs">
+                        <ul class="navbar__buttons">
+                            <li class="button--text"><a class="button__link" href="">Figuritas</a></li>
+                            <li class="button--text"><a class="button__link" href="">Sobres</a></li>
+                            <li class="button--text"><a class="button__link" href="">Perfil</a></li>
+                            <li class="button--icon"><a class="button__link" href=""><i
+                                    class="fa-solid fa-right-from-bracket"></i></a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="header-main__mobile">
+                    <div class="button--icon">
+                        <a class="button__link" href="">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+                </section>
+            </section>
+        </header>
+    </div>
 
-    <aside class="wrapper-aside">
-      <div class="gato"></div>
-      <header class="form-user-info__header user-card">
-        <figure class="user-card__image"></figure>
-        <div class="user-card__data">
-          <h2 class="user-card__data-name">
-            elMuñe
-            <figure class="user-card__edit-icon"></figure>
-          </h2>
-          <p class="user-card__age"><b>Edad:</b> 73 años</p>
-          <p class="user-card__addres"><b>Ubicacion:</b> Parque Chacabuco</p>
-        </div>
-        <div class="sep"></div>
-      </header>
-    </aside>
+    <div class="wrapper__aside">
+        <header class="form-user-info__header user-card">
+            <figure class="user-card__image"></figure>
+            <div class="user-card__data">
+                <h2 class="user-card__data-name">
+                    elMuñe
+                    <figure class="user-card__edit-icon"></figure>
+                </h2>
+                <p class="user-card__age"><b>Edad:</b> 73 años</p>
+                <p class="user-card__addres"><b>Ubicacion:</b> Parque Chacabuco</p>
+            </div>
+        </header>
+    </div>
 
-    <article class="wrapper-article">
-      <form class="form-user-info" autocomplete="off">
-        <nav class="form__user-info__nav">
-          <i class="button--icon fa-solid fa-chevron-left"></i>
-          <button class="button--tab-on">Perfil Usuario</button>
-          <i class="button--icon fa-solid fa-chevron-right"></i>
-        </nav>
-        <article class="form-user-info__body">
-          <h2 class="form__row-title">Información general</h2>
-          <h3>Nombre</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h3>Apellido</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h3>Correo electrónico</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h3>Fecha de nacimiento</h3>
-          <div class="form__row">
-            <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h2 class="form__row-title">Dirección</h2>
-          <h3>Provincia</h3>
-          <div class="form__row">
-            <select class="form__input--primary">
-              <option>Seleccione una opción</option>
-              <option>Opción 1</option>
-              <option>Opción 2</option>
-              <option>Opción 3</option>
-            </select>
-          </div>
-          <h3>Localidad</h3>
-          <div class="form__row">
-            <select class="form__input--primary">
-              <option>Seleccione una opción</option>
-              <option>Opción 1</option>
-              <option>Opción 2</option>
-              <option>Opción 3</option>
-            </select>
-          </div>
-          <h3>Calle</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h3>Altura</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h2 class="form__row-title">Ubicación Geográfica</h2>
-          <h3>Latitud</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h3>Longitud</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h3>Distancia máxima de cercanía para intercambio</h3>
-          <div class="form__row">
-            <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-          </div>
-          <h2 class="form__row-title">Criterio para el intercambio</h2>
-          <h3>Criterio</h3>
-          <div class="form__row">
-            <select class="form__input--primary">
-              <option>Seleccione una opción</option>
-              <option>Opción 1</option>
-              <option>Opción 2</option>
-              <option>Opción 3</option>
-            </select>
-          </div>
-        </article>
-        <footer class="form-user-info__actions">
-          <button class="button button--primary ">Guardar</button>
-          <button class="button button--secondary">Resetear</button>
+    <div class="wrapper__article">
+        <form class="form-user-info" autocomplete="off">
+            <nav class="form__user-info__nav">
+                <i class="button--icon fa-solid fa-chevron-left"></i>
+                <button class="button--tab-on">Perfil Usuario</button>
+                <i class="button--icon fa-solid fa-chevron-right"></i>
+            </nav>
+            <article class="form-user-info__body">
+                <h2 class="form__row-title">Información general</h2>
+                <h3>Nombre</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h3>Apellido</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h3>Correo electrónico</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h3>Fecha de nacimiento</h3>
+                <div class="form__row">
+                    <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h2 class="form__row-title">Dirección</h2>
+                <h3>Provincia</h3>
+                <div class="form__row">
+                    <select class="form__input--primary">
+                        <option>Seleccione una opción</option>
+                        <option>Opción 1</option>
+                        <option>Opción 2</option>
+                        <option>Opción 3</option>
+                    </select>
+                </div>
+                <h3>Localidad</h3>
+                <div class="form__row">
+                    <select class="form__input--primary">
+                        <option>Seleccione una opción</option>
+                        <option>Opción 1</option>
+                        <option>Opción 2</option>
+                        <option>Opción 3</option>
+                    </select>
+                </div>
+                <h3>Calle</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h3>Altura</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h2 class="form__row-title">Ubicación Geográfica</h2>
+                <h3>Latitud</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h3>Longitud</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h3>Distancia máxima de cercanía para intercambio</h3>
+                <div class="form__row">
+                    <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí"/>
+                </div>
+                <h2 class="form__row-title">Criterio para el intercambio</h2>
+                <h3>Criterio</h3>
+                <div class="form__row">
+                    <select class="form__input--primary">
+                        <option>Seleccione una opción</option>
+                        <option>Opción 1</option>
+                        <option>Opción 2</option>
+                        <option>Opción 3</option>
+                    </select>
+                </div>
+            </article>
+            <footer class="form-user-info__actions">
+                <button class="button button--primary ">Guardar</button>
+                <button class="button button--secondary">Resetear</button>
+            </footer>
+        </form>
+    </div>
+
+    <div class="wrapper__footer">
+        <footer class="footer-main">
+            <div class="footer-main__navbar">
+                <nav class="navbar--icon">
+                    <ul class="navbar__buttons">
+                        <li class="button--circle">
+                            <a class="button__link" href="">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="button--circle">
+                            <a class="button__link" href="">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="button--circle">
+                            <a class="button__link" href="">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="button--circle">
+                            <a class="button__link" href="">
+                                <i class="fa-brands fa-at"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-main__logo">
+                <figure class="logo">
+                    <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+                    <section class="logo__text">
+                        <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                            class="logo__last-part">capp</span>
+                    </section>
+                </figure>
+            </div>
         </footer>
-      </form>
-    </article>
-
-    <footer class="wrapper-footer main-footer">
-
-      <nav class="social-media">
-        <a class="circle icon">
-          <i class="fa-brands fa-facebook-f fa-sm"></i>
-        </a>
-        <a class="circle icon">
-          <i class="fa-brands fa-instagram fa-sm"></i>
-        </a>
-        <a class="circle icon">
-          <i class="fa-brands fa-twitter fa-sm"></i>
-        </a>
-        <a class="circle icon">
-          <i class="fa-brands fa-at fa-sm"></i>
-        </a>
-      </nav>
-
-      <section class="logo">
-        <img src="../../images/logo.png" alt="WorldCapp">
-        <div class="logo-text">
-          <span class="first-part">world</span><span class="center-dot">.</span><span class="last-part">capp</span>
-        </div>
-      </section>
-
-    </footer>
-  </div>
+    </div>
+</div>
 </body>
 <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
-
 </html>
