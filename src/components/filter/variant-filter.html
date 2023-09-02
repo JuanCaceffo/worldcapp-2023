@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./variant-filter.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./variant-filter.css">
 </head>
+
 <body>
-    <form class="form__container variant-filter-a">
-        <h3 class="variant-filter-a__h variant-filter-a__h--h3">Filtros</h3>
-        <h4 class="variant-filter-a__h">Valoración</h4>
-        <section class="variant-filter-a__section">
-            <div class="variant-filter-a__container">
-                <label class="variant-filter-a__container__label" for="">Desde</label>
-                <input class="form__input--primary input variant-filter-a__container__input" type="text" placeholder="placeholder">
-            </div>
-            <div class="variant-filter-a__container">
-                <label class="variant-filter-a__container__label" for="">Hasta</label>
-                <input class="form__input--primary input variant-filter-a__container__input" type="text" placeholder="placeholder">
-            </div>
+  <form class="variant-filter-a">
+    <h3 class="variant-filter-a__title variant-filter-a__title--primary">Filtros</h3>
+    <section class="variant-filter-a__section">
+      <section class="variant-filter-a__sub-section">
+        <h4 class="variant-filter-a__title variant-filter-a__title--secondary">Valoración</h4>
+        <section class="variant-filter-a__input-group">
+          <div class="variant-filter-a__container">
+            <label class="variant-filter-a__container__label" for="">Desde</label>
+            <input class="form__input--primary input variant-filter-a__container__input" type="text"
+            placeholder="placeholder">
+          </div>
+          <div class="variant-filter-a__container">
+            <label class="variant-filter-a__container__label" for="">Hasta</label>
+            <input class="form__input--primary input variant-filter-a__container__input" type="text"
+            placeholder="placeholder">
+          </div>
         </section>
-            <div>
-                <input id="onFire" type="checkbox"> 
-                <label for="onFire">On fire</label>
-            </div>
-            <div>
-                <input id="promise" type="checkbox">
-                <label for="promise">Es promesa</label>
-            </div>
-    </form>
-    <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+        <div>
+          <input id="onFire" type="checkbox">
+          <label for="onFire">On fire</label>
+        </div>
+      </section>
+      <section class="variant-filter-a__sub-section variant-filter-a__sub-section--grow">
+        <div class="variant-filter-a__checkbox">
+          <input id="promise" type="checkbox">
+          <label for="promise">Es promesa</label>
+        </div>
+      </section>
+    </section>
+  </form>
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,38 +1,87 @@
 @import url('../../styles/styles.css');
 @import url('../commons/input/input.css');
 
-.variant-filter-a{  
-    background-color: var(--primary-color);
-    border-radius: 0 0 0.5rem 0.5rem;
-    color: var(--clear-color);
-    font-size: 1.25em;
-    padding: 0.5rem 0.5rem 4rem 0.5rem;
+.variant-filter-a {
+  background-color: var(--primary-color);
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: var(--clear-color);
+  font-size: 1.25em;
+  padding: 0.5rem 0.5rem 4rem 0.5rem;
+  width: 100%;
 }
-.variant-filter-a__h{
-    font-size: 2em;
-    padding: 0.6em 0 0.4em 0;
-    text-align: center;
+.variant-filter-a__input-group{
+  display: flex;
+  gap: 1.2em;
+  flex-grow: 1;
+  width: 100%;
 }
-.variant-filter-a__h--h3{
-    border-bottom: 1px solid var(--clear-color);
-}
-.variant-filter-a__section{
-    display: flex;
-    gap: 1em;
-}
-.variant-filter-a__container{
-    flex-grow: 1;
-}
-.variant-filter-a__container__label{
-    display: block;
-    padding-bottom: 0.4em;
+.variant-filter-a__title {
+  font-size: 2em;
+  padding: 0.6em 0 0.4em 0;
+  text-align: center;
+  flex-grow: 1;
+  width: 100%;
 }
 
-.variant-filter-a__container__input{
-    color: var(--secondary-color);
-    height: 3em;
-    width: 100%;
+.variant-filter-a__title--primary {
+  border-bottom: 1px solid var(--clear-color);
+  margin-bottom: 0.8em;
 }
+
+.variant-filter-a__sub-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  align-items: center;
+}
+
+.variant-filter-a__container {
+  flex-grow: 1;
+  width: 9em;
+}
+
+.variant-filter-a__container__label {
+  display: block;
+  padding-bottom: 0.4em;
+}
+
+.variant-filter-a__container__input {
+  color: var(--secondary-color);
+  height: 3em;
+  width: 100%;
+}
+
 .form__container {
-    gap: 1rem;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+    .variant-filter-a__title--secondary {
+    width: 5.5em;
+    flex-grow: 0;
+    justify-self: center
   }
+  .variant-filter-a__container {
+    flex-grow: 0;
+    width: 8.5em;
+  }
+  .variant-filter-a__checkbox {
+    align-self: center;
+  }
+  .variant-filter-a__sub-section {
+    flex-grow: 0;
+    justify-content: center;
+  }
+  .variant-filter-a__sub-section--grow {
+    flex-grow: 1;
+  }
+  .variant-filter-a__section {
+    display: flex;
+  }
+  .variant-filter-a__input-group{
+    display: flex;
+    gap: 1.2em;
+    flex-grow: 0;
+    width: min-content;
+  }
+}
