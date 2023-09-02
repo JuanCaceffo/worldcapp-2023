@@ -6,7 +6,7 @@
   display: flex;
   justify-self: center;
   align-items: start;
-  background-color: var(--clear-color);
+  background-color: var(--color-clear);
 } */
 
 .container-card,
@@ -68,7 +68,7 @@
 }
 
 .player-card__content {
-  background-color: var(--clear-color-lighter);
+  background-color: var(--color-clear-lighter);
   border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
   margin-top: calc(-1*var(--border-radius-xl));
 }
@@ -113,7 +113,7 @@
 }
 
 .player-card__header .fas.fa-fire {
-  color: var(--hot-color);
+  color: var(--color-hot);
 }
 
 .player-card__body p:nth-child(even) {

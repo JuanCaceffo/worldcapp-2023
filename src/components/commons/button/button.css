@@ -52,7 +52,7 @@
 .button--primary,
 .button--circle {
   /*Visual*/
-  color: var(--clear-color);
+  color: var(--color-clear);
 }
 
 .button--primary {
@@ -68,7 +68,7 @@
 .button--secondary,
 .button--tab-on {
   /*Visual*/
-  background-color: var(--clear-color-darker);
+  background-color: var(--color-clear-darker);
   color: var(--dark-text);
 }
 
@@ -81,7 +81,7 @@
 
 .button--tab-off {
   /*Visual*/
-  background-color: var(--clear-color-2darker);
+  background-color: var(--color-clear-2darker);
   color: var(--lighter-text);
 }
 
@@ -159,5 +159,5 @@
 
 .button--secondary:hover {
   /*Visual*/
-  color: var(--clear-color);
+  color: var(--color-clear);
 }

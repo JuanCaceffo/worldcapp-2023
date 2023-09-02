@@ -16,7 +16,7 @@ body{
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color: var(--clear-color);
+    background-color: var(--color-clear);
     box-shadow: var(--box-shadow-md)
 }
 

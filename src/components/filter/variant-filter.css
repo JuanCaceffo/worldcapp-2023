@@ -9,7 +9,7 @@
 .variant-filter-a{  
     background-color: var(--primary-color);
     border-radius: 0 0 0.5rem 0.5rem;
-    color: var(--clear-color);
+    color: var(--color-clear);
     font-size: 1.25em;
     padding: 0.5rem 0.5rem 4rem 0.5rem;
 }
@@ -19,7 +19,7 @@
     text-align: center;
 }
 .variant-filter-a__h--h3{
-    border-bottom: 1px solid var(--clear-color);
+    border-bottom: 1px solid var(--color-clear);
 }
 .variant-filter-a__section{
     display: flex;

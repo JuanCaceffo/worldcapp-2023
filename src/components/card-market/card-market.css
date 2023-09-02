@@ -6,7 +6,7 @@
     width: 100%;
 
     /* Display */
-    background-color: var(--clear-color);
+    background-color: var(--color-clear);
     border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-xs);
     cursor: default;
@@ -31,7 +31,7 @@
 
     /* colors */
     background-color: var(--secondary-color);
-    color: var(--clear-color);
+    color: var(--color-clear);
 }
 
 
