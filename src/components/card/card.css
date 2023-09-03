@@ -1,3 +1,5 @@
+@import url(/src/components/commons/button/button.css);
+
 .container-card,
 .player-card,
 .player-card__content,
@@ -122,4 +124,19 @@
   font-size: 1.2em;
   background-image: var(--card-bg-gradient);
   padding-top: 0em;
+}
+
+.player-card--trash .button--icon {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.player-card--trash .button__link{
+  font-size: 1.5em;
+  color: var(--typeface-color);
+}
+
+.player-card--trash .button__link:hover {
+  color: var(--color-hot);
 }

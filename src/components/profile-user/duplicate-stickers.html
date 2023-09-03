@@ -11,30 +11,31 @@
 </head>
 
 <body>
-  <form class="form-user-info" autocomplete="off">
-    <div class="gato"></div>
-    <header class="form-user-info__header user-card">
-      <figure class="user-card--image"></figure>
-      <div class="user-card--data">
-        <h2 class="data-name">
-          elMuñe
-          <figure class="name-edit"></figure>
-        </h2>
-        <p class="age"><b>Edad:</b> 73 años</p>
-        <p class="addres"><b>Ubicacion:</b> Parque Chacabuco</p>
-      </div>
-      <div class="sep"></div>
-    </header>
-    <nav class="form__user-info__nav">
-      <i class="button--icon fa-solid fa-chevron-left"></i>
-      <button class="button--tab-on">Figuritas Repetidas</button>
-      <i class="button--icon fa-solid fa-chevron-right"></i>
+  <form class="form-info" autocomplete="off">
+    <nav class="form-info__nav">
+      <ul class="navbar__buttons">
+        <li class="button--icon">
+          <a class="button__link" href="">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+        </li>
+        <button class="button--tab-on">Figuritas Repetidas</button>
+        <li class="button--icon">
+          <a class="button__link" href="">
+            <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <article class="form-user-info__body--cards">
-      <article class="player-card">
+    <section class="form-info__body form-info__body--cards">
+      <article class="player-card player-card--trash">
         <section class="player-card__img">
-          <img src="../../images/dibu.png" alt="Emiliano Martinez" />
-          <i class="button--icon fa-solid fa-trash-can"></i>
+          <img src="/src/images/dibu.png" alt="Emiliano Martinez" />
+          <li class="button--icon">
+            <a class="button__link" href="">
+              <i class="fa-solid fa-trash-can"></i>
+            </a>
+          </li>
         </section>
         <section class="player-card__content">
           <header class="player-card__header">
@@ -64,11 +65,15 @@
             <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
           </footer>
         </section>
-      </article>
-      <article class="player-card">
+      </article> 
+      <article class="player-card player-card--trash">
         <section class="player-card__img">
-          <img src="../../images/dibu.png" alt="Emiliano Martinez" />
-          <i class="button--icon fa-solid fa-trash-can"></i>
+          <img src="/src/images/dibu.png" alt="Emiliano Martinez" />
+          <li class="button--icon">
+            <a class="button__link" href="">
+              <i class="fa-solid fa-trash-can"></i>
+            </a>
+          </li>
         </section>
         <section class="player-card__content">
           <header class="player-card__header">
@@ -98,10 +103,14 @@
             <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
           </footer>
         </section>
-      </article>
-    </article>
-    <footer class="form-user-info__actions">
-      <i class="button--circle fa-solid fa-plus"></i>
+      </article> 
+    </section>
+    <footer class="form-info__actions">
+      <li class="button--circle">
+        <a class="button__link" href="">
+          <i class="fa-solid fa-plus"></i>
+        </a>
+      </li>
     </footer>
   </form>
 </body>

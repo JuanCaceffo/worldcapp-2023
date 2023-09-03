@@ -1,7 +1,7 @@
 @import url(/src/components/commons/input/input.css);
 @import url(/src/components/commons/button/button.css);
-@import url(/src/components/card/card.css);
 @import url(/src/components/commons/navbar/navbar.css);
+@import url(/src/components/card/card.css);
 
 .form-info,
 .form-info__nav,
@@ -112,16 +112,6 @@
   box-shadow: var(--box-shadow-2xs);
   border-top: 1px solid var(--color-clear-ligth);
   border-bottom: 1px solid var(--color-clear-dark);
-}
-
-.form-info__body--cards .button--icon {
-  position: absolute;
-  right: 1em;
-  top: 1em;
-}
-
-.form-info__body .button--icon:hover {
-  color: var(--color-hot);
 }
 
 .form-info__actions .button--circle {
