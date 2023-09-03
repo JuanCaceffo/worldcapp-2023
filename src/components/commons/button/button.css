@@ -82,6 +82,7 @@
   /*Visual*/
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   border: none;
+  line-height: 2em;
 }
 
 .button--tab-off {

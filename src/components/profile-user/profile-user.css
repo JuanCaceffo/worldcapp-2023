@@ -19,10 +19,10 @@
 
 .form-info{
   /*Layout*/
-  width: 50%;
+  width: 100%;
   min-width: 32rem;
   min-height: 50vh;
-  margin-top: 1.4em;
+  margin: var(--box-padding) 0 0 0;
   /*Visual*/
   background-color: var(--color-clear);
   color: var(--text-color);
@@ -34,7 +34,6 @@
   gap: 0.3em;
   /*Visual*/
   background-color: var(--color-clear-dark);
-  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 
 .form-info__nav .button__link i{
@@ -46,43 +45,42 @@
   gap: 1.4em;
 }
 
-.form-user-info__header.user-card {
-  padding: 2em;
-  background-image: var(--user-info-background);
-}
-
 .form-info__actions {
   /*Layout*/
   width: 100%;
   padding: var(--box-padding);
   gap: 0.6em;
   /*Visual*/
-  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
   background-color: var(--color-clear-dark);
 }
 
-.form-info__body .form__row-title,
-.form__row-subtitle {
+.form-info__body .form__title {
   /*Visual*/
   width: 100%;
   color: var(--text-color-medium);
 }
 
-.form-info__body .form__row-title{
+.form-info__body .form__title{
   /*Layout*/
   padding-top: var(--box-padding);
 }
 
-.form-info__body .form__row-subtitle {
+.form-info__nav .button--tab-on {
   /*Layout*/
-  padding-top: 0.5em;
+  min-width: 65vw;
   /*Typeface*/
-  font-weight: 400;
+  font-size: 1.6em;
+  /*Visual*/
+  cursor: default;  
+}
+
+.form-info__nav .button--tab-off {
+  display: none;
 }
 
 .form-info__nav .button--tab-on {
   /*Layout*/
-  min-width: 14em;
+  min-width: 65vw;
   /*Typeface*/
   font-size: 1.6em;
   /*Visual*/
@@ -121,4 +119,32 @@
 
 .form-info__actions .button--circle:hover {
   background-color: var(--color-focus);
+}
+
+@media (min-width: 401px) {
+  
+
+}
+
+@media (min-width: 600px) {
+  .form-info__body{    
+    column-gap: var(--box-padding);
+    justify-content: left;
+  }
+}
+
+@media (min-width: 769px) {
+  .form-info__nav .button--tab-on,
+  .form-info__nav .button--tab-off {
+    min-width: 25vw;
+    cursor: pointer;
+  }
+  
+  .form-info__nav .button--icon {
+    display: none;
+  }  
+
+  .form-info__nav .button--tab-off  {
+    display: inline;
+  }
 }
