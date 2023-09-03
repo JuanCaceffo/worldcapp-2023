@@ -1,57 +1,49 @@
 @import url(/src/components/commons/input/input.css);
 @import url(/src/components/commons/button/button.css);
 @import url(/src/components/card/card.css);
+@import url(/src/components/commons/navbar/navbar.css);
 
-.form-user-info,
-.form-user-info__body,
-.form-user-info__body--cards {
-  /*Layout*/
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-}
-
-.form__user-info__nav,
-.form-user-info__actions {
-  /*Layout*/
+.form-info,
+.form-info__nav,
+.form-info__body,
+.form-info__actions{
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-user-info__body,
-.form-user-info__body--cards,
-.form-user-info__actions {
-  /*Layout*/
-  padding: 1.4em;
-  gap: 0.3em;
-  /*Visual*/
-  background-color: var(--color-clear-dark);
-}
-
-.form-user-info__body--cards {
-  gap: 1.4em;
-}
-
-.form-user-info__actions {
-  /*Layout*/
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.form-user-info {
+.form-info__nav{
+  border: none;
+}
+
+.form-info{
   /*Layout*/
-  grid-template-areas:
-    "form-user-info__header"
-    "form-user-info__nav"
-    "form-user-info__body"
-    "form-user-info__actions";
+  width: 50%;
   min-width: 32rem;
   min-height: 50vh;
   margin-top: 1.4em;
   /*Visual*/
-  background-color: var(--color-clear-lighter);
+  background-color: var(--color-clear);
   color: var(--text-color);
+}
+
+.form-info__body {
+  /*Layout*/
+  padding: 0 var(--box-padding) var(--box-padding);
+  gap: 0.3em;
+  /*Visual*/
+  background-color: var(--color-clear-dark);
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.form-info__nav .button__link i{
+  color: var(--text-color)
+}
+
+.form-info__body--cards {
+  padding-top: 1.4em;
+  gap: 1.4em;
 }
 
 .form-user-info__header.user-card {
@@ -59,79 +51,84 @@
   background-image: var(--user-info-background);
 }
 
-.form-user-info__body {
-  /*Visual*/
-  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
-}
-
-.form-user-info__actions {
+.form-info__actions {
   /*Layout*/
+  width: 100%;
+  padding: var(--box-padding);
   gap: 0.6em;
   /*Visual*/
   border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  background-color: var(--color-clear-dark);
 }
 
-.form-user-info__body h2,
-h3 {
+.form-info__body .form__row-title,
+.form__row-subtitle {
   /*Visual*/
-  color: var(--text-color-medium)
+  width: 100%;
+  color: var(--text-color-medium);
 }
 
-.form-user-info__body h2 {
+.form-info__body .form__row-title{
+  /*Layout*/
+  padding-top: var(--box-padding);
+}
+
+.form-info__body .form__row-subtitle {
   /*Layout*/
   padding-top: 0.5em;
-}
-
-.form-user-info__body h3 {
-  /*Layout*/
-  padding-top: 0.3em;
   /*Typeface*/
   font-weight: 400;
 }
 
-.form__user-info__nav .button--tab-on {
+.form-info__nav .button--tab-on {
   /*Layout*/
   min-width: 14em;
   /*Typeface*/
-  font-size: 1.4em;
+  font-size: 1.6em;
   /*Visual*/
   cursor: default;
 }
 
-.form__user-info__nav i {
+.form-info__nav i {
   /*Layout*/
   padding: 1em;
+  /*Typeface*/
+  font-size: 1.6em;
   /*Visual*/
   color: var(--text-color);
 }
 
-.form-user-info__actions .button {
+.form-info__actions .button--primary, 
+.form-info__actions .button--secondary {
   /*Layout*/
-  flex-basis: 29em;
+  flex-basis: 100%;
 }
 
-.form-user-info__header .sep {
+.form-info__header .sep {
   /*Layout*/
   width: 100%;
   margin: 2em 0;
   /*Visual*/
   box-shadow: var(--box-shadow-2xs);
-  border-top: 1px solid var(--color-clear-ligther);
+  border-top: 1px solid var(--color-clear-ligth);
   border-bottom: 1px solid var(--color-clear-dark);
 }
 
-.form-user-info__body--cards .button--icon {
+.form-info__body--cards .button--icon {
   position: absolute;
   right: 1em;
   top: 1em;
 }
 
-.form-user-info__body--cards .button--icon:hover {
+.form-info__body .button--icon:hover {
   color: var(--color-hot);
 }
 
-.form-user-info__actions .button--circle {
-  background-color: var(--text-color-medium);
-  padding: 0.6em;
-  font-size: 2em;
+.form-info__actions .button--circle {
+  background-color: var(--color-terciary);
+  font-size: 3em;
+}
+
+.form-info__actions .button--circle:hover {
+  background-color: var(--color-focus);
 }

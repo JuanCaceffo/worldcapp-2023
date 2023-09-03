@@ -26,6 +26,10 @@
   gap: 1.2em;
 }
 
+.header-main__navbar .button__link{
+  color: var(--typeface-color);
+}
+
 @media screen and (min-width:768px) {
   .header-main__web {
     display: flex;

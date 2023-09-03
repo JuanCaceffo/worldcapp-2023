@@ -49,7 +49,7 @@
 }
 
 .button--primary,
-.button--circle {
+.button--circle .button__link{
   /*Visual*/
   color: var(--typeface-color);
 }
@@ -66,7 +66,7 @@
 
 .button--circle {
   /*Visual*/
-  background-color: var(--color-terciary);
+  background-color: var(--color-primary);
 }
 
 
@@ -74,7 +74,7 @@
   /*Visual*/
   border-top: 1px solid;
   background-color: var(--color-clear-dark);
-  color: var(--text-color);
+  color: var(--color-primary);
 }
 
 .button--tab-on,
@@ -96,39 +96,32 @@
   list-style: none;  
 }
 
-.button__link{
-  color: var(--typeface-color);
+.button__link,
+.button__text{
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 .button--circle{
   /*Layout*/
-  text-align: center;
-  line-height: 1.5em;
   width: 1.5em;
   height: 1.5em;
+  border-radius: 50%;
+  /*Typeface*/
+  line-height: 1.5em;
+  text-align: center;
 }
 
-.button__link{
-  color: var(--typeface-color);
-}
-
-.button--text,
-.button--icon {
+.button--text{
   /*Layout*/  
   padding: 0.1em;
-}
-
-.button--circle {
-  /*Visual*/
-  border-radius: 50%;
 }
 
 .button--primary:hover,
 .button--secondary:hover,
 .button--icon:hover,
 .button--text:hover,
-.button--circle:hover {
+.button--circle:hover{
   /*Layout*/
   transform: translateY(-0.2em);
   /*Animation*/
@@ -136,8 +129,7 @@
 }
 
 .button--primary:hover,
-.button--secondary:hover,
-.button--circle:hover {
+.button--secondary:hover{
   /*Visual*/
   background-color: var(--color-focus);
   box-shadow: var(--box-shadow-md);
@@ -146,6 +138,7 @@
 .button--circle:hover {
   /*Visual*/
   background-color: var(--color-terciary);
+  box-shadow: var(--box-shadow-md);
 }
 
 .button--primary:hover,
@@ -154,8 +147,6 @@
   border: 1px solid var(--color-focus);
 }
 
-.button--icon:hover,
-.button--text:hover,
 .button--text .button__link:hover,
 .button--icon .button__link:hover {
   /*Visual*/
