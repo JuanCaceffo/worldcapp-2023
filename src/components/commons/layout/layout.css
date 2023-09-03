@@ -97,7 +97,7 @@
     background-color: var(--color-secondary);
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:769px){
     .wrapper{
         /*Layout*/
         grid-template-columns: max(20rem, 20vw) auto;

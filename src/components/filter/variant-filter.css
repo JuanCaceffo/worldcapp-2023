@@ -2,7 +2,7 @@
 @import url('../commons/input/input.css');
 
 .variant-filter-a {
-  background-color: var(--color-primary);
+  background-color: var(--color-terciary);
   border-radius: 0 0 0.5rem 0.5rem;
   color: var(--color-clear-medium);
   font-size: 1.25em;
@@ -55,7 +55,8 @@
   gap: 1rem;
 }
 
-@media screen and (min-width: 401px) and (max-width: 768px) {
+/* Se eligió una medida intermedia para hacer el cambio por decisiones de diseño */
+@media screen and (min-width: 630px) and (max-width: 768px) {
     .variant-filter-a__title--secondary {
     width: 5.5em;
     flex-grow: 0;
@@ -80,8 +81,15 @@
   }
   .variant-filter-a__input-group{
     display: flex;
-    gap: 1.2em;
+    gap: 1em;
     flex-grow: 0;
     width: min-content;
+  }
+}
+@media screen and (min-width: 769px){
+  .variant-filter-a {
+    border-radius: 0.5rem;
+    padding: var(--box-padding);
+    margin: 1.75rem;
   }
 }
