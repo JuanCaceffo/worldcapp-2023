@@ -8,14 +8,15 @@
   --color-secondary:hsla(207, 66%, 43%, 1);
   --color-terciary:hsla(197, 96%, 46%, 1);
   /* Poin of Interest Color */
-  --color-hover: hsla(17, 96%, 46%, 1);
-  --color-focus: hsla(17, 96%, 65%, 1);
+  --color-highligthed: hsla(32, 100%, 50%, 1);
+  --color-focus: hsla(32, 100%, 65%, 1);
+  --color-focus-lighter: hsla(32, 100%, 92%, 1);
   --color-hot: hsla(0, 70%, 50%, 1);
   /* Brigth Colors */
-  --color-clear: hsla(207, 100%, 99.5%, 1);
-  --color-clear-medium: hsla(207, 100%, 96%, 1);
-  --color-clear-dark: hsla(207, 100%, 92%, 1);
-  --color-clear-2dark: hsla(207, 100%, 84%, 1);
+  --color-clear: hsla(0, 0%, 99%, 1);
+  --color-clear-medium: hsla(0, 0%, 96%, 1);
+  --color-clear-dark: hsla(0, 0%, 94%, 1);
+  --color-clear-2dark: hsla(0, 0%, 84%, 1);
   /* Text & Typeface */
   --text-color-2lighter: hsla(207, 20%, 75%, 1);
   --text-color-lighter: hsla(207, 20%, 55%, 1);

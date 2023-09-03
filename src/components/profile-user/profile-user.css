@@ -1,13 +1,11 @@
-@import url('../../styles/styles.css');
-@import url('../card-user/index.css');
-@import url('../commons/input/input.css');
-@import url('../commons/button/button.css');
-@import url("../card/card.css");
+@import url(/src/components/commons/input/input.css);
+@import url(/src/components/commons/button/button.css);
+@import url(/src/components/card/card.css);
 
 .form-user-info,
 .form-user-info__body,
 .form-user-info__body--cards {
-  /*Layout*/ 
+  /*Layout*/
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
@@ -16,7 +14,7 @@
 
 .form__user-info__nav,
 .form-user-info__actions {
-  /*Layout*/ 
+  /*Layout*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,24 +23,24 @@
 .form-user-info__body,
 .form-user-info__body--cards,
 .form-user-info__actions {
-  /*Layout*/ 
+  /*Layout*/
   padding: 1.4em;
   gap: 0.3em;
-  /*Visual*/ 
-  background-color: var(--color-clear-darker);
+  /*Visual*/
+  background-color: var(--color-clear-dark);
 }
 
-.form-user-info__body--cards{
+.form-user-info__body--cards {
   gap: 1.4em;
 }
 
 .form-user-info__actions {
-  /*Layout*/ 
-  flex-wrap: wrap;  
+  /*Layout*/
+  flex-wrap: wrap;
 }
 
 .form-user-info {
-  /*Layout*/   
+  /*Layout*/
   grid-template-areas:
     "form-user-info__header"
     "form-user-info__nav"
@@ -51,7 +49,7 @@
   min-width: 32rem;
   min-height: 50vh;
   margin-top: 1.4em;
-  /*Visual*/   
+  /*Visual*/
   background-color: var(--color-clear-lighter);
   color: var(--text-color);
 }
@@ -62,47 +60,49 @@
 }
 
 .form-user-info__body {
-  /*Visual*/   
+  /*Visual*/
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 
 .form-user-info__actions {
-  /*Visual*/   
+  /*Layout*/
+  gap: 0.6em;
+  /*Visual*/
   border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
 }
 
-.form-user-info__body h2, h3 {
-  /*Visual*/   
+.form-user-info__body h2,
+h3 {
+  /*Visual*/
   color: var(--text-color-medium)
 }
 
 .form-user-info__body h2 {
-  /*Layout*/   
+  /*Layout*/
   padding-top: 0.5em;
 }
 
 .form-user-info__body h3 {
-  /*Layout*/   
+  /*Layout*/
   padding-top: 0.3em;
-  /*Typeface*/   
-  font-weight: 400;  
+  /*Typeface*/
+  font-weight: 400;
 }
 
 .form__user-info__nav .button--tab-on {
-  /*Layout*/ 
+  /*Layout*/
   min-width: 14em;
-  /*Typeface*/ 
+  /*Typeface*/
   font-size: 1.4em;
-  /*Visual*/ 
+  /*Visual*/
   cursor: default;
-  background-color: var(--color-clear-darker);
 }
 
 .form__user-info__nav i {
-  /*Layout*/ 
+  /*Layout*/
   padding: 1em;
-  /*Visual*/ 
-  color: var(--text-color);  
+  /*Visual*/
+  color: var(--text-color);
 }
 
 .form-user-info__actions .button {
@@ -110,27 +110,27 @@
   flex-basis: 29em;
 }
 
-.form-user-info__header .sep{
+.form-user-info__header .sep {
   /*Layout*/
   width: 100%;
   margin: 2em 0;
-  /*Visual*/ 
-  box-shadow: var(--box-shadow-2xs);  
+  /*Visual*/
+  box-shadow: var(--box-shadow-2xs);
   border-top: 1px solid var(--color-clear-ligther);
-  border-bottom: 1px solid var(--color-clear-darker);
+  border-bottom: 1px solid var(--color-clear-dark);
 }
 
-.form-user-info__body--cards .button--icon{
+.form-user-info__body--cards .button--icon {
   position: absolute;
   right: 1em;
   top: 1em;
 }
 
-.form-user-info__body--cards .button--icon:hover{
+.form-user-info__body--cards .button--icon:hover {
   color: var(--color-hot);
 }
 
-.form-user-info__actions .button--circle{
+.form-user-info__actions .button--circle {
   background-color: var(--text-color-medium);
   padding: 0.6em;
   font-size: 2em;

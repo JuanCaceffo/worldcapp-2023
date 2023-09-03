@@ -5,25 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/styles/styles.css">
   <link rel="stylesheet" href="./profile-user.css">
   <title>Perfil de Usuario</title>
 </head>
 
 <body>
-  <form class="form-user-info" autocomplete="off">
-    <div class="gato"></div>
-    <header class="form-user-info__header user-card">
-      <figure class="user-card--image"></figure>
-      <div class="user-card--data">
-        <h2 class="data-name">
-          elMuñe
-          <figure class="name-edit"></figure>
-        </h2>
-        <p class="age"><b>Edad:</b> 73 años</p>
-        <p class="addres"><b>Ubicacion:</b> Parque Chacabuco</p>
-      </div>
-      <div class="sep"></div>
-    </header>
+  <form class="form-user-info form-user-" autocomplete="off">
     <nav class="form__user-info__nav">
       <i class="button--icon fa-solid fa-chevron-left"></i>
       <button class="button--tab-on">Perfil Usuario</button>
@@ -32,25 +20,25 @@
     <article class="form-user-info__body">
       <h2 class="form__row-title">Información general</h2>
       <h3>Nombre</h3>
-      <div class="form__row">        
+      <div class="form__row form__row--long">        
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h3>Apellido</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h3>Correo electrónico</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h3>Fecha de nacimiento</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" />
       </div>
       <h2 class="form__row-title">Dirección</h2>
       <h3>Provincia</h3>
-      <div class="form__row">
-        <select  class="form__input--primary">
+      <div class="form__row form__row--long">
+        <select  class="form__select">
           <option>Seleccione una opción</option>
           <option>Opción 1</option>
           <option>Opción 2</option>
@@ -58,8 +46,8 @@
         </select>
       </div>
       <h3>Localidad</h3>
-      <div class="form__row">
-        <select  class="form__input--primary">
+      <div class="form__row form__row--long">
+        <select  class="form__select">
           <option>Seleccione una opción</option>
           <option>Opción 1</option>
           <option>Opción 2</option>
@@ -67,30 +55,30 @@
         </select>
       </div>
       <h3>Calle</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h3>Altura</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h2 class="form__row-title">Ubicación Geográfica</h2>
       <h3>Latitud</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h3>Longitud</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h3>Distancia máxima de cercanía para intercambio</h3>
-      <div class="form__row">
+      <div class="form__row form__row--long">
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
       </div>
       <h2 class="form__row-title">Criterio para el intercambio</h2>
       <h3>Criterio</h3>
-      <div class="form__row">
-        <select  class="form__input--primary">
+      <div class="form__row form__row--long">
+        <select  class="form__select">
           <option>Seleccione una opción</option>
           <option>Opción 1</option>
           <option>Opción 2</option>
