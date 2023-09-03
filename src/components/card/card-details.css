@@ -26,11 +26,13 @@
 /* =================================================================================== */
 /* ===== Re-asignación de clases para quitar o cambiar comportamientos heredados ===== */
 /* =================================================================================== */
-
-.player-card__header h2:nth-child(1){
+.player-card__header h2:first-child{
   flex-basis: 0%;
 }
-
+.player-card__container{
+  padding: 1em 0;
+  border-bottom: 1px solid var(--text-color-medium);
+}
 .player-card__body{
   border-bottom: 1px solid var(--raisin-black);
   display: block;
@@ -38,30 +40,77 @@
 
 .player-card__body p{
   padding-top: 0.5em;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .player-card__body p:nth-child(even){
   text-align: start;
 }
-
-.player-card__footer p{
-  padding-top: 0.5em;
-  font-size: 1.5em;
+.player-card__body p:nth-child(even) {
+  flex-basis: 50%;
+}
+.player-card__footer{
+  display: flex;
+}
+.player-card-footer__section{
+  font-size: 1.3em;
   align-self: self-start;
 }
-
-.container-button {
-  flex-wrap: wrap;
-  padding: 0.5em 0;
+.player-card__content{
+  width: 100%;
 }
 .container-button{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 1em;
+  padding: 1em 0;
   width: 100%;
 }
 .button {
   margin: 0.2em 0;
   width: 100%;
+}
+@media screen and (min-width: 401px){
+  .player-card {
+    max-width: none;
+  }
+  .player-card__container{
+    display: flex;
+  }
+  .player-card__img{
+    width: 70%;
+  }
+
+  .player-card__img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0.5em;
+  }
+  .player-card__body{
+    width: 100%;
+  }
+  .player-card__section-info{
+    display: flex;
+    padding: 1em 0;
+  }
+
+  .player-card__section-info--justify-between{
+    justify-content: space-between;
+  }
+  .player-card__section-info--justify-center{
+    justify-content: center;
+    text-align: center;
+  }
+  .player-card__info-span{
+    display: inline-block;
+  }
+  .container-button{
+    flex-wrap: nowrap;
+    justify-content: space-around
+  }
+  .button {
+    max-width: 10em;
+  }
 }
