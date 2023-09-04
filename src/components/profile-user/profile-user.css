@@ -41,13 +41,20 @@
 }
 
 .form-info__body--cards {
-  padding-top: 1.4em;
-  gap: 1.4em;
+  /*Layout*/
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  padding-top: var(--box-padding);
+  gap: var(--box-padding);
+  /*Visual*/
 }
 
 .form-info__actions {
   /*Layout*/
   width: 100%;
+  min-height: 40rem;
+  align-items: center;
   padding: var(--box-padding);
   gap: 0.6em;
   /*Visual*/
@@ -91,7 +98,7 @@
   /*Layout*/
   padding: 1em;
   /*Typeface*/
-  font-size: 1.6em;
+  font-size: 1.5em;
   /*Visual*/
   color: var(--text-color);
 }
@@ -121,12 +128,16 @@
   background-color: var(--color-focus);
 }
 
-@media (min-width: 401px) {
-  
-
-}
-
 @media (min-width: 600px) {
+  .form-info__actions{
+    gap: var(--box-padding);
+  }
+  
+  .form-info__actions .button--primary,
+  .form-info__actions .button--secondary{
+    flex-basis: 20em;    
+  }  
+  
   .form-info__body{    
     column-gap: var(--box-padding);
     justify-content: left;
@@ -147,4 +158,5 @@
   .form-info__nav .button--tab-off  {
     display: inline;
   }
+  
 }

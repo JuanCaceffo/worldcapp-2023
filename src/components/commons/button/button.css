@@ -16,7 +16,8 @@
 .button--tab-on,
 .button--tab-off {
   /*Layout*/
-  padding: 1.4rem;
+  padding: 0 1.4rem;
+  line-height: 4.4rem;
 }
 
 .button--primary,
@@ -69,7 +70,6 @@
   background-color: var(--color-primary);
 }
 
-
 .button--tab-on {
   /*Visual*/
   border-top: 1px solid;
@@ -82,7 +82,6 @@
   /*Visual*/
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   border: none;
-  line-height: 2em;
 }
 
 .button--tab-off {
@@ -94,7 +93,8 @@
 .button--circle,
 .button--text,
 .button--icon{
-  list-style: none;  
+  list-style: none;
+  margin: 0 auto;  
 }
 
 .button__link,
@@ -157,4 +157,9 @@
 .button--secondary:hover {
   /*Visual*/
   color: var(--color-clear);
+}
+
+.button--disabled {
+  pointer-events: none;
+  cursor:not-allowed;  
 }
