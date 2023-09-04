@@ -14,87 +14,89 @@
   <form class="form-info" autocomplete="off">
     <nav class="form-info__nav">
       <ul class="navbar__buttons">
-        <li class="button--icon">
+        <li class="button--icon button--disabled">
           <a class="button__link" href="">
-            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-left" style="color:var(--typeface-color)"></i>
           </a>
         </li>        
-        <button class="button--tab-on">Perfil Usuario</button>
+        <button class="button--tab-on"><a class="button__link" href="/src/components/profile-user/profile-user.html">Perfil Usuario</a></button>
+        <button class="button--tab-off"><a class="button__link" href="/src/components/profile-user/duplicate-stickers.html">Figuritas Repetidas</a></button>
+        <button class="button--tab-off"><a class="button__link" href="/src/components/profile-user/missing-stickers.html">Figuritas Faltantes</a></button>
         <li class="button--icon">
-          <a class="button__link" href="">
+          <a class="button__link" href="/src/components/profile-user/duplicate-stickers.html">
             <i class="fa-solid fa-chevron-right"></i>
           </a>
         </li>
       </ul>
     </nav>
     <article class="form-info__body">
-      <h2 class="form__row-title">Información general</h2>
-      <h3 class="form__row-subtitle">Nombre</h3>
-      <div class="form__row">
+      <h2 class="form__title">Información general</h2>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Nombre</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h3 class="form__row-subtitle">Apellido</h3>
-      <div class="form__row">
+      </section>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Apellido</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h3 class="form__row-subtitle">Correo electrónico</h3>
-      <div class="form__row">
+      </section>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Correo electrónico</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h3 class="form__row-subtitle">Fecha de nacimiento</h3>
-      <div class="form__row">
+      </section>      
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Fecha de nacimiento</h3>
         <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h2 class="form__row-title">Dirección</h2>
-      <h3 class="form__row-subtitle">Provincia</h3>
-      <div class="form__row">
+      </section>
+      <h2 class="form__title">Dirección</h2>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Provincia</h3>
         <select class="form__select">
           <option>Seleccione una opción</option>
           <option>Opción 1</option>
           <option>Opción 2</option>
           <option>Opción 3</option>
         </select>
-      </div>
-      <h3 class="form__row-subtitle">Localidad</h3>
-      <div class="form__row">
+      </section>      
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Localidad</h3>
         <select class="form__select">
           <option>Seleccione una opción</option>
           <option>Opción 1</option>
           <option>Opción 2</option>
           <option>Opción 3</option>
         </select>
-      </div>
-      <h3 class="form__row-subtitle">Calle</h3>
-      <div class="form__row">
+      </section>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Calle</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h3 class="form__row-subtitle">Altura</h3>
-      <div class="form__row">
+      </section>      
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Altura</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h2 class="form__row-title">Ubicación Geográfica</h2>
-      <h3 class="form__row-subtitle">Latitud</h3>
-      <div class="form__row">
+      </section>
+      <h2 class="form__title">Ubicación Geográfica</h2>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Latitud</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h3 class="form__row-subtitle">Longitud</h3>
-      <div class="form__row">
+      </section>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Longitud</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h3 class="form__row-subtitle">Distancia máxima de cercanía para intercambio</h3>
-      <div class="form__row">
+      </section>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Distancia máxima de cercanía para intercambio</h3>
         <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
-      </div>
-      <h2 class="form__row-title">Criterio para el intercambio</h2>
-      <h3 class="form__row-subtitle">Criterio</h3>
-      <div class="form__row">
+      </section>
+      <h2 class="form__title">Criterio para el intercambio</h2>
+      <section class="form__row form__row--2col">
+        <h3 class="form__row-subtitle">Criterio</h3>
         <select class="form__select">
           <option>Seleccione una opción</option>
           <option>Opción 1</option>
           <option>Opción 2</option>
           <option>Opción 3</option>
         </select>
-      </div>
+      </section>
     </article>
     <footer class="form-info__actions">
         <button class="button--primary">Guardar</button>
