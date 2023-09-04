@@ -1,0 +1,71 @@
+@import url(/src/components/commons/button/button.css);
+@import url(/src/components/commons/logo/logo.css);
+@import url(/src/components/commons/input/input.css);
+
+.form-login,
+.form-login__header,
+.form-login__content,
+.form-login__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.form-login,
+.form-login__content {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-login {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3em;
+  max-width: 40rem;
+  height: 100vh;
+  background-color: var(--color-clear-medium);
+}
+
+.form-login__header {
+  width: 100%;
+  padding: var(--box-padding);
+  font-size: 3.5em;
+  background-image: var(--gradient-primary);
+  box-shadow: var(--box-shadow-xs);
+}
+
+.form-login__content {
+  gap: 0.3em;
+  max-width: 70%;
+}
+
+.form-login__content .form__row-title {
+  width: 100%;
+  color: var(--text-color-medium);
+}
+
+.form-login__content .form__row-title {
+  padding-top: 1em;
+  font-weight: 600;
+}
+
+.form-login__actions {
+  display: flex;
+  width: 70%;
+}
+
+.form-login__actions .button--primary {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width:401px) {
+  .form-login {
+    border-radius: var(--border-radius-md);
+    height: fit-content;
+    padding-bottom: 4em;
+    box-shadow: var(--box-shadow-md);
+  }
+
+  .form-login__header {
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+  }
+}
