@@ -1,101 +1,114 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/src/styles/styles.css">
-    <link rel="stylesheet" href="user-profile.css">
-    <title>User profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/src/styles/styles.css">
+  <link rel="stylesheet" href="user-profile.css">
+  <title>User profile</title>
 </head>
 
 <body>
-<div class="wrapper">  <!--Borrar wrapper--search si tu web no tiene search-->
+  <div class="wrapper"> <!--Borrar wrapper--search si tu web no tiene search-->
     <div class="wrapper__header">
-        <header class="header-main">
-            <section class="header-main__logo">
-                <figure class="logo">
-                    <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
-                    <section class="logo__text">
-                        <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
-                            class="logo__last-part">capp</span>
-                    </section>
-                </figure>
+      <header class="header-main">
+        <section class="header-main__logo">
+          <figure class="logo">
+            <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+            <section class="logo__text">
+              <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                class="logo__last-part">capp</span>
             </section>
-            <section class="header-main__navbar">
-                <section class="header-main__web">
-                    <nav class="navbar--tabs">
-                        <ul class="navbar__buttons">
-                            <li class="button--text"><a class="button__link" href="">Figuritas</a></li>
-                            <li class="button--text"><a class="button__link" href="">Sobres</a></li>
-                            <li class="button--text"><a class="button__link" href="">Perfil</a></li>
-                            <li class="button--icon"><a class="button__link" href=""><i
-                                    class="fa-solid fa-right-from-bracket"></i></a></li>
-                        </ul>
-                    </nav>
-                </section>
-                <section class="header-main__mobile">
-                    <div class="button--icon">
-                        <a class="button__link" href="">
-                            <i class="fa-solid fa-bars"></i>
-                        </a>
-                    </div>
-                </section>
-            </section>
-        </header>
+          </figure>
+        </section>
+        <section class="header-main__navbar">
+          <section class="header-main__web">
+            <nav class="navbar--tabs">
+              <ul class="navbar__buttons">
+                <li class="button--text"><a class="button__link" href="">Figuritas</a></li>
+                <li class="button--text"><a class="button__link" href="">Sobres</a></li>
+                <li class="button--text"><a class="button__link" href="">Perfil</a></li>
+                <li class="button--icon"><a class="button__link" href=""><i
+                      class="fa-solid fa-right-from-bracket"></i></a></li>
+              </ul>
+            </nav>
+          </section>
+          <section class="header-main__mobile">
+            <div class="button--icon">
+              <a class="button__link" href="">
+                <i class="fa-solid fa-bars"></i>
+              </a>
+            </div>
+          </section>
+        </section>
+      </header>
     </div>
 
     <div class="wrapper__aside">
-        <header class="form-user-info__header user-card">
-            <figure class="user-card__image"></figure>
-            <div class="user-card__data">
-                <h2 class="user-card__data-name">
-                    elMuñe
-                    <figure class="user-card__edit-icon"></figure>
-                </h2>
-                <p class="user-card__age"><b>Edad:</b> 73 años</p>
-                <p class="user-card__addres"><b>Ubicacion:</b> Parque Chacabuco</p>
-            </div>
-        </header>
+      <header class="form-user-info__header user-card">
+        <figure class="user-card__image"></figure>
+        <div class="user-card__data">
+          <h2 class="user-card__data-name">
+            elMuñe
+            <figure class="user-card__edit-icon"></figure>
+          </h2>
+          <p class="user-card__age"><b>Edad:</b> 73 años</p>
+          <p class="user-card__addres"><b>Ubicacion:</b> Parque Chacabuco</p>
+        </div>
+      </header>
     </div>
 
     <div class="wrapper__article">
-        <form class="form-info" autocomplete="off">
-            <nav class="form-info__nav">
-              <ul class="navbar__buttons">
-                <li class="button--icon">
-                  <a class="button__link" href="">
-                    <i class="fa-solid fa-chevron-left"></i>
-                  </a>
-                </li>        
-                <button class="button--tab-on">Perfil Usuario</button>
-                <li class="button--icon">
-                  <a class="button__link" href="">
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <article class="form-info__body">
-              <h2 class="form__row-title">Información general</h2>
+      <form class="form-info" autocomplete="off">
+        <nav class="form-info__nav">
+          <ul class="navbar__buttons">
+            <li class="button--icon">
+              <a class="button__link" href="">
+                <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+            <button class="button--tab-on">Perfil Usuario</button>
+            <li class="button--icon">
+              <a class="button__link" href="">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <article class="form-info__body">
+          <h2 class="form__row-title">Información general</h2>
+          <section class="form-info__data-section">
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Nombre</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Apellido</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Correo electrónico</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Fecha de nacimiento</h3>
               <div class="form__row">
                 <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" />
               </div>
-              <h2 class="form__row-title">Dirección</h2>
+            </section>
+          </section>
+          <h2 class="form__row-title">Dirección</h2>
+          <section class="form-info__data-section">
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Provincia</h3>
               <div class="form__row">
                 <select class="form__select">
@@ -105,6 +118,8 @@
                   <option>Opción 3</option>
                 </select>
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Localidad</h3>
               <div class="form__row">
                 <select class="form__select">
@@ -114,28 +129,46 @@
                   <option>Opción 3</option>
                 </select>
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Calle</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Altura</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
-              <h2 class="form__row-title">Ubicación Geográfica</h2>
+            </section>
+          </section>
+
+          <h2 class="form__row-title">Ubicación Geográfica</h2>
+          <section class="form-info__data-section">
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Latitud</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Longitud</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
+            </section>
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Distancia máxima de cercanía para intercambio</h3>
               <div class="form__row">
                 <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
               </div>
-              <h2 class="form__row-title">Criterio para el intercambio</h2>
+            </section>
+          </section>
+
+          <h2 class="form__row-title">Criterio para el intercambio</h2>
+          <section class="form-info__data-section">
+            <section class="form-info__row-title-input">
               <h3 class="form__row-subtitle">Criterio</h3>
               <div class="form__row">
                 <select class="form__select">
@@ -145,54 +178,57 @@
                   <option>Opción 3</option>
                 </select>
               </div>
-            </article>
-            <footer class="form-info__actions">
-                <button class="button--primary">Guardar</button>
-                <button class="button--secondary">Resetear</button>
-            </footer>
-          </form>
+            </section>
+          </section>
+        </article>
+        <footer class="form-info__actions">
+          <button class="button--primary">Guardar</button>
+          <button class="button--secondary">Resetear</button>
+        </footer>
+      </form>
     </div>
 
     <div class="wrapper__footer">
-        <footer class="footer-main">
-            <div class="footer-main__navbar">
-                <nav class="navbar--icon">
-                    <ul class="navbar__buttons">
-                        <li class="button--circle">
-                            <a class="button__link" href="">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="button--circle">
-                            <a class="button__link" href="">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="button--circle">
-                            <a class="button__link" href="">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="button--circle">
-                            <a class="button__link" href="">
-                                <i class="fa-brands fa-at"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer-main__logo">
-                <figure class="logo">
-                    <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
-                    <section class="logo__text">
-                        <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
-                            class="logo__last-part">capp</span>
-                    </section>
-                </figure>
-            </div>
-        </footer>
+      <footer class="footer-main">
+        <div class="footer-main__navbar">
+          <nav class="navbar--icon">
+            <ul class="navbar__buttons">
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-at"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-main__logo">
+          <figure class="logo">
+            <img class="logo__img" src="/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+            <section class="logo__text">
+              <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                class="logo__last-part">capp</span>
+            </section>
+          </figure>
+        </div>
+      </footer>
     </div>
-</div>
+  </div>
 </body>
 <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+
 </html>
