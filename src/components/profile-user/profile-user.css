@@ -16,6 +16,9 @@
 .form-info__data-section{
   width: 100%;
 }
+.form-info__row-title-input{
+  height: fit-content;
+}
 
 .form-info__nav{
   border: none;
@@ -64,12 +67,13 @@
 .form-info__body .form__row-title,
 .form__row-subtitle {
   /*Visual*/
-  width: 100%;
+  text-align: start;
   color: var(--text-color-medium);
 }
 
 .form-info__body .form__row-title{
   /*Layout*/
+  width: 100%;
   padding-top: var(--box-padding);
 }
 
