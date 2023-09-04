@@ -1,3 +1,5 @@
+@import url(/src/components/commons/button/button.css);
+
 .container-card,
 .player-card,
 .player-card__content,
@@ -57,7 +59,7 @@
 }
 
 .player-card__content {
-  background-color: var(--clear-color-lighter);
+  background-color: var(--color-clear);
   border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
   margin-top: calc(-1*var(--border-radius-xl));
   z-index: 99;
@@ -94,16 +96,16 @@
 }
 
 .player-card__header i {
-  color: var(--primary-color);
+  color: var(--color-primary);
   padding-left: 0.1em;
 }
 
 .player-card__header .fas.fa-star {
-  color: var(--focus-color);
+  color: var(--color-focus);
 }
 
 .player-card__header .fas.fa-fire {
-  color: var(--hot-color);
+  color: var(--color-hot);
 }
 
 .player-card__body p:nth-child(even) {
@@ -122,4 +124,19 @@
   font-size: 1.2em;
   background-image: var(--card-bg-gradient);
   padding-top: 0em;
+}
+
+.player-card--trash .button--icon {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.player-card--trash .button__link{
+  font-size: 1.5em;
+  color: var(--typeface-color);
+}
+
+.player-card--trash .button__link:hover {
+  color: var(--color-hot);
 }

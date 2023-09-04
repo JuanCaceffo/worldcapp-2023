@@ -6,38 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Input</title>
+  <link rel="stylesheet" href="/src/styles/styles.css">
   <link rel="stylesheet" href="./input.css">
 </head>
 
 <body>
-  <form class="form__container" autocomplete="off">
-    <section class="form__row">
-      <input name="primary" class="form__input--primary" type="text" placeholder="Texto aquí" />
+  <form class="form__container" autocomplete="off">    
+    <section class="form__row">    
+      <input name="primary" class="form__input--primary" type="text" placeholder="Primary Input Box" />
     </section>
     <section class="form__row">
-      <input name="search" class="form__input--icon-right" type="text" placeholder="Buscar:" />
-      <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
+      <input name="secondary" class="form__input--secondary" type="text" placeholder="Secondary Input Box" autocomplete="off" />
     </section>
     <section class="form__row">
-      <input name="user" class="form__input--icon-left" type="text" placeholder="Usuario:" />
+      <input name="user" class="form__input--icon-left" type="text" placeholder="Icon Left Input" />
       <i class="form__icon--left fa-solid fa-user"></i>
     </section>
     <section class="form__row">
-      <input name="password" id="password" class="form__input--icon-left" type="password" placeholder="Contraseña:" />
+      <input name="search" class="form__input--icon-right" type="text" placeholder="Icon Right Input" />
+      <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
+    </section>
+    <section class="form__row">
+      <input name="password" id="password" class="form__input--icon-left" type="text" placeholder="Password Input" />
       <i class="form__icon--left fa-solid fa-key"></i>
-    </section>
+    </section>    
     <section class="form__row">
-      <input name="secondary" class="form__input--secondary" type="text" placeholder="Texto aquí" autocomplete="off" />
-    </section>
-    <section class="form__row">
-      <select class="form__select--primary">
-        <option>Seleccione una opción</option>
-        <option>Opción 1</option>
-        <option>Opción 2</option>
-        <option>Opción 3</option>
+      <select class="form__select">
+        <option class="form__option">Select Primary Input</option>
+        <option class="form__option">Opción 1</option>
+        <option class="form__option">Opción 2</option>
+        <option class="form__option">Opción 3</option>
       </select>
-    </section>
-    
+    </section>      
   </form>
   <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
 </body>
