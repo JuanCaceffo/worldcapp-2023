@@ -8,7 +8,7 @@
   gap: var(--box-padding);
 }
 
-.form--search{
+.form--search {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -16,8 +16,9 @@
 
 .form__row {
   /*Layout*/
-  width: 100%;  
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   position: relative;
 }
@@ -29,8 +30,8 @@
 .form__select {
   /*Layout*/
   flex: 1;
-  min-width: 0;  
-  min-height: 3.6rem;
+  min-width: 0;
+  min-height: 3rem;
   /*Typeface*/
   font-family: var(--typeface-primary);
   font-size: 1.2em;
@@ -48,27 +49,39 @@
   transition: border var(--transition-time) ease;
 }
 
+.form__row-subtitle {
+  /*Layout*/
+  width: 100%;
+  padding: 0.3em 0 0.3em 0;
+  /*Typeface*/
+  font-weight: 400;
+}
+
 .form__input--primary::placeholder,
 .form__input--secondary::placeholder,
 .form__input--icon-left::placeholder,
-.form__input--icon-right::placeholder{
+.form__input--icon-right::placeholder {
   /*Visual*/
   color: var(--text-color-2lighter);
 }
 
 .form__icon--left,
 .form__icon--right {
-  /*Layout*/  
+  /*Layout*/
   position: absolute;
   width: 3rem;
   height: 3.8rem;
   /*typeface*/
   text-align: center;
   /*Visual*/
-  background-color: var(--color-primary);
+  background-color: var(--color-primary);  
   cursor: text;
   /*Animation*/
   transition: background-color var(--transition-time) ease;
+}
+
+.form__icon--left{
+  bottom: 0px;
 }
 
 .form__input--icon-right {
@@ -94,7 +107,7 @@
   border-radius: var(--border-radius-xs) 0 0 var(--border-radius-xs);
 }
 
-.form__select{
+.form__select {
   cursor: pointer;
   height: 3em;
 }
@@ -126,12 +139,12 @@
   /*Typeface*/
   font-size: 1.4em;
   line-height: 4rem;
-  /*Visual*/
+    /*Visual*/
   color: var(--color-clear);
 }
 
-@media (min-width: 768px) {
-  .form__row{
-    width: 48%
-  }  
+@media (min-width: 600px) {
+  .form__row--2col {
+    width: calc((100% - var(--box-padding))/2);
+  }
 }

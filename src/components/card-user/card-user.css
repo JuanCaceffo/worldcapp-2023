@@ -29,9 +29,10 @@
   font-weight: bold;
 }
 .user-card__edit-icon{
-  width: 0.6em;
-  height: 0.6em;
-  margin-top: 0.15em;
-  background: center/cover no-repeat url(../../images/pen.svg);
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-
+.user-card__edit-icon:hover{
+  transform: translate(2px, -2px);
+}
