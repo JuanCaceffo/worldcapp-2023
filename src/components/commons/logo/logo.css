@@ -1,6 +1,4 @@
-@import url('../../../styles/styles.css');
-
-.logo{
+.logo {
   /*Layout*/
   display: flex;
   /*Typeface*/
@@ -8,13 +6,13 @@
   text-shadow: var(--box-shadow-md);
 }
 
-.logo__img{
+.logo__img {
   /*Layout*/
   width: 1.4em;
-  margin-right: 0.4em;  
+  margin-right: 0.4em;
 }
 
-.logo__text{
+.logo__text {
   /*Layout*/
   cursor: default;
 }
@@ -28,9 +26,9 @@
   /*Layout*/
   margin: 0 0.05em;
   /*Typeface*/
-  font-family:var(--secondary-font);
+  font-family: var(--secondary-font);
   font-weight: 800;
-  color:var(--color-focus);
+  color: var(--color-focus);
 }
 
 .logo__last-part {
