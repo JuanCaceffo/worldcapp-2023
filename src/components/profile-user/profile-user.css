@@ -34,6 +34,7 @@
   gap: 0.3em;
   /*Visual*/
   background-color: var(--color-clear-dark);
+  border-radius: var(--border-radius-md);
 }
 
 .form-info__nav .button__link i{
@@ -48,6 +49,7 @@
   padding-top: var(--box-padding);
   gap: var(--box-padding);
   /*Visual*/
+  border-radius: var(--border-radius-md);
 }
 
 .form-info__actions {
@@ -63,12 +65,13 @@
 
 .form-info__body .form__title {
   /*Visual*/
-  width: 100%;
+  text-align: start;
   color: var(--text-color-medium);
 }
 
 .form-info__body .form__title{
   /*Layout*/
+  width: 100%;
   padding-top: var(--box-padding);
 }
 
@@ -107,16 +110,6 @@
 .form-info__actions .button--secondary {
   /*Layout*/
   flex-basis: 100%;
-}
-
-.form-info__header .sep {
-  /*Layout*/
-  width: 100%;
-  margin: 2em 0;
-  /*Visual*/
-  box-shadow: var(--box-shadow-2xs);
-  border-top: 1px solid var(--color-clear-ligth);
-  border-bottom: 1px solid var(--color-clear-dark);
 }
 
 .form-info__actions .button--circle {

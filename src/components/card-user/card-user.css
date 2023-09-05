@@ -18,7 +18,7 @@
   align-items: center;
   gap: 1.5em;
   align-content: space-between;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .data-name {
@@ -26,19 +26,13 @@
   align-items: center;
   gap: 0.2em;
   font-weight: bold;
-  font-size: 2em;
 }
 
-.name-edit {
-  width: 0.6em;
-  height: 0.6em;
-  margin-top: 0.15em;
-  background: center/cover no-repeat url(/src/images/pen.svg);
+.user-card__edit-icon {
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-
-.user-card-separator {
-  width: 30em;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 2em;
+.user-card__edit-icon:hover {
+  transform: translate(2px, -2px);
 }

@@ -1,0 +1,11 @@
+@import url(../../components/commons/layout/layout.css);
+@import url(../../components/card-user/card-user.css);
+@import url(../../components/profile-user/profile-user.css);
+
+.wrapper__aside{
+  margin: 2em 0;
+}
+.wrapper__article{
+  justify-content: center;
+}
+
