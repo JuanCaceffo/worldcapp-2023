@@ -9,7 +9,7 @@
 </head>
 
 <body>  
-  <div class="wrapper wrapper--no-aside">  <!--Borrar wrapper--search si tu web no tiene search-->
+  <div class="wrapper wrapper--no-aside">
     <div class="wrapper__header">
       <header class="header-main">
         <section class="header-main__logo">
@@ -45,44 +45,91 @@
     
     <div class="wrapper__article wrapper__article--no-aside">
       <article class="player-card">
-        <header class="player-card__header detail-card__header">
-          <h2>Emiliano Martinez</h2>
-          <h2><small>(de Alejo "El Indio" Meni)</small></h2>
-          <div class="detail-card__atributtes">
-            <h2><i class="fas fa-fire fa-sm"></i></h2>
-            <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
-          </div>
-        </header>
-        <section class="player-card__img">
-          <img src="../../images/dibu.png" alt="Emiliano Martinez" />
-        </section>
         <section class="player-card__content">
-          <section class="player-card__body">
-            <p>
-              <i class="fa-solid fa-weight-scale fa-sm"></i>
-              <strong> Peso:</strong> 85 kilos
-            </p>
-            <p>
-              <i class="fas fa-ruler-vertical fa-sm"></i>
-              <i class="fas fa-person fa-sm"></i>
-              <strong>Altura:</strong> 1.7 metros
-            </p>
-            <p><strong>Nacimiento:</strong> 02/09/92 (30 años)</p>
-            <p><strong>Casaca:</strong> 23</p>
-            <p>
-              <strong>Selección:</strong> Argentina
-              (<i class="fa-solid fa-trophy"></i> 3)
-            </p>
-            <p><strong>Año debut:</strong> 2008</p>
-            <p>CONMEBOL (<i class="fa-solid fa-trophy"></i> 10)</p>
-            <p><strong>Posición:</strong> Arquero</p>
-            <p><strong>Es Lider</strong></p>
-            <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+          <header class="player-card__header detail-card__header">
+            <h2>Emiliano Martinez</h2>
+            <h2><small>(de Alejo "El Indio" Meni)</small></h2>
+            <div class="detail-card__atributtes">
+              <h2><i class="fas fa-fire fa-sm"></i></h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+            </div>
+          </header>
+          <section class="player-card__container">
+            <section class="player-card__img">
+              <img src="../../images/dibu.png" alt="Emiliano Martinez" />
+            </section>
+            <section class="player-card__body">
+              <section class="player-card__section-info player-card__section-info--justify-between">
+                <p>
+                  <i class="fa-solid fa-weight-scale fa-sm"></i>
+                  <strong> Peso:</strong>
+                  <span class="player-card__info-span">85 kilos</span>
+                </p>
+                <p>
+                  <i class="fas fa-ruler-vertical fa-sm"></i>
+                  <i class="fas fa-person fa-sm"></i>
+                  <strong>Altura:</strong>
+                  <span class="player-card__info-span">1.7 metros</span>
+                </p>
+              </section>
+              <section class="player-card__section-info player-card__section-info--justify-center">
+                <p>
+                  <strong>Nacimiento:</strong>
+                  <span>02/09/92 (30 años)</span>
+                </p>
+              </section>
+              <section class="player-card__section-info player-card__section-info--justify-between">
+                <p>
+                  <strong>Casaca:</strong> 
+                  <span class="player-card__info-span">23</span>
+                </p>
+                <p>
+                  <strong>Selección:</strong> 
+                  <span class="player-card__info-span">Argentina (<i class="fa-solid fa-trophy"></i> 3)</span>
+                </p>
+              </section>
+              <section class="player-card__section-info player-card__section-info--justify-between">
+                <p>
+                  <strong>Año debut:</strong> 
+                  <span class="player-card__info-span">2008</span>
+                </p>
+                <p>
+                  CONMEBOL (<i class="fa-solid fa-trophy"></i> 10)
+                </p>
+              </section>
+              <section class="player-card__section-info player-card__section-info--justify-between">
+                <p>
+                  <strong>Posición:</strong>
+                  <span class="player-card__info-span">Arquero</span>
+                </p>
+                <p>
+                  <strong>Es Lider</strong>
+                </p>
+              </section>
+              <section class="player-card__section-info player-card__section-info--justify-center">
+                  <p>
+                    <strong>COTIZACION: EU 28.000.000</strong>
+                  </p>
+              </section>
+            </section>
           </section>
-          <footer class="player-card__footer">
-            <p><strong>Nivel de Impresión</strong> Bajo</p>
-            <p><strong>Valoración Base</strong> 102</p>
-            <p><strong>Valoración Total</strong> 124</p>
+          <footer class="player-card__body">
+            <section class="player-card__section-info player-card__section-info--justify-between">
+              <p>
+                <strong>Nivel de Impresión</strong> 
+                <span>Bajo</span>
+              </p>
+              <p>
+                <strong>Valoración Base</strong> 
+                <span class="player-card__info-span">102</span>
+              </p>
+            </section>
+            <section class="player-card__section-info player-card__section-info--justify-center">
+              <p>
+                <strong>Valoración Total</strong> 
+                <span class="player-card__info-span">124</span>
+              </p>
+            </section>
             <section class="container-button">
               <button class="button button--primary ">Solicitar</button>
               <button class="button button--secondary">Volver</button>
