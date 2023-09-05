@@ -1,3 +1,14 @@
 @import url(/src/components/commons/layout/layout.css);
 @import url(/src/components/card-user/card-user.css);
 @import url(/src/components/profile-user/profile-user.css);
+
+
+.wrapper__article {
+  padding: 0;
+}
+
+@media screen and (min-width:769px) {
+  .wrapper__article {
+    padding: var(--box-padding);
+  }
+}

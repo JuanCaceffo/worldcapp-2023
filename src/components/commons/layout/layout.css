@@ -63,6 +63,7 @@
 .wrapper__aside,
 .wrapper__article{
     display: flex;
+    padding: var(--box-padding);
     align-items: flex-start;
 }
 
@@ -72,20 +73,17 @@
     justify-content: center;
 }
 
-
 .wrapper__aside{
     /*Layout*/
     justify-content:center;
-    grid-area: aside;
-    background-color: var(--color-terciary-complementary);
-    padding: var(--box-padding);
+    grid-area: aside; 
     /*styles*/
+    background-color: var(--color-clear-medium);
 }
 
 .wrapper__article{
     /*Layout*/
     grid-area: article;
-    padding: var(--box-padding);
     /*styles*/
     background-color: var(--color-terciary-complementary-lighter);
 }
@@ -107,7 +105,7 @@
             "aside article"
             "footer footer";
     }
-    
+      
     .wrapper--search{
         /*Layout*/
         grid-template-columns: max(20rem, 20vw) auto;

@@ -2,7 +2,6 @@
 
 .variant-filter-a {
   background-color: var(--color-terciary);
-  border-radius: 0 0 0.5rem 0.5rem;
   color: var(--color-clear-medium);
   font-size: 1.25em;
   padding: 0.5rem 0.5rem 4rem 0.5rem;
@@ -96,8 +95,7 @@
 
 @media screen and (min-width: 769px) {
   .variant-filter-a {
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-xl);
     padding: var(--box-padding);
-    margin: 1.75rem;
   }
 }

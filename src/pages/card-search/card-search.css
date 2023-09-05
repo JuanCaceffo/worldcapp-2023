@@ -4,7 +4,6 @@
 @import url(/src/components/filter/variant-filter.css);
 @import url(/src/components/card/card.css);
 
-
 .wrapper__container{
   display: grid;
   justify-items: center;
@@ -14,9 +13,23 @@
   gap: var(--box-padding);  
 }
 
+.wrapper__aside{
+  padding: 0;
+}
+
 @media screen and (min-width:401px){
-  .wrapper__article{
-    overflow-x: auto
-  }  
+  .wrapper__article{    
+    overflow-x: auto;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .wrapper {
+    grid-template-columns: max(30rem, 20vw) auto;
+  }
+
+  .wrapper__aside{
+    padding: var(--box-padding);
+  }
 }
 

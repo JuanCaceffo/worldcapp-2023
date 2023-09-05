@@ -1,38 +1,36 @@
+@import url(/src/components/commons/button/button.css);
+
 .user-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5em;
+  gap: 1em;
 }
 
-.user-card--image {
+.user-card__image {
   border-radius: 50%;
-  width: 15em;
-  height: 15em;
+  width: 13em;
+  height: 13em;
+  box-shadow: var(--box-shadow-md);
   background: black center/contain no-repeat url(https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg);
 }
 
-.user-card--data {
+.user-card__data {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5em;
   align-content: space-between;
-  font-size: 1.4em;
+  text-align: center;
 }
 
-.data-name {
+.user-card__data-name{
+  font-size: 2em;
+  font-weight: 800;
   display: flex;
-  align-items: center;
-  gap: 0.2em;
-  font-weight: bold;
+  gap: 0.4em;
 }
 
-.user-card__edit-icon {
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-.user-card__edit-icon:hover {
-  transform: translate(2px, -2px);
+.user-card__personal{
+  font-size: 1em;  
 }
