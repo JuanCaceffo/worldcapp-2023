@@ -10,12 +10,12 @@
   background-image: var(--card-bg-gradient);
 }
 
-.detail-card__header h2{
-  padding-bottom: 0.25em;
+.detail-card__header-title{
+  padding: 0.25em 0;
 }
 
-.detail-card__header small{
-  font-size: 0.5em;
+.detail-card__header-subtitle{
+  font-size: 0.65em;
 }
 
 .detail-card__atributtes{
@@ -26,11 +26,17 @@
 /* =================================================================================== */
 /* ===== Re-asignación de clases para quitar o cambiar comportamientos heredados ===== */
 /* =================================================================================== */
+.player-card:hover {
+  transform: translateY(0%);
+}
+.player-card__header h2{
+  padding-bottom: 0;
+}
 .player-card__header h2:first-child{
   flex-basis: 0%;
 }
 .player-card__container{
-  padding: 1em 0;
+  padding: 1em;
   border-bottom: 1px solid var(--text-color-medium);
 }
 .player-card__body{
@@ -72,7 +78,7 @@
 }
 @media screen and (min-width: 401px){
   .player-card {
-    max-width: none;
+    max-width: 70vw;
   }
   .player-card__container{
     display: flex;
