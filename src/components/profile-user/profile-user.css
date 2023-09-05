@@ -13,6 +13,10 @@
   justify-content: center;
 }
 
+.form-info__actions{
+  height: 34.4em;
+}
+
 .form-info__nav{
   border: none;
 }
