@@ -1,3 +1,13 @@
 @import url("/src/components/commons/layout/layout.css");
 @import url("/src/components/commons/footer/footer.css");
 @import url("/src/components/login-box/login-box.css");
+
+
+.wrapper__article--no-header{
+    padding: 0;
+}
+
+.form-login{
+    justify-content: center;
+    flex: 1;
+}
