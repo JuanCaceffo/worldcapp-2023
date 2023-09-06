@@ -9,7 +9,7 @@
     width: 100vw;
     height: 100vh;
         
-    grid-template-rows: minmax(6rem, 10vh) auto auto minmax(6rem, 10vh);
+    grid-template-rows: 6rem auto auto 6rem;
     grid-template-areas: 
         "header"
         "aside"
@@ -19,7 +19,7 @@
 
 .wrapper--search{    
     /*Layout*/
-    grid-template-rows: minmax(6rem, 10vh) 5.2rem auto auto minmax(6rem, 10vh);
+    grid-template-rows: 6rem 5.2rem auto auto 6rem;
     grid-template-areas: 
         "header"
         "search"
@@ -30,7 +30,7 @@
 
 .wrapper--no-aside{
     /*Layout*/
-    grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
+    grid-template-rows: 6rem auto 6rem;
     grid-template-areas: 
         "header"
         "article"
@@ -38,7 +38,7 @@
 }
 
 .wrapper--no-header{
-    grid-template-rows: auto minmax(6rem, 10vh);
+    grid-template-rows: auto 6rem;
     grid-template-areas: 
         "article"
         "footer";  
@@ -48,8 +48,10 @@
     /*Layout*/
     grid-area: header;
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 6rem;
     z-index: 99;
-    height: 10vh;
     /*styles*/
     background-image: var(--gradient-primary);
 }
@@ -101,7 +103,7 @@
     .wrapper{
         /*Layout*/
         grid-template-columns: max(20rem, 20vw) auto;
-        grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
+        grid-template-rows: 6rem auto 6rem;
         grid-template-areas: 
             "header header"
             "aside article"
@@ -111,7 +113,7 @@
     .wrapper--search{
         /*Layout*/
         grid-template-columns: max(20rem, 20vw) auto;
-        grid-template-rows: minmax(6rem, 10vh) 5.2rem auto minmax(6rem, 10vh);
+        grid-template-rows: 6rem 5.2rem auto 6rem;
         grid-template-areas: 
             "header header"
             "search search"
@@ -122,7 +124,7 @@
     .wrapper--no-aside{
         /*Layout*/
         grid-template-columns: auto;
-        grid-template-rows: minmax(6rem, 10vh) auto minmax(6rem, 10vh);
+        grid-template-rows: 6rem auto 6rem;
         grid-template-areas: 
             "header"
             "article"
@@ -132,7 +134,7 @@
     .wrapper--no-header{
         /*Layout*/
         grid-template-columns: auto;
-        grid-template-rows: auto minmax(6rem, 10vh);
+        grid-template-rows: auto 6rem;
         grid-template-areas: 
             "article"
             "footer";
