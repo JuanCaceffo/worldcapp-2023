@@ -47,7 +47,9 @@
 .wrapper__header{
     /*Layout*/
     grid-area: header;
+    position: fixed;
     z-index: 99;
+    height: 10vh;
     /*styles*/
     background-image: var(--gradient-primary);
 }
@@ -134,5 +136,8 @@
         grid-template-areas: 
             "article"
             "footer";
+    }
+    .wrapper__article{
+        overflow-y: scroll;
     }
 }
