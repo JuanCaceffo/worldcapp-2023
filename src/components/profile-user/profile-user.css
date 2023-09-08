@@ -29,6 +29,7 @@
 
 .form-info__body {
   /*Layout*/
+  position: relative;
   padding: 0 var(--box-padding) var(--box-padding);
   gap: 0.3em;
   /*Visual*/
@@ -114,6 +115,11 @@
 .form-info__actions .button--circle {
   background-color: var(--color-terciary);
   font-size: 3em;
+  position: fixed;
+  z-index: 81;
+  bottom: 7rem;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .form-info__actions .button--circle:hover {
@@ -157,5 +163,14 @@
 
   .form-info__nav .button--tab-off  {
     display: inline;
+  }
+  .form-info__actions--button-circle-container{
+    height: 37em;
+  }
+  .form-info__actions .button--circle{
+    position: inherit;
+    left: auto;
+    bottom: auto;
+    transform: none;
   }  
 }
