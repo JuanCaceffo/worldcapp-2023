@@ -41,11 +41,12 @@
 .form-login__content .form__row-title {
   width: 100%;
   color: var(--text-color-medium);
-}
-
-.form-login__content .form__row-title {
   padding-top: 1em;
   font-weight: 600;
+}
+
+.form__row-title{
+  font-size: 1.2em;
 }
 
 .form-login__actions {

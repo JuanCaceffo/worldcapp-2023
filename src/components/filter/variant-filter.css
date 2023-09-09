@@ -40,12 +40,7 @@
   width: 9em;
 }
 
-.variant-filter-a__container__label {
-  display: block;
-  padding-bottom: 0.4em;
-}
-
-.variant-filter-a__container__input {
+.variant-filter-a__container-input {
   color: var(--color-secondary);
   height: 3em;
   width: 100%;
