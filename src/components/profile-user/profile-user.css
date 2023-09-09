@@ -29,8 +29,10 @@
 
 .form-info__body {
   /*Layout*/
+  position: relative;
   padding: 0 var(--box-padding) var(--box-padding);
   gap: 0.3em;
+  width: 100%;
   /*Visual*/
   background-color: var(--color-clear-dark);
   border-radius: var(--border-radius-md);
@@ -40,13 +42,13 @@
   color: var(--text-color)
 }
 
-.form-info__body--cards {
+.form-info__body-cards {
   /*Layout*/
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   padding-top: var(--box-padding);
   gap: var(--box-padding);
+  width: 100%;
   /*Visual*/
   border-radius: var(--border-radius-md);
 }
@@ -116,6 +118,18 @@
   font-size: 3em;
 }
 
+.form-info__actions--button-circle-container{
+  position: sticky;
+  width: auto;
+  height: auto;
+  padding: 0;
+  z-index: 81;
+  bottom: 2em;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: transparent;
+}
+
 .form-info__actions .button--circle:hover {
   background-color: var(--color-focus);
 }
@@ -157,5 +171,5 @@
 
   .form-info__nav .button--tab-off  {
     display: inline;
-  }  
+  }
 }
