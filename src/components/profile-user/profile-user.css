@@ -122,8 +122,11 @@
   position: sticky;
   width: auto;
   height: auto;
+  padding: 0;
   z-index: 81;
-  bottom: 0;
+  bottom: 2em;
+  left: 50%;
+  transform: translate(-50%);
   background-color: transparent;
 }
 
