@@ -32,6 +32,7 @@
   position: relative;
   padding: 0 var(--box-padding) var(--box-padding);
   gap: 0.3em;
+  width: 100%;
   /*Visual*/
   background-color: var(--color-clear-dark);
   border-radius: var(--border-radius-md);
@@ -41,13 +42,13 @@
   color: var(--text-color)
 }
 
-.form-info__body--cards {
+.form-info__body-cards {
   /*Layout*/
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   padding-top: var(--box-padding);
   gap: var(--box-padding);
+  width: 100%;
   /*Visual*/
   border-radius: var(--border-radius-md);
 }
@@ -115,11 +116,15 @@
 .form-info__actions .button--circle {
   background-color: var(--color-terciary);
   font-size: 3em;
-  position: fixed;
+}
+
+.form-info__actions--button-circle-container{
+  position: sticky;
+  width: auto;
+  height: auto;
   z-index: 81;
-  bottom: 7rem;
-  left: 50%;
-  transform: translate(-50%);
+  bottom: 0;
+  background-color: transparent;
 }
 
 .form-info__actions .button--circle:hover {
@@ -164,13 +169,4 @@
   .form-info__nav .button--tab-off  {
     display: inline;
   }
-  .form-info__actions--button-circle-container{
-    height: 37em;
-  }
-  .form-info__actions .button--circle{
-    position: inherit;
-    left: auto;
-    bottom: auto;
-    transform: none;
-  }  
 }
