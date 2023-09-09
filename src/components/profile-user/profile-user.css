@@ -42,16 +42,14 @@
   color: var(--text-color)
 }
 
-.form-info__body-cards {
-  /*Layout*/
+/* .form-info__body-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   padding-top: var(--box-padding);
   gap: var(--box-padding);
   width: 100%;
-  /*Visual*/
   border-radius: var(--border-radius-md);
-}
+} */
 
 .form-info__actions {
   /*Layout*/

@@ -4,21 +4,12 @@
 @import url(/src/components/filter/variant-filter.css);
 @import url(/src/components/card/card.css);
 
-.wrapper__container{
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-  gap: var(--box-padding);  
-}
-
 .wrapper__aside{
   padding: 0;
 }
 
 @media screen and (min-width:401px){
-  .wrapper__article{    
+  .wrapper__main-content{    
     overflow-x: auto;
   }
 }

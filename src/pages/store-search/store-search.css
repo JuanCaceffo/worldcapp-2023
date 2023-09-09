@@ -3,11 +3,3 @@
 @import url(/src/components/commons/layout/layout.css);
 @import url(/src/components/sortby-filter/sortby-filter.css);
 @import url(/src/components/card-market/card-market.css);
-
-.wrapper__article {
-  display: grid;
-  justify-items: center;
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--box-padding);
-}
