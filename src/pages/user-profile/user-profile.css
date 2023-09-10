@@ -2,13 +2,16 @@
 @import url(/src/components/card-user/card-user.css);
 @import url(/src/components/profile-user/profile-user.css);
 
+.grid-container{
+  padding: var(--box-padding);
+}
 
-.wrapper__article {
+.wrapper__main-content {
   padding: 0;
 }
 
 @media screen and (min-width:769px) {
-  .wrapper__article {
+  .wrapper__main-content {
     padding: var(--box-padding);
   }
 }
