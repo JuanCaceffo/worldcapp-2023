@@ -43,6 +43,9 @@
 
 .button--primary,
 .button--secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /*Visual*/
   border: 1px solid var(--color-highligthed);
   border-radius: var(--border-radius-md);
