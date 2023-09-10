@@ -1,7 +1,7 @@
 @import url(/src/components/commons/layout/layout.css);
 @import url(/src/components/commons/input/input.css);
 @import url(/src/components/commons/button/button.css);
-@import url(/src/components/filter/variant-filter.css);
+@import url(/src/components/filter/filter.css);
 @import url(/src/components/card/card.css);
 
 .wrapper__aside{
@@ -17,10 +17,6 @@
 @media screen and (min-width:769px) {
   .wrapper {
     grid-template-columns: max(30rem, 20vw) auto;
-  }
-
-  .wrapper__aside{
-    padding: var(--box-padding);
   }
 }
 
