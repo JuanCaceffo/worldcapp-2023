@@ -1,7 +1,7 @@
 @import url(/src/components/commons/header/header.css);
 @import url(/src/components/commons/footer/footer.css);
 @import url(/src/components/commons/layout/layout.css);
-@import url(/src/components/sortby-filter/sortby-filter.css);
+@import url(/src/components/filter/filter.css);
 @import url(/src/components/card-market/card-market.css);
 
 .wrapper__article {
