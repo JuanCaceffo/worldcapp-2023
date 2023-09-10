@@ -1,6 +1,11 @@
 @import url(card.css);
 @import url(/src/components/commons/button/button.css);
 
+.wrapper__main-content.wrapper__main-content--no-aside{
+  overflow-y: unset;
+  padding: 0;
+}
+
 .detail-card__header {
   display: block;
   width: 100%;
@@ -82,8 +87,9 @@
 }
 
 .button {
-  margin: 0.2em 0;
   width: 100%;
+  font-size: inherit;
+  height: 4.6em;
 }
 
 @media screen and (min-width: 401px) {
@@ -136,5 +142,10 @@
 
   .button {
     max-width: 10em;
+  }
+  @media screen and (max-height:700px){
+    .player-card {
+      font-size: 8px;
+    }
   }
 }
