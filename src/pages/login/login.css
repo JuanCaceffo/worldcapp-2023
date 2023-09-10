@@ -10,4 +10,5 @@
 .form-login{
     justify-content: center;
     flex: 1;
+    height: fit-content;
 }
