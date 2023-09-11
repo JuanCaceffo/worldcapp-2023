@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.filter{
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+}
+
 @media screen and (min-width:401px){
   .wrapper__main-content{    
     overflow-x: auto;
@@ -18,5 +22,9 @@
   .wrapper {
     grid-template-columns: max(30rem, 20vw) auto;
   }
+  
+  .filter{
+    margin: 1.2em;
+    border-radius: var(--border-radius-md);
+  }
 }
-

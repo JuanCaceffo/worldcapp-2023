@@ -96,10 +96,3 @@
     width: min-content;
   }
 }
-
-@media screen and (min-width: 769px) {
-  .filter--assessment {
-    border-radius: var(--border-radius-xl);
-    padding: var(--box-padding);
-  }
-}
