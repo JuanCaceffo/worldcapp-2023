@@ -3,12 +3,13 @@
 @import url("/src/components/login-box/login-box.css");
 
 
-.wrapper__main-content--no-header{
+.wrapper__main-content--no-header {
     padding: 0;
 }
 
-.form-login{
+.form-login {
     justify-content: center;
     flex: 1;
     height: fit-content;
+    background-color: var(--color-terciary-complementary-lighter);
 }

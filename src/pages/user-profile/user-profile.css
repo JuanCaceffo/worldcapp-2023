@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+.form-info{
+  background-color: var(--color-terciary-complementary-lighter);
+}
+
 @media screen and (min-width:769px) {
   .wrapper__main-content {
     padding: var(--box-padding);

@@ -27,10 +27,12 @@
 
 .form-login__header {
   width: 100%;
-  padding: var(--box-padding);
   font-size: 3.5em;
-  background-image: var(--gradient-primary);
-  box-shadow: var(--box-shadow-xs);
+}
+.form-login__header .logo{
+  color: var(--color-primary);
+  font-size: 1.2em;
+  margin-bottom: -0.5em;
 }
 
 .form-login__content {
@@ -65,8 +67,16 @@
     padding-bottom: 4em;
     box-shadow: var(--box-shadow-md);
   }
+  .form-login__header .logo{
+    color: var(--typeface-color);
+    font-size: inherit;
+    margin-bottom: 0;
+  }  
 
   .form-login__header {
     border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    padding: var(--box-padding);
+    background-image: var(--gradient-primary);
+    box-shadow: var(--box-shadow-xs);
   }
 }
