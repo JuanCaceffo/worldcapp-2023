@@ -13,15 +13,3 @@
     height: fit-content;
     background-color: var(--color-terciary-complementary-lighter);
 }
-
-@media screen and (max-width:400px) {
-    .form-login .logo {
-        color: var(--color-primary);
-    }
-
-    .form-login__header {
-        background-image: none;
-        box-shadow: none;
-        padding: 0;
-    }
-}
