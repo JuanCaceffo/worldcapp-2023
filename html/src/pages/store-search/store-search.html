@@ -9,9 +9,9 @@
   <title>Puestos de Venta</title>
 </head>
 
-<body>  
-  <div class="wrapper wrapper--search">  <!--Borrar wrapper--search si tu web no tiene search-->
-    <div class="wrapper__header">
+<body>
+  <div class="wrapper wrapper--search"> <!--Borrar wrapper--search si tu web no tiene search-->
+    <section class="wrapper__header">
       <header class="header-main">
         <section class="header-main__logo">
           <figure class="logo">
@@ -29,7 +29,8 @@
                 <li class="button--text"><a class="button__link" href="">Figuritas</a></li>
                 <li class="button--text"><a class="button__link" href="">Sobres</a></li>
                 <li class="button--text"><a class="button__link" href="">Perfil</a></li>
-                <li class="button--icon"><a class="button__link" href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                <li class="button--icon"><a class="button__link" href=""><i
+                      class="fa-solid fa-right-from-bracket"></i></a></li>
               </ul>
             </nav>
           </section>
@@ -42,543 +43,543 @@
           </section>
         </section>
       </header>
-    </div>
-    
-    <div class="wrapper__search">
-      <form class="form--search" autocomplete="off">
+    </section>
+
+    <section class="wrapper__search">
+      <form class="form form--search" autocomplete="off">
         <section class="form__row">
           <input name="search" class="form__input--icon-right" type="text" placeholder="Buscar:" />
           <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
         </section>
       </form>
-    </div>
-    
-    <div class="wrapper__aside">
-        <form class="filter filter--sort">
-            <h4 class="filter__title filter__title--primary">Ordenar Por</h4>
-            <div class="radio-filter">
-                <label for="closest">
-                    <input type="radio" id="closest" name="radio-filter--option" value="closest" checked>
-                    Menor Distancia
-                </label><br>
-    
-                <label for="cheapest">
-                    <input type="radio" id="cheapest" name="radio-filter--option" value="cheapest">
-                    Más Barato
-                </label><br>
-    
-                <label for="pack-quantity">
-                    <input type="radio" id="pack-quantity" name="radio-filter--option" value="pack-quantity">
-                    Más Sobres
-                </label><br>
-            
-                <label for="closest-only">
-                    <input type="radio" id="closest-only" name="radio-filter--option" value="closest-only">
-                    Solo los más cercanos
-                </label>
-            </div>
-        </form>
-    </div>
-    
-    <div class="wrapper__main-content">
-        <div class="grid-container">
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
-                    <i class="fa-solid fa-store fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
-                    <i class="fa-solid fa-book-open fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Supermercado Chumbo</h1>
-                    <i class="fa-solid fa-shopping-basket fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
-                    <i class="fa-solid fa-store fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
-                    <i class="fa-solid fa-book-open fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Supermercado Chumbo</h1>
-                    <i class="fa-solid fa-shopping-basket fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
-                    <i class="fa-solid fa-store fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
-                    <i class="fa-solid fa-book-open fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Supermercado Chumbo</h1>
-                    <i class="fa-solid fa-shopping-basket fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
-                    <i class="fa-solid fa-store fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
-                    <i class="fa-solid fa-book-open fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
-            <div class="card-market">
-            
-                <header class="card-market__name">
-                    <h1 class="card-market--name-text">Supermercado Chumbo</h1>
-                    <i class="fa-solid fa-shopping-basket fa-2xl"></i>
-                </header>
-        
-                <dl class="card-market__content">
-                    <dl class="card-market__info location">
-                        <dt>
-                            <b class="card-market__attribute">Direccion: </b>
-                            <span class="card-market__attribute-info">xxxx </span>
-                        </dt> 
-        
-                        <dt>
-                            <b class="card-market__attribute">Ubicacion Geografica: </b>
-                            <span class="card-market__attribute-info">yyyy </span>
-                        </dt>
-        
-                        <dt>
-                            <b class="card-market__attribute">Distancia: </b>
-                            <span class="card-market__attribute-info">zzzz </span>
-                        </dt>
-                    </dl>
-        
-                    <dl class="card-market__info stock">
-                        <dt>
-                            <b class="card-market__attribute">Stock de Sobres: </b>
-                            <span class="card-market__attribute-info">#### </span>
-                        </dt>
-                        <dt class="card-market__status">
-                            <span>Pedidos Pendientes</span>
-                        </dt>
-                    </dl>
-        
-                    <dt class="card-market__info price">
-                        <b class="card-market__attribute">Precio por sobre: </b>
-                        <span class="card-market__attribute-info">$$$</span>
-                    </dt>
-                </dl>
-            </div>
+    </section>
+
+    <section class="wrapper__aside">
+      <form class="filter filter--sort">
+        <h4 class="filter__title filter__title--primary">Ordenar Por</h4>
+        <div class="radio-filter">
+          <label for="closest">
+            <input type="radio" id="closest" name="radio-filter--option" value="closest" checked>
+            Menor Distancia
+          </label><br>
+
+          <label for="cheapest">
+            <input type="radio" id="cheapest" name="radio-filter--option" value="cheapest">
+            Más Barato
+          </label><br>
+
+          <label for="pack-quantity">
+            <input type="radio" id="pack-quantity" name="radio-filter--option" value="pack-quantity">
+            Más Sobres
+          </label><br>
+
+          <label for="closest-only">
+            <input type="radio" id="closest-only" name="radio-filter--option" value="closest-only">
+            Solo los más cercanos
+          </label>
         </div>
-    </div>
-    
-    <div class="wrapper__footer">      
-      <footer class="footer-main">    
+      </form>
+    </section>
+
+    <section class="wrapper__main-content">
+      <div class="grid-container">
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
+            <i class="fa-solid fa-store fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
+            <i class="fa-solid fa-book-open fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Supermercado Chumbo</h1>
+            <i class="fa-solid fa-shopping-basket fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
+            <i class="fa-solid fa-store fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
+            <i class="fa-solid fa-book-open fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Supermercado Chumbo</h1>
+            <i class="fa-solid fa-shopping-basket fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
+            <i class="fa-solid fa-store fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
+            <i class="fa-solid fa-book-open fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Supermercado Chumbo</h1>
+            <i class="fa-solid fa-shopping-basket fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market__name-text">Kiosko "La Scaloneta"</h1>
+            <i class="fa-solid fa-store fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
+            <i class="fa-solid fa-book-open fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+        <div class="card-market">
+
+          <header class="card-market__name">
+            <h1 class="card-market--name-text">Supermercado Chumbo</h1>
+            <i class="fa-solid fa-shopping-basket fa-2xl"></i>
+          </header>
+
+          <dl class="card-market__content">
+            <dl class="card-market__info location">
+              <dt>
+                <b class="card-market__attribute">Direccion: </b>
+                <span class="card-market__attribute-info">xxxx </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Ubicacion Geografica: </b>
+                <span class="card-market__attribute-info">yyyy </span>
+              </dt>
+
+              <dt>
+                <b class="card-market__attribute">Distancia: </b>
+                <span class="card-market__attribute-info">zzzz </span>
+              </dt>
+            </dl>
+
+            <dl class="card-market__info stock">
+              <dt>
+                <b class="card-market__attribute">Stock de Sobres: </b>
+                <span class="card-market__attribute-info">#### </span>
+              </dt>
+              <dt class="card-market__status">
+                <span>Pedidos Pendientes</span>
+              </dt>
+            </dl>
+
+            <dt class="card-market__info price">
+              <b class="card-market__attribute">Precio por sobre: </b>
+              <span class="card-market__attribute-info">$$$</span>
+            </dt>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper__footer">
+      <footer class="footer-main">
         <div class="footer-main__navbar">
           <nav class="navbar--icon">
             <ul class="navbar__buttons">
@@ -604,18 +605,20 @@
               </li>
             </ul>
           </nav>
-        </div>    
-        <div class="footer-main__logo">          
+        </div>
+        <div class="footer-main__logo">
           <figure class="logo">
             <img class="logo__img" src="/html/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
             <section class="logo__text">
-              <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span class="logo__last-part">capp</span>
+              <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                class="logo__last-part">capp</span>
             </section>
-          </figure>        
-        </div>    
+          </figure>
+        </div>
       </footer>
-    </div>
+    </section>
   </div>
 </body>
 <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+
 </html>
