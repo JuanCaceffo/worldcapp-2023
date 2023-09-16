@@ -83,7 +83,6 @@
     justify-content:center;
     grid-area: aside; 
     /*styles*/
-    background-color: var(--color-clear-medium);
 }
 
 .wrapper__main-content{
@@ -122,6 +121,9 @@
             "footer footer";
     }
 
+    .wrapper__aside{
+        background-color: var(--color-clear-medium);
+    }
     .wrapper--no-aside{
         /*Layout*/
         grid-template-columns: auto;
