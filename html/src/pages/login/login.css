@@ -1,6 +1,6 @@
-@import url("/src/components/commons/layout/layout.css");
-@import url("/src/components/commons/footer/footer.css");
-@import url("/src/components/login-box/login-box.css");
+@import url("../../../src/components/commons/layout/layout.css");
+@import url("../../../src/components/commons/footer/footer.css");
+@import url("../../../src/components/login-box/login-box.css");
 
 
 .wrapper__main-content--no-header {

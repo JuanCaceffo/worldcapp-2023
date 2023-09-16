@@ -1,7 +1,7 @@
-@import url("/src/components/commons/header/header.css");
-@import url("/src/components/commons/footer/footer.css");
-@import url("/src/components/commons/input/input.css");
-@import url("/src/components/commons/layout/grid-container.css");
+@import url('../header/header.css');
+@import url('../footer/footer.css');
+@import url('../input/input.css');
+@import url('../layout/grid-container.css');
 
 .wrapper{
     /*Layout*/

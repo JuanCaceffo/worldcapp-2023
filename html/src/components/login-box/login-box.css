@@ -1,6 +1,6 @@
-@import url(/src/components/commons/button/button.css);
-@import url(/src/components/commons/logo/logo.css);
-@import url(/src/components/commons/input/input.css);
+@import url('../commons/button/button.css');
+@import url('../commons/logo/logo.css');
+@import url('../commons/input/input.css');
 
 .form-login,
 .form-login__header,

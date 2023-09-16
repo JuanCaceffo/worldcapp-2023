@@ -1,4 +1,4 @@
-@import url(/src/components/commons/input/input.css);
+@import url('../commons/input/input.css');
 
 .filter {
   background-color: var(--color-terciary);

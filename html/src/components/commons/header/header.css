@@ -1,6 +1,9 @@
 @import url(/src/components/commons/logo/logo.css);
 @import url(/src/components/commons/navbar/navbar.css);
 @import url(/src/components/commons/button/button.css);
+@import url('../logo/logo.css');
+@import url('../navbar/navbar.css');
+@import url('../button/button.css');
 
 
 .header-main {

@@ -1,8 +1,8 @@
-@import url(/src/components/commons/layout/layout.css);
-@import url(/src/components/commons/input/input.css);
-@import url(/src/components/commons/button/button.css);
-@import url(/src/components/filter/filter.css);
-@import url(/src/components/card/card.css);
+@import url("../../components/commons/layout/layout.css");
+@import url("../../components/commons/input/input.css");
+@import url("../../components/commons/button/button.css");
+@import url("../../components/filter/filter.css");
+@import url("../../components/card/card.css");
 
 .wrapper__aside{
   padding: 0;

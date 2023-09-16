@@ -1,6 +1,6 @@
-@import url(/src/components/commons/layout/layout.css);
-@import url(/src/components/card-user/card-user.css);
-@import url(/src/components/profile-user/profile-user.css);
+@import url("../../../src/components/commons/layout/layout.css");
+@import url("../../../src/components/card-user/card-user.css");
+@import url("../../../src/components/profile-user/profile-user.css");
 
 .grid-container{
   padding: var(--box-padding);

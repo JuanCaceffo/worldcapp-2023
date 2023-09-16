@@ -1,5 +1,5 @@
-@import url(card.css);
-@import url(/src/components/commons/button/button.css);
+@import url("card.css");
+@import url("../../../src/components/commons/button/button.css");
 
 .wrapper__main-content.wrapper__main-content--no-aside{
   overflow-y: unset;

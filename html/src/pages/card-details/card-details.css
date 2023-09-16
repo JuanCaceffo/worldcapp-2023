@@ -1,6 +1,6 @@
-@import url("/src/components/commons/layout/layout.css");
-@import url("/src/components/commons/header/header.css");
-@import url("/src/components/card/card-details.css");
-@import url("/src/components/commons/footer/footer.css");
+@import url('../../components/commons/layout/layout.css');
+@import url('../../components/commons/header/header.css');
+@import url('../../components/card/card-details.css');
+@import url('../../components/commons/footer/footer.css');
 
 

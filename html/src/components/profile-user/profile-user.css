@@ -1,7 +1,7 @@
-@import url(/src/components/commons/input/input.css);
-@import url(/src/components/commons/button/button.css);
-@import url(/src/components/commons/navbar/navbar.css);
-@import url(/src/components/card/card.css);
+@import url('../commons/input/input.css');
+@import url('../commons/button/button.css');
+@import url('../commons/navbar/navbar.css');
+@import url('../card/card.css');
 
 .form-info,
 .form-info__nav,

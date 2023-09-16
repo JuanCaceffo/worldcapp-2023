@@ -1,4 +1,4 @@
-@import url("/src/components/commons/button/button.css");
+@import url('../button/button.css');
 
 .container{
   background-color: var(--color-secondary);
