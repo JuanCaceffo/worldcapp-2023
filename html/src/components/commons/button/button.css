@@ -88,6 +88,9 @@
   /*Visual*/
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   border: none;
+  text-align: center;
+  font-size: 1.5em;
+  list-style: none;
 }
 
 .button--tab-off {
