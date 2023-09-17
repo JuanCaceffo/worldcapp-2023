@@ -118,13 +118,12 @@
 
 .form-info__actions--button-circle-container{
   position: sticky;
-  width: auto;
-  height: auto;
+  width: fit-content;
+  min-height: unset;
   padding: 0;
   z-index: 81;
-  bottom: 2em;
-  left: 50%;
-  transform: translate(-50%);
+  bottom: 1.5em;
+  left: 95%;
   background-color: transparent;
 }
 
