@@ -58,11 +58,14 @@
 }
 
 .wrapper__search{
-    /*Layout*/
-    grid-area: search;
-    padding: 0.5em var(--box-padding);
-    /*styles*/
-    background-color: var(--color-terciary);
+     /*Layout*/
+     grid-area: search;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0 var(--box-padding);
+     /*styles*/
+     background-color: var(--color-terciary);
 }
 
 .wrapper__aside,
