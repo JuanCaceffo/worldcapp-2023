@@ -46,15 +46,14 @@
 }
 
 .wrapper__header{
-    /*Layout*/
+    /*Layout*/    background-image: var(--gradient-primary);
+
     grid-area: header;
     position: fixed;
     top: 0;
     left: 0;
     height: 6rem;
     z-index: 99;
-    /*styles*/
-    background-image: var(--gradient-primary);
 }
 
 .wrapper__search{
@@ -98,8 +97,6 @@
 .wrapper__footer{
     /*Layout*/
     grid-area: footer;
-    /*styles*/
-    background-color: var(--color-secondary);
 }
 
 @media screen and (min-width:769px){
