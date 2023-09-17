@@ -8,7 +8,8 @@
     display: grid;
     min-width: 35rem;
     width: 100vw;
-        
+    min-height: 100vh;
+
     grid-template-rows: 6rem auto auto 6rem;
     grid-template-areas: 
         "header"
@@ -17,7 +18,7 @@
         "footer";
 }
 
-.wrapper--search{    
+.wrapper--search{ 
     /*Layout*/
     grid-template-rows: 6rem 5.2rem auto auto 6rem;
     grid-template-areas: 
@@ -119,10 +120,15 @@
             "aside content"
             "footer footer";
     }
-    
-    .wrapper__aside{
+    .wrapper__search{
         position: sticky;
         top: 6em;
+        z-index: 100;
+    }
+
+    .wrapper__aside{
+        position: sticky;
+        top: 12em;
         height: fit-content;
     }
     .wrapper--no-aside{
