@@ -1,0 +1,45 @@
+/* @import url(/src/components/commons/logo/logo.css);
+@import url(/src/components/commons/navbar/navbar.css);
+@import url(/src/components/commons/button/button.css);
+@import url('../logo/logo.css');
+@import url('../navbar/navbar.css');
+@import url('../button/button.css');
+*/
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  width: 100vw;
+  height: 100%;
+  box-shadow: var(--box-shadow-xs);
+  font-size: 3.5rem;
+  background-image: var(--gradient-primary);
+}
+
+.header-main__web{
+  display: none;
+}
+
+.header-main__navbar{
+  font-size: 0.7em;
+}
+
+.header-main__navbar .navbar__buttons{
+  gap: 1.2em;
+}
+
+.header-main__navbar .button__link{
+  color: var(--typeface-color);
+}
+
+@media screen and (min-width:768px) {
+  .header-main__web {
+    display: flex;
+  }
+
+  .header-main__mobile {    
+    display: none;
+  }
+}

@@ -1,0 +1,7 @@
+/* @import url('../button/button.css'); */
+
+.navbar__buttons{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+} 
