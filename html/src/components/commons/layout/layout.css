@@ -8,7 +8,6 @@
     display: grid;
     min-width: 35rem;
     width: 100vw;
-    height: 100vh;
         
     grid-template-rows: 6rem auto auto 6rem;
     grid-template-areas: 
@@ -120,9 +119,11 @@
             "aside content"
             "footer footer";
     }
-
+    
     .wrapper__aside{
-        background-color: var(--color-clear-medium);
+        position: sticky;
+        top: 6em;
+        height: fit-content;
     }
     .wrapper--no-aside{
         /*Layout*/
@@ -141,8 +142,5 @@
         grid-template-areas: 
             "content"
             "footer";
-    }
-    .wrapper__main-content{
-        overflow-y: scroll;
     }
 }
