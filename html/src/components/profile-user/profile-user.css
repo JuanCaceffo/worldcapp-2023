@@ -3,6 +3,17 @@
 @import url('../commons/navbar/navbar.css');
 @import url('../card/card.css');
 
+.body-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.grid-container {
+  padding: var(--box-padding);
+}
+
 .form-info,
 .form-info__nav,
 .form-info__body,
@@ -168,5 +179,5 @@
 
   .form-info__nav .button--tab-off  {
     display: inline;
-  }
+  }  
 }

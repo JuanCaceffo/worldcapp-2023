@@ -5,30 +5,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../styles/styles.css">
+  <link rel="stylesheet" href="/html/src/styles/styles.css">
+  <link rel="stylesheet" href="/html/src/components/commons/layout/grid-container.css">
   <link rel="stylesheet" href="profile-user.css">
   <title>Perfil de Usuario</title>
 </head>
 
-<body>
-  <form class="form-info" autocomplete="off">
-    <nav class="form-info__nav">
-      <ul class="navbar__buttons">
-        <li class="button--icon button--disabled">
-          <a class="button__link" href="">
-            <i class="fa-solid fa-chevron-left" style="color:var(--typeface-color)"></i>
-          </a>
-        </li>        
-        <button class="button--tab-on"><a class="button__link" href="/src/components/profile-user/profile-user.html">Perfil Usuario</a></button>
-        <button class="button--tab-off"><a class="button__link" href="/src/components/profile-user/duplicate-stickers.html">Figuritas Repetidas</a></button>
-        <button class="button--tab-off"><a class="button__link" href="/src/components/profile-user/missing-stickers.html">Figuritas Faltantes</a></button>
-        <li class="button--icon">
-          <a class="button__link" href="/src/components/profile-user/duplicate-stickers.html">
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
+<body class="body-form">
+  <nav class="form-info__nav">
+    <ul class="navbar__buttons">
+      <li class="button--icon button--disabled">
+        <a class="button__link" href="#">
+          <i class="fa-solid fa-chevron-left" style="color:var(--typeface-color)"></i>
+        </a>
+      </li>        
+      <button class="button--tab-on"><a class="button__link" href="/html/src/components/profile-user/profile-user.html">Perfil Usuario</a></button>
+      <button class="button--tab-off"><a class="button__link" href="/html/src/components/profile-user/duplicate-stickers.html">Figuritas Repetidas</a></button>
+      <button class="button--tab-off"><a class="button__link" href="/html/src/components/profile-user/missing-stickers.html">Figuritas Faltantes</a></button>
+      <li class="button--icon">
+        <a class="button__link" href="/html/src/components/profile-user/duplicate-stickers.html">
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>      
+  <form class="form-info" autocomplete="off">       
     <article class="form-info__body">
       <h2 class="form__title">Información general</h2>
       <section class="form__row form__row--2col">

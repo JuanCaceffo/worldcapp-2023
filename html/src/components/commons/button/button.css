@@ -75,7 +75,6 @@
 
 .button--tab-on {
   /*Visual*/
-  border-top: 1px solid;
   background-color: var(--color-clear-dark);
   color: var(--color-primary);
 }
