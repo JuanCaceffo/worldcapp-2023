@@ -58,6 +58,10 @@
   color: var(--typeface-color);
 }
 
+.button__link--active{
+  color: var(--color-focus);
+}
+
 .button--primary {
   /*Visual*/
   background-color: var(--color-highligthed);
@@ -100,6 +104,7 @@
 }
 
 .button__link,
+.button__link--active,
 .button__text{
   color: var(--color-primary);
   text-decoration: none;
