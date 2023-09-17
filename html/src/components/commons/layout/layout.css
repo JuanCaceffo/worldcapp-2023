@@ -95,6 +95,13 @@
     background-color: var(--color-terciary-complementary-lighter);
 }
 
+.wrapper__main-content--navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
 .wrapper__footer{
     /*Layout*/
     grid-area: footer;
@@ -123,6 +130,7 @@
             "aside content"
             "footer footer";
     }
+
     .wrapper__search{
         position: sticky;
         top: 6em;
@@ -134,6 +142,7 @@
         top: 12em;
         height: fit-content;
     }
+    
     .wrapper--no-aside{
         /*Layout*/
         grid-template-columns: auto;
