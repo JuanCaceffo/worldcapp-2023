@@ -53,19 +53,9 @@
   color: var(--text-color)
 }
 
-/* .form-info__body-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  padding-top: var(--box-padding);
-  gap: var(--box-padding);
-  width: 100%;
-  border-radius: var(--border-radius-md);
-} */
-
 .form-info__actions {
   /*Layout*/
   width: 100%;
-  min-height: 100%;
   align-items: center;
   padding: var(--box-padding);
   gap: 0.6em;
