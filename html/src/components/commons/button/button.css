@@ -58,6 +58,10 @@
   color: var(--typeface-color);
 }
 
+.button__link--active{
+  color: var(--color-focus);
+}
+
 .button--primary {
   /*Visual*/
   background-color: var(--color-highligthed);
@@ -75,7 +79,6 @@
 
 .button--tab-on {
   /*Visual*/
-  border-top: 1px solid;
   background-color: var(--color-clear-dark);
   color: var(--color-primary);
 }
@@ -85,6 +88,9 @@
   /*Visual*/
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   border: none;
+  text-align: center;
+  font-size: 1.5em;
+  list-style: none;
 }
 
 .button--tab-off {
@@ -101,6 +107,7 @@
 }
 
 .button__link,
+.button__link--active,
 .button__text{
   color: var(--color-primary);
   text-decoration: none;
