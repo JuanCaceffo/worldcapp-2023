@@ -1,10 +1,7 @@
-/* @import url(/src/components/commons/logo/logo.css);
-@import url(/src/components/commons/navbar/navbar.css);
-@import url(/src/components/commons/button/button.css);
-@import url('../logo/logo.css');
+/* @import url('../logo/logo.css');
 @import url('../navbar/navbar.css');
 @import url('../button/button.css');
-*/
+ */
 
 .header-main {
   display: flex;
@@ -32,6 +29,10 @@
 
 .header-main__navbar .button__link{
   color: var(--typeface-color);
+}
+
+.header-main__navbar .button__link--active{
+  color: var(--color-focus);
 }
 
 @media screen and (min-width:768px) {

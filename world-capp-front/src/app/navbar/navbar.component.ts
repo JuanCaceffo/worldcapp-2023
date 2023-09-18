@@ -5,4 +5,30 @@ import { Component } from '@angular/core'
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  navbar = new NavBar()
+}
+
+interface NavBarContent {
+  href: string
+  contentName: string
+}
+class NavBar {
+  /* routing here */
+  content: Array<NavBarContent> = [
+    {
+      href: '',
+      contentName: 'Figuritas'
+    },
+    {
+      href: '',
+      contentName: 'Sobres'
+    },
+    {
+      href: '',
+      contentName: 'Perfil'
+    }
+  ]
+}
+
+

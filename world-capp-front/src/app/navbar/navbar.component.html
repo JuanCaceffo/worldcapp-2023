@@ -4,14 +4,8 @@
   contenido de los anchors asi el footer puede usar este componentne -->
   <ul class="navbar__buttons">
     <!-- TODO: cuando esten listas las diferentes variantes de botones incluirlas -->
-    <li class="button--text">
-      <a class="button__link" href="">Figuritas</a>
-    </li>
-    <li class="button--text">
-      <a class="button__link" href="">Sobres</a>
-    </li>
-    <li class="button--text">
-      <a class="button__link" href="">Perfil</a>
+    <li class="button--text" *ngFor="let NavBarContent of navbar.content ">
+      <a class="button__link" href="">{{NavBarContent.contentName}}</a>
     </li>
     <li class="button--icon">
       <a class="button__link" href=""

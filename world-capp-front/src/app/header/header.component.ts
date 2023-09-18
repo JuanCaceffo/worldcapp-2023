@@ -5,4 +5,14 @@ import { Component } from '@angular/core'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  header = new Header()
+}
+
+class Header {
+  isDropDown: boolean = false
+
+  onDropDown() {
+    this.isDropDown = !this.isDropDown 
+  }
+}
