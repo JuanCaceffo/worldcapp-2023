@@ -1,0 +1,11 @@
+<section class="user-card__data-name">
+  <p *ngIf="!isEditing">{{ username }}</p>
+  <p *ngIf="isEditing">
+    <input [(ngModel)]="editedUsername" (keyup.enter)="saveUsername()" (keyup.escape)="cancelEdit()">
+  </p>
+  <li class="button--icon" (click)="startEdit()">
+    <a class="button__link" href="">
+      <i class="fa-solid fa-pen-to-square"></i>
+    </a>
+  </li>                
+</section>
