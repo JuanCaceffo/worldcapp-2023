@@ -1,0 +1,36 @@
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.user-card__image {
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  box-shadow: var(--box-shadow-md);
+  object-fit: cover;
+}
+
+.user-card__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  text-align: center;
+  gap: 1.5em;
+  
+}
+
+.user-card__data-name{
+  display: flex;
+  font-weight: 800;
+  font-size: 2em;
+  gap: 0.4em;
+}
+
+.user-card__personal{
+  font-size: 1.2em;
+}
