@@ -5,9 +5,16 @@ import { Component } from '@angular/core'
   templateUrl: './username-editor.component.html',
   styleUrls: ['./username-editor.component.css']
 })
+
 export class UsernameEditorComponent {
+  profile = new Profile()
+}
+
+export class Profile {
   username: string = 'elMuñe'
   editedUsername: string = ''
+  edad = 20
+  ubicacion = 'CABA'
   isEditing = false
 
 

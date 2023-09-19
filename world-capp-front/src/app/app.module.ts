@@ -6,6 +6,7 @@ import { AppComponent } from './app.component'
 import { ButtonComponent } from './button/button.component'
 import { InputComponent } from './input/input.component'
 import { UsernameEditorComponent } from './username-editor/username-editor.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UsernameEditorComponent } from './username-editor/username-editor.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
