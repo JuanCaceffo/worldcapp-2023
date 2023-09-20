@@ -10,12 +10,12 @@
   background-image: var(--gradient-primary);
 }
 
-.header-main__web{
-  display: none;
-}
-
 .header-main__navbar{
   font-size: 0.7em;
+}
+
+.header-main__navbar.header-main__burger-active{
+
 }
 
 
@@ -23,8 +23,8 @@
   .header-main__web {
     display: flex;
   }
-
-  .header-main__mobile {    
+  
+  .header-main__burger{
     display: none;
   }
 }

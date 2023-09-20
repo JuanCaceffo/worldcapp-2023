@@ -6,13 +6,19 @@ import { Component } from '@angular/core'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  header = new Header()
-}
-
-class Header {
   isDropDown: boolean = false
+  isDesktop: boolean = false
+
+  constructor() {
+    window.addEventListener('resize', () => {
+      this.isDesktop = this.onDesktop()
+    })
+  }
 
   onDropDown() {
-    this.isDropDown = !this.isDropDown 
+    this.isDropDown = !this.isDropDown
+  }
+  onDesktop() {
+    return window.innerWidth >= 768
   }
 }
