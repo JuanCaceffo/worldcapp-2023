@@ -7,7 +7,7 @@
     "editor.formatOnSaveMode": "file", // required to format on save
   },
   "[typescript]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": false, // required 
     "editor.formatOnType": false, // required
     "editor.formatOnSave": true, // optional 

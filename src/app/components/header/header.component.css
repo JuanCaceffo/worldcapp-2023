@@ -1,8 +1,3 @@
-/* @import url('../logo/logo.css');
-@import url('../navbar/navbar.css');
-@import url('../button/button.css');
- */
-
 .header-main {
   display: flex;
   justify-content: space-between;
@@ -23,17 +18,6 @@
   font-size: 0.7em;
 }
 
-.header-main__navbar .navbar__buttons{
-  gap: 1.2em;
-}
-
-.header-main__navbar .button__link{
-  color: var(--typeface-color);
-}
-
-.header-main__navbar .button__link--active{
-  color: var(--color-focus);
-}
 
 @media screen and (min-width:768px) {
   .header-main__web {
