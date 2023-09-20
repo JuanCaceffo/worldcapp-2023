@@ -53,8 +53,8 @@
   /*Visual*/
   border: 1px solid var(--color-highligthed);
   border-radius: var(--border-radius-md);
-  color: var(--typeface-color);
   background-color: var(--color-highligthed);
+  color: var(--typeface-color);
 }
 
 .button--secondary {

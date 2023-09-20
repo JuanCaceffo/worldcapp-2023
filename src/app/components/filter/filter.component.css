@@ -1,5 +1,3 @@
-@import url('../commons/input/input.css');
-
 .filter {
   background-color: var(--color-tertiary);
   box-shadow: var(--box-shadow-xs);

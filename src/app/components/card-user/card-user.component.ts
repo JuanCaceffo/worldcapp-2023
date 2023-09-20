@@ -1,12 +1,12 @@
 import { Component } from '@angular/core'
 
 @Component({
-  selector: 'app-username-editor',
-  templateUrl: './username-editor.component.html',
-  styleUrls: ['./username-editor.component.css']
+  selector: 'app-card-user',
+  templateUrl: './card-user.component.html',
+  styleUrls: ['./card-user.component.css']
 })
 
-export class UsernameEditorComponent {
+export class CardUserComponent {
   isEditing = false
   editedUsername: string = ''
   user = new User()

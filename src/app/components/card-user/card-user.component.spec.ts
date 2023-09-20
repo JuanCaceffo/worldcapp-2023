@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { InputComponent } from './input.component'
+import { CardUserComponent} from './card-user.component'
 
-describe('InputComponent', () => {
-  let component: InputComponent
-  let fixture: ComponentFixture<InputComponent>
+describe('CardUserComponent', () => {
+  let component: CardUserComponent
+  let fixture: ComponentFixture<CardUserComponent>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [InputComponent]
+      declarations: [CardUserComponent]
     })
-    fixture = TestBed.createComponent(InputComponent)
+    fixture = TestBed.createComponent(CardUserComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })
