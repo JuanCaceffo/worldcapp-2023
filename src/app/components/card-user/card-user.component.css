@@ -34,3 +34,26 @@
 .user-card__personal{
   font-size: 1.2em;
 }
+
+
+.user-card__editable{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card__new-name{
+  display: flex;
+}
+
+.user-card__new-name .form__input--card-user{
+  all: unset;
+  width: fit-content;
+  font-size: 18px;
+  
+}
+
+.form__input--card-user{
+  justify-content: center;
+  align-items: center;
+}

@@ -2,12 +2,18 @@
   <img src="https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg"  class="user-card__image">
   <section class="user-card__data">
     <section class="user-card__data-name">
-      <p *ngIf="!isEditing">{{ user.username }}</p>
-      <button *ngIf="!isEditing" (click)="startEdit()">Edit</button>             
-      <p *ngIf="isEditing">
-        <input [(ngModel)]= "editedUsername" (keyup.escape)="cancelEdit()">
-        <button (click)="saveUsername()">ok</button>
-      </p>
+      <section class="user-card__editable" *ngIf="!isEditing">
+        <p>{{ user.username }}</p>
+        <button class="button button--icon button--black" *ngIf="!isEditing" (click)="startEdit()">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </section>
+      <section class="user-card__new-name" *ngIf="isEditing">
+          <input name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nombre usuario..." [(ngModel)]= "editedUsername" (keyup.escape)="cancelEdit()" />
+          <button class="button button--icon button--black" (click)="saveUsername()">
+            <i class="fa-solid fa-check"></i>
+          </button>
+      </section>
     </section>
     <section class="user-card__personal">
       <p><strong>Edad:</strong>{{ user.edad }}</p>

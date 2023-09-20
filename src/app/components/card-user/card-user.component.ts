@@ -14,6 +14,7 @@ export class CardUserComponent {
   startEdit() {
     this.isEditing = true
     this.editedUsername = this.user.username
+    this.deleteUsername()
   }
   
   saveUsername() {
@@ -24,7 +25,11 @@ export class CardUserComponent {
   cancelEdit() {
     this.isEditing = false
   }
-}
+
+  deleteUsername() {
+      this.editedUsername = ''
+    }
+  }
 
 export class User {
   username: string = 'elMuñe'

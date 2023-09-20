@@ -93,6 +93,10 @@
   color: var(--typeface-color);
 }
 
+.button--black{
+  color: var(--text-color);
+}
+
 .button--tab-on {
   /*Typeface*/
   font-size: 1.4em;
