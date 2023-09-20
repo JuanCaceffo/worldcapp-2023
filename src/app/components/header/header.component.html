@@ -3,7 +3,10 @@
   <section class="header-main__logo">
     <p>LOGO</p>
   </section>
-  <section class="header-main__navbar">
+  <section
+    [ngClass]="{ 'header-main__burger-active': isDropDown }"
+    class="header-main__navbar"
+  >
     <button
       (click)="onDropDown()"
       class="header-main__burger button button--icon fa-solid fa-bars"
