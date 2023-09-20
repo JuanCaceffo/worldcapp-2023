@@ -1,7 +1,7 @@
 @import url('../commons/input/input.css');
 
 .filter {
-  background-color: var(--color-terciary);
+  background-color: var(--color-tertiary);
   box-shadow: var(--box-shadow-xs);
   color: var(--color-clear);
   padding: 1em;

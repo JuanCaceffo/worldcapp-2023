@@ -148,7 +148,7 @@
 
 .button--circle:hover {
   /*Visual*/
-  background-color: var(--color-terciary);
+  background-color: var(--color-tertiary);
   box-shadow: var(--box-shadow-md);
 }
 
@@ -161,7 +161,7 @@
 .button--text .button__link:hover,
 .button--icon .button__link:hover {
   /*Visual*/
-  color: var(--color-terciary);
+  color: var(--color-tertiary);
 }
 
 .button--secondary:hover {

@@ -6,7 +6,7 @@
   --typeface-color:hsla(0, 0%, 100%, 1);
   --color-primary:hsla(207, 100%, 25%, 1);
   --color-secondary:hsla(207, 66%, 43%, 1);
-  --color-terciary:hsla(197, 96%, 46%, 1);
+  --color-tertiary:hsla(197, 96%, 46%, 1);
   /* Poin of Interest Color */
   --color-highligthed: hsla(32, 100%, 50%, 1);
   --color-focus: hsla(32, 100%, 65%, 1);
@@ -77,3 +77,5 @@ html {
 .fas--highlighted {
   color: var(--color-focus);
 }
+
+@import url('app/styles/button/button.css');
