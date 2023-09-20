@@ -2,19 +2,16 @@
   <img src="https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg"  class="user-card__image">
   <section class="user-card__data">
     <section class="user-card__data-name">
-      <p *ngIf="!profile.isEditing">{{ profile.username }}</p>
-      <p *ngIf="profile.isEditing">
-        <input [(ngModel)]= "profile.editedUsername" (keyup.enter)="profile.saveUsername()" (keyup.escape)="profile.cancelEdit()">
+      <p *ngIf="!isEditing">{{ user.username }}</p>
+      <button *ngIf="!isEditing" (click)="startEdit()">Edit</button>             
+      <p *ngIf="isEditing">
+        <input [(ngModel)]= "editedUsername" (keyup.escape)="cancelEdit()">
+        <button (click)="saveUsername()">ok</button>
       </p>
-      <li class="button--icon" (click)="profile.startEdit()">
-        <a class="button__link" href="">
-          <i class="fa-solid fa-pen-to-square"></i>
-        </a>
-      </li>                
     </section>
     <section class="user-card__personal">
-      <p><strong>Edad:</strong>{{ profile.edad }}</p>
-      <p><strong>Ubicacion:</strong>{{ profile.ubicacion }}</p>
+      <p><strong>Edad:</strong>{{ user.edad }}</p>
+      <p><strong>Ubicacion:</strong>{{ user.ubicacion }}</p>
     </section>      
   </section>
 </article>

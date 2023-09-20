@@ -7,29 +7,28 @@ import { Component } from '@angular/core'
 })
 
 export class UsernameEditorComponent {
-  profile = new Profile()
-}
-
-export class Profile {
-  username: string = 'elMuñe'
-  editedUsername: string = ''
-  edad = 20
-  ubicacion = 'CABA'
   isEditing = false
-
-
+  editedUsername: string = ''
+  user = new User()
+ 
   startEdit() {
     this.isEditing = true
-    this.editedUsername = this.username
+    this.editedUsername = this.user.username
   }
-
+  
   saveUsername() {
-    this.username = this.editedUsername
+    this.user.username = this.editedUsername
     this.isEditing = false
   }
-
+  
   cancelEdit() {
     this.isEditing = false
   }
+}
+
+export class User {
+  username: string = 'elMuñe'
+  edad = 30
+  ubicacion = 'Parque Chas'
 
 }
