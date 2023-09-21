@@ -10,6 +10,7 @@ export class CardUserComponent {
   isEditing = false
   editedUsername: string = ''
   user = new User()
+  LIMIT: number = 20
  
   startEdit() {
     this.isEditing = true
@@ -27,9 +28,22 @@ export class CardUserComponent {
   }
 
   deleteUsername() {
-      this.editedUsername = ''
-    }
+    this.editedUsername = ''
   }
+
+  inputIsValid():boolean{
+    return !this.isEmpty() && this.isUnderTheTop()
+  }
+
+  isUnderTheTop():boolean {
+    return this.editedUsername.length <= this.LIMIT 
+  }
+
+  isEmpty():boolean {
+    return !this.editedUsername.trim()
+  }
+
+}
 
 export class User {
   username: string = 'elMuñe'

@@ -35,7 +35,6 @@
   font-size: 1.2em;
 }
 
-
 .user-card__editable{
   display: flex;
   justify-content: center;
@@ -46,14 +45,33 @@
   display: flex;
 }
 
-.user-card__new-name .form__input--card-user{
-  all: unset;
-  width: fit-content;
-  font-size: 18px;
+.form__input--card-user{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--text-color);
+  font-size: 16px;
+  animation: animationTitle 1s infinite;
+}
+
+
+.button.button--icon.button--black{
+  font-size: 20px;
+}
+
+.invalid-input {
+  border-bottom: 2px solid var(--color-hot);
   
 }
 
-.form__input--card-user{
-  justify-content: center;
-  align-items: center;
+
+@keyframes animationTitle {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
 }
