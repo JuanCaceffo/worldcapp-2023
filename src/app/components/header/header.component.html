@@ -1,18 +1,19 @@
 <!doctype html>
+
 <header class="header-main">
   <section class="header-main__logo">
     <p>LOGO</p>
   </section>
-  <section
-    [ngClass]="{ 'header-main__burger-active': isDropDown }"
-    class="header-main__navbar"
-  >
+  <section data-testid="nav-bar-content" class="header-main__navbar-container">
     <button
+      data-testid="nav-bar-button"
       (click)="onDropDown()"
-      class="header-main__burger button button--icon fa-solid fa-bars"
+      [class]="'header-main__burger button button--icon ' + iconSelectorClass()"
     ></button>
     <app-nav-bar
-      [ngClass]="{ 'navbar__burger-active': isDropDown }"
+      class="header-main__navbar-mobile"
+      data-testid="nav-bar-desktop"
+      [ngClass]="{ 'header-main__burger-active': isDropDown }"
       *ngIf="isDropDown || isDesktop"
     />
   </section>

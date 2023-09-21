@@ -8,13 +8,19 @@ import { Component } from '@angular/core'
 export class HeaderComponent {
   isDropDown: boolean = false
   isDesktop: boolean = false
-
   constructor() {
+    this.isDesktop = this.onDesktop()
     window.addEventListener('resize', () => {
       this.isDesktop = this.onDesktop()
     })
   }
 
+  iconSelectorClass() {
+    if (this.isDropDown) {
+      return 'fa-solid fa-xmark'
+    }
+    return 'fa-solid fa-bars'
+  }
   onDropDown() {
     this.isDropDown = !this.isDropDown
   }
