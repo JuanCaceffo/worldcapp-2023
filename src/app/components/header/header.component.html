@@ -4,17 +4,35 @@
   <section class="header-main__logo">
     <p>LOGO</p>
   </section>
-  <section data-testid="nav-bar-content" class="header-main__navbar-container">
+  <section class="header-main__navbar-container">
     <button
-      data-testid="nav-bar-button"
+      class="header-main__button-mobile button button--icon fa-solid fa-bars"
       (click)="onDropDown()"
-      [class]="'header-main__burger button button--icon ' + iconSelectorClass()"
     ></button>
-    <app-nav-bar
-      class="header-main__navbar-mobile"
-      data-testid="nav-bar-desktop"
-      [ngClass]="{ 'header-main__burger-active': isDropDown }"
-      *ngIf="isDropDown || isDesktop"
-    />
+    <nav
+      class="header-main__navbar"
+      [ngClass]="{ 'header-main__menu-active': isDropDown && !isDesktop }"
+    >
+      <button
+        (click)="onDropDown()"
+        class="header-main__button-mobile button button--icon fa-solid fa-xmark"
+      ></button>
+      <ul class="header-main-navbar__buttons">
+        <li class="button button--text button--animated">
+          <a class="header-main__button-link button--text" href="">Figuritas</a>
+        </li>
+        <li class="button button--text button--animated">
+          <a class="header-main__button-link button--text" href="">Sobres</a>
+        </li>
+        <li class="button button--text button--animated">
+          <a class="header-main__button-link button--text" href="">Perfil</a>
+        </li>
+        <li class="button button--icon button--animated">
+          <a class="header-main__button-link button--text" href=""
+            ><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
   </section>
 </header>
