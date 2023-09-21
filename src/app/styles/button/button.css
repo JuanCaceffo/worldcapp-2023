@@ -127,8 +127,6 @@
 .button--animated:hover {
   /*Layout*/
   transform: translateY(-0.3em);
-  /*Animation*/
-  transition: all var(--transition-time) ease;
 }
 
 .button--primary:hover {

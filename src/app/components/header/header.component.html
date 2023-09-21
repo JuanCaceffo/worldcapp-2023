@@ -11,23 +11,23 @@
     ></button>
     <nav
       class="header-main__navbar"
-      [ngClass]="{ 'header-main__menu-active': isDropDown && !isDesktop }"
+      [ngClass]="{ 'header-main__menu-active': isDropDown }"
     >
       <button
         (click)="onDropDown()"
         class="header-main__button-mobile button button--icon fa-solid fa-xmark"
       ></button>
       <ul class="header-main-navbar__buttons">
-        <li class="button button--text button--animated">
+        <li class="button button--text" [ngClass]="{'activated':isDropDown}">
           <a class="header-main__button-link button--text" href="">Figuritas</a>
         </li>
-        <li class="button button--text button--animated">
+        <li class="button button--text" [ngClass]="{'activated':isDropDown}">
           <a class="header-main__button-link button--text" href="">Sobres</a>
         </li>
-        <li class="button button--text button--animated">
+        <li class="button button--text" [ngClass]="{'activated':isDropDown}">
           <a class="header-main__button-link button--text" href="">Perfil</a>
         </li>
-        <li class="button button--icon button--animated">
+        <li class="button button--icon" [ngClass]="{'activated':isDropDown}">
           <a class="header-main__button-link button--text" href=""
             ><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i
           ></a>
