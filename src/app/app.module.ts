@@ -11,6 +11,8 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
 import { StoreSearchComponent } from './pages/store-search/store-search.component'
 import { CardDetailsComponent } from './pages/card-details/card-details.component'
 import { UserProfileComponent } from './pages/user-profile/user-profile.component'
+import { FooterComponent } from './components/footer/footer.component'
+import { LogoComponent } from './components/logo/logo.component'
 
 @NgModule({
   declarations: [
@@ -21,10 +23,13 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
     CardAddComponent,
     StoreSearchComponent,
     CardDetailsComponent,
-    UserProfileComponent
+    UserProfileComponent, 
+    FooterComponent, 
+    LogoComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
