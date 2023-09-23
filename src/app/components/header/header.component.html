@@ -6,11 +6,13 @@
   </section>
   <section class="header-main__navbar-container">
     <button
+      data-testid="button-mobile-open"
       class="header-main__button-mobile button button--icon fa-solid fa-bars"
       (click)="onDropDown()"
       *ngIf="!isDropDown"
     ></button>
     <nav
+      data-testid="navbar"
       class="header-main__navbar"
       [ngClass]="{ 'header-main__menu-active': isDropDown }"
     >
@@ -19,16 +21,16 @@
         class="header-main__button-mobile button button--icon fa-solid fa-xmark"
       ></button>
       <ul class="header-main-navbar__buttons">
-        <li class="button button--text" [ngClass]="{'activated':isDropDown}">
+        <li class="button button--text" [ngClass]="{ activated: isDropDown }">
           <a class="header-main__button-link button--text" href="">Figuritas</a>
         </li>
-        <li class="button button--text" [ngClass]="{'activated':isDropDown}">
+        <li class="button button--text" [ngClass]="{ activated: isDropDown }">
           <a class="header-main__button-link button--text" href="">Sobres</a>
         </li>
-        <li class="button button--text" [ngClass]="{'activated':isDropDown}">
+        <li class="button button--text" [ngClass]="{ activated: isDropDown }">
           <a class="header-main__button-link button--text" href="">Perfil</a>
         </li>
-        <li class="button button--icon" [ngClass]="{'activated':isDropDown}">
+        <li class="button button--icon" [ngClass]="{ activated: isDropDown }">
           <a class="header-main__button-link button--text" href=""
             ><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i
           ></a>
