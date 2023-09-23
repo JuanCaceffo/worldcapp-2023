@@ -8,6 +8,7 @@
     <button
       class="header-main__button-mobile button button--icon fa-solid fa-bars"
       (click)="onDropDown()"
+      *ngIf="!isDropDown"
     ></button>
     <nav
       class="header-main__navbar"

@@ -33,7 +33,7 @@
 }
 
 .header-main__navbar.header-main__menu-active{
-  opacity: 1;
+  opacity: 0.95;
   visibility: visible;
 }
 
