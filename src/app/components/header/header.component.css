@@ -4,14 +4,18 @@
   align-items: center;
   padding: 2rem;
   width: 100vw;
-  height: 100%;
+  height: 6rem;
   font-size: 3.5rem;
   box-shadow: var(--box-shadow-xs);
   background-image: var(--gradient-primary);
 }
 
+.header-main__logo{
+  font-size: 0.8em;
+}
+
 .header-main__navbar-container{
-  font-size: 0.7em;
+  font-size: 0.6em;
 }
 
 .header-main__navbar{
@@ -20,7 +24,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 1em;
-  padding: 2rem;
+  padding: 0.8rem 2rem 0 2rem;
   top: 0;
   right: 0;
   bottom: 0;
@@ -37,42 +41,44 @@
   visibility: visible;
 }
 
-.header-main-navbar__buttons{
+.header-main__list-buttons{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1.2em;
+  padding: 0 0.4em;
   list-style: none;
 }
-.header-main-navbar__buttons .button{
-  min-width: unset;
-  font-size: inherit;
+
+.header-main__list-buttons .header-main__list-btn{
   /* transition prop */
   transform: translateX(200px);
   transition: transform 0.4s ease;
 }
-.header-main-navbar__buttons .button:nth-child(1){
+.header-main__list-buttons .header-main__list-btn:nth-child(1){
   transition-delay: 0.2s;
 }
-.header-main-navbar__buttons .button:nth-child(2){
+.header-main__list-buttons .header-main__list-btn:nth-child(2){
   transition-delay: 0.35s;
 }
-.header-main-navbar__buttons .button:nth-child(3){
+.header-main__list-buttons .header-main__list-btn:nth-child(3){
   transition-delay: 0.45s;
 }
-.header-main-navbar__buttons .button:nth-child(4){
+.header-main__list-buttons .header-main__list-btn:nth-child(4){
   transition-delay: 0.55s;
 }
-/* transition button activated */
-.header-main-navbar__buttons .button.activated{
+/* transition header-main__list-btn activated */
+.header-main__list-buttons .header-main__list-btn.activated{
   transform: translateX(0);
 }
 
 .header-main__button-link{
+  min-width: unset;
+  font-size: inherit;
   text-decoration: none; 
 }
 
-.header-main__button-link--active{
+.header-main__button-link:active{
   color: var(--color-focus);
 }
 
@@ -89,12 +95,12 @@
     all: unset;
     transition: none;
   }
-  .header-main-navbar__buttons{
+  .header-main__list-buttons{
     flex-direction: row;
     align-items: center;
     padding: 0;
   }
-  .header-main-navbar__buttons .button{
+  .header-main__list-buttons .header-main__list-btn{
     transform: none;
     transition: none;
   }
