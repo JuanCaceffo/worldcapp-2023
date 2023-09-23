@@ -10,13 +10,6 @@
   background-image: var(--gradient-primary);
 }
 
-.home{  
-  /*Layout*/
-  margin-top: 6rem;  
-  width: 100vw;
-  min-height: calc(100vh - 12rem);
-}
-
 .footer{  
   width: 100vw;
   height: 6rem;

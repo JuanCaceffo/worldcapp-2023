@@ -57,16 +57,14 @@
     background-image: var(--gradient-primary);
 }
 
-.wrapper__search{
-     /*Layout*/
-     grid-area: search;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 0 var(--box-padding);
-     /*styles*/
-     background-color: var(--color-tertiary);
-}
+.home--search {
+    /*Layout*/
+    grid-template-rows: 5.2rem auto auto;
+    grid-template-areas:
+      'search'
+      'aside'
+      'content';
+  }
 
 .wrapper__aside,
 .wrapper__main-content{

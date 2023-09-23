@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-card-details',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-details.component.css']
 })
 export class CardDetailsComponent {
-
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Detalles de TODO:Figurita')
+  }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-user-profile',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent {
-
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Perfil de Usuario')
+  }
 }
