@@ -1,4 +1,3 @@
-
 .user-card {
   display: flex;
   flex-direction: column;
@@ -20,47 +19,48 @@
   align-items: center;
   align-content: space-between;
   text-align: center;
-  gap: 1.5em;
-  
+  gap: 2em;
 }
 
-.user-card__data-name{
-  display: flex;
+.user-card__data-name {
   font-weight: 800;
   font-size: 2em;
   gap: 0.4em;
 }
 
-.user-card__personal{
+.user-card__personal {
   font-size: 1.2em;
 }
 
-.user-card__editable{
+.user-card__editable {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.user-card__new-name{
-  display: flex;
-}
-
-.form__input--card-user{
+.form__input--card-user {
+  flex: 1;
   border: none;
   outline: none;
   border-bottom: 2px solid var(--text-color);
   font-size: 16px;
   animation: animationTitle 1s infinite;
+  padding: 2px;
 }
 
-
-.button.button--icon.button--black{
+.button.button--icon.button--black {
   font-size: 20px;
+  display: inline-flex;
 }
 
 .invalid-input {
   border-bottom: 2px solid var(--color-hot);
-  
+}
+
+.user-card__validation-message {
+  color: var(--color-hot);
+  font-size: 10px;
+  margin-top: 2px;
+  text-align: start;
 }
 
 

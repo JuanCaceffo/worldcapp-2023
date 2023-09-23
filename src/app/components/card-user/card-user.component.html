@@ -3,21 +3,25 @@
   <section class="user-card__data">
     <section class="user-card__data-name">
       <section class="user-card__editable" *ngIf="!isEditing">
-        <p>{{ user.username }}</p>
-        <button class="button button--icon button--black" *ngIf="!isEditing" (click)="startEdit()">
+        <p data-testid="initialUsername">{{ user.username }}</p>
+        <button data-testid="edit-button" class="button button--icon button--black" *ngIf="!isEditing" (click)="startEdit()">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
       </section>
       <section class="user-card__new-name" *ngIf="isEditing">
+        <form class="user-card__form">
           <input name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nuevo nombre..." [(ngModel)]= "editedUsername" [ngClass]="{'invalid-input': !inputIsValid()}" (keyup.escape)="cancelEdit()" />
           <button class="button button--icon button--black" (click)="saveUsername()" [disabled]="!inputIsValid()">
             <i class="fa-solid fa-check"></i>
           </button>
+        </form>
+        <div *ngIf="isEmpty()" class="user-card__validation-message">El campo no puede estar vacío.</div>
+        <div *ngIf="!isUnderTheTop()" class="user-card__validation-message">El nombre supera el límite de {{ LIMIT }} caracteres.</div>
       </section>
     </section>
     <section class="user-card__personal">
-      <p><strong>Edad:</strong>{{ user.edad }}</p>
-      <p><strong>Ubicacion:</strong>{{ user.ubicacion }}</p>
+      <p data-testid="initialAge"><strong>Edad:</strong>{{ user.edad }}</p>
+      <p data-testid="initialLocation"><strong>Ubicacion:</strong>{{ user.ubicacion }}</p>
     </section>      
   </section>
 </article>

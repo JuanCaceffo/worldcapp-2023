@@ -47,7 +47,7 @@ export class CardUserComponent {
 
 export class User {
   username: string = 'elMuñe'
-  edad = 30
-  ubicacion = 'Parque Chas'
+  edad: string = '30'
+  ubicacion: string = 'Parque Chas'
 
 }
