@@ -1,6 +1,6 @@
 import { Component, ContentChild, OnInit } from '@angular/core'
-import { VariantFilterComponent } from './filterVariant/variantFilter.component'
-import { SortedByFilterComponent } from './filterSortedBy/sortedByFilter.component'
+import { VariantFilterComponent } from './variantFilter/variantFilter.component'
+import { SortedByFilterComponent } from './sortedByFilter/sortedByFilter.component'
 
 type FilterType = VariantFilterComponent | SortedByFilterComponent
 interface Filter {
