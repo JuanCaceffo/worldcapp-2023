@@ -10,8 +10,8 @@
       </section>
       <section class="user-card__new-name" *ngIf="isEditing">
         <form class="user-card__form">
-          <input name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nuevo nombre..." [(ngModel)]= "editedUsername" [ngClass]="{'invalid-input': !inputIsValid()}" (keyup.escape)="cancelEdit()" />
-          <button class="button button--icon button--black" (click)="saveUsername()" [disabled]="!inputIsValid()">
+          <input data-testid="edit-input" name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nuevo nombre..." [(ngModel)]= "editedUsername" [ngClass]="{'invalid-input': !inputIsValid()}" (keyup.escape)="cancelEdit()" />
+          <button data-testid="save-button" class="button button--icon button--black" (click)="saveUsername()" [disabled]="!inputIsValid()">
             <i class="fa-solid fa-check"></i>
           </button>
         </form>
