@@ -10,6 +10,7 @@
           type="number"
           min="0"
           placeholder="Desde"
+          [(ngModel)]="filter.from"
           />
         </div>
         <div class="filter__container">
@@ -20,17 +21,18 @@
             type="number"
             min="0"
             placeholder="Hasta"
+            [(ngModel)]="filter.to"
           />
         </div>
       </section>
       <div>
-        <input name="onFire" type="checkbox" />
+        <input name="onFire" type="checkbox" [(ngModel)]="filter.onFire" />
         <label for="onFire">On fire</label>
       </div>
     </section>
     <section class="filter__sub-section filter__sub-section--grow">
       <div class="filter__checkbox">
-        <input name="promise" type="checkbox" />
+        <input name="promise" type="checkbox" [(ngModel)]="filter.isPromise" />
         <label for="promise">Es promesa</label>
       </div>
     </section>
