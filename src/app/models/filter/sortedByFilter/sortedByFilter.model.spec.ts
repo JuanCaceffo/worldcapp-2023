@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { SortedByFilterComponent } from './sortedByFilter.model'
+import { SortedByFilter } from './sortedByFilter.model'
 
 describe('FilterComponent', () => {
-  let component: SortedByFilterComponent
-  let fixture: ComponentFixture<SortedByFilterComponent>
+  let component: SortedByFilter
+  let fixture: ComponentFixture<SortedByFilter>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SortedByFilterComponent]
+      declarations: [SortedByFilter]
     })
-    fixture = TestBed.createComponent(SortedByFilterComponent)
+    fixture = TestBed.createComponent(SortedByFilter)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

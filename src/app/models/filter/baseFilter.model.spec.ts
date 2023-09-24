@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FilterComponent } from './baseFilter.model'
+import { BaseFilter } from './baseFilter.model'
 
 describe('FilterComponent', () => {
-  let component: FilterComponent
-  let fixture: ComponentFixture<FilterComponent>
+  let component: BaseFilter
+  let fixture: ComponentFixture<BaseFilter>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FilterComponent]
+      declarations: [BaseFilter]
     })
-    fixture = TestBed.createComponent(FilterComponent)
+    fixture = TestBed.createComponent(BaseFilter)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

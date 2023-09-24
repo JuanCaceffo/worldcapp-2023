@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { SortedByFilter } from 'src/app/models/filter/sortedByFilter/sortedByFilter.model'
 
 @Component({
   selector: 'app-sortedByFilter',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['../../../styles/input/input.css', './sortedByFilter.component.css']
 })
 export class SortedByFilterComponent implements OnInit {
-  constructor() { }
-  
+  filter!: SortedByFilter  
   title: string = 'Ordernar Por'
 
   ngOnInit() {
+    this.filter = new SortedByFilter()
+    this.filter.getFigure()
   }
 
 }

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { VariantFilterComponent } from './variantFilter.model'
+import { VariantFilter } from './variantFilter.model'
 
 describe('FilterComponent', () => {
-  let component: VariantFilterComponent
-  let fixture: ComponentFixture<VariantFilterComponent>
+  let component: VariantFilter
+  let fixture: ComponentFixture<VariantFilter>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [VariantFilterComponent]
+      declarations: [VariantFilter]
     })
-    fixture = TestBed.createComponent(VariantFilterComponent)
+    fixture = TestBed.createComponent(VariantFilter)
     component = fixture.componentInstance
     fixture.detectChanges()
   })
