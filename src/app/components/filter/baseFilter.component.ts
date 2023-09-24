@@ -12,10 +12,12 @@ type FilterType = VariantFilterComponent | SortedByFilterComponent
 
 export class BaseFilterComponent {
   @ContentChild('childFilter') childFilter!: FilterType
-
+  
   title!: string
   
-  ngAfterContentInit(): void{
-    this.title = this.childFilter.title
+  ngAfterContentInit(): void {
+    if(this.childFilter){
+      this.title = this.childFilter.title
+    }
   }
 }
