@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { FormsModule } from '@angular/forms'
-import { FilterComponent } from './components/filter/filter.component'
+import { BaseFilterComponent } from './components/filter/baseFilter.component'
+import { SortedByFilterComponent } from './components/filter/filterSortedBy/sortedByFilter.component'
+import { VariantFilterComponent } from './components/filter/filterVariant/variantFilter.component'
 
 @NgModule({
-  declarations: [AppComponent, FilterComponent],
+  declarations: [AppComponent, BaseFilterComponent, SortedByFilterComponent, VariantFilterComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

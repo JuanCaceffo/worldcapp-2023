@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FilterComponent } from './filter.model'
+import { FilterComponent } from './baseFilter.component'
 
 describe('FilterComponent', () => {
   let component: FilterComponent
