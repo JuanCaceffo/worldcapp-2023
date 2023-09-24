@@ -1,0 +1,37 @@
+.logo {
+  /*Layout*/
+  display: flex;
+  /*Typeface*/
+  color: var(--typeface-color);
+  text-shadow: var(--box-shadow-md);
+}
+
+.logo__img {
+  /*Layout*/
+  width: 1.4em;
+  margin-right: 0.4em;
+}
+
+.logo__text {
+  /*Layout*/
+  cursor: default;
+}
+
+.logo__first-part {
+  /*Typeface*/
+  font-weight: 800;
+}
+
+.logo__center-dot {
+  /*Layout*/
+  margin: 0 0.05em;
+  /*Typeface*/
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  color: var(--color-focus);
+}
+
+.logo__last-part {
+  /*Typeface*/
+  font-weight: 400;
+}
