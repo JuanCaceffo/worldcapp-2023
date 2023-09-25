@@ -54,6 +54,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 html {
