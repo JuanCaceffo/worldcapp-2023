@@ -1,0 +1,40 @@
+  <section class="filter__section">
+    <section class="filter__sub-section">
+      <h4 class="filter__title filter__title--secondary" data-testid="valoracion">Valoración</h4>
+      <article class="filter__input-group">
+        <section data-testid="inputFrom" class="filter__container">
+          <label class="form__row-subtitle" for="">Desde</label>
+          <input
+          name="from"
+          class="form__input--primary input filter__container-input"
+          type="number"
+          min="0"
+          placeholder="Desde"
+          [(ngModel)]="filter.from"
+          />
+        </section>
+        <section class="filter__container">
+          <label class="form__row-subtitle" for="">Hasta</label>
+          <input
+            class="form__input--primary input filter__container-input"
+            name="to"
+            type="number"
+            min="0"
+            placeholder="Hasta"
+            [(ngModel)]="filter.to"
+            data-testid="inputTo"
+          />
+        </section>
+      </article>
+      <section>
+        <input name="onFire" type="checkbox" [(ngModel)]="filter.onFire" data-testid="checkboxOnFire"/>
+        <label for="onFire">On fire</label>
+      </section>
+    </section>
+    <article class="filter__sub-section filter__sub-section--grow">
+      <section class="filter__checkbox">
+        <input name="promise" type="checkbox" [(ngModel)]="filter.isPromise" data-testid="checkboxIsPromise" />
+        <label for="promise">Es promesa</label>
+      </section>
+    </article>
+  </section>

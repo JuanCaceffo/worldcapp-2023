@@ -1,6 +1,9 @@
 <!-- <p>Hola A todys</p>
-<button class="button button--primary">Ingresar</button>
-<app-filter /> -->
+<button class="button button--primary">Ingresar</button> -->
 <app-header />
-<app-filter />
+<!-- Filtro Base -->
+<app-baseFilter>
+  <app-variantFilter #childFilter />
+  <!-- <app-sortedByFilter #childFilter/> -->
+</app-baseFilter>
 <app-footer />
