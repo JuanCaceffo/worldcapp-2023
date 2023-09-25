@@ -1,5 +1,25 @@
 <div class="home">  
   <section class="home__content">
-    TODO: ACA VA EL CONTENIDO
+    <form class="form-login">
+      <section class="form-login__header">
+        <app-logo/>
+      </section>
+      <section class="form-login__content">
+        <h2 class="form__row-title">Usuario</h2>
+        <section class="form__row">
+          <input name="user" class="form__input--icon-left" type="text" placeholder="Ingrese su usuario:" />
+          <i class="form__icon--left fa-solid fa-user"></i>
+        </section>
+        <h2 class="form__row-title">Contraseña</h2>
+        <section class="form__row">
+          <input name="password" id="password" class="form__input--icon-left" type="password"
+            placeholder="Ingrese su contraseña:" />
+          <i class="form__icon--left fa-solid fa-key"></i>
+        </section>
+      </section>
+      <section class="form-login__actions">
+        <button class="button--primary">Ingresar</button>
+      </section>
+    </form>
   </section>
 </div>
