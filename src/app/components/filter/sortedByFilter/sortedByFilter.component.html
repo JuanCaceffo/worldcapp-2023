@@ -1,6 +1,6 @@
 
-<section class="radio-filter">
-  <div>
+<article class="radio-filter">
+  <section>
     <input
     type="radio"
     id="closest"
@@ -9,9 +9,9 @@
     (click)="filter.getFilterValue($event)"
     checked />
     <label for="closest">Menor Distancia</label>
-  </div>
+  </section>
   
-  <div>
+  <section>
     <input
     type="radio"
     id="cheapest"
@@ -19,18 +19,18 @@
     value="cheapest"
     (click)="filter.getFilterValue($event)" />
     <label for="cheapest">Más Barato </label>
-  </div>
+  </section>
 
-  <div>
+  <section>
     <input type="radio"
     id="pack-quantity"
     name="radio-filter--option"
     value="pack-quantity"
     (click)="filter.getFilterValue($event)" />
     <label for="pack-quantity">Más Sobres</label>
-  </div>
+  </section>
   
-  <div>
+  <section>
     <input
     type="radio"
     id="closest-only"
@@ -38,5 +38,5 @@
     value="closest-only"
     (click)="filter.getFilterValue($event)" />
     <label for="closest-only">Solo los más cercanos</label>
-  </div>
-</section>
+  </section>
+</article>
