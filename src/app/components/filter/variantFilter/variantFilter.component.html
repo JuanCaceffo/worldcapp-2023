@@ -1,8 +1,8 @@
   <section class="filter__section">
     <section class="filter__sub-section">
       <h4 class="filter__title filter__title--secondary" data-testid="valoracion">Valoración</h4>
-      <section class="filter__input-group">
-        <div data-testid="inputFrom" class="filter__container">
+      <article class="filter__input-group">
+        <section data-testid="inputFrom" class="filter__container">
           <label class="form__row-subtitle" for="">Desde</label>
           <input
           name="from"
@@ -12,8 +12,8 @@
           placeholder="Desde"
           [(ngModel)]="filter.from"
           />
-        </div>
-        <div class="filter__container">
+        </section>
+        <section class="filter__container">
           <label class="form__row-subtitle" for="">Hasta</label>
           <input
             class="form__input--primary input filter__container-input"
@@ -24,17 +24,17 @@
             [(ngModel)]="filter.to"
             data-testid="inputTo"
           />
-        </div>
-      </section>
-      <div>
+        </section>
+      </article>
+      <section>
         <input name="onFire" type="checkbox" [(ngModel)]="filter.onFire" data-testid="checkboxOnFire"/>
         <label for="onFire">On fire</label>
-      </div>
+      </section>
     </section>
-    <section class="filter__sub-section filter__sub-section--grow">
-      <div class="filter__checkbox">
+    <article class="filter__sub-section filter__sub-section--grow">
+      <section class="filter__checkbox">
         <input name="promise" type="checkbox" [(ngModel)]="filter.isPromise" data-testid="checkboxIsPromise" />
         <label for="promise">Es promesa</label>
-      </div>
-    </section>
+      </section>
+    </article>
   </section>
