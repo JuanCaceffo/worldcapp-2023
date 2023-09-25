@@ -10,8 +10,8 @@ describe('FilterVariantComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ VariantFilterComponent ],
-      imports: [FormsModule],
+      declarations: [VariantFilterComponent],
+      imports: [FormsModule]
     })
     fixture = TestBed.createComponent(VariantFilterComponent)
     component = fixture.componentInstance

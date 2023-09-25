@@ -5,13 +5,13 @@ import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter
   selector: 'app-variantFilter',
   templateUrl: './variantFilter.component.html',
   styleUrls: [
-    '../../../styles/input/input.css', 
-    '../baseFilter.component.css', 
+    '../../../styles/input/input.css',
+    '../baseFilter.component.css',
     './variantFilter.component.css'
   ]
 })
 export class VariantFilterComponent implements OnInit {
-  filter!: VariantFilter  
+  filter!: VariantFilter
   title: string = 'Filtros'
 
   ngOnInit() {
