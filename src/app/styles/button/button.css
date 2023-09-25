@@ -91,6 +91,8 @@
 .button--text {
   /*Visual*/
   color: var(--typeface-color);
+  /*Layout*/
+  padding: 0.1em;
 }
 
 .button--tab-on {
@@ -116,15 +118,6 @@
   color: var(--text-color-lighter);
 }
 
-.button--text {
-  /*Layout*/
-  padding: 0.1em;
-}
-
-.button--black {
-  color: var(--text-color);
-}
-
 /*Hover Actions*/
 .button--shadows:hover {
   /*Visual*/
@@ -134,8 +127,6 @@
 .button--animated:hover {
   /*Layout*/
   transform: translateY(-0.3em);
-  /*Animation*/
-  transition: all var(--transition-time) ease;
 }
 
 .button--primary:hover {

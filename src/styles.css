@@ -52,8 +52,9 @@
 
 .main {
   display: flex;
-  flex-flow: row wrap;
-  min-width: 35rem;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 html {
