@@ -11,12 +11,12 @@
       <section class="user-card__new-name" *ngIf="isEditing">
         <form class="user-card__form">
           <input data-testid="edit-input" name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nuevo nombre..." [(ngModel)]= "editedUsername" [ngClass]="{'invalid-input': !inputIsValid()}" (keyup.escape)="cancelEdit()" />
-          <button data-testid="save-button" class="button button--icon button--black" (click)="saveUsername()" [disabled]="!inputIsValid()">
+          <button data-testid="save-button" class="button button--icon button--black" (click)="saveUsername()" [disabled]="!inputIsValid()" [ngClass]="{'invalid-button': !inputIsValid()}">
             <i class="fa-solid fa-check"></i>
           </button>
         </form>
-        <div *ngIf="isEmpty()" class="user-card__validation-message">El campo no puede estar vacío.</div>
-        <div *ngIf="!isUnderTheTop()" class="user-card__validation-message">El nombre supera el límite de {{ LIMIT }} caracteres.</div>
+        <div *ngIf="isEmpty()" class="user-card__validation-message">El campo no debe estar vacío.</div>
+        <div *ngIf="!isUnderTheTop()" class="user-card__validation-message">Excede el límite de {{ LIMIT }} caracteres.</div>
       </section>
     </section>
     <section class="user-card__personal">

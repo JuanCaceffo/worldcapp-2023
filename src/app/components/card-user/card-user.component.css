@@ -41,10 +41,11 @@
   flex: 1;
   border: none;
   outline: none;
+  width: 11em;
   border-bottom: 2px solid var(--text-color);
   font-size: 16px;
   animation: animationTitle 1s infinite;
-  padding: 2px;
+  padding: 4px;
 }
 
 .button.button--icon.button--black {
@@ -54,6 +55,11 @@
 
 .invalid-input {
   border-bottom: 2px solid var(--color-hot);
+}
+
+.invalid-button:hover{
+  color: var(--color-hot);
+
 }
 
 .user-card__validation-message {
