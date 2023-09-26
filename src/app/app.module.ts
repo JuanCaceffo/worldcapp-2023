@@ -3,7 +3,12 @@ import { BrowserModule } from '@angular/platform-browser'
 
 // import { AppRoutingModule, routingComponents } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { HeaderComponent } from './components/header/header.component'
 import { FormsModule } from '@angular/forms'
+
+import { BaseFilterComponent } from './components/filter/baseFilter.component'
+import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
+import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { LogoComponent } from './components/logo/logo.component'
 import { CardDetailsComponent } from './pages/card-details/card-details.component'
@@ -19,18 +24,20 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
     FooterComponent, 
     LogoComponent,
     // routingComponents,
+    BaseFilterComponent,
+    SortedByFilterComponent,
+    VariantFilterComponent,
+    HeaderComponent,
     LoginComponent,
     CardSearchComponent,
     CardDetailsComponent,
     StoreSearchComponent,
     UserProfileComponent,
-    CardAddComponent
+    CardAddComponent,
+    FormsModule,
+    BrowserModule 
   ],
-  imports: [
-    BrowserModule, 
-    // AppRoutingModule, 
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
