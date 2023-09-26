@@ -22,7 +22,6 @@ describe('FilterVariantComponent', () => {
     expect(component).toBeTruthy()
   })
 
-  //CONSULTAR
   it('Inicialmente el filtro tiene los valores por defecto', () => {
     const inputFrom = fixture.debugElement.nativeElement.querySelector(
       `[data-testid="inputFrom"]`

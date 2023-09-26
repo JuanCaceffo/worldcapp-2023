@@ -20,3 +20,6 @@ export class BaseFilterComponent {
     }
   }
 }
+//CONSULTAS
+//* Se puede hacaer un test sobre los valores de los inputs? con valueAsNumber o value? (ver variantFilter)
+//* Genero el objeto de dominio? o solo con el modelo de vista esta bien?

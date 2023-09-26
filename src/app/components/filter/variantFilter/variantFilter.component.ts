@@ -19,7 +19,7 @@ export class VariantFilterComponent {
   isPromise = false
 
   // ngOnInit() {
-  //   this.filter = new VariantFilter(2, 3, true, true)
+  //   this.filter = new VariantFilter()
   //   this.filter.getFigure()
   // }
 }
