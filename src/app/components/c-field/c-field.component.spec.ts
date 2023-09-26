@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { InputComponent } from './input.component'
+import { CFieldComponent } from './c-field.component'
 
-describe('InputComponent', () => {
-  let component: InputComponent
-  let fixture: ComponentFixture<InputComponent>
+describe('CFieldComponent', () => {
+  let component: CFieldComponent
+  let fixture: ComponentFixture<CFieldComponent>
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [InputComponent]
+      declarations: [CFieldComponent]
     })
-    fixture = TestBed.createComponent(InputComponent)
+    fixture = TestBed.createComponent(CFieldComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

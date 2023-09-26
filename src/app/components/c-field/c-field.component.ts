@@ -1,12 +1,11 @@
 import { Component, HostBinding, Input } from '@angular/core'
 
 @Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css']
+  selector: 'app-c-field',
+  templateUrl: './c-field.component.html',
+  styleUrls: ['./c-field.component.css']
 })
-
-export class InputComponent {
+export class CFieldComponent {
   @HostBinding('class') className = 'app-input'
   @Input() label: string = ''
   @Input() placeholder: string = 'Ingrese un valor'
