@@ -7,8 +7,7 @@ import { Card } from 'src/app/models/cards/Card'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  constructor(card: Card) {}
+  /* constructor(card: Card) {} */
 
   ngOnInit() {}
 }

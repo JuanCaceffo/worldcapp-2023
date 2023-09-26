@@ -17,11 +17,12 @@ import { LoginComponent } from './pages/login/login.component'
 import { CardSearchComponent } from './pages/card-search/card-search.component'
 import { StoreSearchComponent } from './pages/store-search/store-search.component'
 import { CardAddComponent } from './pages/card-add/card-add.component'
+import { CardComponent } from './components/card/card.component'
 
 @NgModule({
   declarations: [
-    AppComponent,    
-    FooterComponent, 
+    AppComponent,
+    FooterComponent,
     LogoComponent,
     // routingComponents,
     BaseFilterComponent,
@@ -35,11 +36,11 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
     UserProfileComponent,
     CardAddComponent,
     // FormsModule,
-    // BrowserModule 
+    // BrowserModule
+    CardComponent
   ],
   imports: [BrowserModule, /*AppRoutingModule,*/ FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-
 export class AppModule {}
