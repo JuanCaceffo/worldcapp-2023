@@ -16,3 +16,12 @@
   background-color: var(--color-secondary);
 }
 
+
+.app-input{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0.2em;  
+}
+

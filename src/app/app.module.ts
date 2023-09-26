@@ -16,7 +16,10 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
 import { LoginComponent } from './pages/login/login.component'
 import { CardSearchComponent } from './pages/card-search/card-search.component'
 import { StoreSearchComponent } from './pages/store-search/store-search.component'
-import { CardAddComponent } from './pages/card-add/card-add.component'
+import { CardAddComponent } from './pages/card-add/card-add.component';
+import { InputComponent } from './components/input/input.component';
+import { SelectComponent } from './components/input/select/select.component';
+import { BaseComponent } from './components/input/base/base.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
     StoreSearchComponent,
     UserProfileComponent,
     CardAddComponent,
+    InputComponent,
+    SelectComponent,
+    BaseComponent,
     // FormsModule,
     // BrowserModule 
   ],
