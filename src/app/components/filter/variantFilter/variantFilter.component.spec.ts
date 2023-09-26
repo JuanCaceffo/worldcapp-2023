@@ -23,12 +23,13 @@ describe('FilterVariantComponent', () => {
   })
 
   //CONSULTAR
-  // it('Inicialmente el filtro tiene los valores por defecto', () => {
-  //   // const inputFrom = fixture.debugElement.nativeElement.querySelector(`[data-testid="inputFrom"]`)
-  //   // console.log(inputFrom.textContent)
-  //   // expect(+inputFrom.textContent).toBe(0)
-  //   // component.filter.from = 1
-  //   // fixture.detectChanges()
-  //   // expect(+inputFrom.textContent).toBe(1)
-  // })
+  it('Inicialmente el filtro tiene los valores por defecto', () => {
+    const inputFrom = fixture.debugElement.nativeElement.querySelector(
+      `[data-testid="inputFrom"]`
+    )
+    expect(+inputFrom.textContent).toBe(0)
+    component.from = 1
+    fixture.detectChanges()
+    expect(+inputFrom.textContent).toBe(1)
+  })
 })

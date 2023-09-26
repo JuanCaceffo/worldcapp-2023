@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter.model'
+import { Component } from '@angular/core'
+// import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter.model'
 
 @Component({
   selector: 'app-variantFilter',
@@ -10,12 +10,16 @@ import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter
     './variantFilter.component.css'
   ]
 })
-export class VariantFilterComponent implements OnInit {
-  filter!: VariantFilter
+export class VariantFilterComponent {
+  // filter!: VariantFilter
   title: string = 'Filtros'
+  from = 0
+  to = 0
+  onFire = false
+  isPromise = false
 
-  ngOnInit() {
-    this.filter = new VariantFilter()
-    this.filter.getFigure()
-  }
+  // ngOnInit() {
+  //   this.filter = new VariantFilter(2, 3, true, true)
+  //   this.filter.getFigure()
+  // }
 }

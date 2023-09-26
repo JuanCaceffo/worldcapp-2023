@@ -12,8 +12,13 @@ describe('BaseFilterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, BaseFilterComponent, VariantFilterComponent, SortedByFilterComponent],
-      imports: [FormsModule],
+      declarations: [
+        AppComponent,
+        BaseFilterComponent,
+        VariantFilterComponent,
+        SortedByFilterComponent
+      ],
+      imports: [FormsModule]
     })
     fixture = TestBed.createComponent(BaseFilterComponent)
     component = fixture.componentInstance
