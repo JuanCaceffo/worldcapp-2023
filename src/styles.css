@@ -50,11 +50,10 @@
   box-sizing: border-box;
 }
 
-body {
+.main {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow-x: hidden;
+  flex-flow: row wrap;
+  min-width: 35rem;
 }
 
 html {
@@ -80,3 +79,4 @@ html {
 }
 
 @import url('app/styles/button/button.css');
+@import url('app/styles/layout/layout.css');
