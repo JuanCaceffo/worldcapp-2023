@@ -2,8 +2,6 @@
   /*Layout*/
   display: grid;
   width: 100vw;
-
-  width: 100vw;
   min-height: calc(100vh - 6rem);
   grid-template-areas: 'content';
 }
@@ -52,7 +50,7 @@
 .home__content {
   /*Layout*/
   grid-area: content;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 @media screen and (min-width: 769px) {
