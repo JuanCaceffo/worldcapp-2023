@@ -34,10 +34,10 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
     StoreSearchComponent,
     UserProfileComponent,
     CardAddComponent,
-    FormsModule,
-    BrowserModule 
+    // FormsModule,
+    // BrowserModule 
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, /*AppRoutingModule,*/ FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
