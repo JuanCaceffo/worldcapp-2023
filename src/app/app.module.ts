@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 
-// import { AppRoutingModule, routingComponents } from './app-routing.module'
+import { AppRoutingModule, routingComponents } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/header/header.component'
 import { FormsModule } from '@angular/forms'
@@ -20,7 +20,7 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
     HeaderComponent,   
     FooterComponent, 
     LogoComponent,
-    // routingComponents,
+    routingComponents,
     LoginComponent,
     CardSearchComponent,
     CardDetailsComponent,
@@ -30,7 +30,7 @@ import { CardAddComponent } from './pages/card-add/card-add.component'
   ],
   imports: [
     BrowserModule, 
-    // AppRoutingModule, 
+    AppRoutingModule, 
     FormsModule
   ],
   providers: [],
