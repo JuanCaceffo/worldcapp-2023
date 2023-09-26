@@ -104,4 +104,7 @@
     transform: none;
     transition: none;
   }
+  .fa-solid.fa-right-from-bracket.fa-rotate-180{
+    transform: rotate(0);
+  }
 }
