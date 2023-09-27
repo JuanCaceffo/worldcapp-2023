@@ -1,7 +1,8 @@
 
   <article class="player-card player-card--trash">
     <section class="player-card__img">
-      <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+      <!-- TODO: ver como implementar la imagen --> 
+      <img src="/html/src/images/pity.png"/>
       <li class="button--icon">
         <a class="button__link" href="">
           <i class="fa-solid fa-trash-can"></i>
@@ -10,32 +11,33 @@
     </section>
     <section class="player-card__content">
       <header class="player-card__header">
-        <h2>Gonzalo Martinez</h2>
-        <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+        <!-- TODO: implementar pipes -->
+        <h2>{{ player?.name + ' ' + player?.surname }}</h2>
+        <h2><i class="fas fa-id-badge fa-sm"></i> {{card?.cardProps?.figureNumber}}</h2>
         <h2>
           <i class="fas fa-trophy fa-sm"></i>
           <i class="fas fa-fire fa-sm"></i>
           <i class="fas fa-star fa-sm"></i>
-          124
+          {{card?.baseValoration}}
         </h2>
         <p>
           <i class="fa-solid fa-weight-scale fa-sm"></i
-          ><strong> Peso:</strong> 85 kilos
+          ><strong> Peso:</strong> {{player?.weight}}
         </p>
         <p>
           <i class="fas fa-ruler-vertical fa-sm"></i
-          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> 1.7
+          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> {{player?.age}}
           metros
         </p>
       </header>
       <section class="player-card__body">
-        <p><strong>Casaca:</strong> 10</p>
-        <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
-        <p><strong>Selección:</strong> Argentina</p>
-        <p><strong>Posición:</strong> Mediocampista</p>
+        <p><strong>Casaca:</strong>{{player?.shirtNumber}}</p>
+        <p><strong>Nacimiento:</strong>{{player?.birth }}</p>
+        <p><strong>Selección:</strong> {{player?.nationalTeam}}</p>
+        <p><strong>Posición:</strong> {{player?.positon}}</p>
       </section>
       <footer class="player-card__footer">
-        <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+        <h2 class="player-card__body--highlight">COTIZACION:{{player?.quote}}</h2>
       </footer>
     </section>
-  </article>
+</article>
