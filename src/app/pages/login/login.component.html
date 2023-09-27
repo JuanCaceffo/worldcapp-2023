@@ -7,18 +7,18 @@
       <section class="form-login__content">
         <h2 class="form__row-title">Usuario</h2>
         <section class="form__row">
-          <input name="user" class="form__input--icon-left" type="text" placeholder="Ingrese su usuario:" />
+          <input name="user" class="form__input--icon-left" type="text" placeholder="Ingrese su usuario:" data-testid="user-input"/>
           <i class="form__icon--left fa-solid fa-user"></i>
         </section>
         <h2 class="form__row-title">Contraseña</h2>
         <section class="form__row">
           <input name="password" id="password" class="form__input--icon-left" type="password"
-            placeholder="Ingrese su contraseña:" />
+            placeholder="Ingrese su contraseña:" data-testid="password-input"/>
           <i class="form__icon--left fa-solid fa-key"></i>
         </section>
       </section>
       <section class="form-login__actions">
-        <button class="button button--large button--primary button--font-md">Ingresar</button>
+        <button class="button button--large button--primary button--font-md" data-testid="login-button">Ingresar</button>
       </section>
     </form>
   </section>
