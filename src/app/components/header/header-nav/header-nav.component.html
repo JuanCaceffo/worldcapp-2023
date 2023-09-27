@@ -1,5 +1,5 @@
 <li class="header-nav__list-btn" [ngClass]="{ 'activated': isDropDown }" *ngFor="let item of listProps">
-  <button class="header-nav__button-link button button--text button--animated" >
+  <button [routerLink]="item.link" routerLinkActive="active" class="header-nav__button-link button button--text button--animated" >
     {{item.content}}
     <i *ngIf="item.classCss" [class]="item.classCss"></i>
   </button>

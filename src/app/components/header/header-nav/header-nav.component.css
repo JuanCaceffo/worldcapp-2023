@@ -26,9 +26,10 @@
   text-decoration: none; 
 }
 
-.header-nav__button-link:active{
+.header-nav__button-link.active{
   color: var(--color-focus);
 }
+
 @media screen and (min-width:768px) {
   .header-nav__list-btn{
     transform: none;
