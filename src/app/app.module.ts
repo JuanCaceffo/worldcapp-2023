@@ -10,6 +10,7 @@ import { BaseFilterComponent } from './components/filter/baseFilter.component'
 import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
 import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
 import { FooterComponent } from './components/footer/footer.component'
+import { CardUserComponent } from './components/card-user/card-user.component'
 import { LogoComponent } from './components/logo/logo.component'
 import { CardAddComponent } from './pages/card-add/card-add.component'
 import { HeaderNavComponent } from './components/header/header-nav/header-nav.component'
@@ -25,8 +26,9 @@ import { HeaderNavComponent } from './components/header/header-nav/header-nav.co
     VariantFilterComponent,
     HeaderComponent,
     HeaderNavComponent,
-    CardAddComponent
-    // FormsModule,
+    CardAddComponent,
+    CardUserComponent,
+        // FormsModule,
     // BrowserModule
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
