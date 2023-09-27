@@ -1,8 +1,10 @@
+@import url(/src/app/styles/input/input.css);
+@import url(/src/app/styles/button/button.css);/* SE HACE ASI? */
+
 .home, /* Externalizar en el general? */
 .form-login,
 .form-login__header,
-.form-login__content,
-.form-login__actions {
+.form-login__content {
   display: flex;
   justify-content: center;
 }
@@ -50,6 +52,7 @@
 
 .form-login__actions {
   display: flex;
+  justify-content: center;
   width: 70%;
 }
 
