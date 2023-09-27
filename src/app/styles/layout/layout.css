@@ -1,7 +1,7 @@
 .home {
   /*Layout*/
   display: grid;
-  width: 100vw;
+  width: 100vh;
 
   width: 100vw;
   min-height: calc(100vh - 6rem);
