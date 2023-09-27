@@ -20,23 +20,7 @@
         (click)="onDropDown()"
         class="header-main__button-mobile button button--icon fa-solid fa-xmark"
       ></button>
-      <ul class="header-main__list-buttons">
-        <li class="header-main__list-btn" [ngClass]="{ 'activated': isDropDown }">
-          <!-- TODO: preguntar sobre diferencias entre aplicar tag a o button -->
-          <button class="header-main__button-link button button--text button--animated" href="">Figuritas</button>
-        </li>
-        <li class="header-main__list-btn" [ngClass]="{ 'activated': isDropDown }">
-          <button class="header-main__button-link button button--text button--animated" href="">Sobres</button>
-        </li>
-        <li class="header-main__list-btn" [ngClass]="{ 'activated': isDropDown }">
-          <button class="header-main__button-link button button--text button--animated" href="">Perfil</button>
-        </li>
-        <li class="header-main__list-btn" [ngClass]="{ 'activated': isDropDown }">
-          <button class="header-main__button-link button button--icon button--animated" href=""
-            ><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i
-          ></button>
-        </li>
-      </ul>
+      <app-header-nav class="header-main__list-buttons" [isDropDown]="isDropDown" [listProps]="navBarProps"/>
     </nav>
   </section>
 </header>
