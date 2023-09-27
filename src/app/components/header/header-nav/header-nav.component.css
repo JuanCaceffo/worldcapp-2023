@@ -27,11 +27,14 @@
 }
 
 .header-nav__button-link.active{
-  color: var(--color-focus);
+  color: var(--color-tertiary);
   pointer-events: none;
 }
 
 @media screen and (min-width:768px) {
+  .header-nav__button-link.active{
+    color: var(--color-focus);
+  } 
   .header-nav__list-btn{
     transform: none;
     transition: none;

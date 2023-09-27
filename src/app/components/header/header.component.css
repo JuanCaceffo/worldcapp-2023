@@ -23,7 +23,7 @@
 }
 
 .header-main__navbar{
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
