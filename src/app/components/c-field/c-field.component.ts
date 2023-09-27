@@ -1,4 +1,5 @@
 import { Component, HostBinding, Input } from '@angular/core'
+import { CustomFieldProps } from 'src/app/models/c-field/c-field.model';
 
 @Component({
   selector: 'app-c-field',
@@ -7,9 +8,10 @@ import { Component, HostBinding, Input } from '@angular/core'
 })
 export class CFieldComponent {
   @HostBinding('class') className = 'app-input'
-  @Input() label: string = ''
-  @Input() placeholder: string = 'Ingrese un valor'
-  @Input() type: string = 'text'
-  @Input() name: string = ''
-  @Input() class: string = ''
+  @Input() fieldProperties: CustomFieldProps;
+
+  // Determinar inputType automáticamente
+  ngOnInit() {
+    @Input() inputType = this.fieldProperties.selectOptions ? 'select' : 'text';
+  }
 }

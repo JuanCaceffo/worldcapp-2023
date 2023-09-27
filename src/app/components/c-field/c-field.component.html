@@ -1,1 +1,9 @@
-<label class="f-input__label" *ngIf="label!=''">{{label}}</label>
+<label>{{ fieldProperties.label }}</label>
+<ng-container *ngIf="fieldProperties.inputType === 'text'">
+  <input type="text" [placeholder]="fieldProperties.label" />
+</ng-container>
+<ng-container *ngIf="fieldProperties.inputType === 'select'">
+  <select>
+    <option *ngFor="let option of fieldProperties.selectOptions" [value]="option">{{ option }}</option>
+  </select>
+</ng-container>
