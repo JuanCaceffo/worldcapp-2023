@@ -10,6 +10,7 @@ import { BaseFilterComponent } from './components/filter/baseFilter.component'
 import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
 import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
 import { FooterComponent } from './components/footer/footer.component'
+import { CardUserComponent } from './components/card-user/card-user.component'
 import { LogoComponent } from './components/logo/logo.component'
 import { CardDetailsComponent } from './pages/card-details/card-details.component'
 import { UserProfileComponent } from './pages/user-profile/user-profile.component'
@@ -35,6 +36,7 @@ import { CardComponent } from './components/card/card.component'
     StoreSearchComponent,
     UserProfileComponent,
     CardAddComponent,
+    CardUserComponent
     // FormsModule,
     // BrowserModule
     CardComponent
