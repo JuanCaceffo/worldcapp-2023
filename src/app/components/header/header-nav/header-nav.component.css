@@ -28,6 +28,7 @@
 
 .header-nav__button-link.active{
   color: var(--color-focus);
+  pointer-events: none;
 }
 
 @media screen and (min-width:768px) {

@@ -1,8 +1,12 @@
 .header-main {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 0 2rem;
   width: 100vw;
   height: 6rem;
   font-size: 3.5rem;
