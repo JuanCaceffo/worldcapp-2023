@@ -8,26 +8,25 @@ import { CardSearchComponent } from './pages/card-search/card-search.component'
 import { StoreSearchComponent } from './pages/store-search/store-search.component'
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'figuritas', component: CardSearchComponent},
-  { path: 'detalle-figurita/:id', component: CardDetailsComponent},
-  { path: 'sobres', component: StoreSearchComponent},
-  { path: 'perfil', component: UserProfileComponent},
-  { path: 'agregar-figuritas', component: CardAddComponent},
-  { path: '**', redirectTo: 'LoginComponent', pathMatch: 'full'}
+  { path: 'login', component: LoginComponent },
+  { path: 'figuritas', component: CardSearchComponent },
+  { path: 'detalle-figurita/:id', component: CardDetailsComponent },
+  { path: 'sobres', component: StoreSearchComponent },
+  { path: 'perfil', component: UserProfileComponent },
+  { path: 'agregar-figuritas', component: CardAddComponent },
+  { path: '**', component: LoginComponent }
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
-export const routingComponents =  [
+export const routingComponents = [
   LoginComponent,
   CardSearchComponent,
   CardDetailsComponent,
   StoreSearchComponent,
   UserProfileComponent,
-  CardAddComponent,
+  CardAddComponent
 ]
-
