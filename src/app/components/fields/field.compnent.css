@@ -1,0 +1,95 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.field {
+  /*Layout*/
+  width: 100%;
+  min-height: 3.5rem;
+  padding-right: 1rem;  
+  /*Typeface*/
+  font-family: inherit;
+  font-size: 1.2em;
+  text-indent: 1rem;
+  /*Visual*/
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-clear);
+  outline: none;
+  /*Animation */
+  transition: border var(--transition-time) ease;
+}
+
+.field--rounded {
+  border-radius: var(--border-radius-xs);  
+}
+
+.field--underline {
+  /*Visual*/
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-primary);
+  /*Animation */
+  transition: border-bottom var(--transition-time) ease;
+}
+
+.field--select {
+  cursor: pointer;
+}
+
+.field--iconized {
+  text-indent: 3em;  
+}
+
+.field--iconized-r{
+  padding-right: 3.2em;
+}
+
+.field__icon {
+  /*Layout*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 2.8em;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  /*Visual*/
+  background-color: var(--color-primary);  
+  cursor: text;      
+  /*Animation*/
+  transition: background-color var(--transition-time) ease;
+}
+
+.field__icon--focused {
+  background-color: var(--color-focus);
+}
+
+.field__icon::before{
+  color: var(--typeface-color);
+  font-size: 1.4em;  
+}
+
+.field__container{  
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.field::placeholder {
+  /*Visual*/
+  color: var(--text-color-2lighter);
+}
+
+.field:focus {
+  /* Visual*/
+  border: 1px solid var(--color-focus);
+}
+
+.field--underline:focus {
+  border: none;
+  border-bottom: 1px solid var(--color-focus);
+}
