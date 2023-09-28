@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter.model'
+import { VariantFilter } from 'src/app/data/models/filter/variantFilter/variantFilter.model'
 
 @Component({
   selector: 'app-variantFilter',
