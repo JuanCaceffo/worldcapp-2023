@@ -30,7 +30,7 @@
   --typeface-primary: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
   --typeface-secondary: 'Roboto', 'Open Sans', 'Verdana', 'sans-serif';
   /* Border Radius */
-  --border-radius-xs: 0.5rem;
+  --border-radius: 0.5rem;
   --border-radius-md: 1rem;
   --border-radius-xl: 1.5rem;
   /* Box Shadow */
@@ -84,5 +84,3 @@ html {
 }
 
 @import url('app/styles/button/button.css');
-@import url('app/styles/layout/layout.css');
-@import url('app/styles/shadow/shadow.css')

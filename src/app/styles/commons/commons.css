@@ -21,3 +21,15 @@
 .shadow--animated:hover{
   box-shadow: var(--box-shadow-hover);
 }
+
+.rounded {
+  border-radius: var(--border-radius)
+}
+
+.rounded--small {
+  border-radius: var(--border-radius-md)
+}
+
+.rounded--large {
+  border-radius: var(--border-radius-xl)
+}

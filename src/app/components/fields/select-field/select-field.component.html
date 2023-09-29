@@ -1,7 +1,5 @@
-<app-field-label label={{label}}>
-  <select [ngClass]="['field field--select', className]">
-    <option value="opcion1">Opción 1</option>
-    <option value="opcion2">Opción 2</option>
-  </select>
-</app-field-label>  
-  
+<app-field-label label={{label}} />
+<select inputElement roundedElement shadedElement class={{cssClass()}}>
+  <option value="opcion1">Opción 1</option>
+  <option value="opcion2">Opción 2</option>
+</select>

@@ -1,12 +1,12 @@
 export interface FieldProps {  
   label: string
   className: string
-  value: string
+  value: string | number
   shadowed?: string
 }
 
 export interface InputFieldProps extends FieldProps {
-  placeholder?: string  
+  placeholder?: string
 }
 
 export interface IconFieldProps extends InputFieldProps{

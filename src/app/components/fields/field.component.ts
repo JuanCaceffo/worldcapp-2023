@@ -1,15 +1,19 @@
-import { Directive, Input } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { FieldProps } from 'src/app/interfaces/field'
 
-@Directive()
+@Component({
+  template:'',
+  styleUrls:['./field.component.css']
+})
 export abstract class FieldComponent implements FieldProps {
   @Input() label = ''
   @Input() className = ''
-  @Input() value!: string  
+  @Input() value!: string | number
 
+  
   cssClass(): string {
     return 'field ' + this.cssVariant() + this.className
   }
-
+  
   abstract cssVariant(): string 
 }

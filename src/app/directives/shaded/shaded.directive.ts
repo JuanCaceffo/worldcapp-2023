@@ -1,35 +1,19 @@
-import { Directive, ElementRef, Input } from '@angular/core'
+import { Directive, ElementRef, Input, OnInit } from '@angular/core'
 
 @Directive({
   selector: '[shaded]'
 })
-export class ShadedDirective {
-  @Input() shaded = ''
-
+export class ShadedDirective implements OnInit {
+  @Input() shaded?: string
+  
   constructor(private element: ElementRef) {}
+ 
+  ngOnInit(): void {   
+    const elements = this.element.nativeElement.querySelectorAll('[shadedElement]')
 
-  ngOnInit(): void {
-    const shadedElement = this.element.nativeElement.querySelector(
-      'input, select, button'
-    )
-        
-    switch (this.shaded) {
-    case 'small':
-      this.castShadows(shadedElement, 'shadow shadow--small')
-      break
-    case 'medium':
-      this.castShadows(shadedElement, 'shadow shadow--medium')
-      break
-    case 'large':
-      this.castShadows(shadedElement, 'shadow shadow--large')
-      break
-    default:
-      this.castShadows(shadedElement, 'shadow')
-      break
-    }
-  } 
-
-  castShadows(element:HTMLElement, cssClass: string): void {
-    element && element.classList.add(cssClass)
-  }
+    elements.forEach((e:HTMLElement) => {
+      e.classList.add('shadow')      
+      this.shaded && e.classList.add('shadow--' + this.shaded)
+    })         
+  }  
 }

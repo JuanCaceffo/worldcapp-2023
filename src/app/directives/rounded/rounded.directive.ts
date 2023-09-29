@@ -1,15 +1,18 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core'
+import { Directive, ElementRef, Input, OnInit } from '@angular/core'
 
 @Directive({
   selector: '[rounded]'
 })
-export class RoundedDirective {
-  constructor( private element: ElementRef, private renderer: Renderer2){
-    
-  }
+export class RoundedDirective implements OnInit {
+  @Input() rounded?: string
+  
+  constructor(private element: ElementRef) {}
 
   ngOnInit(): void {
-    const inputElement = this.element.nativeElement.querySelector('input')    
-    inputElement && this.renderer.addClass(inputElement, 'field--rounded')
+    const elements = this.element.nativeElement.querySelectorAll('[roundedElement]')
+    elements.forEach((e: HTMLElement) => {
+      e.classList.add('rounded')
+      this.rounded && e.classList.add('rounded--' + this.rounded)
+    })
   }
 }

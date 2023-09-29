@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, Renderer2 } from '@angular/core'
+import { Directive, ElementRef, Input } from '@angular/core'
 
 @Directive({
   selector: '[variant]'
@@ -6,17 +6,22 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core'
 export class VariantDirective {
   @Input() variant = ''
 
-  constructor(private element: ElementRef, private renderer: Renderer2) {}
+  constructor(private element: ElementRef) {}
 
   ngOnInit(): void {
-    const inputElement = this.element.nativeElement.querySelector('input')
+    const inputElements = this.element.nativeElement.querySelectorAll('[inputElement]')
     
-    switch (this.variant) {
-    case 'simple':
-      inputElement && this.renderer.addClass(inputElement, 'field--underline')
-      break
-    case 'icon-right':
-      break
-    }
+    
+    inputElements.forEach((e: HTMLElement) => {
+      e.classList.add('field--' + this.variant)
+    })    
+
+    if (this.variant === 'icon-right') {
+      const iconElements = this.element.nativeElement.querySelectorAll('[iconElement]')
+     
+      iconElements.forEach((e: HTMLElement) => {
+        e.classList.add('field__icon--' + this.variant)
+      })
+    }    
   }
 }
