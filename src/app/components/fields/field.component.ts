@@ -7,10 +7,10 @@ import { FieldProps } from 'src/app/interfaces/field'
 export abstract class FieldComponent implements FieldProps {
   @Input() label = ''
   @Input() name = 'undefined'
-  @Input() value!: string | number
+  @Input() value!: string
   @Input() class = ''
-  @Input() autofocus = false
-  @Input() tabindex: number | undefined
+  @Input() autofocus = 'false'
+  @Input() tabindex: string | undefined
 
   cssClass(): string {
     return 'field ' + this.cssVariant() + this.class

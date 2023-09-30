@@ -5,11 +5,12 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core'
 })
 export class RoundedDirective implements OnInit {
   @Input() rounded?: string
-  
+
   constructor(private element: ElementRef) {}
 
   ngOnInit(): void {
-    const elements = this.element.nativeElement.querySelectorAll('[roundedElement]')
+    const elements =
+      this.element.nativeElement.querySelectorAll('[roundedElement]')
     elements.forEach((e: HTMLElement) => {
       e.classList.add('rounded')
       this.rounded && e.classList.add('rounded--' + this.rounded)

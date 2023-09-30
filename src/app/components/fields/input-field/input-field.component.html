@@ -1,7 +1,7 @@
 <app-field-label label={{label}} />
 <div roundedElement shadedElement class="field__container">
-  <input [(ngModel)]="value" type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} inputElement
-    roundedElement class={{cssClass()}} placeholder={{placeholder}} />
+  <input [(ngModel)]="value" type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}}
+    class={{cssClass()}} placeholder={{placeholder}} inputElement roundedElement />
   <ng-content></ng-content>
 </div>
 <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>

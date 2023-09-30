@@ -2,7 +2,7 @@
     <section class="filter__sub-section">
       <h4 class="filter__title filter__title--secondary" data-testid="valoracion">Valoración</h4>
       <article class="filter__input-group">
-        <section data-testid="inputFrom" class="filter__container">
+        <section class="filter__container">
           <label class="form__row-subtitle" for="">Desde</label>
           <input
           name="from"
@@ -11,6 +11,7 @@
           min="0"
           placeholder="Desde"
           [(ngModel)]="filter.from"
+          data-testid="inputFrom"
           />
         </section>
         <section class="filter__container">
