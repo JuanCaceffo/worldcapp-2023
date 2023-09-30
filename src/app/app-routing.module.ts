@@ -14,14 +14,14 @@ const routes: Routes = [
   { path: 'sobres', component: StoreSearchComponent },
   { path: 'perfil', component: UserProfileComponent },
   { path: 'agregar-figuritas', component: CardAddComponent },
-  { path: '**', component: LoginComponent }
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ]
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
 export const routingComponents = [
   LoginComponent,
   CardSearchComponent,

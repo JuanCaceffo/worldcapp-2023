@@ -11,3 +11,4 @@ export class CardSearchComponent {
     this.titleService.setTitle('Figuritas')
   }
 }
+

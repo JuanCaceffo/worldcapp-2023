@@ -1,0 +1,8 @@
+:host{
+  width: 100%;
+}
+
+.field__label{  
+  font-size: 1.2em;
+  width: 100%;
+}

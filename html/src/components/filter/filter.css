@@ -2,7 +2,7 @@
 
 .filter {
   background-color: var(--color-tertiary);
-  box-shadow: var(--box-shadow-xs);
+  box-shadow: var(--box-shadow);
   color: var(--color-clear);
   padding: 1em;
   width: 100%;
