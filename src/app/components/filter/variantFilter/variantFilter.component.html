@@ -5,28 +5,10 @@
     </h4>
     <article class="filter__input-group">
       <section class="filter__container">
-        <label class="form__row-subtitle" for="">Desde</label>
-        <input
-          name="from"
-          class="form__input--primary input filter__container-input"
-          type="number"
-          min="0"
-          placeholder="Desde"
-          [(ngModel)]="from"
-          data-testid="inputFrom"
-        />
+        <app-input-field type="number" min="0" rounded value={{from}} label="Desde"/>
       </section>
       <section class="filter__container">
-        <label class="form__row-subtitle" for="">Hasta</label>
-        <input
-          class="form__input--primary input filter__container-input"
-          name="to"
-          type="number"
-          min="0"
-          placeholder="Hasta"
-          [(ngModel)]="to"
-          data-testid="inputTo"
-        />
+        <app-input-field type="number" min="0" rounded value={{to}} label="Hasta"/>
       </section>
     </article>
     <section>
