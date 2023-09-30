@@ -5,13 +5,16 @@ import { Component, Input, OnInit} from '@angular/core'
 @Component({
   selector: 'app-input-field',
   templateUrl: './input-field.component.html',
-  styleUrls: ['./input-field.component.css', '../field.component.css']
+  styleUrls: ['../field.component.css','./input-field.component.css']
 })
 export class InputFieldComponent
   extends FieldComponent
   implements OnInit, InputFieldProps
 {
-  @Input() placeholder = 'Escriba aquí'   
+  @Input() placeholder = 'Escriba aquí'
+  @Input() type = 'text'
+  @Input() error: string | undefined
+     
   constructor() {
     super()
   }

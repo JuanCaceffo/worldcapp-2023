@@ -1,19 +1,24 @@
-export interface FieldProps {  
-  label: string
-  className: string
+export interface FieldProps {
+  label: string  
+  name: string
   value: string | number
-  shadowed?: string
+  class?: string
+  autofocus?: boolean
+  tabindex?: number
 }
 
 export interface InputFieldProps extends FieldProps {
   placeholder?: string
+  type?: string
+  error?: string | undefined
 }
 
-export interface IconFieldProps extends InputFieldProps{
+export interface IconFieldProps extends InputFieldProps {
   icon?: string
-  iconFlip?: boolean
 }
 
 export interface SelectFieldProps extends FieldProps {
   options?: string[]
+  size?: number
+  default?: string
 }

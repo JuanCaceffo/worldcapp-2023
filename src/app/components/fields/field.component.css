@@ -30,9 +30,12 @@
   transition: border-bottom var(--transition-time) ease;
 }
 
-.field--select {
+/* .field--select {
+  font-family: inherit;
+  color: var(--text-color-2lighter);
   cursor: pointer;
-}
+  text-indent: 0.5rem;
+} */
 
 .field--iconized {
   text-indent: 3em;  

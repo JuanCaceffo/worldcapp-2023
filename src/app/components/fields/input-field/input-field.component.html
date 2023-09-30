@@ -1,5 +1,5 @@
 <app-field-label label={{label}} />
 <div roundedElement shadedElement class="field__container">
-  <input type="date" [(ngModel)]="value" inputElement roundedElement class={{cssClass()}} placeholder={{placeholder}}/>  
+  <input [(ngModel)]="value" type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} inputElement roundedElement class={{cssClass()}} placeholder={{placeholder}}/>  
   <ng-content></ng-content>
 </div>

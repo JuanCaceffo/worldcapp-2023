@@ -1,5 +1,6 @@
 <app-field-label label={{label}} />
-<select inputElement roundedElement shadedElement class={{cssClass()}}>
-  <option value="opcion1">Opción 1</option>
-  <option value="opcion2">Opción 2</option>
+<select [(ngModel)]="value" name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} inputElement roundedElement
+  shadedElement class={{cssClass()}}>
+  <option class="select__label">{{ default | slice:0:20 }}</option>
+  <option *ngFor="let option of options" [value]="option">{{ option }}</option>
 </select>

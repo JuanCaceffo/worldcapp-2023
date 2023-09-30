@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core'
 @Component({
   selector: 'app-icon-field',
   templateUrl: './icon-field.component.html',
-  styleUrls: ['./icon-field.component.css', '../field.component.css', '../input-field/input-field.component.css']
+  styleUrls: ['../field.component.css','./icon-field.component.css']
 })
 export class IconFieldComponent
   extends InputFieldComponent
