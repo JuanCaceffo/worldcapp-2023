@@ -7,3 +7,5 @@
 <app-select-field rounded shaded label='Hola'></app-select-field>    
 <app-input-field error='mensaje de error largo y apestoso' variant='underline'></app-input-field>    
 <app-input-field variant='underline'></app-input-field>
+
+![Imagen con ejemplos de input](../../../assets/images/fields.png)
