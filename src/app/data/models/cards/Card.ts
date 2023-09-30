@@ -1,10 +1,19 @@
+import { Dayjs } from 'dayjs'
 import { CardDTO } from '../../dto/CardDTO.dto'
+import { DATE_FORMATE } from '../../services/config'
+import * as dayjs from 'dayjs'
 
+interface CardProps extends Omit<CardDTO, 'birth'> {
+  birth: Dayjs
+}
 export class Card {
-  constructor(public cardProps: CardDTO) {}
+  //Preguntar si es posible agregar las propiedades de esta forma
+  public cardProps!: CardProps
 
   static fromJson(cardJSON: CardDTO): Card {
-    return new Card(cardJSON)
+    return Object.assign(new Card(), cardJSON, {
+      brith: dayjs(cardJSON.birth, DATE_FORMATE)
+    })
   }
 
   get baseValoration() {

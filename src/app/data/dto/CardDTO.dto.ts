@@ -1,4 +1,12 @@
-type Player = {
+export interface CardDTO {
+  figureNumber: number
+  isOnfire: boolean
+  isPromise: boolean
+  initialValue: number
+  multiplierImpresion: number
+  multiplierOnFire: number
+  mulitplierEvenNumber: number
+  //player
   name: string
   surname: string
   weight: number
@@ -9,14 +17,5 @@ type Player = {
   nationalTeam: string
   positon: string
   quote: number
-}
-export interface CardDTO {
-  figureNumber: number
-  isOnfire: boolean
-  isPromise: boolean
-  player: Player
-  initialValue: number
-  multiplierImpresion: number
-  multiplierOnFire: number
-  mulitplierEvenNumber: number
+  //player
 }
