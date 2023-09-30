@@ -1,0 +1,9 @@
+# Ejemplos de Inputs y sus formas de usarlos
+
+```html
+<app-input-field rounded shaded label='Hola'></app-input-field>
+<app-icon-field rounded shaded icon="fas fa-magnifying-glass" variant="icon-right" label='Hola'></app-icon-field>
+<app-icon-field rounded shaded icon="fas fa-magnifying-glass" label='Hola'></app-icon-field>
+<app-select-field rounded shaded label='Hola'></app-select-field>    
+<app-input-field error='mensaje de error largo y apestoso' variant='underline'></app-input-field>    
+<app-input-field variant='underline'></app-input-field>
