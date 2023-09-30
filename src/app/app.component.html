@@ -1,9 +1,3 @@
-<!-- <p>Hola A todys</p>
-<button class="button button--primary">Ingresar</button> -->
-<app-header />
-<!-- Filtro Base -->
-<app-baseFilter>
-  <app-variantFilter #childFilter />
-  <!-- <app-sortedByFilter #childFilter/> -->
-</app-baseFilter>
+<app-header *ngIf="!isLoginPage()" />
+<router-outlet></router-outlet>
 <app-footer />

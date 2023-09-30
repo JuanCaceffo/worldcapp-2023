@@ -1,0 +1,35 @@
+.shadow {
+  box-shadow: var(--box-shadow);  
+}
+
+.shadow--animated {
+  transition: box-shadow var(--transition-time) ease;
+}
+
+.shadow--small {
+  box-shadow: var(--box-shadow-xs);
+}
+
+.shadow--medium {
+  box-shadow: var(--box-shadow-md);
+}
+
+.shadow--large {
+  box-shadow: var(--box-shadow-xl);
+}
+
+.shadow--animated:hover{
+  box-shadow: var(--box-shadow-hover);
+}
+
+.rounded {
+  border-radius: var(--border-radius)
+}
+
+.rounded--small {
+  border-radius: var(--border-radius-md)
+}
+
+.rounded--large {
+  border-radius: var(--border-radius-xl)
+}

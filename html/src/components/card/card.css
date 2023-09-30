@@ -39,7 +39,7 @@
   max-width: 30em;
   margin: 0 auto;
   border-radius: var(--border-radius-xl);
-  box-shadow: var(--box-shadow-xs);
+  box-shadow: var(--box-shadow);
   cursor: default;
   transition: all 400ms ease;
 }
@@ -79,7 +79,7 @@
 }
 
 .player-card__header {
-  box-shadow: var(--box-shadow-xs);
+  box-shadow: var(--box-shadow);
 }
 
 .player-card__header h2 {

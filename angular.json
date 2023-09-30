@@ -25,7 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/styles/layout/layout.css",
+              "src/app/styles/commons/commons.css"
             ],
             "scripts": []
           },
