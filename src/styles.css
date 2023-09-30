@@ -11,7 +11,7 @@
   --color-highligthed: hsla(32, 100%, 50%, 1);
   --color-focus: hsla(32, 100%, 65%, 1);
   --color-focus-lighter: hsla(32, 100%, 92%, 1);
-  --color-hot: hsla(0, 70%, 50%, 1);
+  --color-hot: hsla(0, 80%, 50%, 1);
   /* Brigth Colors */
   --color-clear: hsla(0, 0%, 99%, 1);
   --color-clear-medium: hsla(0, 0%, 96%, 1);
@@ -30,14 +30,15 @@
   --typeface-primary: 'Mulish', 'Open Sans', 'Verdana', 'sans-serif';
   --typeface-secondary: 'Roboto', 'Open Sans', 'Verdana', 'sans-serif';
   /* Border Radius */
-  --border-radius-xs: 0.5rem;
+  --border-radius: 0.5rem;
   --border-radius-md: 1rem;
   --border-radius-xl: 1.5rem;
   /* Box Shadow */
-  --box-shadow-2xs: 0.0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
-  --box-shadow-xs: 0.0rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  --box-shadow-xs: 0.0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.0rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
   --box-shadow-md: 0.25rem 0.25rem 1.2rem rgba(0, 0, 0, 0.3);
   --box-shadow-xl: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+  --box-shadow-hover: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
   /* Box Padding */
   --box-padding: 1.6rem;
   /* Animations */
@@ -83,4 +84,3 @@ html {
 }
 
 @import url('app/styles/button/button.css');
-@import url('app/styles/layout/layout.css');

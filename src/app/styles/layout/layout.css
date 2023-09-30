@@ -55,6 +55,15 @@
   /* background-color: aquamarine; */
 }
 
+.home__content--grid{
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: var(--box-padding);
+}
+
 @media screen and (min-width: 769px) {
   .home--2col {
     /*Layout*/
