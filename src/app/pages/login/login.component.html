@@ -7,15 +7,15 @@
       <section class="form-login__content">
         <h2 class="form__row-title">Usuario</h2>
         <section class="form__row">
-          <app-icon-field rounded shaded icon="fa-solid fa-user"></app-icon-field>
+          <app-icon-field rounded shaded icon="fa-solid fa-user" [(ngModel)]="loginData.user" ></app-icon-field>
         </section>
         <h2 class="form__row-title">Contraseña</h2>
         <section class="form__row">
-          <app-icon-field rounded shaded icon="fa-solid fa-key"></app-icon-field>
+          <app-icon-field rounded shaded icon="fa-solid fa-key" [(ngModel)]="loginData.password" ></app-icon-field>
         </section>
       </section>
       <section class="form-login__actions">
-        <button class="button button--large button--primary button--font-md" data-testid="login-button">Ingresar</button>
+        <button class="button button--large button--primary button--font-md" data-testid="login-button" (click)="loginData.submit()">Ingresar</button>
       </section>
     </form>
   </section>

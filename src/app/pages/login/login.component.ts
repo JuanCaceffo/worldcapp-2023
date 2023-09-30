@@ -7,11 +7,27 @@ import { Title } from '@angular/platform-browser'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  loginData = new LoginData()
   constructor(private titleService: Title) {
     this.titleService.setTitle('Página de Inicio de Sesión')
   }
   
   login() {
     this.titleService.setTitle('Página principal - Usuario logueado')
+  }
+}
+export class LoginData {
+  users = {"sol": "1234","pablo": "5678"}
+  user: string = ""
+  password: string = ""
+
+  submit(){
+    if (this.user in this.users) {
+      console.log("HOLA")
+    }
+    console.log("SISISI")
+    console.log(this.user)
+    console.log(this.password)
+    console.log(this.user in this.users)
   }
 }
