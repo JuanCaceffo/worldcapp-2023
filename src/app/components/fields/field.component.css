@@ -30,53 +30,6 @@
   transition: border-bottom var(--transition-time) ease;
 }
 
-/* .field--select {
-  font-family: inherit;
-  color: var(--text-color-2lighter);
-  cursor: pointer;
-  text-indent: 0.5rem;
-} */
-
-.field--iconized {
-  text-indent: 3em;  
-}
-
-.field--icon-right {
-  text-indent: 1rem;
-  padding-right: 3.2em;
-}
-
-.field__icon {
-  /*Layout*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 2.8em;
-  height: 100%;
-  left: 0;
-  bottom: 0;  
-  /*Visual*/
-  background-color: var(--color-primary);  
-  cursor: text;      
-  /*Animation*/
-  transition: background-color var(--transition-time) ease;
-}
-
-.field__icon--focused {
-  background-color: var(--color-focus);
-}
-
-.field__icon--icon-right {  
-  left: unset;
-  right: 0;
-}
-
-.field__icon::before{
-  color: var(--typeface-color);
-  font-size: 1.4em;  
-}
-
 .field__container{  
   position: relative;
   overflow: hidden;
@@ -91,10 +44,6 @@
 .field::placeholder {
   /*Visual*/
   color: var(--text-color-2lighter);
-}
-
-::ng-deep .field:focus + .field__icon {
-  background-color: var(--color-focus)
 }
 
 .field--underline:focus {
