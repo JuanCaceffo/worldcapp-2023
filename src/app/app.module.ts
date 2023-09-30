@@ -36,7 +36,7 @@ import { CardComponent } from './components/card/card.component'
     StoreSearchComponent,
     UserProfileComponent,
     CardAddComponent,
-    CardUserComponent
+    CardUserComponent,
     // FormsModule,
     // BrowserModule
     CardComponent

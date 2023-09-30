@@ -7,8 +7,9 @@ import { Card } from 'src/app/data/models/cards/Card'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() card?: Card
-  player = this.card?.cardProps.player
+  @Input() card!: Card
+  //TODO: probar con injeccion de dependencias por meido de constructor
+  props = this.card.cardProps
 
   ngOnInit() {}
 }
