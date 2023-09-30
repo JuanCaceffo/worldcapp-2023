@@ -1,6 +1,7 @@
 import { InputFieldProps } from 'src/app/interfaces/field'
 import { Component } from '@angular/core'
 import { InputFieldComponent } from '../input-field/input-field.component'
+import { InputType } from '../field.component'
 
 @Component({
   selector: 'app-control-field',
@@ -15,7 +16,7 @@ export class ControlFieldComponent
     super()
   }
 
-  override cssVariant(): string {
+  override cssVariant(): InputType {
     return this.type === 'checkbox'
       ? 'field--checkbox'
       : this.type === 'radio'

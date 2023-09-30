@@ -11,7 +11,7 @@
         <app-input-field type="number" min="0" rounded value={{to}} label="Hasta"/>
       </section>
     </article>
-    <section>
+    <section class="filter__checkbox">
       <input
         name="onFire"
         type="checkbox"
@@ -20,16 +20,16 @@
       />
       <label for="onFire">On fire</label>
     </section>
-  </section>
-  <article class="filter__sub-section filter__sub-section--grow">
-    <section class="filter__checkbox">
-      <input
+    <!-- <article class="filter__sub-section filter__sub-section--grow"> -->
+      <section class="filter__checkbox">
+        <input
         name="promise"
         type="checkbox"
         [(ngModel)]="isPromise"
         data-testid="checkboxIsPromise"
-      />
-      <label for="promise">Es promesa</label>
-    </section>
-  </article>
+        />
+        <label for="promise">Es promesa</label>
+      </section>
+    <!-- </article> -->
+  </section>
 </section>
