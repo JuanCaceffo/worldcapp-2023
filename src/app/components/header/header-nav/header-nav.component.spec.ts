@@ -1,28 +1,27 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing'
 
-import { HeaderNavComponent } from './header-nav.component';
+import { HeaderNavComponent } from './header-nav.component'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe('HeaderNavComponent', () => {
-  let component: HeaderNavComponent;
-  let fixture: ComponentFixture<HeaderNavComponent>;
+  let component: HeaderNavComponent
+  let fixture: ComponentFixture<HeaderNavComponent>
 
-  beforeEach(async(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderNavComponent ]
-    })
-    .compileComponents();
-  }));
+      imports: [RouterTestingModule],
+      declarations: [HeaderNavComponent]
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderNavComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(HeaderNavComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
