@@ -2,13 +2,14 @@ import { FieldComponent } from 'src/app/components/fields/field.component'
 import { TestBed, fakeAsync } from '@angular/core/testing'
 import { InputFieldComponent } from './input-field.component'
 import { RouterTestingModule } from '@angular/router/testing'
+import { FieldLabelComponent } from '../field-label/field-label.component'
 
-describe('CustomField', () => {  
+describe('CustomField', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule], 
-      declarations: [FieldComponent, InputFieldComponent]
-    }).compileComponents()    
+      imports: [RouterTestingModule],
+      declarations: [FieldComponent, InputFieldComponent, FieldLabelComponent]
+    }).compileComponents()
   }))
 
   it('should create', () => {

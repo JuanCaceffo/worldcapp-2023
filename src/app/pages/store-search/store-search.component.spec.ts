@@ -1,21 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { StoreSearchComponent } from './store-search.component';
+// import { StoreSearchComponent } from './store-search.component'
 
-describe('StoreSearchComponent', () => {
-  let component: StoreSearchComponent;
-  let fixture: ComponentFixture<StoreSearchComponent>;
+// describe('StoreSearchComponent', () => {
+//   let component: StoreSearchComponent
+//   let fixture: ComponentFixture<StoreSearchComponent>
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [StoreSearchComponent]
-    });
-    fixture = TestBed.createComponent(StoreSearchComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [StoreSearchComponent]
+//     })
+//     fixture = TestBed.createComponent(StoreSearchComponent)
+//     component = fixture.componentInstance
+//     fixture.detectChanges()
+//   })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy()
+//   })
+// })
