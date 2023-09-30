@@ -13,7 +13,6 @@ export class IconFieldComponent
 {
   @Input() icon = 'fas fa-thumbs-up'  
   
-
   constructor(){
     super()
   }
