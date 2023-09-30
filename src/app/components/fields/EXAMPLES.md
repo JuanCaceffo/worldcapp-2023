@@ -8,4 +8,4 @@
 <app-input-field error='mensaje de error largo y apestoso' variant='underline'></app-input-field>    
 <app-input-field variant='underline'></app-input-field>
 
-![Imagen con ejemplos de input](../../../assets/images/fields.png)
+![fields](https://github.com/algo3-unsam/worldcapp-2023-grupo-8/assets/62702056/cb0109aa-7196-4cf4-9a9e-5bd4775e2ffd)
