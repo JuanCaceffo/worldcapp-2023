@@ -26,7 +26,9 @@ export class Card {
     public age?: number,
     public nationalTeam?: string,
     public positon?: string,
-    public quote?: number //player
+    public quote?: number,
+    //player
+    public owner?: string
   ) {}
 
   static fromJson(cardJSON: CardDTO): Card {

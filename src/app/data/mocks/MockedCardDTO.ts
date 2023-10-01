@@ -23,7 +23,8 @@ export const mockCardData: Array<CardDTO> = [
     nationalTeam: 'Argentina',
     positon: 'mediocampista',
     age: 30,
-    birth: '06/13/1993'
+    birth: '06/13/1993',
+    owner: 'ale menis'
   },
   {
     figureNumber: 10,
@@ -42,6 +43,7 @@ export const mockCardData: Array<CardDTO> = [
     nationalTeam: 'Argentina',
     positon: 'Defensor',
     age: 35,
-    birth: '02/12/1988'
+    birth: '02/12/1988',
+    owner: 'juan cacho caceffo'
   }
 ]

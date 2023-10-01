@@ -18,4 +18,5 @@ export interface CardDTO {
   positon: string
   quote: number
   //player
+  owner: string
 }

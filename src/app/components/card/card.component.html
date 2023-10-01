@@ -36,10 +36,12 @@
         <p><strong>Nacimiento: </strong>{{card.birth}}</p>
         <p><strong>Selección: </strong> {{card.nationalTeam}}</p>
         <p><strong>Posición: </strong> {{card.positon}}</p>
-      </section>
-      <footer class="player-card__footer">
-        <!-- TODO: agregar pipe para el tipo de moneda -->
         <h2 class="player-card__body--highlight">COTIZACION: {{card.quote}}</h2>
+      </section>
+      <footer *ngIf="cardType === 'owner'" class="player-card__footer">
+        <!-- TODO: agregar pipe para el tipo de moneda -->
+        <h2>CEDIDA POR:</h2>
+        <p>{{card.owner}}</p>
       </footer>
     </section>
 </article>
