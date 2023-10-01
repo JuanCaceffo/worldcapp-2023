@@ -20,7 +20,7 @@
 
 .button--shadows {
   /*Visual*/
-  box-shadow: var(--box-shadow-2xs);
+  box-shadow: var(--box-shadow-xs);
 }
 
 .button--disabled {

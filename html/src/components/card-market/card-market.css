@@ -4,7 +4,7 @@
     max-width: 330px;
     background-color: var(--color-clear-medium);
     border-radius: var(--border-radius-xl);
-    box-shadow: var(--box-shadow-xs);
+    box-shadow: var(--box-shadow);
     cursor: default;
     transition: all 400ms ease;
 }
