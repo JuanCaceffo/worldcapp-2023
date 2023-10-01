@@ -3,26 +3,45 @@ import { CardDTO } from '../../dto/CardDTO.dto'
 import { DATE_FORMATE } from '../../services/config'
 import * as dayjs from 'dayjs'
 
-interface CardProps extends Omit<CardDTO, 'birth'> {
+/* interface CardProps extends Omit<CardDTO, 'birth'> {
   birth: Dayjs
-}
+} */
 export class Card {
   //Preguntar si es posible agregar las propiedades de esta forma
-  public cardProps!: CardProps
+  constructor(
+    public figureNumber?: number,
+    public isOnfire?: boolean,
+    public isPromise?: boolean,
+    public initialValue: number = 0,
+    public multiplierImpresion: number = 0,
+    public multiplierOnFire: number = 0,
+    public mulitplierEvenNumber: number = 0,
+    //player
+    public name?: string,
+    public surname?: string,
+    public weight?: number,
+    public height?: number,
+    public shirtNumber?: number,
+    public birth?: Dayjs,
+    public age?: number,
+    public nationalTeam?: string,
+    public positon?: string,
+    public quote?: number
+  ) //player
+  {}
 
   static fromJson(cardJSON: CardDTO): Card {
     return Object.assign(new Card(), cardJSON, {
-      brith: dayjs(cardJSON.birth, DATE_FORMATE)
+      birth: dayjs(cardJSON.birth, DATE_FORMATE)
     })
   }
 
   get baseValoration() {
-    const props = this.cardProps
     return (
-      props.initialValue *
-      props.multiplierOnFire *
-      props.mulitplierEvenNumber *
-      props.multiplierImpresion
+      this.initialValue *
+      this.multiplierOnFire *
+      this.mulitplierEvenNumber *
+      this.multiplierImpresion
     )
   }
 }

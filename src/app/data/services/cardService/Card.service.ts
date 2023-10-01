@@ -6,13 +6,10 @@ import { Card } from '../../models/cards/Card'
   providedIn: 'root'
 })
 export class CardService {
-  constructor() {}
+  data = mockCardData
 
-  getAllCards() {
-    const data = mockCardData
-    return data.map((card) => {
-      Card.fromJson(card)
-    })
+  getAllCards(): Card[] {
+    return this.data.map<Card>((cardDTO) => Card.fromJson(cardDTO))
   }
 
   /* getCardById(id: number){
