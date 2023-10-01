@@ -30,11 +30,9 @@ export class Card {
   ) {}
 
   static fromJson(cardJSON: CardDTO): Card {
-    const caca = Object.assign(new Card(), cardJSON, {
+    return Object.assign(new Card(), cardJSON, {
       birth: dayjs(cardJSON.birth, DATE_FORMATE)
     })
-    console.log(caca)
-    return caca
   }
 
   get baseValoration() {
