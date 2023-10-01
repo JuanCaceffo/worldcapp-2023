@@ -7,7 +7,7 @@ import * as dayjs from 'dayjs'
   birth: Dayjs
 } */
 export class Card {
-  //Preguntar si es posible agregar las propiedades de esta forma
+  //Preguntar por otra forma mas limpia de declarar los aprametros
   constructor(
     public figureNumber?: number,
     public isOnfire?: boolean,
