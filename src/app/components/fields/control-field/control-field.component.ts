@@ -24,7 +24,5 @@ export class ControlFieldComponent
         : ''
   }
 
-  override cssClass(): string {
-    return super.cssClass()
-  }
+  override cssClass = (): string => super.cssClass() + this.cssVariant()
 }

@@ -19,10 +19,11 @@ export abstract class FieldComponent implements FieldProps {
   @Input() class = ''
   @Input() autofocus = false
   @Input() tabindex: number | undefined
-
-  cssClass(): string {
-    return 'field ' + this.cssVariant() + this.class
-  }
+  @Input() testid: string | undefined
 
   abstract cssVariant(): InputType
+
+  cssClass = (): string => 'field ' + this.cssVariant() + this.class
+
+  isTestId = (): string => this.testid ?? ''
 }
