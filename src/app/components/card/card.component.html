@@ -12,8 +12,8 @@
     <section class="player-card__content">
       <header class="player-card__header">
         <!-- TODO: implementar pipes -->
-        <h2>{{ props.name + ' ' + props.surname }}</h2>
-        <h2><i class="fas fa-id-badge fa-sm"></i> {{props.figureNumber}}</h2>
+        <h2>{{ card.name + ' ' + card.surname }}</h2>
+        <h2><i class="fas fa-id-badge fa-sm"></i> {{card.figureNumber}}</h2>
         <h2>
           <i class="fas fa-trophy fa-sm"></i>
           <i class="fas fa-fire fa-sm"></i>
@@ -22,23 +22,23 @@
         </h2>
         <p>
           <i class="fa-solid fa-weight-scale fa-sm"></i
-          ><strong> Peso:</strong> {{props.weight}}
+          ><strong> Peso:</strong> {{card.weight}}
         </p>
         <p>
           <i class="fas fa-ruler-vertical fa-sm"></i
-          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> {{props.age}}
+          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> {{card.age}}
           metros
         </p>
       </header>
       <section class="player-card__body">
-        <p><strong>Casaca:</strong>{{props.shirtNumber}}</p>
-        <p><strong>Nacimiento:</strong>{{props.birth }}</p>
-        <p><strong>Selección:</strong> {{props.nationalTeam}}</p>
-        <p><strong>Posición:</strong> {{props.positon}}</p>
+        <p><strong>Casaca:</strong>{{card.shirtNumber}}</p>
+        <p><strong>Nacimiento:</strong>{{card.birth }}</p>
+        <p><strong>Selección:</strong> {{card.nationalTeam}}</p>
+        <p><strong>Posición:</strong> {{card.positon}}</p>
       </section>
       <footer class="player-card__footer">
         <!-- TODO: agregar pipe para el tipo de moneda -->
-        <h2 class="player-card__body--highlight">COTIZACION:{{props.quote}}</h2>
+        <h2 class="player-card__body--highlight">COTIZACION:{{card.quote}}</h2>
       </footer>
     </section>
 </article>
