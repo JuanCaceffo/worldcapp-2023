@@ -23,7 +23,7 @@ export const mockCardData: Array<CardDTO> = [
     nationalTeam: 'Argentina',
     positon: 'mediocampista',
     age: 30,
-    birth: '13/06/1993'
+    birth: '06/13/1993'
   },
   {
     figureNumber: 10,
@@ -42,6 +42,6 @@ export const mockCardData: Array<CardDTO> = [
     nationalTeam: 'Argentina',
     positon: 'Defensor',
     age: 35,
-    birth: '12/02/1988'
+    birth: '02/12/1988'
   }
 ]

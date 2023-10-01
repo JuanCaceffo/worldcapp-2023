@@ -31,14 +31,15 @@
         </p>
       </header>
       <section class="player-card__body">
-        <p><strong>Casaca:</strong>{{card.shirtNumber}}</p>
-        <p><strong>Nacimiento:</strong>{{card.birth }}</p>
-        <p><strong>Selección:</strong> {{card.nationalTeam}}</p>
-        <p><strong>Posición:</strong> {{card.positon}}</p>
+        <p><strong>Casaca: </strong>{{card.shirtNumber}}</p>
+        <!-- TODO: formatear fecha --> 
+        <p><strong>Nacimiento: </strong>{{card.birth}}</p>
+        <p><strong>Selección: </strong> {{card.nationalTeam}}</p>
+        <p><strong>Posición: </strong> {{card.positon}}</p>
       </section>
       <footer class="player-card__footer">
         <!-- TODO: agregar pipe para el tipo de moneda -->
-        <h2 class="player-card__body--highlight">COTIZACION:{{card.quote}}</h2>
+        <h2 class="player-card__body--highlight">COTIZACION: {{card.quote}}</h2>
       </footer>
     </section>
 </article>

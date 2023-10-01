@@ -1,6 +1,6 @@
 import { Dayjs } from 'dayjs'
 import { CardDTO } from '../../dto/CardDTO.dto'
-import { DATE_FORMATE } from '../../services/config'
+import { DATE_FORMATE } from './../../services/config'
 import * as dayjs from 'dayjs'
 
 /* interface CardProps extends Omit<CardDTO, 'birth'> {
@@ -26,14 +26,15 @@ export class Card {
     public age?: number,
     public nationalTeam?: string,
     public positon?: string,
-    public quote?: number
-  ) //player
-  {}
+    public quote?: number //player
+  ) {}
 
   static fromJson(cardJSON: CardDTO): Card {
-    return Object.assign(new Card(), cardJSON, {
+    const caca = Object.assign(new Card(), cardJSON, {
       birth: dayjs(cardJSON.birth, DATE_FORMATE)
     })
+    console.log(caca)
+    return caca
   }
 
   get baseValoration() {
