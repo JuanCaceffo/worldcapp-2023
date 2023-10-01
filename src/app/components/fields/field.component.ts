@@ -23,7 +23,9 @@ export abstract class FieldComponent implements FieldProps {
 
   abstract cssVariant(): InputType
 
-  cssClass = (): string => 'field ' + this.cssVariant() + this.class
+  cssClass(): string {
+    return `field ${this.cssVariant()}${this.class}`
+  }
 
   isTestId = (): string => this.testid ?? ''
 }

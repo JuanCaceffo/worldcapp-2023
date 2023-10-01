@@ -32,7 +32,9 @@ export class InputFieldComponent
     return ''
   }
 
-  override cssClass = (): string => super.cssClass() + this.errorStyle()
+  override cssClass(): string {
+    return super.cssClass() + this.errorStyle()
+  }
 
   errorMessage(): string {
     this.validateErrorMessage()
