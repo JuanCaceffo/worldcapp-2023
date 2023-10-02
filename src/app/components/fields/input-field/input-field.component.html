@@ -1,9 +1,8 @@
-<ng-container *ngFor="let prop of props; let i = index" >
-  <app-field-label label={{prop.label}} />
+
+  <app-field-label label={{props.label}} />
   <div roundedElement shadedElement class="field__container">
-    <input [(ngModel)]="prop.value" type={{prop.type}} name={{prop.name}} autofocus={{prop.autofocus}} tabindex={{prop.tabindex}}
-      class={{cssClass(i)}} placeholder={{prop.placeholder}} inputElement roundedElement />
+    <input [(ngModel)]="props.value" (input)="onChangeEvent()" type={{props.type}} name={{props.name}} autofocus={{props.autofocus}} tabindex={{props.tabindex}}
+      class={{cssClass()}} placeholder={{props.placeholder}} inputElement roundedElement />
     <ng-content></ng-content>
   </div>
-  <span class="field__error" *ngIf="errorMessage(i)">{{errorMessage(i)}}</span>
-</ng-container>
+  <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>

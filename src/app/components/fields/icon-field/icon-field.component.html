@@ -1,5 +1,3 @@
-<ng-container *ngFor="let prop of props; let i = index" >
-  <app-input-field [props]="props">
-    <i iconElement class={{iconCSS(i)}}></i>
-  </app-input-field>
-</ng-container>
+<app-input-field [props]="props">
+  <i iconElement class={{iconCSS()}}></i>
+</app-input-field>

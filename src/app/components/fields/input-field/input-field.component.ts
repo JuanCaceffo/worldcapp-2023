@@ -1,6 +1,6 @@
 import { FieldComponent } from 'src/app/components/fields/field.component'
 import { InputFieldProps } from 'src/app/interfaces/field'
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
 const MAXERRORLENGTH = 40
 @Component({
@@ -12,39 +12,36 @@ export class InputFieldComponent extends FieldComponent implements OnInit {
   @Input() placeholder?: string
   @Input() type?: string
   @Input() error?: string
-  @Input() override props: InputFieldProps[] = [
-    {
-      label: '',
-      name: '',
-      value: '',
-      class: '',
-      placeholder: 'Escriba aquí',
-      type: 'text',
-      autofocus: 'false',
-      tabindex: '-1',
-      error: ''
-    }
-  ]
-  @Output() onchange: EventEmitter<Event> = new EventEmitter()
-  
+  @Input() override props: InputFieldProps = {
+    label: '',
+    name: '',
+    value: '',
+    class: '',
+    placeholder: 'Escriba aquí',
+    type: 'text',
+    autofocus: 'false',
+    tabindex: '-1',
+    error: ''
+  }
+
   override cssVariant = (): string => ''
 
-  override cssClass(index: number): string {
-    return super.cssClass(index) + this.errorStyle(index)
+  override cssClass(): string {
+    return super.cssClass() + this.errorStyle()
   }
 
-  errorMessage = (index: number): string => {    
-    this.validateErrorMessage(index)
-    return this.props[index].error
+  errorMessage = (): string => {
+    this.validateErrorMessage()
+    return this.props.error
   }
 
-  errorStyle = (index: number): string => this.props[index].error !== '' ? 'field--error' : ''
+  errorStyle = (): string => (this.props.error !== '' ? 'field--error' : '')
 
-  validateErrorMessage = (index: number) => {
-    if (this.props[index].error.length > MAXERRORLENGTH) {
+  validateErrorMessage = () => {
+    if (this.props.error.length > MAXERRORLENGTH) {
       throw new Error(
         `Too long error msg, ${
-          this.props[index].error.length - MAXERRORLENGTH
+          this.props.error.length - MAXERRORLENGTH
         } chars exeeded of ${MAXERRORLENGTH}.`
       )
     }
