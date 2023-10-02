@@ -18,16 +18,17 @@ export class LoginComponent {
 }
 export class LoginData {
   users = {"sol": "1234","pablo": "5678"}
-  user: string = ""
-  password: string = ""
+  user = ""
+  password = ""
 
   submit(){
     if (this.user in this.users) {
-      console.log("HOLA")
+      console.log("SI SOY")
+    } else {
+      console.log("NO SOY")
+      console.log(this.user)
+      console.log(this.password)
+      console.log(this.user in this.users)
     }
-    console.log("SISISI")
-    console.log(this.user)
-    console.log(this.password)
-    console.log(this.user in this.users)
   }
 }

@@ -15,6 +15,7 @@ import { FieldLabelComponent } from './components/fields/field-label/field-label
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
 import { DIRECTIVES } from './directives/directives'
+import { LoginComponent } from './pages/login/login.component'
 @NgModule({
   declarations: [
     routingComponents,
@@ -36,6 +37,7 @@ import { DIRECTIVES } from './directives/directives'
     InputFieldComponent,
     IconFieldComponent,
     SelectFieldComponent,
+    LoginComponent,
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
