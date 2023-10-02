@@ -5,6 +5,7 @@ import { VariantFilterComponent } from './variantFilter.component'
 import { FormsModule } from '@angular/forms'
 import { InputFieldComponent } from '../../fields/input-field/input-field.component'
 import { FieldLabelComponent } from '../../fields/field-label/field-label.component'
+import { getByTestId } from 'src/app/helpers/test.helper'
 
 describe('FilterVariantComponent', () => {
   let component: VariantFilterComponent
@@ -24,19 +25,13 @@ describe('FilterVariantComponent', () => {
     fixture.detectChanges()
   })
 
-  const getByTestId = (testId: string) => {
-    return fixture.debugElement.nativeElement.querySelector(
-      `[data-testid="${testId}"]`
-    ) as HTMLElement
-  }
-
   it('should create', () => {
     expect(component).toBeTruthy()
   })
 
   it('Inicialmente los inputs numericos tienen los valores por defecto', async () => {
-    const inputFrom = getByTestId('inputFrom')
-    const inputTo = getByTestId('inputTo')
+    const inputFrom = getByTestId(fixture, 'inputFrom')
+    const inputTo = getByTestId(fixture, 'inputTo')
 
     await fixture.whenStable()
     expect(
@@ -48,8 +43,8 @@ describe('FilterVariantComponent', () => {
   })
 
   it('Cambio de valor de los inputs numericos', async () => {
-    const inputFrom = getByTestId('inputFrom')
-    const inputTo = getByTestId('inputTo')
+    const inputFrom = getByTestId(fixture, 'inputFrom')
+    const inputTo = getByTestId(fixture, 'inputTo')
 
     component.from = 1
     component.to = 2
