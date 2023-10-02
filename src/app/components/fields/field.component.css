@@ -63,6 +63,7 @@
 .field__error {
   width: 100%;
   text-align: right;
+  margin-right: 0.2em;
   font-size: 1.2em;
   font-weight: 600;  
   color: var(--color-hot);

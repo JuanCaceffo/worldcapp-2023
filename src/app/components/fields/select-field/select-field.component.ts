@@ -7,16 +7,26 @@ import { SelectFieldProps } from 'src/app/interfaces/field'
   templateUrl: './select-field.component.html',
   styleUrls: ['../field.component.css','./select-field.component.css']
 })
-export class SelectFieldComponent extends FieldComponent implements SelectFieldProps, OnInit {
-  @Input() options = []
-  @Input() size = 10
-  @Input() default = 'Elija una opción'
+export class SelectFieldComponent extends FieldComponent implements OnInit {
+  @Input() options?:[]
+  @Input() size?:number
+  @Input() default?:string
+  @Input() override props: SelectFieldProps[] = [
+    {
+      label: '',
+      name: '',
+      value: 'Elija una opción',
+      class: '',
+      options: [],
+      size: '10',
+      autofocus: 'false',
+      tabindex: '-1',
+    }
+  ]
 
-  ngOnInit():void {
-    this.value ?  this.value : this.value = this.default
-  }
+  override cssVariant = (): string =>'field--select'
   
-  override cssVariant(): string {
-    return 'field--select'
-  }
+  // ngOnInit():void {
+  //   // this.value ?  this.value : this.value = this.default
+  // }
 }

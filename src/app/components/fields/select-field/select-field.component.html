@@ -1,6 +1,8 @@
-<app-field-label label={{label}} />
-<select [(ngModel)]="value" name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} inputElement roundedElement
-  shadedElement class={{cssClass()}}>
-  <option class="select__label">{{ default | slice:0:20 }}</option>
-  <option *ngFor="let option of options" [value]="option">{{ option }}</option>
-</select>
+<ng-container *ngFor="let prop of props; let i = index" >
+  <app-field-label label={{prop.label}} />
+  <select [(ngModel)]="prop.value" name={{prop.name}} autofocus={{prop?.autofocus}} tabindex={{prop?.tabindex}} inputElement roundedElement
+    shadedElement class={{cssClass(i)}}>
+    <option class="select__label">{{ prop.value | slice:0:20 }}</option>
+    <option *ngFor="let option of prop.options" [value]="option">{{ option }}</option>
+  </select>
+</ng-container>

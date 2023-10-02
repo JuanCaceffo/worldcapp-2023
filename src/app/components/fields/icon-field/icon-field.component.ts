@@ -9,23 +9,25 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class IconFieldComponent
   extends InputFieldComponent
-  implements OnInit, IconFieldProps
+  implements OnInit
 {
-  @Input() icon = 'fas fa-thumbs-up'  
-  
-  constructor(){
-    super()
-  }
-
-  iconCSS():string{
-    return 'field__icon ' + this.icon
-  }
-
-  override ngOnInit(): void {
-    console.log(this.icon)
-  }
-
-  override cssVariant(): string {
-    return 'field--iconized'
-  }
+  @Input() icon?:string
+  @Input() override props: IconFieldProps[] = [
+    {
+      label: '',
+      name: '',
+      value: '',
+      class: 'field--iconized',
+      placeholder: 'Escriba aquí',
+      type: 'text',
+      error: '',
+      autofocus: 'false',
+      tabindex: '-1',
+      icon: 'fas fa-thumbs-up' 
+    }
+  ]
+   
+  override cssVariant = (): string => 'field--iconized'
+ 
+  iconCSS = (index:number):string => 'field__icon ' + this.props[index].icon
 }
