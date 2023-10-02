@@ -8,7 +8,7 @@ import { SelectFieldProps } from 'src/app/interfaces/field'
   styleUrls: ['../field.component.css', './select-field.component.css']
 })
 export class SelectFieldComponent extends FieldComponent implements OnInit {
-  @Input() options?: []
+  @Input() options?: string[]
   @Input() size?: number
   @Input() default?: string
   @Input() override props: SelectFieldProps = {

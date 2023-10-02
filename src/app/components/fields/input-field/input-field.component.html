@@ -1,7 +1,7 @@
 
   <app-field-label label={{props.label}} />
   <div roundedElement shadedElement class="field__container">
-    <input [(ngModel)]="props.value" (input)="onChangeEvent()" type={{props.type}} name={{props.name}} autofocus={{props.autofocus}} tabindex={{props.tabindex}}
+    <input [(ngModel)]="props.value" (input)="onChangeEvent(props.value)" type={{props.type}} name={{props.name}} autofocus={{props.autofocus}} tabindex={{props.tabindex}}
       class={{cssClass()}} placeholder={{props.placeholder}} inputElement roundedElement />
     <ng-content></ng-content>
   </div>

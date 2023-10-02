@@ -1,7 +1,9 @@
-<!-- <ng-container *ngFor="let element of formElements; let i = index">
-  <app-input-field (onChangeEvent)="doSomething($event)"></app-input-field>
-  <p>"vacio"</p>
-</ng-container> -->
+<ng-container *ngFor="let element of formElements; let i = index">
+  <app-input-field (onchange)="doSomething($event)"></app-input-field>
+  <app-icon-field (onchange)="doSomething($event)"></app-icon-field>
+  <app-select-field [options]="['uno','dos','tres']" (onchange)="doSomething($event)"></app-select-field>
+  <p>{{childValue}}</p>
+</ng-container>
 
 <!-- <app-icon-field [props]="fieldProps" (onChange)="doSomething($event)" rounded shaded />
 <app-input-field [props]="fieldProps" (onChange)="doSomething($event)" rounded shaded />

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core'
-
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -8,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core'
 export class FormComponent implements OnInit {
   // @Input() label = "Actualizar"
   @Input() formElements = [{}]
-  childValue: string = ""
+  @Input() childValue: string = ""
   
-  doSomething(data: string): void {
+  doSomething(data: string) {
     console.log(data)
     this.childValue = data
   }

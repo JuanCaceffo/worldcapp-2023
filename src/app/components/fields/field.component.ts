@@ -36,7 +36,7 @@ export abstract class FieldComponent implements OnInit {
     })
   }
 
-  onChangeEvent = (): void => {
-    this.onchange.emit(this.props.value)
+  onChangeEvent(value: string) {
+    this.onchange.emit(value)
   }
 }
