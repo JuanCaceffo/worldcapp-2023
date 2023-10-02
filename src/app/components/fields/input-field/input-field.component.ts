@@ -1,6 +1,6 @@
 import { FieldComponent } from 'src/app/components/fields/field.component'
 import { InputFieldProps } from 'src/app/interfaces/field'
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 
 const MAXERRORLENGTH = 40
 @Component({
@@ -25,12 +25,8 @@ export class InputFieldComponent extends FieldComponent implements OnInit {
       error: ''
     }
   ]
-
-  // ngOnInit(): void {
-  //   // console.log(this.label)
-  //   // console.log(this.className)
-  // }
-
+  @Output() onchange: EventEmitter<Event> = new EventEmitter()
+  
   override cssVariant = (): string => ''
 
   override cssClass(index: number): string {

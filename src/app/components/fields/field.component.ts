@@ -10,7 +10,7 @@ export abstract class FieldComponent implements OnInit {
   @Input() value?: string
   @Input() class?: string
   @Input() autofocus?: string
-  @Input() tabindex?: string
+  @Input() tabindex?: string  
   @Input() props: FieldProps[] = [
     {
       label: '',
@@ -28,7 +28,7 @@ export abstract class FieldComponent implements OnInit {
 
   abstract cssVariant(): string
 
-  ngOnInit(): void {        
+  ngOnInit = (): void => {        
     this.props.forEach((element) => {
       Object.entries(this).forEach(([key, value]) => {
         // console.log(element[key as keyof FieldProps]) 
