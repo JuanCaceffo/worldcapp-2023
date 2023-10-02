@@ -1,7 +1,8 @@
-<app-field-label label={{label}} />
-<div roundedElement shadedElement class="field__container">
-  <input [(ngModel)]="value" type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}}
-    class={{cssClass()}} placeholder={{placeholder}} inputElement roundedElement />
-  <ng-content></ng-content>
-</div>
-<span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>
+
+  <app-field-label label={{props.label}} />
+  <div roundedElement shadedElement class="field__container">
+    <input [(ngModel)]="props.value" (input)="onChangeEvent(props.value)" type={{props.type}} name={{props.name}} autofocus={{props.autofocus}} tabindex={{props.tabindex}}
+      class={{cssClass()}} placeholder={{props.placeholder}} inputElement roundedElement />
+    <ng-content></ng-content>
+  </div>
+  <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>

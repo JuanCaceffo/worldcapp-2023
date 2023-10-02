@@ -11,6 +11,10 @@ export class LoginComponent {
   constructor(private titleService: Title) {
     this.titleService.setTitle('Página de Inicio de Sesión')
   }
+
+  algo(data: string){
+    console.log(data)
+  }
   
   login() {
     this.titleService.setTitle('Página principal - Usuario logueado')
@@ -26,9 +30,10 @@ export class LoginData {
       console.log("SI SOY")
     } else {
       console.log("NO SOY")
-      console.log(this.user)
-      console.log(this.password)
-      console.log(this.user in this.users)
     }
+    console.log(this.user)
+    console.log(this.password)
+    console.log(this.user in this.users)
+    
   }
 }

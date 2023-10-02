@@ -1,3 +1,3 @@
-<app-input-field value={{value}} type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} placeholder={{placeholder}} class={{cssClass()}} label={{label}}>
+<app-input-field (input)="onChangeEvent(props.value)" [props]="props">
   <i iconElement class={{iconCSS()}}></i>
 </app-input-field>
