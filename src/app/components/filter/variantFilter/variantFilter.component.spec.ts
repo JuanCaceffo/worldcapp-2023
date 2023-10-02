@@ -24,17 +24,44 @@ describe('FilterVariantComponent', () => {
     fixture.detectChanges()
   })
 
+  const getByTestId = (testId: string) => {
+    return fixture.debugElement.nativeElement.querySelector(
+      `[data-testid="${testId}"]`
+    ) as HTMLElement
+  }
+
   it('should create', () => {
     expect(component).toBeTruthy()
   })
 
-  it('Inicialmente el filtro tiene los valores por defecto', () => {
-    const inputFrom = fixture.debugElement.nativeElement.querySelector(
-      `[data-testid="inputFrom"]`
-    )
-    expect(+inputFrom.textContent).toBe(0)
+  it('Inicialmente los inputs numericos tienen los valores por defecto', async () => {
+    const inputFrom = getByTestId('inputFrom')
+    const inputTo = getByTestId('inputTo')
+
+    await fixture.whenStable()
+    expect(
+      (inputFrom.childNodes[1].firstChild as HTMLInputElement).valueAsNumber
+    ).toBe(0)
+    expect(
+      (inputTo.childNodes[1].firstChild as HTMLInputElement).valueAsNumber
+    ).toBe(0)
+  })
+
+  it('Cambio de valor de los inputs numericos', async () => {
+    const inputFrom = getByTestId('inputFrom')
+    const inputTo = getByTestId('inputTo')
+
     component.from = 1
+    component.to = 2
+
     fixture.detectChanges()
-    expect(+inputFrom.textContent).toBe(1)
+    await fixture.whenStable()
+
+    expect(
+      (inputFrom.childNodes[1].firstChild as HTMLInputElement).valueAsNumber
+    ).toBe(1)
+    expect(
+      (inputTo.childNodes[1].firstChild as HTMLInputElement).valueAsNumber
+    ).toBe(2)
   })
 })

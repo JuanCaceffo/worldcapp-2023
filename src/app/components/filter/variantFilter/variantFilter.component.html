@@ -5,10 +5,10 @@
     </h4>
     <article class="filter__input-group">
       <section class="filter__container">
-        <app-input-field type="number" min="0" rounded value={{from}} label="Desde" />
+        <app-input-field type="number" min="0" rounded value={{from}} label="Desde" data-testid="inputFrom" />
       </section>
       <section class="filter__container">
-        <app-input-field type="number" min="0" rounded value={{to}} label="Hasta"/>
+        <app-input-field type="number" min="0" rounded value={{to}} label="Hasta" data-testid="inputTo"/>
       </section>
     </article>
     <section class="filter__checkbox">
