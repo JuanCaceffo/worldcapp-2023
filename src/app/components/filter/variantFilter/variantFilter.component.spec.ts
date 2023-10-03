@@ -61,4 +61,37 @@ describe('FilterVariantComponent', () => {
       (inputTo.childNodes[1].firstChild as HTMLInputElement).valueAsNumber
     ).toBe(2)
   })
+
+  it('Inicialmente los checkbox tienen los valores por defecto', async () => {
+    const onFire = getByTestId(fixture, 'checkboxOnFire')
+    const isPromise = getByTestId(fixture, 'checkboxIsPromise')
+
+    fixture.detectChanges()
+    await fixture.whenStable()
+
+    expect((onFire.childNodes[0].firstChild as HTMLInputElement).value).toBe(
+      'false'
+    )
+    expect((isPromise.childNodes[0].firstChild as HTMLInputElement).value).toBe(
+      'false'
+    )
+  })
+
+  it('Cambio de valor de los checkbox al hacerles click', async () => {
+    const onFire = getByTestId(fixture, 'checkboxOnFire')
+    const isPromise = getByTestId(fixture, 'checkboxIsPromise')
+
+    component.onFire = true
+    component.isPromise = true
+
+    fixture.detectChanges()
+    await fixture.whenStable()
+
+    expect((onFire.childNodes[0].firstChild as HTMLInputElement).value).toBe(
+      'true'
+    )
+    expect((isPromise.childNodes[0].firstChild as HTMLInputElement).value).toBe(
+      'true'
+    )
+  })
 })
