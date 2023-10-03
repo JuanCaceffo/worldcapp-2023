@@ -11,11 +11,12 @@ const MAXERRORLENGTH = 40
   templateUrl: './input-field.component.html',
   styleUrls: ['../field.component.css', './input-field.component.css']
 })
-<<<<<<< HEAD
 export class InputFieldComponent extends FieldComponent implements OnInit {
   @Input() placeholder?: string
   @Input() type?: string
   @Input() error?: string
+  @Input() min?: string
+  @Input() max?: string
   @Input() override props: InputFieldProps = {
     label: '',
     name: '',
@@ -25,32 +26,13 @@ export class InputFieldComponent extends FieldComponent implements OnInit {
     type: 'text',
     autofocus: 'false',
     tabindex: '-1',
-    error: ''
+    error: '',
+    min: '',
+    max: '',
+    testid: ''
   }
 
-  override cssVariant = (): string => ''
-=======
-export class InputFieldComponent
-  extends FieldComponent
-  implements OnInit, InputFieldProps
-{
-  @Input() placeholder = 'Escriba aquí'
-  @Input() type = 'text'
-  @Input() error = ''
-
-  constructor() {
-    super()
-  }
-
-  ngOnInit(): void {
-    // console.log(this.label)
-    // console.log(this.className)
-  }
-
-  override cssVariant(): InputType {
-    return ''
-  }
->>>>>>> feature/test-filters
+  override cssVariant = (): InputType => ''
 
   override cssClass(): string {
     return super.cssClass() + this.errorStyle()
@@ -63,19 +45,11 @@ export class InputFieldComponent
 
   errorStyle = (): string => (this.props.error !== '' ? 'field--error' : '')
 
-<<<<<<< HEAD
   validateErrorMessage = () => {
     if (this.props.error.length > MAXERRORLENGTH) {
       throw new Error(
         `Too long error msg, ${
           this.props.error.length - MAXERRORLENGTH
-=======
-  validateErrorMessage() {
-    if (this.error.length > MAXERRORLENGTH) {
-      throw new Error(
-        `Too long error msg, ${
-          this.error.length - MAXERRORLENGTH
->>>>>>> feature/test-filters
         } chars exeeded of ${MAXERRORLENGTH}.`
       )
     }

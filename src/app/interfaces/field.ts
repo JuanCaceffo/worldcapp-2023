@@ -12,6 +12,8 @@ export interface InputFieldProps extends FieldProps {
   placeholder: string
   type: string
   error: string
+  min: string
+  max: string
 }
 
 export interface IconFieldProps extends InputFieldProps {
@@ -21,4 +23,8 @@ export interface IconFieldProps extends InputFieldProps {
 export interface SelectFieldProps extends FieldProps {
   options: string[]
   size: string
+}
+
+export interface ControlFieldProps extends FieldProps {
+  type: string
 }

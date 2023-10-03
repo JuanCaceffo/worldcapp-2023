@@ -1,5 +1,5 @@
-import { InputFieldProps } from 'src/app/interfaces/field'
-import { Component, Input } from '@angular/core'
+import { ControlFieldProps } from 'src/app/interfaces/field'
+import { Component, Input, OnInit } from '@angular/core'
 import { FieldComponent, InputType } from '../field.component'
 
 @Component({
@@ -9,19 +9,23 @@ import { FieldComponent, InputType } from '../field.component'
 })
 export class ControlFieldComponent
   extends FieldComponent
-  implements InputFieldProps
-{
-  @Input() type = 'checkbox'
+  implements OnInit
+{  
+  @Input() type?: string
+  @Input() checked?: string
+  @Input() override props: ControlFieldProps = {
+    label: '',
+    name: '',
+    value: '',
+    class: '',    
+    type: 'checkbox',    
+    autofocus: 'false',
+    tabindex: '-1',    
+    testid: ''
+  }  
 
-  constructor() {
-    super()
-  }
-  placeholder?: string | undefined
-  error?: string | undefined
-
-  override cssVariant(): InputType {
-    return this.type === 'radio' ? 'field--radio' : 'field--checkbox'
-  }
+  override cssVariant = (): InputType =>
+    this.type === 'radio' ? 'field--radio' : 'field--checkbox'
 
   //Piso el cssClass para que pierda las clases
   override cssClass(): string {

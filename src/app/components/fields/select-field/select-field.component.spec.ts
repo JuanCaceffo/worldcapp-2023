@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { FieldLabelComponent } from '../field-label/field-label.component'
 import { SelectFieldComponent } from './select-field.component'
 
-describe('CustomField', () => {
+describe('Select Field Component', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
