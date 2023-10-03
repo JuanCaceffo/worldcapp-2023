@@ -1,7 +1,6 @@
 import { InputFieldProps } from 'src/app/interfaces/field'
-import { Component } from '@angular/core'
-import { InputFieldComponent } from '../input-field/input-field.component'
-import { InputType } from '../field.component'
+import { Component, Input } from '@angular/core'
+import { FieldComponent, InputType } from '../field.component'
 
 @Component({
   selector: 'app-control-field',
@@ -9,22 +8,23 @@ import { InputType } from '../field.component'
   styleUrls: ['../field.component.css', './control-field.component.css']
 })
 export class ControlFieldComponent
-  extends InputFieldComponent
+  extends FieldComponent
   implements InputFieldProps
 {
+  @Input() type = 'checkbox'
+
   constructor() {
     super()
   }
+  placeholder?: string | undefined
+  error?: string | undefined
 
   override cssVariant(): InputType {
-    return this.type === 'checkbox'
-      ? 'field--checkbox'
-      : this.type === 'radio'
-        ? 'field--radio'
-        : ''
+    return this.type === 'radio' ? 'field--radio' : 'field--checkbox'
   }
 
+  //Piso el cssClass para que pierda las clases
   override cssClass(): string {
-    return super.cssClass() + this.cssVariant()
+    return this.cssVariant()
   }
 }

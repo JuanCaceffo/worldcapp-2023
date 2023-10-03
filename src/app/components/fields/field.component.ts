@@ -15,7 +15,7 @@ export type InputType =
 export abstract class FieldComponent implements FieldProps {
   @Input() label = ''
   @Input() name = 'undefined'
-  @Input() value!: string | number
+  @Input() value!: string | number | boolean
   @Input() class = ''
   @Input() autofocus = false
   @Input() tabindex: number | undefined

@@ -1,7 +1,7 @@
 export interface FieldProps {
   label: string
   name: string
-  value: string | number
+  value: string | number | boolean
   class?: string
   autofocus?: boolean
   tabindex?: number
@@ -22,4 +22,8 @@ export interface SelectFieldProps extends FieldProps {
   options?: string[]
   size?: number
   default?: string
+}
+
+export interface ControlFieldProps extends FieldProps {
+  type?: string
 }

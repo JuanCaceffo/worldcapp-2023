@@ -8,28 +8,29 @@
         <app-input-field type="number" min="0" rounded value={{from}} label="Desde" data-testid="inputFrom" />
       </section>
       <section class="filter__container">
-        <app-input-field type="number" min="0" rounded value={{to}} label="Hasta" data-testid="inputTo"/>
+        <app-input-field type="number" min="0" rounded value={{to}} label="Hasta" data-testid="inputTo" />
       </section>
     </article>
     <section class="filter__checkbox">
-      <input
+      <app-control-field name="onFire" type="checkbox" value={{onFire}} label="On Fire" data-testid="checkboxOnFire"/>
+      
+      <!-- <input
         name="onFire"
         type="checkbox"
         [(ngModel)]="onFire"
         data-testid="checkboxOnFire"
       />
-      <label for="onFire">On fire</label>
+      <label for="onFire">On fire</label> -->
     </section>
-    <!-- <article class="filter__sub-section filter__sub-section--grow"> -->
       <section class="filter__checkbox">
-        <input
+        <!-- <input
         name="promise"
         type="checkbox"
         [(ngModel)]="isPromise"
         data-testid="checkboxIsPromise"
         />
-        <label for="promise">Es promesa</label>
+        <label for="promise">Es promesa</label> -->
+        <app-control-field name="promise" type="checkbox" value={{isPromise}} label="Es promesa" data-testid="checkboxIsPromise"/>
       </section>
-    <!-- </article> -->
   </section>
 </section>

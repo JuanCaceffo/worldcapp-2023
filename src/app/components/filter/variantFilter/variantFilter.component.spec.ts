@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms'
 import { InputFieldComponent } from '../../fields/input-field/input-field.component'
 import { FieldLabelComponent } from '../../fields/field-label/field-label.component'
 import { getByTestId } from 'src/app/helpers/test.helper'
+import { ControlFieldComponent } from '../../fields/control-field/control-field.component'
 
 describe('FilterVariantComponent', () => {
   let component: VariantFilterComponent
@@ -16,7 +17,8 @@ describe('FilterVariantComponent', () => {
       declarations: [
         VariantFilterComponent,
         InputFieldComponent,
-        FieldLabelComponent
+        FieldLabelComponent,
+        ControlFieldComponent
       ],
       imports: [FormsModule]
     })
