@@ -1,11 +1,11 @@
 <div class="field__control">
   <input 
     [(ngModel)]="props.value" 
-    type={{props.type}} 
-    name={{props.name}} 
-    tabindex={{props.tabindex}} 
-    class={{cssClass()}}       
+    [type]="props.type" 
+    [name]="props.name" 
+    [tabindex]="props.tabindex" 
+    [class]="cssClass()"       
     inputElement 
   />
-  <app-field-label label={{label}} />
+  <app-field-label [label]="props.label" />
 </div>

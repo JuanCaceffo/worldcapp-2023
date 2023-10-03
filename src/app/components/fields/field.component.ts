@@ -8,7 +8,7 @@ export type InputType =
   | 'field--checkbox'
   | 'field--radio'
   | 'field--iconized'
-  
+
 @Component({
   template: '',
   styleUrls: ['./field.component.css']
@@ -28,7 +28,7 @@ export abstract class FieldComponent implements OnInit {
     class: '',
     autofocus: 'false',
     tabindex: '-1',
-    testid: '',
+    testid: ''
   }
 
   @Output() onchange = new EventEmitter<string[]>()
@@ -50,6 +50,9 @@ export abstract class FieldComponent implements OnInit {
   onChangeEvent() {
     this.onchange.emit([this.props.value, this.props.name])
   }
-  
-  isTestId = (): string => this.testid ?? ''
+
+  isTestId(): string {
+    console.log(this.props.testid)
+    return this.props.testid 
+  }
 }
