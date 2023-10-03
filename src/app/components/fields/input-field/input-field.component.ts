@@ -16,7 +16,7 @@ export class InputFieldComponent extends FieldComponent implements OnInit {
   @Input() type?: string
   @Input() error?: string
   @Input() min?: string
-  @Input() max?: string
+  @Input() max?: string  
   @Input() override props: InputFieldProps = {
     label: '',
     name: '',

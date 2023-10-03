@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 // import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter.model'
 
 @Component({
@@ -12,14 +12,15 @@ import { Component } from '@angular/core'
 })
 export class VariantFilterComponent {
   // filter!: VariantFilter
-  title: string = 'Filtros'
-  from = 0
-  to = 0
-  onFire = false
+  title = 'Filtros'
+  from = '0'
+  to = '0'
+  @Input() onFire = false
   isPromise = false
 
   // ngOnInit() {
   //   this.filter = new VariantFilter()
   //   this.filter.getFigure()
   // }
+  setTestId = (name:string): string => name   
 }

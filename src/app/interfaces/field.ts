@@ -27,4 +27,5 @@ export interface SelectFieldProps extends FieldProps {
 
 export interface ControlFieldProps extends FieldProps {
   type: string
+  checked: boolean
 }

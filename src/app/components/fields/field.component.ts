@@ -20,7 +20,7 @@ export abstract class FieldComponent implements OnInit {
   @Input() class?: string
   @Input() autofocus?: string
   @Input() tabindex?: string
-  @Input() testid?: string
+  @Input('data-testid') testid?: string
   @Input() props: FieldProps = {
     label: '',
     name: 'undefined',
@@ -43,16 +43,12 @@ export abstract class FieldComponent implements OnInit {
     Object.entries(this).forEach(([key, value]) => {
       if (key in this.props) {
         this.props[key as keyof FieldProps] = value
-      }
+      }            
     })
+        
   }
 
   onChangeEvent() {
     this.onchange.emit([this.props.value, this.props.name])
-  }
-
-  isTestId(): string {
-    console.log(this.props.testid)
-    return this.props.testid 
   }
 }

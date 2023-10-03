@@ -12,7 +12,7 @@ export class ControlFieldComponent
   implements OnInit
 {  
   @Input() type?: string
-  @Input() checked?: string
+  @Input() checked?: boolean
   @Input() override props: ControlFieldProps = {
     label: '',
     name: '',
@@ -21,7 +21,8 @@ export class ControlFieldComponent
     type: 'checkbox',    
     autofocus: 'false',
     tabindex: '-1',    
-    testid: ''
+    testid: '',
+    checked: false
   }  
 
   override cssVariant = (): InputType =>
