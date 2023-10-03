@@ -20,7 +20,7 @@ export abstract class FieldComponent implements OnInit {
     tabindex: '-1'
   }
 
-  @Output() onchange = new EventEmitter<string>()
+  @Output() onchange = new EventEmitter<string[]>()
 
   cssClass(): string {
     return 'field ' + this.cssVariant() + this.props.class
@@ -36,7 +36,7 @@ export abstract class FieldComponent implements OnInit {
     })
   }
 
-  onChangeEvent(value: string) {
-    this.onchange.emit(value)
+  onChangeEvent() {
+    this.onchange.emit([this.props.value, this.props.name])
   }
 }

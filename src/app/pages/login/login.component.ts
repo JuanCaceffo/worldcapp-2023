@@ -12,8 +12,8 @@ export class LoginComponent {
     this.titleService.setTitle('Página de Inicio de Sesión')
   }
 
-  algo(data: string){
-    console.log(data)
+  loginDatos(datos: string[]){
+    this.loginData.onInputData(datos)
   }
   
   login() {
@@ -21,19 +21,28 @@ export class LoginComponent {
   }
 }
 export class LoginData {
-  users = {"sol": "1234","pablo": "5678"}
+  inputData!: string[]
+  users = [
+    {user: "sol", password: "1234"},
+    {user: "pablo", password: "5678"}
+  ]
   user = ""
   password = ""
 
+  onInputData(datos: string[]){
+    this.inputData = datos
+  }
+
   submit(){
-    if (this.user in this.users) {
-      console.log("SI SOY")
-    } else {
-      console.log("NO SOY")
-    }
-    console.log(this.user)
-    console.log(this.password)
-    console.log(this.user in this.users)
+    // if (this.user in ) {
+    //   console.log("SI SOY")
+    // } else {
+    //   console.log("NO SOY")
+    // }
+
+    Object.keys(this.users).forEach((index,element) => {
+      console.log(index,element)
+    } )
     
   }
 }

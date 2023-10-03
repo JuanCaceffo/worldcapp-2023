@@ -7,12 +7,12 @@
       <section class="form-login__content">
         <h2 class="form__row-title">Usuario</h2>
         <section class="form__row">
-          <input type="text" [(ngModel)]="loginData.user" name="millas" >
-          <app-icon-field rounded shaded icon="fa-solid fa-user" [(ngModel)]="loginData.user" name="millas" ></app-icon-field>
+          <!-- <input type="text" [(ngModel)]="loginData.user" name="millas" > -->
+          <app-icon-field rounded shaded icon="fas fa-user" (onchange)="loginDatos($event)" name="user" ></app-icon-field>
         </section>
         <h2 class="form__row-title">Contraseña</h2>
         <section class="form__row">
-          <app-icon-field rounded shaded icon="fa-solid fa-key" type="password"  name="password" ></app-icon-field>
+          <app-icon-field rounded shaded icon="fas fa-key" type="password" name="password" ></app-icon-field>
         </section>
       </section>
       <section class="form-login__actions">
