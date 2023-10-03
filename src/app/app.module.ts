@@ -15,6 +15,7 @@ import { FieldLabelComponent } from './components/fields/field-label/field-label
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
 import { DIRECTIVES } from './directives/directives'
+import { CardMarketComponent } from './components/card-market/card-market.component'
 @NgModule({
   declarations: [
     routingComponents,
@@ -30,6 +31,7 @@ import { DIRECTIVES } from './directives/directives'
     InputFieldComponent,
     IconFieldComponent,
     SelectFieldComponent,
+    CardMarketComponent,
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
