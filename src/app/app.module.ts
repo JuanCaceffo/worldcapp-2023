@@ -10,13 +10,15 @@ import { FooterComponent } from './components/footer/footer.component'
 import { BaseFilterComponent } from './components/filter/baseFilter.component'
 import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
 import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
-import { InputFieldComponent } from './components/fields/input-field/input-field.component'
 import { FieldLabelComponent } from './components/fields/field-label/field-label.component'
+import { InputFieldComponent } from './components/fields/input-field/input-field.component'
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
+import { ControlFieldComponent } from './components/fields/control-field/control-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
+import { LoginComponent } from './pages/login/login.component'
 import { FormComponent } from './components/form/form.component'
 import { DIRECTIVES } from './directives/directives'
-import { LoginComponent } from './pages/login/login.component'
+
 @NgModule({
   declarations: [
     routingComponents,
@@ -28,18 +30,13 @@ import { LoginComponent } from './pages/login/login.component'
     BaseFilterComponent,
     SortedByFilterComponent,
     VariantFilterComponent,
-    HeaderComponent,
-    HeaderNavComponent,
-    // CardAddComponent,
-    // CardUserComponent,
-    // FormsModule,
-    // BrowserModule
     FieldLabelComponent,
     InputFieldComponent,
     IconFieldComponent,
+    ControlFieldComponent,
     SelectFieldComponent,
     LoginComponent,
-    FormComponent,
+    FormComponent,    
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],

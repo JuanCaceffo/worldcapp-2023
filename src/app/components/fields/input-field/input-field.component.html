@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   <app-field-label label={{props.label}} />
   <div roundedElement shadedElement class="field__container">
@@ -6,3 +7,13 @@
     <ng-content></ng-content>
   </div>
   <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>
+=======
+<app-field-label label={{label}} />
+<div roundedElement shadedElement class="field__container">
+  <input [(ngModel)]="value" type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} 
+  inputElement roundedElement class={{cssClass()}} placeholder={{placeholder}} [attr.data-testid]="isTestId()" />
+  <!-- data-testid={{ isTestId() }} -->
+  <ng-content></ng-content>
+</div>
+<span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>
+>>>>>>> feature/test-filters

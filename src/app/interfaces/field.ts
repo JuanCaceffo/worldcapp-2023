@@ -1,10 +1,11 @@
 export interface FieldProps {
-  label: string  
+  label: string
   name: string
   value: string
   class: string   
   autofocus: string 
   tabindex: string
+  testid: string
 }
 
 export interface InputFieldProps extends FieldProps {
