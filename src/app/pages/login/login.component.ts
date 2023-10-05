@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Title } from '@angular/platform-browser'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -7,8 +8,9 @@ import { Title } from '@angular/platform-browser'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  public errorMsg: string | null = null
   loginData = new LoginData()
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private router: Router) {
     this.titleService.setTitle('Página de Inicio de Sesión')
   }
 
@@ -19,7 +21,9 @@ export class LoginComponent {
   login() {
     this.loginData.submit()
     if (this.loginData.validLogin == true){
-      //rutear?
+      this.router.navigate(['/figuritas'])
+    } else {
+      this.errorMsg = "Usuario o contraseña ingresados son invalidos! Vuelva a intentar"
     }
     this.titleService.setTitle('Página principal - Usuario logueado')
   }
@@ -45,15 +49,14 @@ export class LoginData {
   }
 
   submit(){
+    this.validLogin = false
     for (const usuario of this.users){
       if (usuario.user == this.user){
         if (usuario.password == this.password){
           this.validLogin = true
-          //Rutear?
         }
       }
     }
     console.log(this.validLogin)
-    this.validLogin = false
   }
 }

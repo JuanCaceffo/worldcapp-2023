@@ -14,6 +14,7 @@
         <section class="form__row">
           <app-icon-field rounded shaded icon="fas fa-key" type="password" (onchange)="loginDatos($event)" name="password" ></app-icon-field>
         </section>
+        <div *ngIf="errorMsg" class="error-msg">{{errorMsg}}</div>  
       </section>
       <section class="form-login__actions">
         <button class="button button--large button--primary button--font-md" data-testid="login-button" (click)="login()">Ingresar</button>
