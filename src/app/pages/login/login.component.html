@@ -12,13 +12,12 @@
         </section>
         <h2 class="form__row-title">Contraseña</h2>
         <section class="form__row">
-          <app-icon-field rounded shaded icon="fas fa-key" type="password" name="password" ></app-icon-field>
+          <app-icon-field rounded shaded icon="fas fa-key" type="password" (onchange)="loginDatos($event)" name="password" ></app-icon-field>
         </section>
       </section>
       <section class="form-login__actions">
-        <button class="button button--large button--primary button--font-md" data-testid="login-button" (click)="loginData.submit()">Ingresar</button>
+        <button class="button button--large button--primary button--font-md" data-testid="login-button" (click)="login()">Ingresar</button>
       </section>
-      <div> {{loginData.user}} </div>
     </form>
   </section>
 </div>
