@@ -5,7 +5,7 @@
   padding: 1em;
   width: 100%;
   font-size: 1.25em;
-  border-radius: var(--border-radius-md);
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
 }
 
 .filter__title {
