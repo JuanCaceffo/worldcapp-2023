@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { PickupPoint } from 'src/app/models/pickupPoint/pickupPoint'
 
 @Component({
   selector: 'app-card-market',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./card-market.component.css']
 })
 export class CardMarketComponent implements OnInit {
-  constructor() {}
+  marketCards!: PickupPoint[]
 
-  ngOnInit() {}
+  ngOnInit() {
+    //TODO: Sacar Kiosko de aca y ver en el back si es un tipo
+    this.marketCards = [
+      new PickupPoint('Kiosko La Scaloneta', 'Alpatacal 1234', 2, 3, 4)
+    ]
+  }
 }
