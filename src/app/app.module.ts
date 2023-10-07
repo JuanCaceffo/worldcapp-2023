@@ -23,6 +23,7 @@ import { FieldLabelComponent } from './components/fields/field-label/field-label
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
 import { DIRECTIVES } from './directives/directives'
+import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
 @NgModule({
   declarations: [
     routingComponents,
@@ -49,6 +50,7 @@ import { DIRECTIVES } from './directives/directives'
     InputFieldComponent,
     IconFieldComponent,
     SelectFieldComponent,
+    ConcatenatePipe,
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],

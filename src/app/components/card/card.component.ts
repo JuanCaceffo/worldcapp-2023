@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { Card } from 'src/app/data/models/cards/Card'
+import { Figurita } from 'src/app/data/models/cards/Card'
 
 type cardType = 'owner' | 'details'
 
@@ -10,6 +10,6 @@ type cardType = 'owner' | 'details'
 })
 export class CardComponent implements OnInit {
   ngOnInit() {}
-  @Input() card!: Card
+  @Input() card!: Figurita
   @Input() cardType!: cardType
 }

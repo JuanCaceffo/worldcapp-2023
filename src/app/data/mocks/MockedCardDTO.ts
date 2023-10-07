@@ -1,8 +1,7 @@
 import { CardDTO } from '../dto/CardDTO.dto'
 const INITIAL_VALUE = 100
-const MULIPLIER_EVENVALUE = { True: 1.1, False: 1.0 }
-const MULIPLIER_ONFIRE = { True: 1.2, False: 1.0 }
-const MULIPLIER_IMPRESION = { lowImpresion: 1.0, mediaNHigtImpresion: 0.85 }
+const DATE_1 = '1993-06-13'
+const DATE_2 = '1998-12-02'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const mockCardData: Array<CardDTO> = [
@@ -10,9 +9,7 @@ export const mockCardData: Array<CardDTO> = [
     figureNumber: 22,
     isOnfire: true,
     initialValue: INITIAL_VALUE,
-    mulitplierEvenNumber: MULIPLIER_EVENVALUE.True,
-    multiplierOnFire: MULIPLIER_ONFIRE.True,
-    multiplierImpresion: MULIPLIER_IMPRESION.lowImpresion,
+    levelOfImpresion: 'low',
     isPromise: true,
     weight: 70,
     name: 'gonzalo',
@@ -23,16 +20,14 @@ export const mockCardData: Array<CardDTO> = [
     nationalTeam: 'Argentina',
     positon: 'mediocampista',
     age: 30,
-    birth: '06/13/1993',
+    birth: new Date(DATE_1),
     owner: 'ale menis'
   },
   {
     figureNumber: 10,
     isOnfire: false,
     initialValue: INITIAL_VALUE,
-    mulitplierEvenNumber: MULIPLIER_EVENVALUE.False,
-    multiplierOnFire: MULIPLIER_ONFIRE.True,
-    multiplierImpresion: MULIPLIER_IMPRESION.mediaNHigtImpresion,
+    levelOfImpresion: 'high',
     isPromise: false,
     weight: 75,
     name: 'Nicolas',
@@ -43,7 +38,7 @@ export const mockCardData: Array<CardDTO> = [
     nationalTeam: 'Argentina',
     positon: 'Defensor',
     age: 35,
-    birth: '02/12/1988',
+    birth: new Date(DATE_2),
     owner: 'juan cacho caceffo'
   }
 ]

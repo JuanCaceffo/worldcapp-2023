@@ -3,16 +3,14 @@ export interface CardDTO {
   isOnfire: boolean
   isPromise: boolean
   initialValue: number
-  multiplierImpresion: number
-  multiplierOnFire: number
-  mulitplierEvenNumber: number
+  levelOfImpresion: string
   //player
   name: string
   surname: string
   weight: number
   height: number
   shirtNumber: number
-  birth: string
+  birth: Date
   age: number
   nationalTeam: string
   positon: string

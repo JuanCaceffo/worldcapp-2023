@@ -1,28 +1,24 @@
-import { Dayjs } from 'dayjs'
 import { CardDTO } from '../../dto/CardDTO.dto'
-import { DATE_FORMATE } from './../../services/config'
-import * as dayjs from 'dayjs'
 
 /* interface CardProps extends Omit<CardDTO, 'birth'> {
   birth: Dayjs
 } */
-export class Card {
-  //Preguntar por otra forma mas limpia de declarar los aprametros
+const INITIAL_VALUE = 100
+export class Figurita {
+  //Preguntar por otra forma mas limpia de declarar los parametros
   constructor(
     public figureNumber?: number,
     public isOnfire?: boolean,
     public isPromise?: boolean,
-    public initialValue: number = 0,
-    public multiplierImpresion: number = 0,
-    public multiplierOnFire: number = 0,
-    public mulitplierEvenNumber: number = 0,
+    public playerValoration?: number,
+    public levelOfImpresion?: string,
     //player
     public name?: string,
     public surname?: string,
     public weight?: number,
     public height?: number,
     public shirtNumber?: number,
-    public birth?: Dayjs,
+    public birth?: Date,
     public age?: number,
     public nationalTeam?: string,
     public positon?: string,
@@ -31,18 +27,44 @@ export class Card {
     public owner?: string
   ) {}
 
-  static fromJson(cardJSON: CardDTO): Card {
-    return Object.assign(new Card(), cardJSON, {
-      birth: dayjs(cardJSON.birth, DATE_FORMATE)
-    })
+  static fromJson(cardJSON: CardDTO): Figurita {
+    return Object.assign(new Figurita(), cardJSON)
   }
 
   get baseValoration() {
     return (
-      this.initialValue *
+      INITIAL_VALUE *
       this.multiplierOnFire *
-      this.mulitplierEvenNumber *
+      this.multiplierEvenNumber *
       this.multiplierImpresion
     )
+  }
+
+  get multiplierEvenNumber() {
+    if (this.figureNumber! % 2 === 0) {
+      return 1.1
+    } else {
+      return 1.0
+    }
+  }
+
+  get multiplierOnFire() {
+    if (this.isOnfire === true) {
+      return 1.2
+    } else {
+      return 1.0
+    }
+  }
+
+  get multiplierImpresion() {
+    if (this.levelOfImpresion === 'low') {
+      return 1.0
+    } else {
+      return 0.85
+    }
+  }
+
+  get totalValoration() {
+    return this.baseValoration + this.playerValoration!
   }
 }
