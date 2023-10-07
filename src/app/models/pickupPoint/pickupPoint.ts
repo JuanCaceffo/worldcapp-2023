@@ -1,13 +1,18 @@
-export class PickupPoint {
+import { IPickupPoint } from 'src/app/interfaces/pickupPoint'
+
+export class PickupPoint implements IPickupPoint {
   static valorsobre = (): number => 170.0
   constructor(
-    // private distance: number
     public name: string,
     public address: string,
     public envelopeStock: number,
     public envelopePrice: number,
     public geoLocation: number
   ) {}
+
+  //TODO: Generar los respectivos metodos
+  distance: number = 2
+  pendingOrders: boolean = true
 }
 
 //Puntos de Ventas
