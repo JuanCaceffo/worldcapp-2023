@@ -1,7 +1,7 @@
 import { CardService } from './../../data/services/cardService/Card.service'
 import { Component, OnInit } from '@angular/core'
 import { Title } from '@angular/platform-browser'
-import { Card } from 'src/app/data/models/cards/Card'
+import { Card } from 'src/app/data/models/cards/Figurita'
 
 @Component({
   selector: 'app-card-search',

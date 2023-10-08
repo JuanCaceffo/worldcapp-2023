@@ -1,8 +1,5 @@
 import { CardDTO } from '../../dto/CardDTO.dto'
 
-/* interface CardProps extends Omit<CardDTO, 'birth'> {
-  birth: Dayjs
-} */
 const INITIAL_VALUE = 100
 export class Figurita {
   //Preguntar por otra forma mas limpia de declarar los parametros
@@ -28,7 +25,9 @@ export class Figurita {
   ) {}
 
   static fromJson(cardJSON: CardDTO): Figurita {
-    return Object.assign(new Figurita(), cardJSON)
+    return Object.assign(new Figurita(), cardJSON, {
+      birth: new Date(cardJSON.birth)
+    })
   }
 
   get baseValoration() {

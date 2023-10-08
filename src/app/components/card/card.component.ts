@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { Figurita } from 'src/app/data/models/cards/Card'
+import { Figurita } from 'src/app/data/models/cards/Figurita'
 
 type cardType = 'owner' | 'details'
 

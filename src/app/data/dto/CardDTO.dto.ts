@@ -10,7 +10,7 @@ export interface CardDTO {
   weight: number
   height: number
   shirtNumber: number
-  birth: Date
+  birth: string
   age: number
   nationalTeam: string
   positon: string
