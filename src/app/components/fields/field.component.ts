@@ -1,5 +1,13 @@
 import { Component, Input } from '@angular/core'
 import { FieldProps } from 'src/app/interfaces/field'
+
+export type InputType =
+  | ''
+  | 'field--text'
+  | 'field--select'
+  | 'field--checkbox'
+  | 'field--radio'
+  | 'field--iconized'
 @Component({
   template: '',
   styleUrls: ['./field.component.css']
@@ -7,14 +15,17 @@ import { FieldProps } from 'src/app/interfaces/field'
 export abstract class FieldComponent implements FieldProps {
   @Input() label = ''
   @Input() name = 'undefined'
-  @Input() value!: string
+  @Input() value!: string | number | boolean
   @Input() class = ''
-  @Input() autofocus = 'false'
-  @Input() tabindex: string | undefined
+  @Input() autofocus = false
+  @Input() tabindex: number | undefined
+  @Input() testid = ''
+
+  abstract cssVariant(): InputType
 
   cssClass(): string {
-    return 'field ' + this.cssVariant() + this.class
+    return `field ${this.cssVariant()}${this.class}`
   }
 
-  abstract cssVariant(): string
+  isTestId = (): string => this.testid ?? ''
 }

@@ -14,6 +14,7 @@ import { InputFieldComponent } from './components/fields/input-field/input-field
 import { FieldLabelComponent } from './components/fields/field-label/field-label.component'
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
+import { ControlFieldComponent } from './components/fields/control-field/control-field.component'
 import { DIRECTIVES } from './directives/directives'
 import { CardMarketComponent } from './components/card-market/card-market.component'
 @NgModule({
@@ -32,6 +33,7 @@ import { CardMarketComponent } from './components/card-market/card-market.compon
     IconFieldComponent,
     SelectFieldComponent,
     CardMarketComponent,
+    ControlFieldComponent,
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
