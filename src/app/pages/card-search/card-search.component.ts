@@ -1,7 +1,7 @@
 import { CardService } from './../../data/services/cardService/Card.service'
 import { Component, OnInit } from '@angular/core'
 import { Title } from '@angular/platform-browser'
-import { Card } from 'src/app/data/models/cards/Figurita'
+import { Figurita } from 'src/app/data/models/cards/Figurita'
 
 @Component({
   selector: 'app-card-search',
@@ -14,7 +14,7 @@ export class CardSearchComponent implements OnInit {
     this.listCards = this.getAllCards()
   }
   constructor(private titleService: Title, public cardService: CardService) {}
-  listCards: Array<Card> = []
+  listCards: Array<Figurita> = []
 
   getAllCards() {
     return this.cardService.getAllCards()
