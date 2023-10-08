@@ -23,7 +23,7 @@
 
 .home--search {
   /*Layout*/
-  grid-template-rows: 5.2rem 1fr 1fr;
+  grid-template-rows: 5.2rem auto 1fr;
   grid-template-areas:
     'search'
     'aside'
@@ -44,15 +44,17 @@
 
 .home__aside {
   /*Layout*/
+  padding: 1rem;
   justify-content: center;
   grid-area: aside;
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
 }
 
 .home__content {
   /*Layout*/
+  padding: 1rem;
   grid-area: content;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .home__content--grid{
