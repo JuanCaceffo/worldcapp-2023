@@ -2,7 +2,7 @@
   <article class="player-card player-card--trash">
     <section class="player-card__img">
       <!-- TODO: ver como implementar la imagen --> 
-      <img src="/html/src/images/pity.png"/>
+      <img src="../../../assets/pity.png"/>
       <li class="button--icon">
         <a class="button__link" href="">
           <i class="fa-solid fa-trash-can"></i>
@@ -18,7 +18,7 @@
           <i class="fas fa-trophy fa-sm"></i>
           <i class="fas fa-fire fa-sm"></i>
           <i class="fas fa-star fa-sm"></i>
-          {{card.baseValoration}}
+          {{card.baseValoration | number:'0.0-2'}}
         </h2>
         <p>
           <i class="fa-solid fa-weight-scale fa-sm"></i
@@ -36,7 +36,7 @@
         <p><strong>Nacimiento: </strong>{{ card.birth | date:'dd-MM-yyyy' }}</p>
         <p><strong>Selección: </strong> {{card.nationalTeam}}</p>
         <p><strong>Posición: </strong> {{card.positon}}</p>
-        <h2 class="player-card__body--highlight">COTIZACION: {{card.quote}}</h2>
+        <h2 class="player-card__body--highlight">COTIZACION: {{card.quote | currency: 'EUR' : 'symbol' : '0.0-2'}}</h2>
       </section>
       <footer *ngIf="cardType === 'owner'" class="player-card__footer">
         <!-- TODO: agregar pipe para el tipo de moneda -->
