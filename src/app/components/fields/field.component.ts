@@ -17,8 +17,8 @@ export abstract class FieldComponent implements FieldProps {
   @Input() name = 'undefined'
   @Input() value!: string | number | boolean
   @Input() class = ''
-  @Input() autofocus = false
-  @Input() tabindex: number | undefined
+  @Input() autofocus = 'false'
+  @Input() tabindex: string | undefined
   @Input() testid = ''
 
   abstract cssVariant(): InputType

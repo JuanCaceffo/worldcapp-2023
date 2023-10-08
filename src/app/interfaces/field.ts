@@ -3,8 +3,8 @@ export interface FieldProps {
   name: string
   value: string | number | boolean
   class?: string
-  autofocus?: boolean
-  tabindex?: number
+  autofocus?: string
+  tabindex?: string
   testid?: string
 }
 
