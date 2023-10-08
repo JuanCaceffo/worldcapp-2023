@@ -32,16 +32,13 @@
       </header>
       <section class="player-card__body">
         <p><strong>Casaca: </strong>{{card.shirtNumber}}</p>
-        <!-- TODO: formatear fecha --> 
         <p><strong>Nacimiento: </strong>{{ card.birth | date:'dd-MM-yyyy' }}</p>
         <p><strong>Selección: </strong> {{card.nationalTeam}}</p>
         <p><strong>Posición: </strong> {{card.positon}}</p>
         <h2 class="player-card__body--highlight">COTIZACION: {{card.quote | currency: 'EUR' : 'symbol' : '0.0-2'}}</h2>
       </section>
       <footer *ngIf="cardType === 'owner'" class="player-card__footer">
-        <!-- TODO: agregar pipe para el tipo de moneda -->
-        <h2>CEDIDA POR:</h2>
-        <p>{{card.owner}}</p>
+        <h3>CEDIDA POR: {{card.owner}}</h3>
       </footer>
     </section>
 </article>
