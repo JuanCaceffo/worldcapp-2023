@@ -1,6 +1,6 @@
 <div class="card-market" *ngFor="let marketCard of marketCards">
   <header class="card-market__name">
-      <h1 class="card-market__name-text">{{marketCard.name}}</h1>
+      <h1 class="card-market__name-text" data-testid="title-market-card">{{marketCard.name}}</h1>
       <i class="fa-solid fa-store fa-2xl"></i>
 
       <!-- <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
@@ -14,36 +14,36 @@
       <dl class="card-market__info location">
           <dt>
               <b class="card-market__attribute">Direccion: </b>
-              <span class="card-market__attribute-info">{{marketCard.address}}</span>
+              <span class="card-market__attribute-info" data-testid="address-market-card">{{marketCard.address}}</span>
           </dt> 
 
           <dt>
               <b class="card-market__attribute">Ubicacion Geografica: </b>
-              <span class="card-market__attribute-info">{{marketCard.geoLocation}}</span>
+              <span class="card-market__attribute-info" data-testid="geolocation-market-card">{{marketCard.geoLocation}}</span>
           </dt>
 
           <dt>
               <b class="card-market__attribute">Distancia: </b>
-              <span class="card-market__attribute-info">{{marketCard.distance}}</span>
+              <span class="card-market__attribute-info" data-testid="distance-market-card">{{marketCard.distance}}</span>
           </dt>
       </dl>
 
       <dl class="card-market__info stock">
           <dt>
               <b class="card-market__attribute">Stock de Sobres: </b>
-              <span class="card-market__attribute-info">{{marketCard.envelopeStock}}</span>
+              <span class="card-market__attribute-info "data-testid="stock-market-card">{{marketCard.envelopeStock}}</span>
           </dt>
-          <dt class="card-market__status">
+          <dt class="card-market__status" data-testid="pending-market-card">
             <!-- CONSULTA: 
             Entiendo que si tiene >= 1 pedido pendiente se muestra, en caso contrario, no.
             Si hay que poner la cantidad de pendientes hacer metodo en el back que devuelva cantidad pendientes -->
-              <span>Pedidos Pendientes</span>
+              <span *ngIf="marketCard.pendingOrders">Pedidos Pendientes</span>
           </dt>
       </dl>
 
       <dt class="card-market__info price">
           <b class="card-market__attribute">Precio por sobre: </b>
-          <span class="card-market__attribute-info">{{marketCard.envelopePrice}}</span>
+          <span class="card-market__attribute-info" data-testid="price-market-card">{{marketCard.envelopePrice}}</span>
       </dt>
   </dl>
 </div>

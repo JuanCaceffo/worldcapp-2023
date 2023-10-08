@@ -9,9 +9,9 @@ export class PickupPoint implements IPickupPoint {
     public distance: number
   ) {}
 
+  //TODO: Generar los respectivos metodos para obtener estos datos
   envelopePrice = 170
-  //TODO: Generar los respectivos metodos
-  pendingOrders: boolean = true
+  pendingOrders = true
 }
 
 //Puntos de Ventas
