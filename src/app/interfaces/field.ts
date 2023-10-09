@@ -1,24 +1,23 @@
 export interface FieldProps {
   label: string  
   name: string
-  value: string 
-  class?: string
-  autofocus?: string 
-  tabindex?: string
+  value: string
+  class: string   
+  autofocus: string 
+  tabindex: string
 }
 
 export interface InputFieldProps extends FieldProps {
-  placeholder?: string
-  type?: string
-  error?: string | undefined
+  placeholder: string
+  type: string
+  error: string
 }
 
 export interface IconFieldProps extends InputFieldProps {
-  icon?: string
+  icon: string
 }
 
 export interface SelectFieldProps extends FieldProps {
-  options?: string[]
-  size?: number
-  default?: string
+  options: string[]
+  size: string
 }

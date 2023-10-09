@@ -1,0 +1,16 @@
+<ng-container *ngFor="let formElement of formElements">
+  <fieldset>
+    <legend class="typeface typeface--xl typeface--strong">macarena</legend>
+    <ng-container *ngFor="let element in formElement; let i = index">
+      <ng-container [ngSwitch]="element.type">
+        <!-- <app-input-field (onchange)="doSomething($event)"></app-input-field>
+      <app-icon-field (onchange)="doSomething($event)"></app-icon-field>
+      <app-select-field
+        [options]="['uno', 'dos', 'tres']"
+        (onchange)="doSomething($event)"
+      ></app-select-field>
+      <p>{{ childValue }}</p> -->
+      </ng-container>
+    </ng-container>
+  </fieldset>
+</ng-container>

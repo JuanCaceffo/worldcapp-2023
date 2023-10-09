@@ -14,7 +14,9 @@ import { InputFieldComponent } from './components/fields/input-field/input-field
 import { FieldLabelComponent } from './components/fields/field-label/field-label.component'
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
+import { FormComponent } from './components/form/form.component'
 import { DIRECTIVES } from './directives/directives'
+import { LoginComponent } from './pages/login/login.component'
 @NgModule({
   declarations: [
     routingComponents,
@@ -26,10 +28,18 @@ import { DIRECTIVES } from './directives/directives'
     BaseFilterComponent,
     SortedByFilterComponent,
     VariantFilterComponent,
+    HeaderComponent,
+    HeaderNavComponent,
+    // CardAddComponent,
+    // CardUserComponent,
+    // FormsModule,
+    // BrowserModule
     FieldLabelComponent,
     InputFieldComponent,
     IconFieldComponent,
     SelectFieldComponent,
+    LoginComponent,
+    FormComponent,
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
