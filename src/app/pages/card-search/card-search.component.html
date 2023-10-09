@@ -6,6 +6,7 @@
     TODO: ACA VA EL SIDEBAR
   </section>
   <section class="home__content home__content--grid">    
+    <app-cardWtihOwner [card]="card" *ngFor="let card of listCards"/>
     <!-- <app-input-field tabindex=0 rounded shaded label='Input común'/>
     <app-input-field tabindex=1 type="number" rounded shaded label='Input común'/>
     <app-input-field tabindex=2 type="password" rounded shaded label='Input común'/>
@@ -13,7 +14,7 @@
     <app-icon-field rounded shaded icon="fas fa-magnifying-glass" label='Input con icono'/>
     <app-select-field rounded shaded label='Select field'/>
     <app-input-field error='The maximum length is 40 characters.' variant='underline'/>
-    <app-input-field variant='underline'/> -->
-    <app-form/> 
+    <app-input-field variant='underline'/> 
+    <app-form/>--> 
   </section>  
 </div>
