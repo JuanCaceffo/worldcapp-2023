@@ -32,6 +32,7 @@
 
 .home__search {
   /*Layout*/
+  width: 100vw;
   grid-area: search;
   display: flex;
   align-items: center;
