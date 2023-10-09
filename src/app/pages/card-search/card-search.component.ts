@@ -11,12 +11,8 @@ import { Figurita } from 'src/app/data/models/cards/Figurita'
 export class CardSearchComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
-    this.listCards = this.getAllCards()
+    this.listCards = this.cardService.getAllCards()
   }
   constructor(private titleService: Title, public cardService: CardService) {}
   listCards: Array<Figurita> = []
-
-  getAllCards() {
-    return this.cardService.getAllCards()
-  }
 }
