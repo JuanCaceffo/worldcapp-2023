@@ -26,7 +26,6 @@ import { FormComponent } from './components/form/form.component'
 import { DIRECTIVES } from './directives/directives'
 import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
 import { CardWtihOwnerComponent } from './components/cardWtihOwner/cardWtihOwner.component'
-import { LoginComponent } from './pages/login/login.component'
 
 @NgModule({
   declarations: [
