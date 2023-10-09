@@ -12,7 +12,9 @@ export class CardService {
     return this.data.map<Figurita>((cardDTO) => Figurita.fromJson(cardDTO))
   }
 
-  getCardById(id: number) {
-    return this.data.find((card) => card.ID == id)
+  getCardById(id: number): Figurita | undefined {
+    const card = this.data.find((card) => card.ID == id)
+    if (!card) return
+    return Figurita.fromJson(card)
   }
 }

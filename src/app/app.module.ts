@@ -24,6 +24,7 @@ import { IconFieldComponent } from './components/fields/icon-field/icon-field.co
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
 import { DIRECTIVES } from './directives/directives'
 import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
+import { CardWtihOwnerComponent } from './components/cardWtihOwner/cardWtihOwner.component'
 @NgModule({
   declarations: [
     routingComponents,
@@ -46,6 +47,7 @@ import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
     // FormsModule,
     // BrowserModule
     CardComponent,
+    CardWtihOwnerComponent,
     FieldLabelComponent,
     InputFieldComponent,
     IconFieldComponent,
