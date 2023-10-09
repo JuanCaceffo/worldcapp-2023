@@ -1,4 +1,5 @@
 export interface CardDTO {
+  ID: number
   figureNumber: number
   isOnfire: boolean
   isPromise: boolean

@@ -4,6 +4,7 @@ const INITIAL_VALUE = 100
 export class Figurita {
   //Preguntar por otra forma mas limpia de declarar los parametros
   constructor(
+    public ID?: number,
     public figureNumber?: number,
     public isOnfire?: boolean,
     public isPromise?: boolean,

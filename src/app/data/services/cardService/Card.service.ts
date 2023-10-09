@@ -12,7 +12,7 @@ export class CardService {
     return this.data.map<Figurita>((cardDTO) => Figurita.fromJson(cardDTO))
   }
 
-  /* getCardById(id: number){
-
-  } */
+  getCardById(id: number) {
+    return this.data.filter((card) => card.ID == id)
+  }
 }
