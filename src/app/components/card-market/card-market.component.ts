@@ -1,7 +1,6 @@
 import { CardMarketService } from './../../services/card-market.service'
 import { Component, OnInit } from '@angular/core'
 import { IPickupPoint } from 'src/app/interfaces/pickupPoint'
-import { PickupPoint, PickupPoint2 } from 'src/app/models/pickupPoint/pickupPoint'
 
 @Component({
   selector: 'app-card-market',
@@ -10,14 +9,9 @@ import { PickupPoint, PickupPoint2 } from 'src/app/models/pickupPoint/pickupPoin
 })
 export class CardMarketComponent implements OnInit {
   marketCards!: IPickupPoint[]
-
   constructor(public cardMarketService: CardMarketService) { }
   //TODO:Puntos de ventas devuelve o kiosko o lirebria, etc. Ver nombre de clase y respecto a eso
   //Automatizar el iconito en la vista
-
-  getType(data: IPickupPoint): PickupPoint | PickupPoint2 {
-    return data
-  }
 
   ngOnInit() {
     //TODO: Sacar Kiosko de aca y ver en el back si es un tipo
