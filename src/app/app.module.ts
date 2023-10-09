@@ -22,9 +22,12 @@ import { InputFieldComponent } from './components/fields/input-field/input-field
 import { FieldLabelComponent } from './components/fields/field-label/field-label.component'
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
+import { FormComponent } from './components/form/form.component'
 import { DIRECTIVES } from './directives/directives'
 import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
 import { CardWtihOwnerComponent } from './components/cardWtihOwner/cardWtihOwner.component'
+import { LoginComponent } from './pages/login/login.component'
+
 @NgModule({
   declarations: [
     routingComponents,
@@ -44,15 +47,18 @@ import { CardWtihOwnerComponent } from './components/cardWtihOwner/cardWtihOwner
     UserProfileComponent,
     CardAddComponent,
     CardUserComponent,
-    // FormsModule,
-    // BrowserModule
     CardComponent,
     CardWtihOwnerComponent,
+    HeaderNavComponent,
+    // CardAddComponent,
+    // CardUserComponent,
     FieldLabelComponent,
     InputFieldComponent,
     IconFieldComponent,
     SelectFieldComponent,
     ConcatenatePipe,
+    LoginComponent,
+    FormComponent,
     DIRECTIVES
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],

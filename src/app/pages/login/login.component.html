@@ -1,5 +1,23 @@
 <div class="home">  
   <section class="home__content">
-    TODO: ACA VA EL CONTENIDO
+    <form class="form-login">
+      <section class="form-login__header">
+        <app-logo/>
+      </section>
+      <section class="form-login__content">
+        <h2 class="form__row-title">Usuario</h2>
+        <section class="form__row">
+          <app-icon-field rounded shaded icon="fas fa-user" (onchange)="loginDatos($event)" name="user" data-testid="userInput"></app-icon-field>
+        </section>
+        <h2 class="form__row-title">Contraseña</h2>
+        <section class="form__row">
+          <app-icon-field rounded shaded icon="fas fa-key" type="password" (onchange)="loginDatos($event)" name="password" data-testid="passwordInput"></app-icon-field>
+        </section>
+        <div *ngIf="errorMsg" class="error-msg" data-testid="errorMessage">{{errorMsg}} </div>  
+      </section>
+      <section class="form-login__actions">
+        <button class="button button--large button--primary button--font-md" data-testid="loginButton" (click)="login()" >Ingresar</button>
+      </section>
+    </form>
   </section>
 </div>
