@@ -32,7 +32,6 @@
 
 .home__search {
   /*Layout*/
-  width: 100vw;
   grid-area: search;
   display: flex;
   align-items: center;
@@ -67,6 +66,10 @@
   gap: var(--box-padding);
 }
 
+.searchbar{
+  width: 100%
+}
+
 @media screen and (min-width: 769px) {
   .home--2col {
     /*Layout*/
@@ -92,6 +95,9 @@
     position: sticky;
     top: 6rem;
     z-index: 100;
+  }
+  .searchbar{
+    width: 65%
   }
 
   .home__aside {
