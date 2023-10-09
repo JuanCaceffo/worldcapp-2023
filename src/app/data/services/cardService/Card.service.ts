@@ -13,6 +13,6 @@ export class CardService {
   }
 
   getCardById(id: number) {
-    return this.data.filter((card) => card.ID == id)
+    return this.data.find((card) => card.ID == id)
   }
 }
