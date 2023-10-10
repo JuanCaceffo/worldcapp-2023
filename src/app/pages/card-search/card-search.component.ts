@@ -1,7 +1,7 @@
-import { CardService } from './../../data/services/cardService/Card.service'
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 import { Title } from '@angular/platform-browser'
 import { Figurita } from 'src/app/data/models/cards/Figurita'
+import { CardService } from 'src/app/data/services/cardService/Card.service'
 
 @Component({
   selector: 'app-card-search',
@@ -9,10 +9,24 @@ import { Figurita } from 'src/app/data/models/cards/Figurita'
   styleUrls: ['./card-search.component.css']
 })
 export class CardSearchComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    public cardService: CardService
+  ) {}
+
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
     this.listCards = this.cardService.getAllCards()
   }
-  constructor(private titleService: Title, public cardService: CardService) {}
+
+  @Input() value = 'mamasa'
+  lista = [
+    {
+      type: 'text',
+      value: 'prueba de input',
+      label: 'texto de etiqueta'
+    }
+  ]
+
   listCards: Array<Figurita> = []
 }
