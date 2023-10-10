@@ -6,11 +6,11 @@ export class PickupPoint implements IPickupPoint {
     public address: string,
     public envelopeStock: number,
     public geoLocation: number,
-    public distance: number
+    public distance: number,
+    public envelopePrice: number
   ) {}
 
   //TODO: Generar los respectivos metodos para obtener estos datos
-  envelopePrice = 170
   pendingOrders = true
 }
 
