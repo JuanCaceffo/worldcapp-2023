@@ -1,3 +1,18 @@
-<app-input-field (input)="onChangeEvent()" [props]="props">
+<app-input-field
+  [attr.input]="onChangeEvent()"
+  [label]="label"
+  [name]="name"
+  [value]="value"
+  [class]="class"
+  [autofocus]="autofocus"
+  [tabindex]="tabindex"
+  [attr.testid]="testid"
+  [attr.icon]="icon"
+  [placeholder]="placeholder"
+  [type]="type"
+  [error]="error"
+  [min]="min"
+  [max]="max"
+>
   <i iconElement [class]="iconCSS()"></i>
 </app-input-field>

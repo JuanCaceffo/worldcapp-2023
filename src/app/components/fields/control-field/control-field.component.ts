@@ -1,5 +1,5 @@
 import { ControlFieldProps } from 'src/app/interfaces/field'
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { FieldComponent, InputType } from '../field.component'
 
 @Component({
@@ -9,21 +9,10 @@ import { FieldComponent, InputType } from '../field.component'
 })
 export class ControlFieldComponent
   extends FieldComponent
-  implements OnInit
+  implements ControlFieldProps
 {  
-  @Input() type?: string
-  @Input() checked?: boolean
-  @Input() override props: ControlFieldProps = {
-    label: '',
-    name: '',
-    value: '',
-    class: '',    
-    type: 'checkbox',    
-    autofocus: 'false',
-    tabindex: '-1',    
-    testid: '',
-    checked: false
-  }  
+  @Input() type: string = 'checkbox'
+  @Input() checked = false
 
   override cssVariant = (): InputType =>
     this.type === 'radio' ? 'field--radio' : 'field--checkbox'
