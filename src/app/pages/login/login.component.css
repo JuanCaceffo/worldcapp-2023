@@ -1,6 +1,12 @@
 @import url(/src/app/styles/input/input.css);
 @import url(/src/app/styles/button/button.css);/* SE HACE ASI? */
 
+.error-msg{
+  font-size: 1.2em;
+  color: var(--color-hot);
+  font-weight: 700;
+}
+
 .home, /* Externalizar en el general? */
 .form-login,
 .form-login__header,
