@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
-import { Figurita } from 'src/app/data/models/cards/Figurita'
+import {Component, Input, OnInit} from '@angular/core'
+import {Router} from '@angular/router'
+import {Figurita} from 'src/app/data/models/cards/Figurita'
 
 @Component({
   selector: 'app-cardWtihOwner',
@@ -13,6 +13,6 @@ export class CardWithOwnerComponent implements OnInit {
   @Input() card!: Figurita
 
   handleClick() {
-    this.router.navigate(['/detalle-figurita', this.card.ID])
+    this.router.navigate(['/detalle-figurita', this.card.cardID])
   }
 }

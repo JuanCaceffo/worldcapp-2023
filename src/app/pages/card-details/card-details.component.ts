@@ -36,6 +36,6 @@ export class CardDetailsComponent implements OnInit {
   card!: Figurita
 
   goCardPage() {
-    this.router.navigateByUrl('/figuritas')
+    this.router.navigate(['/figuritas'])
   }
 }

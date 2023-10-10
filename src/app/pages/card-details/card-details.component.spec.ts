@@ -2,13 +2,16 @@ import {
   ComponentFixture,
   TestBed,
   fakeAsync,
+  flushMicrotasks,
   tick
 } from '@angular/core/testing'
 
-import { CardDetailsComponent } from './card-details.component'
-import { ActivatedRoute, Router, RouterModule } from '@angular/router'
-import { routes, routingComponents } from 'src/app/app-routing.module'
-import { APP_BASE_HREF } from '@angular/common'
+import {CardDetailsComponent} from './card-details.component'
+import {ActivatedRoute, Router, RouterModule} from '@angular/router'
+import {routes, routingComponents} from 'src/app/app-routing.module'
+import {APP_BASE_HREF} from '@angular/common'
+import {ConcatenatePipe} from 'src/app/pipes/concatenate-pipe.pipe'
+import {FormsModule} from '@angular/forms'
 
 let routerSpy: jasmine.SpyObj<Router>
 
@@ -25,15 +28,15 @@ describe('CardDetailsComponent', () => {
     routerSpy = jasmine.createSpyObj('Router', ['navigate'])
 
     TestBed.configureTestingModule({
-      declarations: [CardDetailsComponent, routingComponents],
-      imports: [RouterModule.forRoot(routes)],
+      declarations: [CardDetailsComponent, routingComponents, ConcatenatePipe],
+      imports: [FormsModule, RouterModule.forRoot(routes)],
       providers: [
-        { provide: APP_BASE_HREF, useValue: '/' },
-        {
+        /*  {provide: APP_BASE_HREF, useValue: '/'}, */
+        /* {
           provide: ActivatedRoute,
           useValue: {}
-        },
-        { provide: Router, useValue: routerSpy }
+        }, */
+        {provide: Router, useValue: routerSpy}
       ]
     })
     fixture = TestBed.createComponent(CardDetailsComponent)

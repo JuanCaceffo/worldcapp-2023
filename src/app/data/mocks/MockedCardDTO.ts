@@ -1,4 +1,4 @@
-import { CardDTO } from '../dto/CardDTO.dto'
+import {CardDTO} from '../dto/CardDTO.dto'
 const INITIAL_VALUE = 100
 const DATE_1 = '1993-06-13'
 const DATE_2 = '1998-12-02'
@@ -6,7 +6,8 @@ const DATE_2 = '1998-12-02'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const mockCardData: Array<CardDTO> = [
   {
-    ID: 1,
+    cardID: 1,
+    ownerID: 1,
     figureNumber: 22,
     isOnfire: true,
     initialValue: INITIAL_VALUE,
@@ -31,7 +32,8 @@ export const mockCardData: Array<CardDTO> = [
     playerValoration: 14
   },
   {
-    ID: 2,
+    cardID: 2,
+    ownerID: 1,
     figureNumber: 10,
     isOnfire: false,
     initialValue: INITIAL_VALUE,

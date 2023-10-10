@@ -1,10 +1,10 @@
-import { CardDTO } from '../../dto/CardDTO.dto'
+import {CardDTO} from '../../dto/CardDTO.dto'
 
 const INITIAL_VALUE = 100
 export class Figurita {
   //Preguntar por otra forma mas limpia de declarar los parametros
   constructor(
-    public ID?: number,
+    public cardID?: number,
     public figureNumber?: number,
     public isOnfire?: boolean,
     public isPromise?: boolean,
