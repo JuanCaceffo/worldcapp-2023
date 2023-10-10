@@ -32,4 +32,3 @@
 ::ng-deep .field:focus + .field__icon {
   background-color: var(--color-focus)
 }
-
