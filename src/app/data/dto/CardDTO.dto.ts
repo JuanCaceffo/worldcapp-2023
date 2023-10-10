@@ -16,6 +16,12 @@ export interface CardDTO {
   nationalTeam: string
   positon: string
   quote: number
+  debutYear: number
+  worldCups: number
+  confederation: string
+  confederationWorldCups: number
+  isLeader: boolean
+  playerValoration: number
   //player
   owner: string
 }

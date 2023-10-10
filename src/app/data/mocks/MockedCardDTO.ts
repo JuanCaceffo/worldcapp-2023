@@ -10,7 +10,7 @@ export const mockCardData: Array<CardDTO> = [
     figureNumber: 22,
     isOnfire: true,
     initialValue: INITIAL_VALUE,
-    levelOfImpresion: 'low',
+    levelOfImpresion: 'bajo',
     isPromise: true,
     weight: 70,
     name: 'gonzalo',
@@ -22,14 +22,20 @@ export const mockCardData: Array<CardDTO> = [
     positon: 'mediocampista',
     age: 30,
     birth: DATE_1,
-    owner: 'ale menis'
+    owner: 'ale menis',
+    debutYear: 2008,
+    worldCups: 3,
+    confederation: 'conmebol',
+    confederationWorldCups: 10,
+    isLeader: true,
+    playerValoration: 14
   },
   {
     ID: 2,
     figureNumber: 10,
     isOnfire: false,
     initialValue: INITIAL_VALUE,
-    levelOfImpresion: 'high',
+    levelOfImpresion: 'alto',
     isPromise: false,
     weight: 75,
     name: 'Nicolas',
@@ -41,6 +47,12 @@ export const mockCardData: Array<CardDTO> = [
     positon: 'Defensor',
     age: 35,
     birth: DATE_2,
-    owner: 'juan cacho caceffo'
+    owner: 'juan cacho caceffo',
+    debutYear: 2003,
+    worldCups: 3,
+    confederation: 'conmebol',
+    confederationWorldCups: 10,
+    isLeader: true,
+    playerValoration: 20
   }
 ]

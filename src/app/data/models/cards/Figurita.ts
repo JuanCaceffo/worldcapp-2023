@@ -21,6 +21,11 @@ export class Figurita {
     public nationalTeam?: string,
     public positon?: string,
     public quote?: number,
+    public debutYear?: number,
+    public worldCups?: number,
+    public confederation?: string,
+    public confederationWorldCups?: number,
+    public isLeader?: boolean,
     //player
     public owner?: string
   ) {}
@@ -29,6 +34,10 @@ export class Figurita {
     return Object.assign(new Figurita(), cardJSON, {
       birth: new Date(cardJSON.birth)
     })
+  }
+
+  get ifIsLeader() {
+    return this.isLeader ? 'Es lider' : 'No es lider'
   }
 
   get baseValoration() {
@@ -57,7 +66,7 @@ export class Figurita {
   }
 
   get multiplierImpresion() {
-    if (this.levelOfImpresion === 'low') {
+    if (this.levelOfImpresion === 'bajo') {
       return 1.0
     } else {
       return 0.85

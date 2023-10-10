@@ -7,7 +7,10 @@ import { CardService } from 'src/app/data/services/cardService/Card.service'
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
-  styleUrls: ['./card-details.component.css']
+  styleUrls: [
+    '../../components/card/card.component.css',
+    './card-details.component.css'
+  ]
 })
 export class CardDetailsComponent implements OnInit {
   constructor(
