@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { PickupPoint } from 'src/app/models/pickupPoint/pickupPoint'
 import { CardMarketService } from 'src/app/services/card-market.service'
+import { IPickupPoint } from 'src/app/interfaces/pickupPoint'
 
 @Component({
   selector: 'app-card-market',
@@ -17,9 +18,10 @@ export class CardMarketComponent implements OnInit {
 
   ngOnInit() {
     this.getAllCards()
+    // this.marketCards = this.cardMarketService.buscarMarket()
   }
 
-  //TODO: Sacar Kiosko, libreria y supermercado del tipo de la clase obtenida
+  //TODO: Sacar Kiosko, libreria y supermercado del tipo de la clase obtenida (no le recibe en el name)
 
   async getAllCards() {
     this.marketCards = await this.cardMarketService.getAllCards()
