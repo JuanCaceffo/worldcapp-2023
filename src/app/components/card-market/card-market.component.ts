@@ -9,17 +9,13 @@ import { CardMarketService } from 'src/app/services/card-market.service'
 })
 export class CardMarketComponent implements OnInit {
   marketCards!: PickupPoint[]
-
   constructor(private cardMarketService: CardMarketService) {}
-
-  //TODO:Puntos de ventas devuelve o kiosko o libreria, etc. Ver nombre de clase y respecto a eso
-  //Automatizar el iconito en la vista
 
   ngOnInit() {
     this.getAllCards()
   }
 
-  //TODO: Sacar Kiosko, libreria y supermercado del tipo de la clase obtenida (no le recibe en el name)
+  //TODO: Devolver el tipo de class (Kiosko, libreria o supermercado) desde el back
 
   async getAllCards() {
     this.marketCards = await this.cardMarketService.getAllCards()

@@ -58,4 +58,13 @@ describe('CardMarketComponent', () => {
   })
 
   //TODO: Se podría hacer el test de los iconos (dependiendo que tipo de market se recibe)
+  it('Ingresa un punto de venta de un respectivo tipo y se visualiza el icono correctamente', () => {
+    component.marketCards = [new CardMarketStub()]
+    fixture.detectChanges()
+    const icon = getByTestId(fixture, 'super-market-card')
+
+    fixture.detectChanges()
+
+    expect(icon).toBeTruthy()
+  })
 })

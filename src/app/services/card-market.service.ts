@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core'
 import { CardMarketStub } from './servicesStubs/card-market-stub'
-import { IPickupPoint } from '../interfaces/pickupPoint'
+import { PickupPointDTO } from '../interfaces/pickupPointDTO'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardMarketService {
-  marketCards!: IPickupPoint[]
+  marketCards!: PickupPointDTO[]
 
-  async getAllCards(): Promise<IPickupPoint[]> {
+  async getAllCards(): Promise<PickupPointDTO[]> {
     return await [
       new CardMarketStub(),
       new CardMarketStub(),

@@ -2,13 +2,9 @@
     <div class="card-market" *ngFor="let marketCard of marketCards">
     <header class="card-market__name">
         <h1 class="card-market__name-text" data-testid="title-market-card" >{{marketCard.name}}</h1>
-        <i class="fa-solid fa-store fa-2xl"></i>
-
-        <!-- <h1 class="card-market--name-text">Libreria Dibu-jando</h1>
-        <i class="fa-solid fa-book-open fa-2xl"></i> -->
-
-        <!-- <h1 class="card-market--name-text">Supermercado Chumbo</h1>
-        <i class="fa-solid fa-shopping-basket fa-2xl"></i> -->
+        <i *ngIf="marketCard.type === 'Kiosko'" class="fa-solid fa-store fa-2xl" data-testid="kiosko-market-card"></i>
+        <i *ngIf="marketCard.type === 'Libreria'" class="fa-solid fa-book-open fa-2xl" data-testid="libreria-market-card"></i>
+        <i *ngIf="marketCard.type === 'Supermercado'" class="fa-solid fa-shopping-basket fa-2xl" data-testid="super-market-card"></i>
     </header>
 
     <dl class="card-market__content">

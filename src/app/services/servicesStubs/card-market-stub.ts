@@ -1,6 +1,6 @@
-import { IPickupPoint } from 'src/app/interfaces/pickupPoint'
+import { PickupPointDTO } from 'src/app/interfaces/pickupPointDTO'
 
-export class CardMarketStub implements IPickupPoint {
+export class CardMarketStub implements PickupPointDTO {
   address = 'Calle falsa 123'
   distance = 2
   envelopeStock = 2
@@ -8,4 +8,5 @@ export class CardMarketStub implements IPickupPoint {
   geoLocation = 3
   name = 'TestStub'
   pendingOrders = true
+  type = 'Supermercado'
 }

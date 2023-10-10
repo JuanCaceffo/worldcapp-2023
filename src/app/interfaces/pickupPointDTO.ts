@@ -1,4 +1,4 @@
-export interface IPickupPoint {
+export interface PickupPointDTO {
   address: string
   distance: number
   envelopeStock: number
@@ -6,4 +6,5 @@ export interface IPickupPoint {
   geoLocation: number
   name: string
   pendingOrders: boolean
+  type: string
 }

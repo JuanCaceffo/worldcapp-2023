@@ -1,13 +1,14 @@
-import { IPickupPoint } from 'src/app/interfaces/pickupPoint'
+import { PickupPointDTO } from 'src/app/interfaces/pickupPointDTO'
 
-export class PickupPoint implements IPickupPoint {
+export class PickupPoint implements PickupPointDTO {
   constructor(
     public name: string,
     public address: string,
     public envelopeStock: number,
     public geoLocation: number,
     public distance: number,
-    public envelopePrice: number
+    public envelopePrice: number,
+    public type: string
   ) {}
 
   //TODO: Generar los respectivos metodos para obtener estos datos
