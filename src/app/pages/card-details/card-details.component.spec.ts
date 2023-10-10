@@ -1,21 +1,56 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  fakeAsync,
+  tick
+} from '@angular/core/testing'
 
-// import { CardDetailsComponent } from './card-details.component';
+import { CardDetailsComponent } from './card-details.component'
+import { ActivatedRoute, Router, RouterModule } from '@angular/router'
+import { routes, routingComponents } from 'src/app/app-routing.module'
+import { APP_BASE_HREF } from '@angular/common'
 
-// describe('CardDetailsComponent', () => {
-//   let component: CardDetailsComponent;
-//   let fixture: ComponentFixture<CardDetailsComponent>;
+let routerSpy: jasmine.SpyObj<Router>
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [CardDetailsComponent]
-//     });
-//     fixture = TestBed.createComponent(CardDetailsComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+describe('CardDetailsComponent', () => {
+  let component: CardDetailsComponent
+  let fixture: ComponentFixture<CardDetailsComponent>
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  const getByTestId = (testId: string): HTMLInputElement => {
+    const compiled = fixture.debugElement.nativeElement
+    return compiled.querySelector(`[data-testid="${testId}"]`)
+  }
+
+  beforeEach(fakeAsync(() => {
+    routerSpy = jasmine.createSpyObj('Router', ['navigate'])
+
+    TestBed.configureTestingModule({
+      declarations: [CardDetailsComponent, routingComponents],
+      imports: [RouterModule.forRoot(routes)],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/' },
+        {
+          provide: ActivatedRoute,
+          useValue: {}
+        },
+        { provide: Router, useValue: routerSpy }
+      ]
+    })
+    fixture = TestBed.createComponent(CardDetailsComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  }))
+
+  it('should create', () => {
+    expect(component).toBeTruthy()
+  })
+
+  it('cuando se clickea en el boton de ir hacia atras vuelve a la pagina principal', fakeAsync(() => {
+    const backButton = getByTestId('backButton')
+    backButton.click()
+    fixture.detectChanges()
+    tick()
+    const [route] = routerSpy.navigate.calls.first().args[0]
+    expect(route).toBe('/figuritas')
+  }))
+})

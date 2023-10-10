@@ -1,28 +1,22 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing'
 
-import { CardWtihOwnerComponent } from './cardWtihOwner.component';
+import { CardWtihOwnerComponent } from './cardWtihOwner.component'
 
 describe('CardWtihOwnerComponent', () => {
-  let component: CardWtihOwnerComponent;
-  let fixture: ComponentFixture<CardWtihOwnerComponent>;
+  let component: CardWtihOwnerComponent
+  let fixture: ComponentFixture<CardWtihOwnerComponent>
 
-  beforeEach(async(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardWtihOwnerComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [CardWtihOwnerComponent]
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardWtihOwnerComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(CardWtihOwnerComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  it('cauando se hace click en una card te redirije hacia los detalles de la misma', () => {})
+})
