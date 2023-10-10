@@ -37,5 +37,6 @@ export class CardSearchComponent implements OnInit {
   //   }
   // ]
 
+  
   listCards: Array<Figurita> = []
 }
