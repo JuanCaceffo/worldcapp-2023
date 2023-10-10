@@ -1,4 +1,7 @@
-import { FieldComponent } from 'src/app/components/fields/field.component'
+import {
+  FieldComponent,
+  InputType
+} from 'src/app/components/fields/field.component'
 import { InputFieldProps } from 'src/app/interfaces/field'
 import { Component, Input, OnInit } from '@angular/core'
 
@@ -12,6 +15,8 @@ export class InputFieldComponent extends FieldComponent implements OnInit {
   @Input() placeholder?: string
   @Input() type?: string
   @Input() error?: string
+  @Input() min?: string
+  @Input() max?: string  
   @Input() override props: InputFieldProps = {
     label: '',
     name: '',
@@ -21,10 +26,13 @@ export class InputFieldComponent extends FieldComponent implements OnInit {
     type: 'text',
     autofocus: 'false',
     tabindex: '-1',
-    error: ''
+    error: '',
+    min: '',
+    max: '',
+    testid: ''
   }
 
-  override cssVariant = (): string => ''
+  override cssVariant = (): InputType => ''
 
   override cssClass(): string {
     return super.cssClass() + this.errorStyle()

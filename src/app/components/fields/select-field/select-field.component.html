@@ -1,6 +1,16 @@
 <app-field-label label={{props.label}} />
-<select [(ngModel)]="props.value" (click)="onChangeEvent()" name={{props.name}} autofocus={{props.autofocus}} tabindex={{props.tabindex}} inputElement roundedElement
-  shadedElement class={{cssClass()}}>
+<select 
+  [(ngModel)]="props.value" 
+  (click)="onChangeEvent()" 
+  name={{props.name}} 
+  autofocus={{props.autofocus}} 
+  tabindex={{props.tabindex}} 
+  class={{cssClass()}}
+  [attr.data-testid]="props.testid"
+  inputElement 
+  roundedElement
+  shadedElement
+>
   <option class="select__label">{{props.value | slice:0:20}}</option>
   <option *ngFor="let option of props.options" [value]="option">{{ option }}</option>
 </select>

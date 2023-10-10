@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { FieldComponent } from '../field.component'
+import { FieldComponent, InputType} from '../field.component'
 import { SelectFieldProps } from 'src/app/interfaces/field'
 
 @Component({
@@ -19,12 +19,9 @@ export class SelectFieldComponent extends FieldComponent implements OnInit {
     options: [],
     size: '10',
     autofocus: 'false',
-    tabindex: '-1'
+    tabindex: '-1',
+    testid: ''
   }
 
-  override cssVariant = (): string => 'field--select'
-
-  // ngOnInit():void {
-  //   // this.value ?  this.value : this.value = this.default
-  // }
+  override cssVariant = (): InputType => 'field--select'
 }

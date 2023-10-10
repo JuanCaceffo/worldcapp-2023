@@ -1,6 +1,7 @@
 import { IconFieldProps } from './../../../interfaces/field'
 import { InputFieldComponent } from '../input-field/input-field.component'
 import { Component, Input, OnInit } from '@angular/core'
+import { InputType } from '../field.component'
 
 @Component({
   selector: 'app-icon-field',
@@ -19,10 +20,13 @@ export class IconFieldComponent extends InputFieldComponent implements OnInit {
     error: '',
     autofocus: 'false',
     tabindex: '-1',
-    icon: 'fas fa-thumbs-up'
+    icon: 'fas fa-thumbs-up',
+    min: '',
+    max: '',
+    testid: ''
   }
 
-  override cssVariant = (): string => 'field--iconized'
+  override cssVariant = (): InputType => 'field--iconized'
 
   iconCSS = (): string => 'field__icon ' + this.props.icon
 }
