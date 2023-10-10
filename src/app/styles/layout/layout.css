@@ -85,6 +85,7 @@
   }
 
   .home__aside {
+    /*Layout*/
     padding: 1em;
     position: sticky;
     background-color: var(--color-clear-medium);

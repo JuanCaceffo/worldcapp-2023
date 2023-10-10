@@ -1,34 +1,34 @@
-/* tslint:disable:no-unused-variable */
-import { ComponentFixture, TestBed } from '@angular/core/testing'
-
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing'
 import { VariantFilterComponent } from './variantFilter.component'
 import { FormsModule } from '@angular/forms'
+import { InputFieldComponent } from '../../fields/input-field/input-field.component'
+import { FieldLabelComponent } from '../../fields/field-label/field-label.component'
+import { ControlFieldComponent } from '../../fields/control-field/control-field.component'
+import { FieldComponent } from '../../fields/field.component'
 
 describe('FilterVariantComponent', () => {
   let component: VariantFilterComponent
   let fixture: ComponentFixture<VariantFilterComponent>
 
-  beforeEach(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [VariantFilterComponent],
-      imports: [FormsModule]
-    })
+      imports: [FormsModule],
+      declarations: [
+        VariantFilterComponent,
+        FieldComponent,
+        InputFieldComponent,
+        FieldLabelComponent,
+        ControlFieldComponent
+      ]      
+    }).compileComponents()
     fixture = TestBed.createComponent(VariantFilterComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
-  })
+  }))
 
   it('should create', () => {
     expect(component).toBeTruthy()
-  })
-
-  //CONSULTAR
-  // it('Inicialmente el filtro tiene los valores por defecto', () => {
-  //   // const inputFrom = fixture.debugElement.nativeElement.querySelector(`[data-testid="inputFrom"]`)
-  //   // console.log(inputFrom.textContent)
-  //   // expect(+inputFrom.textContent).toBe(0)
-  //   // component.filter.from = 1
-  //   // fixture.detectChanges()
-  //   // expect(+inputFrom.textContent).toBe(1)
-  // })
+  })  
 })
+
+

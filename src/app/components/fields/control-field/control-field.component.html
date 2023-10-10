@@ -1,0 +1,13 @@
+<div class="field__control">
+  <input     
+    [(ngModel)]="props.value"
+    [type]="props.type" 
+    [name]="props.name" 
+    [tabindex]="props.tabindex" 
+    [class]="cssClass()"
+    [attr.data-testid]="props.testid"       
+    inputElement    
+    [checked]="props.checked" 
+  />
+  <app-field-label [label]="props.label" />
+</div>
