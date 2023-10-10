@@ -12,8 +12,13 @@ describe('BaseFilterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, BaseFilterComponent, VariantFilterComponent, SortedByFilterComponent],
-      imports: [FormsModule],
+      declarations: [
+        AppComponent,
+        BaseFilterComponent,
+        VariantFilterComponent,
+        SortedByFilterComponent
+      ],
+      imports: [FormsModule]
     })
     fixture = TestBed.createComponent(BaseFilterComponent)
     component = fixture.componentInstance
@@ -24,9 +29,15 @@ describe('BaseFilterComponent', () => {
     expect(component).toBeTruthy()
   })
 
-  // CONSULTAR: Titulo cambia luego de renderizar y no asigna correctamente el nombre
-  // it('Se obtiene correctamente el nombre del filtro', () => {
-  //   const titleFilter = fixture.debugElement.nativeElement.querySelector('[data-testid="titleFilter"]')
-  //   expect(titleFilter.textContent).toBe('Filtros')
-  // })
+  it('Se obtiene correctamente el nombre del filtro', () => {
+    const titleFilter = fixture.debugElement.nativeElement.querySelector(
+      '[data-testid="titleFilter"]'
+    )
+    //ToBeFalsy realiza el test implementando !!(valueExpected), por lo que genera una respuesta boolean
+    expect(titleFilter.textContent).toBeFalsy()
+    component.childFilter = new VariantFilterComponent()
+    component.title = component.childFilter.title
+    fixture.detectChanges()
+    expect(titleFilter.textContent).toBe('Filtros')
+  })
 })

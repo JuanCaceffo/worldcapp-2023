@@ -4,10 +4,10 @@ import { Figurita } from 'src/app/data/models/cards/Figurita'
 
 @Component({
   selector: 'app-cardWtihOwner',
-  templateUrl: './cardWtihOwner.component.html',
-  styleUrls: ['./cardWtihOwner.component.css']
+  templateUrl: './cardWithOwner.component.html',
+  styleUrls: ['./cardWithOwner.component.css']
 })
-export class CardWtihOwnerComponent implements OnInit {
+export class CardWithOwnerComponent implements OnInit {
   constructor(public router: Router) {}
   ngOnInit() {}
   @Input() card!: Figurita

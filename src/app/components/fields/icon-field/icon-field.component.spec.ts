@@ -5,7 +5,7 @@ import { FieldLabelComponent } from '../field-label/field-label.component'
 import { InputFieldComponent } from '../input-field/input-field.component'
 import { IconFieldComponent } from './icon-field.component'
 
-describe('CustomField', () => {
+describe('Icon Field Component', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],

@@ -22,7 +22,10 @@ export class FormComponent implements OnInit {
           type: 'text',
           autofocus: 'false',
           tabindex: '-1',
-          error: ''
+          error: '',
+          min: '',
+          max: '',
+          testid: ''
         }
       ]
     }

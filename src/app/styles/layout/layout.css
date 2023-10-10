@@ -45,8 +45,8 @@
 .home__aside {
   /*Layout*/
   justify-content: center;
+  min-height: 100%;
   grid-area: aside;
-  background-color: goldenrod;
 }
 
 .home__content {
@@ -93,7 +93,9 @@
 
   .home__aside {
     /*Layout*/
+    padding: 1em;
     position: sticky;
+    background-color: var(--color-clear-medium);
     /* top: 11.2rem; */
     height: fit-content;
   }

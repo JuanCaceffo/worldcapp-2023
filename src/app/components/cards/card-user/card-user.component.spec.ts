@@ -1,20 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing'
 import { FormsModule } from '@angular/forms'
 import { CardUserComponent} from './card-user.component'
+import { ConcatenatePipe } from 'src/app/pipes/concatenate-pipe.pipe'
+import { CardComponent } from '../card/card.component'
 
 describe('CardUserComponent', () => {
   let component: CardUserComponent
   let fixture: ComponentFixture<CardUserComponent>
 
-  beforeEach(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [CardUserComponent],
+      declarations: [CardUserComponent, CardComponent, ConcatenatePipe],
       imports: [FormsModule]
     })
     fixture = TestBed.createComponent(CardUserComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
-  })
+  }))
 
   it('Debe crearse', () => {
     expect(component).toBeTruthy()
