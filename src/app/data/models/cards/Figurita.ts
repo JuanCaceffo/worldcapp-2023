@@ -1,4 +1,4 @@
-import { CardDTO } from '../../dto/CardDTO.dto'
+import {CardDTO} from '../../dto/CardDTO.dto'
 
 const INITIAL_VALUE = 100
 
