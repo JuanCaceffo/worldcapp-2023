@@ -1,6 +1,7 @@
 import { CardDTO } from '../../dto/CardDTO.dto'
 
 const INITIAL_VALUE = 100
+
 export class Figurita {
   //Preguntar por otra forma mas limpia de declarar los parametros
   constructor(
@@ -66,5 +67,10 @@ export class Figurita {
 
   get totalValoration() {
     return this.baseValoration + this.playerValoration!
+  }
+
+  // AGREGADO POR PABLO SI ESTA OK BORRAR EL COMMENT
+  get imageURL(): string {
+    return `assets/images/card-img-${this.ID}.jpg`
   }
 }
