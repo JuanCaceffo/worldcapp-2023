@@ -13,10 +13,10 @@
   [error]="error"
   [min]="min"
   [max]="max"
+  (onchange)="dataInput($event)"
 >
-<div *ngIf="buttonOn; else buttonOff" class="field__button field__icon" iconElement>
-  <i iconElement [class]="iconCSS()" (click)="clickAction()"></i>
-</div>  
+  
+<i *ngIf="buttonOn; else buttonOff" iconElement [class]="iconCSS()" (click)="clickAction()"></i>
 <ng-template #buttonOff>
   <i iconElement [class]="iconCSS()" ></i>
 </ng-template>

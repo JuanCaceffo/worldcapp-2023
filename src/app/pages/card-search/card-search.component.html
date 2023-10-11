@@ -1,6 +1,6 @@
 <div class="home home--header-on home--2col home--search">
   <section class="home__search">
-    <app-icon-field rounded shaded icon="fas fa-magnifying-glass" variant="icon-right" class="field--search" [buttonOn]="true"/>
+    <app-icon-field rounded shaded icon="fas fa-magnifying-glass" variant="icon-right" class="field--search" [buttonOn]="true" (onchange)="enviarDatos($event)"/>
   </section>
   <!-- <input type="text" (keyup.enter)="onEnterPressed()" [(ngModel)]="aBuscar"> -->
   <!-- <button (click)="searchbar.search(aBuscar)">boton</button> -->
@@ -8,8 +8,6 @@
     <app-baseFilter>
       <app-variantFilter #childFilter />      
     </app-baseFilter>
-    <div style="width: 100px; height: 50px; background-color: aqua; cursor: pointer" (click)="enviarDatos()"></div>
-    <input type="text" placeholder="hola" [(ngModel)]="aBuscar">
     <i style="background-color: red; width: 20px; height: 20px; cursor: pointer;" >pepe</i>
   </section>
   <section class="home__content home__content--grid">    

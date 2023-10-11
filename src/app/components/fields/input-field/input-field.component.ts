@@ -19,7 +19,7 @@ export class InputFieldComponent extends FieldComponent implements InputFieldPro
   @Input() max?: string
 
   override cssVariant = (): InputType => ''
-
+  
   override cssClass(): string {    
     return `${super.cssClass()} ${this.errorStyle()}`
   }

@@ -26,7 +26,8 @@ export class CardSearchComponent implements OnInit {
     this.value = resultado.map( (elemento) => elemento.cardID )
   }
 
-  enviarDatos(){
+  enviarDatos(datos: string[]){
+    this.aBuscar = datos[0]
     console.log(this.aBuscar)
   }
 

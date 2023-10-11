@@ -11,6 +11,11 @@ import { InputType } from '../field.component'
 export class IconFieldComponent extends InputFieldComponent implements IconFieldProps {
   @Input() icon = 'fas fa-thumbs-up'
   @Input() buttonOn = false
+  datosInput = ""
+  
+  dataInput(datos: string[]) {
+    this.datosInput = datos[0]
+  }
 
   override cssClass(): string {
     
@@ -23,9 +28,9 @@ export class IconFieldComponent extends InputFieldComponent implements IconField
   
   override cssVariant = (): InputType => 'field--iconized'
 
-  iconCSS = (): string => `${this.buttonOn ? ' fiel__icon--buttonicon' : ''} field__icon ${this.icon}` /*'field__icon ' + this.icon + (this.buttonOn ? ' fiel__icon--buttonicon' : '')*/
+  iconCSS = (): string => `field__icon ${this.icon}`
 
   clickAction(){
-    console.log(this.value)
+    console.log(this.datosInput)
   }
 }
