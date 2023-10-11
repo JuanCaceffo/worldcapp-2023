@@ -1,35 +1,16 @@
-import {CardDTO} from '../../dto/CardDTO.dto'
+import {figuritaDTO} from '../../dto/figurita.dto'
 
 const INITIAL_VALUE = 100
 
 export class Figurita {
-  //Preguntar por otra forma mas limpia de declarar los parametros
-  constructor(
-    public ID?: number,
-    public figureNumber?: number,
-    public isOnfire?: boolean,
-    public isPromise?: boolean,
-    public playerValoration?: number,
-    public levelOfImpresion?: string,
-    //player
-    public name?: string,
-    public surname?: string,
-    public weight?: number,
-    public height?: number,
-    public shirtNumber?: number,
-    public birth?: Date,
-    public age?: number,
-    public nationalTeam?: string,
-    public positon?: string,
-    public quote?: number,
-    //player
-    public owner?: string
-  ) {}
+  constructor(public props: figuritaDTO) {}
 
-  static fromJson(cardJSON: CardDTO): Figurita {
-    return Object.assign(new Figurita(), cardJSON, {
-      birth: new Date(cardJSON.birth)
-    })
+  static fromJson(cardJSON: figuritaDTO): Figurita {
+    return new Figurita(cardJSON)
+  }
+
+  get birth() {
+    return new Date(this.props.birth)
   }
 
   get baseValoration() {
@@ -42,7 +23,7 @@ export class Figurita {
   }
 
   get multiplierEvenNumber() {
-    if (this.figureNumber! % 2 === 0) {
+    if (this.props.figureNumber! % 2 === 0) {
       return 1.1
     } else {
       return 1.0
@@ -50,7 +31,7 @@ export class Figurita {
   }
 
   get multiplierOnFire() {
-    if (this.isOnfire === true) {
+    if (this.props.isOnfire === true) {
       return 1.2
     } else {
       return 1.0
@@ -58,7 +39,7 @@ export class Figurita {
   }
 
   get multiplierImpresion() {
-    if (this.levelOfImpresion === 'low') {
+    if (this.props.levelOfImpresion === 'low') {
       return 1.0
     } else {
       return 0.85
@@ -66,11 +47,11 @@ export class Figurita {
   }
 
   get totalValoration() {
-    return this.baseValoration + this.playerValoration!
+    return this.baseValoration + this.props.playerValoration
   }
 
   // AGREGADO POR PABLO SI ESTA OK BORRAR EL COMMENT
   get imageURL(): string {
-    return `assets/images/card-img-${this.ID}.jpg`
+    return `assets/images/card-img-${this.props.cardID}.jpg`
   }
 }

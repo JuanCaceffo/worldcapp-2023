@@ -1,5 +1,6 @@
-export interface CardDTO {
-  ID: number
+export interface figuritaDTO {
+  cardID: number
+  ownerID: number
   figureNumber: number
   isOnfire: boolean
   isPromise: boolean
@@ -16,6 +17,12 @@ export interface CardDTO {
   nationalTeam: string
   positon: string
   quote: number
+  debutYear: number
+  worldCups: number
+  confederation: string
+  confederationWorldCups: number
+  isLeader: boolean
+  playerValoration: number
   //player
   owner: string
 }
