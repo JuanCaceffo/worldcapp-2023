@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { FieldComponent, InputType} from '../field.component'
+import { FieldComponent } from '../field.component'
 import { SelectFieldProps } from 'src/app/interfaces/field'
 
 @Component({
@@ -11,6 +11,4 @@ export class SelectFieldComponent extends FieldComponent implements SelectFieldP
   @Input() options: string[] = []
   @Input() size = '10'
   @Input() default?: string
-  
-  override cssVariant = (): InputType => 'field--select'
 }
