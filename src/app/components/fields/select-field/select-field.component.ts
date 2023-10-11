@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { FieldComponent, InputType} from '../field.component'
 import { SelectFieldProps } from 'src/app/interfaces/field'
 
@@ -7,21 +7,10 @@ import { SelectFieldProps } from 'src/app/interfaces/field'
   templateUrl: './select-field.component.html',
   styleUrls: ['../field.component.css', './select-field.component.css']
 })
-export class SelectFieldComponent extends FieldComponent implements OnInit {
-  @Input() options?: string[]
-  @Input() size?: number
+export class SelectFieldComponent extends FieldComponent implements SelectFieldProps {
+  @Input() options: string[] = []
+  @Input() size = '10'
   @Input() default?: string
-  @Input() override props: SelectFieldProps = {
-    label: '',
-    name: '',
-    value: 'Elija una opción',
-    class: '',
-    options: [],
-    size: '10',
-    autofocus: 'false',
-    tabindex: '-1',
-    testid: ''
-  }
-
+  
   override cssVariant = (): InputType => 'field--select'
 }

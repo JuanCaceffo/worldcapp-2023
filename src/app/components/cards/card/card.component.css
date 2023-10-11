@@ -37,13 +37,13 @@
   max-width: 30em;
   margin: 0 auto;
   border-radius: var(--border-radius-xl);
-  box-shadow: var(--box-shadow-xs);
+  box-shadow: var(--box-shadow);
   cursor: default;
   transition: all 400ms ease;
 }
 
 .player-card:hover {
-  box-shadow: var(--box-shadow-xl);
+  box-shadow: var(--box-shadow-hover);
   transform: translateY(-3%);
 }
 

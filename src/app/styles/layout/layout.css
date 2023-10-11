@@ -45,7 +45,7 @@
 
 .home__content {
   grid-area: content;
-  /* background-color: aquamarine; */
+  padding: var(--box-padding)
 }
 
 .home__content--grid{

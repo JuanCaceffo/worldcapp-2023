@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { Figurita } from 'src/app/data/models/cards/Figurita'
 
 @Component({
-  selector: 'app-cardWtihOwner',
+  selector: 'app-cardWithOwner',
   templateUrl: './cardWithOwner.component.html',
   styleUrls: ['./cardWithOwner.component.css']
 })
