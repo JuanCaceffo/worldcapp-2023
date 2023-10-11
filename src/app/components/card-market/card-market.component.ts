@@ -1,23 +1,18 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { PickupPoint } from 'src/app/models/pickupPoint/pickupPoint'
-import { CardMarketService } from 'src/app/services/card-market.service'
 
 @Component({
   selector: 'app-card-market',
   templateUrl: './card-market.component.html',
   styleUrls: ['./card-market.component.css']
 })
-export class CardMarketComponent implements OnInit {
-  marketCards!: PickupPoint[]
-  constructor(private cardMarketService: CardMarketService) {}
+export class CardMarketComponent {
+  @Input() inputMarketCard!: PickupPoint
+  marketCard: PickupPoint = this.inputMarketCard
 
   ngOnInit() {
-    this.getAllCards()
+    this.marketCard = this.inputMarketCard
   }
 
   //TODO: Devolver el tipo de class (Kiosko, libreria o supermercado) desde el back
-
-  async getAllCards() {
-    this.marketCards = await this.cardMarketService.getAllCards()
-  }
 }

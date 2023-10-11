@@ -63,8 +63,6 @@ describe('CardMarketComponent', () => {
     fixture.detectChanges()
     const icon = getByTestId(fixture, 'super-market-card')
 
-    fixture.detectChanges()
-
     expect(icon).toBeTruthy()
   })
 })
