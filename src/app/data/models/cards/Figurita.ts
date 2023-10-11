@@ -9,6 +9,10 @@ export class Figurita {
     return new Figurita(cardJSON)
   }
 
+  get isWorldChampion() {
+    return this.props.worldCups > 0
+  }
+
   get birth() {
     return new Date(this.props.birth)
   }
@@ -23,27 +27,15 @@ export class Figurita {
   }
 
   get multiplierEvenNumber() {
-    if (this.props.figureNumber! % 2 === 0) {
-      return 1.1
-    } else {
-      return 1.0
-    }
+    return this.props.figureNumber! % 2 === 0 ? 1.1 : 1.0
   }
 
   get multiplierOnFire() {
-    if (this.props.isOnfire === true) {
-      return 1.2
-    } else {
-      return 1.0
-    }
+    return this.props.isOnfire ? 1.2 : 1.0
   }
 
   get multiplierImpresion() {
-    if (this.props.levelOfImpresion === 'low') {
-      return 1.0
-    } else {
-      return 0.85
-    }
+    return this.props.levelOfImpresion === 'low' ? 1.0 : 0.85
   }
 
   get totalValoration() {
