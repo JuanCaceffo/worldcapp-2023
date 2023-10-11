@@ -39,6 +39,9 @@
 .player-card__header h2:first-child {
   flex-basis: 0%;
 }
+.player-card__header h2:nth-child(3) {
+  flex-basis: 0%;
+}
 
 .player-card__container {
   padding: 1em;

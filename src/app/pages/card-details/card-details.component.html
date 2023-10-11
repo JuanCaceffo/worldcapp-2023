@@ -13,8 +13,10 @@
               >
             </h3>
             <div class="detail-card__atributtes">
-              <h2><i class="fas fa-fire fa-sm"></i></h2>
-              <h2>
+              <h2><i class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i></h2>
+              <h2><i class="fas fa-fire fa-sm" *ngIf="card.props.isOnfire"></i></h2>
+              <h2><i class="fas fa-star fa-sm" *ngIf="card.props.isPromise"></i></h2>
+            <h2>
                 <i class="fas fa-id-badge fa-sm"></i>{{ card.props.figureNumber }}
               </h2>
             </div>
