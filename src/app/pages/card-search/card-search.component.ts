@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import { Figurita } from 'src/app/data/models/cards/Figurita'
-import { CardService } from 'src/app/data/services/cardService/Card.service'
+import {Component, Input, OnInit} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {Figurita} from 'src/app/data/models/cards/Figurita'
+import {CardService} from 'src/app/data/services/cardService/Card.service'
 
 @Component({
   selector: 'app-card-search',
@@ -9,10 +9,7 @@ import { CardService } from 'src/app/data/services/cardService/Card.service'
   styleUrls: ['./card-search.component.css']
 })
 export class CardSearchComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    public cardService: CardService
-  ) {}
+  constructor(private titleService: Title, public cardService: CardService) {}
 
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
