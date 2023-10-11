@@ -3,7 +3,7 @@
     <section class="player-card__img">
       <!-- TODO: ver como implementar la imagen --> 
       <img [src]="card.imageURL"/>
-      <li class="button--icon">
+      <li class="button--icon" *ngIf="card.props.ownerID === userService.userLogedID">
         <a class="button__link" href="">
           <i class="fa-solid fa-trash-can"></i>
         </a>
@@ -12,30 +12,30 @@
     <section class="player-card__content">
       <header class="player-card__header">
         <!-- TODO: implementar pipes -->
-        <h2>{{ card.name | concatenate: card.surname }}</h2>
-        <h2><i class="fas fa-id-badge fa-sm"></i> {{card.figureNumber}}</h2>
+        <h2>{{ card.props.name | concatenate: card.props.surname | titlecase}}</h2>
+        <h2><i class="fas fa-id-badge fa-sm"></i> {{card.props.figureNumber}}</h2>
         <h2>
-          <i class="fas fa-trophy fa-sm"></i>
-          <i class="fas fa-fire fa-sm"></i>
-          <i class="fas fa-star fa-sm"></i>
+          <i class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i>
+          <i class="fas fa-fire fa-sm" *ngIf="card.props.isOnfire"></i>
+          <i class="fas fa-star fa-sm" *ngIf="card.props.isPromise"></i>
           {{card.baseValoration | number:'0.0-2'}}
         </h2>
         <p>
           <i class="fa-solid fa-weight-scale fa-sm"></i
-          ><strong> Peso:</strong> {{card.weight}}
+          ><strong> Peso:</strong> {{card.props.weight}}
         </p>
         <p>
           <i class="fas fa-ruler-vertical fa-sm"></i
-          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> {{card.age}}
+          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> {{card.props.age}}
           metros
         </p>
       </header>
       <section class="player-card__body">
-        <p><strong>Casaca: </strong>{{card.shirtNumber}}</p>
+        <p><strong>Casaca: </strong>{{card.props.shirtNumber}}</p>
         <p><strong>Nacimiento: </strong>{{ card.birth | date:'dd-MM-yyyy' }}</p>
-        <p><strong>Selección: </strong> {{card.nationalTeam}}</p>
-        <p><strong>Posición: </strong> {{card.positon}}</p>
-        <h2 class="player-card__body--highlight">COTIZACION: {{card.quote | currency: 'EUR' : 'symbol' : '0.0-2'}}</h2>
+        <p><strong>Selección: </strong> {{card.props.nationalTeam | titlecase}}</p>
+        <p><strong>Posición: </strong> {{card.props.positon | titlecase}}</p>
+        <h2 class="player-card__body--highlight">COTIZACION: {{card.props.quote | currency: 'EUR' : 'symbol' : '0.0-2'}}</h2>
       </section>
       <footer class="player-card__footer">
         <ng-content select="[footer]"></ng-content>

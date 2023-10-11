@@ -23,7 +23,7 @@ export class CardSearchComponent implements OnInit {
 
   onEnterPressed() {
     const resultado = searchbar.search(this.aBuscar)
-    this.value = resultado.map( (elemento) => elemento.ID )
+    this.value = resultado.map( (elemento) => elemento.cardID )
   }
 
   enviarDatos(){
