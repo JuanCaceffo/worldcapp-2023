@@ -26,6 +26,10 @@ export class CardSearchComponent implements OnInit {
     this.value = resultado.map( (elemento) => elemento.ID )
   }
 
+  enviarDatos(){
+    console.log(this.aBuscar)
+  }
+
   @Input() value!: number[]
 
   // @Input() value = 'mamasa'

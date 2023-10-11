@@ -16,7 +16,7 @@ export class InputFieldComponent extends FieldComponent implements InputFieldPro
   @Input() type = 'text'
   @Input() error = ''
   @Input() min?: string
-  @Input() max?: string  
+  @Input() max?: string
 
   override cssVariant = (): InputType => ''
 

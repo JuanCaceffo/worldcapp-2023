@@ -19,6 +19,15 @@
   background-color: var(--color-focus);
 }
 
+.field__button {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  height: fit-content;
+  width: fit-content;
+}
+
 .field__icon--icon-right {  
   left: unset;
   right: 0;

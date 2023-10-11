@@ -14,5 +14,11 @@
   [min]="min"
   [max]="max"
 >
-  <i iconElement [class]="iconCSS()"></i>
+<div *ngIf="buttonOn; else buttonOff" class="field__button field__icon" iconElement>
+  <i iconElement [class]="iconCSS()" (click)="clickAction()"></i>
+</div>  
+<ng-template #buttonOff>
+  <i iconElement [class]="iconCSS()" ></i>
+</ng-template>
+  
 </app-input-field>
