@@ -1,4 +1,4 @@
-export interface CardDTO {
+export interface figuritaDTO {
   cardID: number
   ownerID: number
   figureNumber: number

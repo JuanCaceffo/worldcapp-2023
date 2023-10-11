@@ -1,17 +1,17 @@
-  <app-field-label [label]="props.label" />
+  <app-field-label [label]="label" />
   <div roundedElement shadedElement class="field__container">
     <input 
-      [(ngModel)]="props.value" 
+      [(ngModel)]="value" 
       (input)="onChangeEvent()" 
-      [type]="props.type"
-      [name]="props.name"
-      [autofocus]="props.autofocus"
-      [tabindex]="props.tabindex"
+      [type]="type"
+      [name]="name"
+      [autofocus]="autofocus"
+      [tabindex]="tabindex"
       [class]="cssClass()" 
-      [placeholder]="props.placeholder" 
-      [attr.data-testid]="props.testid"
-      [min]="props.min"
-      [max]="props.max"
+      [placeholder]="placeholder" 
+      [attr.data-testid]="testid"
+      [min]="min"
+      [max]="max"
       inputElement 
       roundedElement 
     />

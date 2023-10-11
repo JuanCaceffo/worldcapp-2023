@@ -1,43 +1,24 @@
-import {CardDTO} from '../../dto/CardDTO.dto'
+import {figuritaDTO} from '../../dto/figurita.dto'
 
 const INITIAL_VALUE = 100
-export class Figurita {
-  //Preguntar por otra forma mas limpia de declarar los parametros
-  constructor(
-    public cardID?: number,
-    public figureNumber?: number,
-    public isOnfire?: boolean,
-    public isPromise?: boolean,
-    public playerValoration?: number,
-    public levelOfImpresion?: string,
-    //player
-    public name?: string,
-    public surname?: string,
-    public weight?: number,
-    public height?: number,
-    public shirtNumber?: number,
-    public birth?: Date,
-    public age?: number,
-    public nationalTeam?: string,
-    public positon?: string,
-    public quote?: number,
-    public debutYear?: number,
-    public worldCups?: number,
-    public confederation?: string,
-    public confederationWorldCups?: number,
-    public isLeader?: boolean,
-    //player
-    public owner?: string
-  ) {}
 
-  static fromJson(cardJSON: CardDTO): Figurita {
-    return Object.assign(new Figurita(), cardJSON, {
-      birth: new Date(cardJSON.birth)
-    })
+export class Figurita {
+  constructor(public props: figuritaDTO) {}
+
+  static fromJson(cardJSON: figuritaDTO): Figurita {
+    return new Figurita(cardJSON)
+  }
+
+  get isWorldChampion() {
+    return this.props.worldCups > 0
+  }
+
+  get birth() {
+    return new Date(this.props.birth)
   }
 
   get ifIsLeader() {
-    return this.isLeader ? 'Es lider' : 'No es lider'
+    return this.props.isLeader ? 'Es lider' : 'No es lider'
   }
 
   get baseValoration() {
@@ -50,30 +31,23 @@ export class Figurita {
   }
 
   get multiplierEvenNumber() {
-    if (this.figureNumber! % 2 === 0) {
-      return 1.1
-    } else {
-      return 1.0
-    }
+    return this.props.figureNumber! % 2 === 0 ? 1.1 : 1.0
   }
 
   get multiplierOnFire() {
-    if (this.isOnfire === true) {
-      return 1.2
-    } else {
-      return 1.0
-    }
+    return this.props.isOnfire ? 1.2 : 1.0
   }
 
   get multiplierImpresion() {
-    if (this.levelOfImpresion === 'bajo') {
-      return 1.0
-    } else {
-      return 0.85
-    }
+    return this.props.levelOfImpresion === 'bajo' ? 1.0 : 0.85
   }
 
   get totalValoration() {
-    return this.baseValoration + this.playerValoration!
+    return this.baseValoration + this.props.playerValoration
+  }
+
+  // AGREGADO POR PABLO SI ESTA OK BORRAR EL COMMENT
+  get imageURL(): string {
+    return `assets/images/card-img-${this.props.cardID}.jpg`
   }
 }

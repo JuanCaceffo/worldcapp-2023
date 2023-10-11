@@ -6,14 +6,12 @@ import {Figurita} from '../../models/cards/Figurita'
   providedIn: 'root'
 })
 export class CardService {
-  data = mockCardData
-
   getAllCards(): Figurita[] {
-    return this.data.map<Figurita>((cardDTO) => Figurita.fromJson(cardDTO))
+    return mockCardData.map<Figurita>((cardDTO) => Figurita.fromJson(cardDTO))
   }
 
   getCardById(id: number): Figurita | undefined {
-    const card = this.data.find((card) => card.cardID == id)
+    const card = mockCardData.find((card) => card.cardID == id)
     if (!card) return
     return Figurita.fromJson(card)
   }

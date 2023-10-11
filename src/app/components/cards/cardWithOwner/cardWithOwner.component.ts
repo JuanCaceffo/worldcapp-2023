@@ -3,7 +3,7 @@ import {Router} from '@angular/router'
 import {Figurita} from 'src/app/data/models/cards/Figurita'
 
 @Component({
-  selector: 'app-cardWtihOwner',
+  selector: 'app-cardWithOwner',
   templateUrl: './cardWithOwner.component.html',
   styleUrls: ['./cardWithOwner.component.css']
 })
@@ -13,6 +13,6 @@ export class CardWithOwnerComponent implements OnInit {
   @Input() card!: Figurita
 
   handleClick() {
-    this.router.navigate(['/detalle-figurita', this.card.cardID])
+    this.router.navigate(['/detalle-figurita', this.card.props.cardID])
   }
 }
