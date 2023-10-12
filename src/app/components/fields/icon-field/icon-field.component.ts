@@ -1,7 +1,6 @@
 import { IconFieldProps } from './../../../interfaces/field'
 import { InputFieldComponent } from '../input-field/input-field.component'
-import { Component, Input } from '@angular/core'
-import { InputType } from '../field.component'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 
 @Component({
   selector: 'app-icon-field',
@@ -11,26 +10,18 @@ import { InputType } from '../field.component'
 export class IconFieldComponent extends InputFieldComponent implements IconFieldProps {
   @Input() icon = 'fas fa-thumbs-up'
   @Input() buttonOn = false
-  datosInput = ""
-  
-  dataInput(datos: string[]) {
-    this.datosInput = datos[0]
-  }
+  @Output() onchangeIcon = new EventEmitter<string[]>()
+  @Output() emitter = new EventEmitter<string>()
 
-  override cssClass(): string {
-    
-    return super.cssClass()
+  onChangeIconEvent(data:string[]): void {      
+    this.value = data[0]
+    this.onchangeIcon.emit(data)
   }
-
-  ngOnInit(): void {
-    console.log("css class:",super.cssClass())
-  }
-  
-  override cssVariant = (): InputType => 'field--iconized'
-
-  iconCSS = (): string => `field__icon ${this.icon}`
 
   clickAction(){
-    console.log(this.datosInput)
+    this.emitter.emit(this.value)
   }
+
+  iconCSS = (): string => 'field__icon ' + this.icon
+
 }

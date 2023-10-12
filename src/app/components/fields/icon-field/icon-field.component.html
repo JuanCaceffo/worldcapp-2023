@@ -1,9 +1,9 @@
-<app-input-field
-  [attr.input]="onChangeEvent()"
+<app-input-field  
+  (onchangeInput)="onChangeIconEvent($event)"
   [label]="label"
   [name]="name"
   [value]="value"
-  [class]="class"
+  [class]="'field field--iconized'"
   [autofocus]="autofocus"
   [tabindex]="tabindex"
   [attr.testid]="testid"
@@ -13,10 +13,9 @@
   [error]="error"
   [min]="min"
   [max]="max"
-  (onchange)="dataInput($event)"
 >
   
-<i *ngIf="buttonOn; else buttonOff" iconElement [class]="iconCSS()" (click)="clickAction()"></i>
+<i *ngIf="buttonOn; else buttonOff" iconElement [class]="iconCSS()" (click)="clickAction()" style="cursor: pointer"></i>
 <ng-template #buttonOff>
   <i iconElement [class]="iconCSS()" ></i>
 </ng-template>

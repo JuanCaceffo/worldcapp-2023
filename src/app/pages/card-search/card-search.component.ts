@@ -16,32 +16,22 @@ export class CardSearchComponent implements OnInit {
     public cardService: CardService
   ) {}
 
+  @Input() value!: number[]
+
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
     this.listCards = this.cardService.getAllCards()
   }
 
-  onEnterPressed() {
-    const resultado = searchbar.search(this.aBuscar)
-    this.value = resultado.map( (elemento) => elemento.cardID )
-  }
-
-  enviarDatos(datos: string[]){
-    this.aBuscar = datos[0]
+  enviarDatos(datos: string){
+    this.aBuscar = datos
     console.log(this.aBuscar)
   }
 
-  @Input() value!: number[]
-
-  // @Input() value = 'mamasa'
-  // lista = [
-  //   {
-  //     type: 'text',
-  //     value: 'prueba de input',
-  //     label: 'texto de etiqueta'
-  //   }
-  // ]
-
-  
   listCards: Array<Figurita> = []
+
+  // onEnterPressed() {
+  //   const resultado = searchbar.search(this.aBuscar)
+  //   this.value = resultado.map( (elemento) => elemento.cardID )
+  // }
 }
