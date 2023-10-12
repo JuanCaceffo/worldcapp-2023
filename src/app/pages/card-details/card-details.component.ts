@@ -3,6 +3,7 @@ import {Title} from '@angular/platform-browser'
 import {ActivatedRoute, Router} from '@angular/router'
 import {Figurita} from 'src/app/data/models/cards/Figurita'
 import {CardService} from 'src/app/data/services/cardService/Card.service'
+import {UserService} from 'src/app/data/services/userService/User.service'
 
 @Component({
   selector: 'app-card-details',
@@ -17,7 +18,8 @@ export class CardDetailsComponent implements OnInit {
     private titleService: Title,
     private route: ActivatedRoute,
     private router: Router,
-    public cardService: CardService
+    public cardService: CardService,
+    public userService: UserService
   ) {}
   ngOnInit() {
     this.route.params.subscribe((param) => {
@@ -37,5 +39,11 @@ export class CardDetailsComponent implements OnInit {
 
   goCardPage() {
     this.router.navigate(['/figuritas'])
+  }
+
+  requestFigurita() {
+    this.userService.figuritaRequest(this.card)
+    //si todo sale bien navega
+    this.goCardPage()
   }
 }
