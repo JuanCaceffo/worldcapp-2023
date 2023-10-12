@@ -15,8 +15,4 @@ export class CardService {
     if (!card) return
     return Figurita.fromJson(card)
   }
-
-  //idea para boton solicitud de card details
-  /* solicitud de card: recibe el id del solicitante (debeira poder acceder a ese id si el user esta logeado) 
-  + la card solicitada  */
 }
