@@ -15,7 +15,7 @@
 
 .home--aside {
   /*Layout*/
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
     'aside'
     'content';
@@ -23,7 +23,7 @@
 
 .home--search {
   /*Layout*/
-  grid-template-rows: 5.2rem 1fr 1fr;
+  grid-template-rows: 5.2rem 1fr;
   grid-template-areas:
     'search'
     'aside'
