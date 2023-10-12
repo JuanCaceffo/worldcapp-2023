@@ -51,7 +51,7 @@ export const mockCardData: Array<figuritaDTO> = [
     birth: DATE_2,
     owner: 'juan cacho caceffo',
     debutYear: 2003,
-    worldCups: 3,
+    worldCups: 0,
     confederation: 'conmebol',
     confederationWorldCups: 10,
     isLeader: true,

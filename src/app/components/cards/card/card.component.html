@@ -15,10 +15,9 @@
         <h2>{{ card.props.name | concatenate: card.props.surname | titlecase}}</h2>
         <h2><i class="fas fa-id-badge fa-sm"></i> {{card.props.figureNumber}}</h2>
         <h2>
-          <i class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i>
-          <i class="fas fa-fire fa-sm" *ngIf="card.props.isOnfire"></i>
-          <i class="fas fa-star fa-sm" *ngIf="card.props.isPromise"></i>
-          {{card.baseValoration | number:'0.0-2'}}
+          <i data-testid="worldChampion" class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i>
+          <i data-testid="onFire" class="fas fa-fire fa-sm" *ngIf="card.props.isOnfire"></i>
+          <span><i class="fas fa-star fa-sm"></i>{{card.baseValoration | number:'1.0-0'}}</span>
         </h2>
         <p>
           <i class="fa-solid fa-weight-scale fa-sm"></i
