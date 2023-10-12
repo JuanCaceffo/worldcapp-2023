@@ -46,15 +46,15 @@
   /*Layout*/
   padding: 1rem;
   justify-content: center;
+  min-height: 100%;
   grid-area: aside;
-  /* background-color: goldenrod; */
 }
 
 .home__content {
   /*Layout*/
   padding: 1rem;
   grid-area: content;
-  /* background-color: aquamarine; */
+  padding: var(--box-padding)
 }
 
 .home__content--grid{
@@ -102,7 +102,9 @@
 
   .home__aside {
     /*Layout*/
+    padding: 1em;
     position: sticky;
+    background-color: var(--color-clear-medium);
     /* top: 11.2rem; */
     height: fit-content;
   }

@@ -8,24 +8,19 @@ export type InputType =
   | 'field--checkbox'
   | 'field--radio'
   | 'field--iconized'
+
 @Component({
   template: '',
   styleUrls: ['./field.component.css']
 })
 export abstract class FieldComponent implements FieldProps {
   @Input() label = ''
-  @Input() name = 'undefined'
-  @Input() value!: string | number | boolean
-  @Input() class = ''
+  @Input() name = ''
+  @Input() value = ''
+  @Input() class = 'field'
   @Input() autofocus = 'false'
-  @Input() tabindex: string | undefined
-  @Input() testid = ''
+  @Input() tabindex = '-1'
+  @Input('data-testid') testid = ''
 
-  abstract cssVariant(): InputType
-
-  cssClass(): string {
-    return `field ${this.cssVariant()}${this.class}`
-  }
-
-  isTestId = (): string => this.testid ?? ''
+  constructor() {}
 }

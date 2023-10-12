@@ -1,14 +1,14 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core'
+import { Directive, ElementRef, Input, AfterViewInit } from '@angular/core'
 
 @Directive({
   selector: '[shaded]'
 })
-export class ShadedDirective implements OnInit {
+export class ShadedDirective implements AfterViewInit {
   @Input() shaded?: string
 
   constructor(private element: ElementRef) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     const elements =
       this.element.nativeElement.querySelectorAll('[shadedElement]')
 

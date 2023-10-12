@@ -1,25 +1,20 @@
-// /* tslint:disable:no-unused-variable */
-// import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { FieldComponent } from 'src/app/components/fields/field.component'
+import { TestBed, fakeAsync } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
+import { FieldLabelComponent } from '../field-label/field-label.component'
+import { ControlFieldComponent } from './control-field.component'
 
-// import { ControlFieldComponent } from './control-field.component'
+describe('Control Field Component', () => {
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      declarations: [FieldComponent, ControlFieldComponent, FieldLabelComponent]
+    }).compileComponents()
+  }))
 
-// describe('ControlFieldComponent', () => {
-//   let component: ControlFieldComponent
-//   let fixture: ComponentFixture<ControlFieldComponent>
-
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [ControlFieldComponent]
-//     }).compileComponents()
-//   }))
-
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(ControlFieldComponent)
-//     component = fixture.componentInstance
-//     fixture.detectChanges()
-//   })
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy()
-//   })
-// })
+  it('should create', () => {
+    const fixture = TestBed.createComponent(ControlFieldComponent)
+    const controlField = fixture.debugElement.componentInstance
+    expect(controlField).toBeTruthy()
+  })
+})

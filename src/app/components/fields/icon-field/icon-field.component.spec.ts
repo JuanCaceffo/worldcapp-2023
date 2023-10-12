@@ -1,30 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { IconFieldComponent } from './icon-field.component'
-import { InputFieldComponent } from '../input-field/input-field.component'
+import { FieldComponent } from 'src/app/components/fields/field.component'
+import { TestBed, fakeAsync } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
 import { FieldLabelComponent } from '../field-label/field-label.component'
-import { routingComponents } from 'src/app/app-routing.module'
-import { FormsModule } from '@angular/forms'
+import { InputFieldComponent } from '../input-field/input-field.component'
+import { IconFieldComponent } from './icon-field.component'
 
-describe('IFieldComponent', () => {
-  let component: IconFieldComponent
-  let fixture: ComponentFixture<IconFieldComponent>
-
-  beforeEach(() => {
+describe('Icon Field Component', () => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
-        routingComponents,
+        FieldComponent,
         IconFieldComponent,
         InputFieldComponent,
         FieldLabelComponent
-      ],
-      imports: [FormsModule]
-    })
-    fixture = TestBed.createComponent(IconFieldComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+      ]
+    }).compileComponents()
+  }))
 
   it('should create', () => {
-    expect(component).toBeTruthy()
+    const fixture = TestBed.createComponent(IconFieldComponent)
+    const iconField = fixture.debugElement.componentInstance
+    expect(iconField).toBeTruthy()
   })
 })

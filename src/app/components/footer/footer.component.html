@@ -1,18 +1,23 @@
 <footer class="footer-main">
   <section class="footer-main__navbar">
     <nav class="navbar--icon">
-        <button class="button button--icon button--circle button--animated button--shadows">
-          <i class="fa-brands fa-facebook-f"></i>
-        </button>
-        <button class="button button--icon button--circle button--animated button--shadows">
-          <i class="fa-brands fa-instagram"></i>
-        </button>
-        <button class="button button--icon button--circle button--animated button--shadows">
-          <i class="fa-brands fa-twitter"></i>
-        </button>
-        <button class="button button--icon button--circle button--animated button--shadows">
-          <i class="fa-brands fa-at"></i>
-        </button>
+        
+      <button (click)='gotoURL("https://www.facebook.com")' class="button button--icon button--circle button--animated button--shadows">
+        <i class="fa-brands fa-facebook-f"></i>
+      </button>   
+    
+      <button (click)='gotoURL("https://www.instagram.com")' class="button button--icon button--circle button--animated button--shadows">
+        <i class="fa-brands fa-instagram"></i>
+      </button>    
+    
+      <button (click)='gotoURL("https://www.twitter.com")' class="button button--icon button--circle button--animated button--shadows">
+        <i class="fa-brands fa-twitter"></i>
+      </button>
+    
+      <button (click)='gotoURL("https://www.gmail.com")' class="button button--icon button--circle button--animated button--shadows">
+        <i class="fa-brands fa-at"></i>
+      </button>
+        
     </nav>
   </section>
 

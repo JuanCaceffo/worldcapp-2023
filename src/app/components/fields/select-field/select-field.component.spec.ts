@@ -1,19 +1,20 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing'
-// import { SelectFieldComponent } from './select-field.component'
-// describe('SFieldComponent', () => {
-//   let component: SelectFieldComponent
-//   let fixture: ComponentFixture<SelectFieldComponent>
+import { FieldComponent } from 'src/app/components/fields/field.component'
+import { TestBed, fakeAsync } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
+import { FieldLabelComponent } from '../field-label/field-label.component'
+import { SelectFieldComponent } from './select-field.component'
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [SelectFieldComponent]
-//     })
-//     fixture = TestBed.createComponent(SelectFieldComponent)
-//     component = fixture.componentInstance
-//     fixture.detectChanges()
-//   })
+describe('Select Field Component', () => {
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+      declarations: [FieldComponent, SelectFieldComponent, FieldLabelComponent]
+    }).compileComponents()
+  }))
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy()
-//   })
-// })
+  it('should create', () => {
+    const fixture = TestBed.createComponent(SelectFieldComponent)
+    const select = fixture.debugElement.componentInstance
+    expect(select).toBeTruthy()
+  })
+})

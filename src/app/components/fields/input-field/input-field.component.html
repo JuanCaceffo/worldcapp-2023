@@ -1,7 +1,21 @@
-<app-field-label label={{label}} />
-<div roundedElement shadedElement class="field__container">
-  <input [(ngModel)]="value" type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} 
-  inputElement roundedElement class={{cssClass()}} placeholder={{placeholder}} [attr.data-testid]="isTestId()" />
-  <ng-content></ng-content>
-</div>
-<span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>
+  <app-field-label [label]="label" />
+  <div roundedElement shadedElement class="field__container">
+    <input 
+      [(ngModel)]="value"
+      (keyup.enter)="onChangeInputEvent()"
+      [ngClass]="{'field--error': error !== ''}"       
+      [type]="type"
+      [name]="name"
+      [autofocus]="autofocus"
+      [tabindex]="tabindex"
+      [class]="class"
+      [placeholder]="placeholder" 
+      [attr.data-testid]="testid"
+      [min]="min"
+      [max]="max"
+      inputElement 
+      roundedElement 
+    />
+    <ng-content></ng-content>
+  </div>
+  <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>

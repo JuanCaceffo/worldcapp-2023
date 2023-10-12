@@ -1,3 +1,18 @@
-<app-input-field value={{value}} type={{type}} name={{name}} autofocus={{autofocus}} tabindex={{tabindex}} placeholder={{placeholder}} class={{cssClass()}} label={{label}}>
-  <i iconElement class={{iconCSS()}}></i>
+<app-input-field  
+  (onchangeInput)="onChangeIconEvent($event)"
+  [label]="label"
+  [name]="name"
+  [value]="value"
+  [class]="'field field--iconized'"
+  [autofocus]="autofocus"
+  [tabindex]="tabindex"
+  [attr.testid]="testid"
+  [attr.icon]="icon"
+  [placeholder]="placeholder"
+  [type]="type"
+  [error]="error"
+  [min]="min"
+  [max]="max"
+>
+  <i iconElement [class]="iconCSS()"></i>
 </app-input-field>

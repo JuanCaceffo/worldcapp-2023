@@ -1,42 +1,94 @@
-import { NgModule } from '@angular/core'
+// Angular Components
+import { AppRoutingModule, routingComponents } from './app-routing.module'
 import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms'
-import { AppRoutingModule, routingComponents } from './app-routing.module'
+import { NgModule } from '@angular/core'
+
+// Main Component
 import { AppComponent } from './app.component'
-import { LogoComponent } from './components/logo/logo.component'
+
+// Application Components
+// Base page components
+import { FooterComponent } from './components/footer/footer.component'
 import { HeaderComponent } from './components/header/header.component'
 import { HeaderNavComponent } from './components/header/header-nav/header-nav.component'
-import { FooterComponent } from './components/footer/footer.component'
+import { LogoComponent } from './components/logo/logo.component'
+
+// Filter components
 import { BaseFilterComponent } from './components/filter/baseFilter.component'
 import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
 import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
-import { InputFieldComponent } from './components/fields/input-field/input-field.component'
+
+// Card Components
+import { CardComponent } from './components/cards/card/card.component'
+import { CardUserComponent } from './components/cards/card-user/card-user.component'
+import { CardWithOwnerComponent } from './components/cards/cardWithOwner/cardWithOwner.component'
+
+// Pages
+import { CardAddComponent } from './pages/card-add/card-add.component'
+import { CardDetailsComponent } from './pages/card-details/card-details.component'
+import { CardSearchComponent } from './pages/card-search/card-search.component'
+import { LoginComponent } from './pages/login/login.component'
+import { StoreSearchComponent } from './pages/store-search/store-search.component'
+import { UserProfileComponent } from './pages/user-profile/user-profile.component'
+
+// Field inputs components
+import { ControlFieldComponent } from './components/fields/control-field/control-field.component'
 import { FieldLabelComponent } from './components/fields/field-label/field-label.component'
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
+import { InputFieldComponent } from './components/fields/input-field/input-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
-import { ControlFieldComponent } from './components/fields/control-field/control-field.component'
-import { DIRECTIVES } from './directives/directives'
 import { CardMarketComponent } from './components/card-market/card-market.component'
+
+// Form components
+import { FormComponent } from './components/form/form.component'
+
+// Directives
+import { DIRECTIVES } from './directives/directives'
+
+// Pipes
+import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
+
 @NgModule({
   declarations: [
+    // Angular
     routingComponents,
     AppComponent,
-    LogoComponent,
+    // Base Page Components
+    FooterComponent,
     HeaderComponent,
     HeaderNavComponent,
-    FooterComponent,
+    LogoComponent,
+    // Filter Components
     BaseFilterComponent,
     SortedByFilterComponent,
     VariantFilterComponent,
-    FieldLabelComponent,
-    InputFieldComponent,
-    IconFieldComponent,
-    SelectFieldComponent,
+    // Card Components
+    CardComponent,
+    CardUserComponent,
+    CardWithOwnerComponent,
     CardMarketComponent,
+    // Pages
+    CardAddComponent,
+    CardDetailsComponent,
+    CardSearchComponent,
+    LoginComponent,
+    StoreSearchComponent,
+    UserProfileComponent,
+    // Fields
     ControlFieldComponent,
-    DIRECTIVES
+    FieldLabelComponent,
+    IconFieldComponent,
+    InputFieldComponent,
+    SelectFieldComponent,
+    // Form
+    FormComponent,
+    // Directives
+    DIRECTIVES,
+    // Pipe
+    ConcatenatePipe
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [AppRoutingModule, BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

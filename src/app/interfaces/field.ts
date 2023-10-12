@@ -1,7 +1,7 @@
 export interface FieldProps {
-  label: string
-  name: string
-  value: string | number | boolean
+  label?: string
+  name?: string
+  value?: string
   class?: string
   autofocus?: string
   tabindex?: string
@@ -10,20 +10,22 @@ export interface FieldProps {
 
 export interface InputFieldProps extends FieldProps {
   placeholder?: string
-  type?: string
-  error?: string | undefined
+  type: string
+  error?: string
+  min?: string
+  max?: string
 }
 
 export interface IconFieldProps extends InputFieldProps {
-  icon?: string
+  icon: string
 }
 
 export interface SelectFieldProps extends FieldProps {
-  options?: string[]
-  size?: number
-  default?: string
+  options: string[]
+  size?: string
 }
 
 export interface ControlFieldProps extends FieldProps {
-  type?: string
+  type: string
+  checked: boolean
 }

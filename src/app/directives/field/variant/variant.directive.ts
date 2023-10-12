@@ -1,16 +1,15 @@
-import { Directive, ElementRef, Input } from '@angular/core'
+import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core'
 
 @Directive({
   selector: '[variant]'
 })
-export class VariantDirective {
+export class VariantDirective implements AfterViewInit {
   @Input() variant = ''
 
   constructor(private element: ElementRef) {}
 
-  ngOnInit(): void {
-    const inputElements =
-      this.element.nativeElement.querySelectorAll('[inputElement]')
+  ngAfterViewInit(): void {
+    const inputElements = this.element.nativeElement.querySelectorAll('[inputElement]')
 
     inputElements.forEach((e: HTMLElement) => {
       e.classList.add('field--' + this.variant)
