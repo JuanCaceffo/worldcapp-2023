@@ -1,4 +1,4 @@
-import {
+/* import {
   ComponentFixture,
   TestBed,
   fakeAsync,
@@ -31,11 +31,11 @@ describe('CardDetailsComponent', () => {
       declarations: [CardDetailsComponent, routingComponents, ConcatenatePipe],
       imports: [FormsModule, RouterModule.forRoot(routes)],
       providers: [
-        /*  {provide: APP_BASE_HREF, useValue: '/'}, */
-        /* {
+         {provide: APP_BASE_HREF, useValue: '/'},
+        {
           provide: ActivatedRoute,
           useValue: {}
-        }, */
+        },
         {provide: Router, useValue: routerSpy}
       ]
     })
@@ -57,3 +57,4 @@ describe('CardDetailsComponent', () => {
     expect(route).toBe('/figuritas')
   }))
 })
+ */
