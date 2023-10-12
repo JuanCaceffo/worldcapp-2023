@@ -1,13 +1,14 @@
   <app-field-label [label]="label" />
   <div roundedElement shadedElement class="field__container">
     <input 
-      [(ngModel)]="value" 
-      (input)="onChangeEvent()" 
+      [(ngModel)]="value"
+      (keyup.enter)="onChangeInputEvent()"
+      [ngClass]="{'field--error': error !== ''}"       
       [type]="type"
       [name]="name"
       [autofocus]="autofocus"
       [tabindex]="tabindex"
-      [class]="cssClass()" 
+      [class]="class"
       [placeholder]="placeholder" 
       [attr.data-testid]="testid"
       [min]="min"

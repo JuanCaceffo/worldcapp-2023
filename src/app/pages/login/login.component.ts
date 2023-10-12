@@ -16,6 +16,7 @@ export class LoginComponent {
 
   loginDatos(datos: string[]){
     this.loginData.onInputData(datos)
+    console.log("estos datos locos:", datos[0])
   }
   
   login() {
@@ -56,7 +57,6 @@ export class LoginData {
           this.validLogin = true
         }
       }
-    }
-    console.log(this.validLogin)
+    }    
   }
 }

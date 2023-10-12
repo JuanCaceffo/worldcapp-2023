@@ -1,11 +1,11 @@
 <app-field-label label={{label}} />
 <select 
   [(ngModel)]="value" 
-  (click)="onChangeEvent()" 
-  name={{name}} 
-  autofocus={{autofocus}} 
-  tabindex={{tabindex}} 
-  class={{cssClass()}}
+  [ngClass]="'field--select'"  
+  [name]="name"
+  [class]="class"
+  [autofocus]="autofocus"
+  [tabindex]="tabindex"  
   [attr.data-testid]="testid"
   inputElement 
   roundedElement

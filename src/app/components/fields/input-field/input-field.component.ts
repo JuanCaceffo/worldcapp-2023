@@ -1,9 +1,6 @@
-import {
-  FieldComponent,
-  InputType
-} from 'src/app/components/fields/field.component'
+import {  FieldComponent } from 'src/app/components/fields/field.component'
 import { InputFieldProps } from 'src/app/interfaces/field'
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 
 const MAXERRORLENGTH = 40
 @Component({
@@ -16,20 +13,17 @@ export class InputFieldComponent extends FieldComponent implements InputFieldPro
   @Input() type = 'text'
   @Input() error = ''
   @Input() min?: string
-  @Input() max?: string  
+  @Input() max?: string 
+  @Output() onchangeInput = new EventEmitter<string[]>()
 
-  override cssVariant = (): InputType => ''
-
-  override cssClass(): string {    
-    return `${super.cssClass()} ${this.errorStyle()}`
-  }
-
+  onChangeInputEvent() {
+    this.onchangeInput.emit([this.value, this.name])       
+  } 
+  
   errorMessage = (): string => {
     this.validateErrorMessage()
     return this.error
   }
-
-  errorStyle = (): string => (this.error !== '' ? 'field--error' : '')
 
   validateErrorMessage = () => {
     if (this.error.length > MAXERRORLENGTH) {

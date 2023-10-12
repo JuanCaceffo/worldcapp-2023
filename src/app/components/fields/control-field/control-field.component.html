@@ -1,10 +1,11 @@
 <div class="field__control">
   <input     
     [(ngModel)]="value"
-    [type]="type" 
+    [ngClass]="{'field--radio': type === 'radio', 'field--checkbox': type === 'checkbox' }"
+    [type]="type"
+    [class]="class" 
     [name]="name" 
-    [tabindex]="tabindex" 
-    [class]="cssClass()"
+    [tabindex]="tabindex"     
     [attr.data-testid]="testid"       
     inputElement    
     [checked]="checked" 
