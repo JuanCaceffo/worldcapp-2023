@@ -8,7 +8,7 @@ import { PickupPoint } from 'src/app/models/pickupPoint/pickupPoint'
 })
 export class CardMarketComponent {
   @Input() inputMarketCard!: PickupPoint
-  marketCard: PickupPoint = this.inputMarketCard
+  marketCard!: PickupPoint
 
   ngOnInit() {
     this.marketCard = this.inputMarketCard

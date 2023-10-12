@@ -18,6 +18,7 @@ describe('CardMarketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardMarketComponent)
     component = fixture.componentInstance
+    component.inputMarketCard = new CardMarketStub()
     fixture.detectChanges()
   })
 
@@ -26,9 +27,6 @@ describe('CardMarketComponent', () => {
   })
 
   it('Ingresa un punto de venta y se bindea todos sus valores correctamente', () => {
-    component.marketCards = [new CardMarketStub()]
-    fixture.detectChanges()
-
     const title = getByTestId(fixture, 'title-market-card')
     const address = getByTestId(fixture, 'address-market-card')
     const geoLocation = getByTestId(fixture, 'geolocation-market-card')
@@ -45,22 +43,17 @@ describe('CardMarketComponent', () => {
   })
 
   it('Ingresa un punto de venta y verifica el correcto funcionamiento de pedidos pendientes', () => {
-    component.marketCards = [new CardMarketStub()]
-    fixture.detectChanges()
-
     const pending = getByTestId(fixture, 'pending-market-card')
 
     expect(pending.textContent).toBe('Pedidos Pendientes')
-    component.marketCards[0].pendingOrders = false
+    component.marketCard.pendingOrders = false
     fixture.detectChanges()
 
     expect(pending.textContent).toBe('')
   })
 
-  //TODO: Se podría hacer el test de los iconos (dependiendo que tipo de market se recibe)
+  // //TODO: Se podría hacer el test de los iconos (dependiendo que tipo de market se recibe)
   it('Ingresa un punto de venta de un respectivo tipo y se visualiza el icono correctamente', () => {
-    component.marketCards = [new CardMarketStub()]
-    fixture.detectChanges()
     const icon = getByTestId(fixture, 'super-market-card')
 
     expect(icon).toBeTruthy()
