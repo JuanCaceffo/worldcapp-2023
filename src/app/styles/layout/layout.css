@@ -15,7 +15,7 @@
 
 .home--aside {
   /*Layout*/
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
     'aside'
     'content';
