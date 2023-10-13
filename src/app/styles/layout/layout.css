@@ -44,7 +44,6 @@
 
 .home__aside {
   /*Layout*/
-  padding: 1rem;
   justify-content: center;
   min-height: 100%;
   grid-area: aside;
