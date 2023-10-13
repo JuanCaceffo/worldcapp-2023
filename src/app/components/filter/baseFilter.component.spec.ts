@@ -5,6 +5,7 @@ import { BaseFilterComponent } from './baseFilter.component'
 import { VariantFilterComponent } from './variantFilter/variantFilter.component'
 import { SortedByFilterComponent } from './sortedByFilter/sortedByFilter.component'
 import { AppComponent } from 'src/app/app.component'
+import { getByTestId } from 'src/app/helpers/test.helper'
 
 describe('BaseFilterComponent', () => {
   let component: BaseFilterComponent
@@ -30,9 +31,7 @@ describe('BaseFilterComponent', () => {
   })
 
   it('Se obtiene correctamente el nombre del filtro', () => {
-    const titleFilter = fixture.debugElement.nativeElement.querySelector(
-      '[data-testid="titleFilter"]'
-    )
+    const titleFilter = getByTestId(fixture, 'titleFilter')
     //ToBeFalsy realiza el test implementando !!(valueExpected), por lo que genera una respuesta boolean
     expect(titleFilter.textContent).toBeFalsy()
     component.childFilter = new VariantFilterComponent()

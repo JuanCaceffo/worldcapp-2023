@@ -19,7 +19,7 @@ import { BaseFilterComponent } from './components/filter/baseFilter.component'
 import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
 import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
 
-// Card Components 
+// Card Components
 import { CardComponent } from './components/cards/card/card.component'
 import { CardUserComponent } from './components/cards/card-user/card-user.component'
 import { CardWithOwnerComponent } from './components/cards/cardWithOwner/cardWithOwner.component'
@@ -38,6 +38,7 @@ import { FieldLabelComponent } from './components/fields/field-label/field-label
 import { IconFieldComponent } from './components/fields/icon-field/icon-field.component'
 import { InputFieldComponent } from './components/fields/input-field/input-field.component'
 import { SelectFieldComponent } from './components/fields/select-field/select-field.component'
+import { CardMarketComponent } from './components/card-market/card-market.component'
 
 // Form components
 import { FormComponent } from './components/form/form.component'
@@ -51,7 +52,7 @@ import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
 @NgModule({
   declarations: [
     // Angular
-    routingComponents,    
+    routingComponents,
     AppComponent,
     // Base Page Components
     FooterComponent,
@@ -66,6 +67,7 @@ import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
     CardComponent,
     CardUserComponent,
     CardWithOwnerComponent,
+    CardMarketComponent,
     // Pages
     CardAddComponent,
     CardDetailsComponent,
@@ -80,11 +82,11 @@ import { ConcatenatePipe } from './pipes/concatenate-pipe.pipe'
     InputFieldComponent,
     SelectFieldComponent,
     // Form
-    FormComponent,    
+    FormComponent,
     // Directives
     DIRECTIVES,
     // Pipe
-    ConcatenatePipe,
+    ConcatenatePipe
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule],
   providers: [],

@@ -2,8 +2,8 @@ export interface FieldProps {
   label?: string
   name?: string
   value?: string
-  class?: string   
-  autofocus?: string 
+  class?: string
+  autofocus?: string
   tabindex?: string
   testid?: string
 }

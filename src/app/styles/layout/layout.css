@@ -23,7 +23,7 @@
 
 .home--search {
   /*Layout*/
-  grid-template-rows: 5.2rem 1fr;
+  grid-template-rows: 5.2rem auto 1fr;
   grid-template-areas:
     'search'
     'aside'
@@ -51,6 +51,7 @@
 
 .home__content {
   /*Layout*/
+  padding: 1rem;
   grid-area: content;
   padding: var(--box-padding)
 }
@@ -62,6 +63,10 @@
   align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   gap: var(--box-padding);
+}
+
+.searchbar{
+  width: 100%
 }
 
 @media screen and (min-width: 769px) {
@@ -89,6 +94,9 @@
     position: sticky;
     top: 6rem;
     z-index: 100;
+  }
+  .searchbar{
+    width: 65%
   }
 
   .home__aside {
