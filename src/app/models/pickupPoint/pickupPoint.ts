@@ -1,18 +1,11 @@
-import { PickupPointDTO } from 'src/app/interfaces/pickupPointDTO'
+import {PickupPointDTO} from 'src/app/interfaces/pickupPointDTO'
 
-export class PickupPoint implements PickupPointDTO {
-  constructor(
-    public name: string,
-    public address: string,
-    public envelopeStock: number,
-    public geoLocation: number,
-    public distance: number,
-    public envelopePrice: number,
-    public type: string
-  ) {}
+export class PickupPoint {
+  constructor(public props: PickupPointDTO) {}
 
-  //TODO: Generar los respectivos metodos para obtener estos datos
-  pendingOrders = true
+  static fromJson(cardJSON: PickupPointDTO): PickupPoint {
+    return new PickupPoint(cardJSON)
+  }
 }
 
 //Puntos de Ventas

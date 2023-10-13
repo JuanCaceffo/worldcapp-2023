@@ -1,9 +1,10 @@
 /* tslint:disable:no-unused-variable */
-import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing'
+import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
-import { CardMarketComponent } from './card-market.component'
-import { CardMarketStub } from 'src/app/services/servicesStubs/card-market-stub'
-import { getByTestId } from 'src/app/helpers/test.helper'
+import {CardMarketComponent} from './card-market.component'
+import {MockedCardMarket} from 'src/app/services/mocks/card-market.mock'
+import {getByTestId} from 'src/app/helpers/test.helper'
+import {PickupPoint} from 'src/app/models/pickupPoint/pickupPoint'
 
 describe('CardMarketComponent', () => {
   let component: CardMarketComponent
@@ -18,7 +19,7 @@ describe('CardMarketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardMarketComponent)
     component = fixture.componentInstance
-    component.inputMarketCard = new CardMarketStub()
+    component.inputMarketCard = new PickupPoint(MockedCardMarket[0])
     fixture.detectChanges()
   })
 
@@ -34,7 +35,7 @@ describe('CardMarketComponent', () => {
     const stock = getByTestId(fixture, 'stock-market-card')
     const price = getByTestId(fixture, 'price-market-card')
 
-    expect(title.textContent).toBe('TestStub')
+    expect(title.textContent).toBe('Test Mock 1')
     expect(address.textContent).toBe('Calle falsa 123')
     expect(geoLocation.textContent).toBe('3')
     expect(distance.textContent).toBe('2')
@@ -46,7 +47,7 @@ describe('CardMarketComponent', () => {
     const pending = getByTestId(fixture, 'pending-market-card')
 
     expect(pending.textContent).toBe('Pedidos Pendientes')
-    component.marketCard.pendingOrders = false
+    component.marketCard.props.pendingOrders = false
     fixture.detectChanges()
 
     expect(pending.textContent).toBe('')

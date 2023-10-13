@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core'
-import { CardMarketStub } from './servicesStubs/card-market-stub'
-import { PickupPointDTO } from '../interfaces/pickupPointDTO'
+import {Injectable} from '@angular/core'
+import {PickupPointDTO} from '../interfaces/pickupPointDTO'
+import {MockedCardMarket} from './mocks/card-market.mock'
+import {PickupPoint} from '../models/pickupPoint/pickupPoint'
 
 @Injectable({
   providedIn: 'root'
@@ -8,14 +9,9 @@ import { PickupPointDTO } from '../interfaces/pickupPointDTO'
 export class CardMarketService {
   marketCards!: PickupPointDTO[]
 
-  async getAllCards(): Promise<PickupPointDTO[]> {
-    return await [
-      new CardMarketStub(),
-      new CardMarketStub(),
-      new CardMarketStub(),
-      new CardMarketStub(),
-      new CardMarketStub(),
-      new CardMarketStub()
-    ]
+  async getAllCards(): Promise<PickupPoint[]> {
+    return await MockedCardMarket.map<PickupPoint>((pup) =>
+      PickupPoint.fromJson(pup)
+    )
   }
 }
