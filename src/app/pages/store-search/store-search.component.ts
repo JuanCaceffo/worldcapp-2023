@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
 import {Title} from '@angular/platform-browser'
-import {PickupPoint} from 'src/app/models/pickupPoint/pickupPoint'
-import {CardMarketService} from 'src/app/services/card-market.service'
+import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
+import {CardMarketService} from 'src/app/services/card-market-service/card-market.service'
 
 @Component({
   selector: 'app-store-search',

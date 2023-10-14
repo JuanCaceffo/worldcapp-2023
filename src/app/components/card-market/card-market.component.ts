@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core'
-import {PickupPoint} from 'src/app/models/pickupPoint/pickupPoint'
+import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
 
 @Component({
   selector: 'app-card-market',

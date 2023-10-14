@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import { ActivatedRoute, Router } from '@angular/router'
-import { Figurita } from 'src/app/data/models/cards/Figurita'
-import { CardService } from 'src/app/data/services/cardService/Card.service'
+import {Component, OnInit} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {ActivatedRoute, Router} from '@angular/router'
+import {Figurita} from 'src/app/models/cards/figurita.model'
+import {CardService} from 'src/app/services/card-service/card.service'
 
 @Component({
   selector: 'app-card-details',

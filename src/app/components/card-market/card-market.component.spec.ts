@@ -2,9 +2,9 @@
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
 import {CardMarketComponent} from './card-market.component'
-import {MockedCardMarket} from 'src/app/services/mocks/card-market.mock'
+import {mockedCardMarket} from 'src/app/mocks/card-market.mock'
 import {getByTestId} from 'src/app/helpers/test.helper'
-import {PickupPoint} from 'src/app/models/pickupPoint/pickupPoint'
+import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
 
 describe('CardMarketComponent', () => {
   let component: CardMarketComponent
@@ -19,7 +19,7 @@ describe('CardMarketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardMarketComponent)
     component = fixture.componentInstance
-    component.inputMarketCard = new PickupPoint(MockedCardMarket[0])
+    component.inputMarketCard = new PickupPoint(mockedCardMarket[0])
     fixture.detectChanges()
   })
 
