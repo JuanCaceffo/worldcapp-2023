@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { Title } from '@angular/platform-browser'
 import { Figurita } from 'src/app/data/models/cards/Figurita'
-import { searchbar } from 'src/app/data/models/searchbar/searchbar'
 import { CardService } from 'src/app/data/services/cardService/Card.service'
 
 @Component({
@@ -10,7 +9,6 @@ import { CardService } from 'src/app/data/services/cardService/Card.service'
   styleUrls: ['./card-search.component.css']
 })
 export class CardSearchComponent implements OnInit {
-  aBuscar = ""
   constructor(
     private titleService: Title,
     public cardService: CardService
@@ -24,8 +22,7 @@ export class CardSearchComponent implements OnInit {
   }
 
   enviarDatos(datos: string){
-    this.aBuscar = datos
-    console.log(this.aBuscar)
+    console.log(datos)
   }
 
   listCards: Array<Figurita> = []
