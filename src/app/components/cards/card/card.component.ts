@@ -1,6 +1,6 @@
-import {UserService} from './../../../data/services/userService/User.service'
+import {UserService} from 'src/app/services/user-service/user.service'
 import {Component, Input, OnInit} from '@angular/core'
-import {Figurita} from 'src/app/data/models/cards/Figurita'
+import {Figurita} from 'src/app/models/cards/figurita.model'
 
 @Component({
   selector: 'app-card',

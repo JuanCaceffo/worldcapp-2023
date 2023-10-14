@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { Title } from '@angular/platform-browser'
+import {Component} from '@angular/core'
+import {Title} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-card-add',
@@ -7,7 +7,9 @@ import { Title } from '@angular/platform-browser'
   styleUrls: ['./card-add.component.css']
 })
 export class CardAddComponent {
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title) {}
+
+  ngOnInit() {
     this.titleService.setTitle('Agregar Figuritas')
   }
 }

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core'
-import { Title } from '@angular/platform-browser'
+import {Component} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
+import {CardMarketService} from 'src/app/services/card-market-service/card-market.service'
 
 @Component({
   selector: 'app-store-search',
@@ -7,7 +9,19 @@ import { Title } from '@angular/platform-browser'
   styleUrls: ['./store-search.component.css']
 })
 export class StoreSearchComponent {
-  constructor(private titleService: Title) {
+  marketCards!: PickupPoint[]
+
+  constructor(
+    private titleService: Title,
+    private cardMarketService: CardMarketService
+  ) {}
+
+  async ngOnInit() {
     this.titleService.setTitle('Sobres')
+    await this.getAllCards()
+  }
+
+  async getAllCards() {
+    this.marketCards = await this.cardMarketService.getAllCards()
   }
 }

@@ -1,0 +1,43 @@
+  <header class="card-market__name">
+    <h1 class="card-market__name-text" data-testid="title-market-card">{{ marketCard.props.name }}</h1>
+    <i *ngIf="marketCard.props.type === 'Kiosko'" class="fa-solid fa-store fa-2xl" data-testid="kiosko-market-card"></i>
+    <i *ngIf="marketCard.props.type === 'Libreria'" class="fa-solid fa-book-open fa-2xl" data-testid="libreria-market-card"></i>
+    <i *ngIf="marketCard.props.type === 'Supermercado'" class="fa-solid fa-shopping-basket fa-2xl" data-testid="super-market-card"></i>
+  </header>
+
+  <dl class="card-market__content">
+    <dl class="card-market__info location">
+      <dt>
+        <b class="card-market__attribute">Direccion: </b>
+        <span class="card-market__attribute-info" data-testid="address-market-card">{{ marketCard.props.address }}</span>
+      </dt>
+
+      <dt>
+        <b class="card-market__attribute">Ubicacion Geografica: </b>
+        <span class="card-market__attribute-info" data-testid="geolocation-market-card">{{ marketCard.props.geoLocation }}</span>
+      </dt>
+
+      <dt>
+        <b class="card-market__attribute">Distancia: </b>
+        <span class="card-market__attribute-info" data-testid="distance-market-card">{{ marketCard.props.distance }}</span>
+      </dt>
+    </dl>
+
+    <dl class="card-market__info stock">
+      <dt>
+        <b class="card-market__attribute">Stock de Sobres: </b>
+        <span class="card-market__attribute-info" data-testid="stock-market-card">{{ marketCard.props.envelopeStock }}</span>
+      </dt>
+      <dt class="card-market__status" data-testid="pending-market-card">
+        <!-- CONSULTA: 
+                Entiendo que si tiene >= 1 pedido pendiente se muestra, en caso contrario, no.
+                Si hay que poner la cantidad de pendientes hacer metodo en el back que devuelva cantidad pendientes -->
+        <span *ngIf="marketCard.props.pendingOrders">Pedidos Pendientes</span>
+      </dt>
+    </dl>
+
+    <dt class="card-market__info price">
+      <b class="card-market__attribute">Precio por sobre: </b>
+      <span class="card-market__attribute-info" data-testid="price-market-card">{{ marketCard.props.envelopePrice }}</span>
+    </dt>
+  </dl>
