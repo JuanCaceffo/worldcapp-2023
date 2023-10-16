@@ -2,11 +2,13 @@
 
 import {TestBed, inject} from '@angular/core/testing'
 import {CardMarketService} from './card-market.service'
+import {HttpClientModule} from '@angular/common/http'
 
 describe('Service: CardMarket', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CardMarketService]
+      providers: [CardMarketService],
+      imports: [HttpClientModule]
     })
   })
 

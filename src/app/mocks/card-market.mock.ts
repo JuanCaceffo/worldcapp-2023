@@ -4,85 +4,85 @@ export const mockedCardMarket: Array<PickupPointDTO> = [
   {
     id: 1,
     direccion: {
-      streetName: 'Calle falsa',
-      streetNumber: 11,
-      distance: 2,
-      geoLocation: 3
+      calle: 'Calle falsa',
+      altura: 11,
+      distancia: 2,
+      geoLocalizacion: 3
     },
-    envelopeStock: 2,
-    envelopePrice: 1,
-    name: 'Test Mock 1',
-    pendingOrders: true,
-    type: 'Kiosko'
+    stockSobres: 2,
+    precioSobres: 1,
+    nombre: 'Test Mock 1',
+    pendientes: true,
+    tipoPuntoDeVenta: 'Kioscos'
   },
   {
     id: 2,
     direccion: {
-      streetName: 'Alpatacal',
-      streetNumber: 123,
-      distance: 2,
-      geoLocation: 3
+      calle: 'Alpatacal',
+      altura: 123,
+      distancia: 2,
+      geoLocalizacion: 3
     },
-    envelopeStock: 2,
-    envelopePrice: 1,
-    name: 'Test Mock 2',
-    pendingOrders: true,
-    type: 'Libreria'
+    stockSobres: 2,
+    precioSobres: 1,
+    nombre: 'Test Mock 2',
+    pendientes: true,
+    tipoPuntoDeVenta: 'Librerias'
   },
   {
     id: 3,
     direccion: {
-      streetName: 'Urquiza',
-      streetNumber: 1231,
-      distance: 12,
-      geoLocation: 12
+      calle: 'Urquiza',
+      altura: 1231,
+      distancia: 12,
+      geoLocalizacion: 12
     },
-    envelopeStock: 12,
-    envelopePrice: 1,
-    name: 'Test Mock 3',
-    pendingOrders: true,
-    type: 'Supermercado'
+    stockSobres: 12,
+    precioSobres: 1,
+    nombre: 'Test Mock 3',
+    pendientes: true,
+    tipoPuntoDeVenta: 'Supermercados'
   },
   {
     id: 4,
     direccion: {
-      streetName: 'av. Libertador',
-      streetNumber: 3500,
-      distance: 5,
-      geoLocation: 5
+      calle: 'av. Libertador',
+      altura: 3500,
+      distancia: 5,
+      geoLocalizacion: 5
     },
-    envelopeStock: 5,
-    envelopePrice: 5,
-    name: 'Test Mock 4',
-    pendingOrders: true,
-    type: 'Supermercado'
+    stockSobres: 5,
+    precioSobres: 5,
+    nombre: 'Test Mock 4',
+    pendientes: true,
+    tipoPuntoDeVenta: 'Supermercados'
   },
   {
     id: 5,
     direccion: {
-      streetName: 'av. Figeroa Alcorta',
-      streetNumber: 12,
-      distance: 1,
-      geoLocation: 1
+      calle: 'av. Figeroa Alcorta',
+      altura: 12,
+      distancia: 1,
+      geoLocalizacion: 1
     },
-    envelopeStock: 1,
-    envelopePrice: 1,
-    name: 'Test Mock 5',
-    pendingOrders: true,
-    type: 'Supermercado'
+    stockSobres: 1,
+    precioSobres: 1,
+    nombre: 'Test Mock 5',
+    pendientes: true,
+    tipoPuntoDeVenta: 'Supermercados'
   },
   {
     id: 6,
     direccion: {
-      streetName: 'Lascano',
-      streetNumber: 545,
-      distance: 2,
-      geoLocation: 2
+      calle: 'Lascano',
+      altura: 545,
+      distancia: 2,
+      geoLocalizacion: 2
     },
-    envelopeStock: 2,
-    envelopePrice: 2,
-    name: 'Test Mock 6',
-    pendingOrders: true,
-    type: 'Supermercado'
+    stockSobres: 2,
+    precioSobres: 2,
+    nombre: 'Test Mock 6',
+    pendientes: true,
+    tipoPuntoDeVenta: 'Supermercados'
   }
 ]

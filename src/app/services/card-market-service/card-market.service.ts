@@ -12,11 +12,6 @@ export class CardMarketService {
   constructor(private httpClient: HttpClient) {}
   marketCards!: PickupPointDTO[]
 
-  // async getAllCards(): Promise<PickupPoint[]> {
-  //   return await mockedCardMarket.map<PickupPoint>((pup) =>
-  //     PickupPoint.fromJson(pup)
-  //   )
-  // }
   async getAllCards(): Promise<PickupPoint[]> {
     //TODO: Pasar a .env
     const pickupPoint$ = this.httpClient.get<PickupPointDTO[]>(
