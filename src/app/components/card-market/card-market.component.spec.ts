@@ -5,6 +5,7 @@ import {CardMarketComponent} from './card-market.component'
 import {mockedCardMarket} from 'src/app/mocks/card-market.mock'
 import {getByTestId} from 'src/app/helpers/test.helper'
 import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
+import {FullAddressPipe} from 'src/app/pipes/full-address.pipe'
 
 describe('CardMarketComponent', () => {
   let component: CardMarketComponent
@@ -12,7 +13,7 @@ describe('CardMarketComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [CardMarketComponent]
+      declarations: [CardMarketComponent, FullAddressPipe]
     }).compileComponents()
   }))
 
@@ -36,7 +37,7 @@ describe('CardMarketComponent', () => {
     const price = getByTestId(fixture, 'price-market-card')
 
     expect(title.textContent).toBe('Test Mock 1')
-    expect(address.textContent).toBe('Calle falsa 123')
+    expect(address.textContent).toBe('Calle falsa 11')
     expect(geoLocation.textContent).toBe('3')
     expect(distance.textContent).toBe('2')
     expect(stock.textContent).toBe('2')

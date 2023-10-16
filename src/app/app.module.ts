@@ -48,6 +48,7 @@ import {DIRECTIVES} from './directives/directives'
 
 // Pipes
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
+import {FullAddressPipe} from './pipes/full-address.pipe'
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
     // Directives
     DIRECTIVES,
     // Pipe
-    ConcatenatePipe
+    ConcatenatePipe,
+    FullAddressPipe
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule],
   providers: [],

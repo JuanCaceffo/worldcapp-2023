@@ -1,5 +1,6 @@
 export interface PickupPointDTO {
-  address: string
+  streetName: string
+  streetNumber: number
   distance: number
   envelopeStock: number
   envelopePrice: number
