@@ -49,6 +49,7 @@ import {DIRECTIVES} from './directives/directives'
 // Pipes
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -90,7 +91,7 @@ import {FullAddressPipe} from './pipes/full-address.pipe'
     ConcatenatePipe,
     FullAddressPipe
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

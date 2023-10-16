@@ -6,6 +6,6 @@ import {PickupPointDTO} from '../dtos/pickup-point.dto'
 })
 export class FullAddressPipe implements PipeTransform {
   transform(pickupPoint: PickupPointDTO): string {
-    return `${pickupPoint.streetName} ${pickupPoint.streetNumber}`
+    return `${pickupPoint.direccion.calle} ${pickupPoint.direccion.altura}`
   }
 }
