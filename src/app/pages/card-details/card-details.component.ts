@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import { ActivatedRoute, Router } from '@angular/router'
-import { Figurita } from 'src/app/data/models/cards/Figurita'
-import { CardService } from 'src/app/data/services/cardService/Card.service'
+import {Component, OnInit} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {ActivatedRoute, Router} from '@angular/router'
+import {Figurita} from 'src/app/models/cards/figurita.model'
+import {CardService} from 'src/app/services/card-service/card.service'
+import {UserService} from 'src/app/services/user-service/user.service'
 
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
-  styleUrls: ['./card-details.component.css']
+  styleUrls: [
+    '../../components/cards/card/card.component.css',
+    './card-details.component.css'
+  ]
 })
 export class CardDetailsComponent implements OnInit {
   constructor(
     private titleService: Title,
     private route: ActivatedRoute,
     private router: Router,
-    public cardService: CardService
+    public cardService: CardService,
+    public userService: UserService
   ) {}
   ngOnInit() {
     this.route.params.subscribe((param) => {
@@ -33,6 +38,12 @@ export class CardDetailsComponent implements OnInit {
   card!: Figurita
 
   goCardPage() {
-    this.router.navigateByUrl('/figuritas')
+    this.router.navigate(['/figuritas'])
+  }
+
+  requestFigurita() {
+    this.userService.figuritaRequest(this.card)
+    //si todo sale bien navega
+    this.goCardPage()
   }
 }

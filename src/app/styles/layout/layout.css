@@ -20,7 +20,8 @@
 }
 
 .home--search {
-  grid-template-rows: 5.2rem 1fr 1fr;
+  /*Layout*/
+  grid-template-rows: 5.2rem auto 1fr;
   grid-template-areas:
     'search'
     'aside'
@@ -82,6 +83,9 @@
     position: sticky;
     top: 6rem;
     z-index: 100;
+  }
+  .searchbar{
+    width: 65%
   }
 
   .home__aside {

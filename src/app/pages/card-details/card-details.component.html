@@ -1,120 +1,159 @@
 <!DOCTYPE html>
-
-<div class="container-card">
-  <article class="player-card">
-    <section class="player-card__content">
-      <header class="player-card__header detail-card__header">
-        <h2 class="detail-card__header-title">Gonzalo Martinez</h2>
-        <h3>
-          <small class="detail-card__header-subtitle"
-            >(de Alejo "El Indio" Meni)</small
-          >
-        </h3>
-        <div class="detail-card__atributtes">
-          <h2><i class="fas fa-fire fa-sm"></i></h2>
-          <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
-        </div>
-      </header>
-      <section class="player-card__container">
-        <section class="player-card__img">
-          <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
-        </section>
-        <section class="player-card__body">
-          <section
-            class="player-card__section-info player-card__section-info--justify-between"
-          >
-            <p>
-              <i class="fa-solid fa-weight-scale fa-sm"></i>
-              <strong> Peso:</strong>
-              <span class="player-card__info-span">85 kilos</span>
-            </p>
-            <p>
-              <i class="fas fa-ruler-vertical fa-sm"></i>
-              <i class="fas fa-person fa-sm"></i>
-              <strong>Altura:</strong>
-              <span class="player-card__info-span">1.7 metros</span>
-            </p>
-          </section>
-          <section
-            class="player-card__section-info player-card__section-info--justify-center"
-          >
-            <p>
-              <strong>Nacimiento:</strong>
-              <span>13/06/93 (30 años)</span>
-            </p>
-          </section>
-          <section
-            class="player-card__section-info player-card__section-info--justify-between"
-          >
-            <p>
-              <strong>Casaca:</strong>
-              <span class="player-card__info-span">23</span>
-            </p>
-            <p>
-              <strong>Selección:</strong>
-              <span class="player-card__info-span"
-                >Argentina (<i class="fa-solid fa-trophy"></i> 3)</span
+<article class="home home--header-on">
+  <section class="home__content home__content--grid">
+      <article class="player-card">
+        <section class="player-card__content">
+          <header class="player-card__header detail-card__header">
+            <h2 class="detail-card__header-title">
+              {{ card.props.name | concatenate : card.props.surname | titlecase}}
+            </h2>
+            <h3>
+              <small class="detail-card__header-subtitle"
+                >(de {{ card.props.owner }})</small
               >
-            </p>
+            </h3>
+            <div class="detail-card__atributtes">
+              <h2><i class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i></h2>
+              <h2><i class="fas fa-fire fa-sm" *ngIf="card.props.isOnfire"></i></h2>
+              <h2>
+                <i class="fas fa-id-badge fa-sm"></i>{{ card.props.figureNumber }}
+              </h2>
+            </div>
+          </header>
+          <section class="player-card__container">
+            <section class="player-card__img">
+              <img
+                [src]="card.imageURL"
+                [alt]="card.props.name | concatenate : card.props.surname"
+              />
+            </section>
+            <section class="player-card__body">
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <i class="fa-solid fa-weight-scale fa-sm"></i>
+                  <strong> Peso: </strong>
+                  <span class="player-card__info-span"
+                    >{{ card.props.weight }} KG</span
+                  >
+                </p>
+                <p>
+                  <i class="fas fa-ruler-vertical fa-sm"></i>
+                  <i class="fas fa-person fa-sm"></i>
+                  <strong>Altura: </strong>
+                  <span class="player-card__info-span"
+                    >{{ card.props.height }} metros</span
+                  >
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-center"
+              >
+                <p>
+                  <strong>Nacimiento: </strong>
+                  <span
+                    >{{ card.props.birth | date : 'dd-MM-yyyy' }} ({{
+                      card.props.age
+                    }}
+                    años)</span
+                  >
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <strong>Casaca: </strong>
+                  <span class="player-card__info-span">{{
+                    card.props.shirtNumber
+                  }}</span>
+                </p>
+                <p>
+                  <strong>Selección:</strong>
+                  <span class="player-card__info-span"
+                    >{{ card.props.nationalTeam }} (<i class="fa-solid fa-trophy"></i>
+                    {{ card.props.worldCups }})</span
+                  >
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <strong>Año debut: </strong>
+                  <span class="player-card__info-span">{{
+                    card.props.debutYear
+                  }}</span>
+                </p>
+                <p>
+                  {{ card.props.confederation | uppercase }} (<i
+                    class="fa-solid fa-trophy"
+                  ></i>
+                  {{ card.props.confederationWorldCups }})
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <strong>Posición: </strong>
+                  <span class="player-card__info-span">{{ card.props.positon }}</span>
+                </p>
+                <p>
+                  <strong>{{ card.ifIsLeader }}</strong>
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-center"
+              >
+                <p>
+                  <strong
+                    >COTIZACION:
+                    {{
+                      card.props.quote | currency : 'EUR' : 'symbol' : '0.0-2'
+                    }}</strong
+                  >
+                </p>
+              </section>
+            </section>
           </section>
-          <section
-            class="player-card__section-info player-card__section-info--justify-between"
-          >
-            <p>
-              <strong>Año debut:</strong>
-              <span class="player-card__info-span">2008</span>
-            </p>
-            <p>CONMEBOL (<i class="fa-solid fa-trophy"></i> 10)</p>
-          </section>
-          <section
-            class="player-card__section-info player-card__section-info--justify-between"
-          >
-            <p>
-              <strong>Posición:</strong>
-              <span class="player-card__info-span">Mediocampista</span>
-            </p>
-            <p>
-              <strong>Es Lider</strong>
-            </p>
-          </section>
-          <section
-            class="player-card__section-info player-card__section-info--justify-center"
-          >
-            <p>
-              <strong>COTIZACION: EU 28.000.000</strong>
-            </p>
-          </section>
+          <footer class="player-card__body">
+            <section
+              class="player-card__section-info player-card__section-info--justify-between"
+            >
+              <p>
+                <strong>Nivel de Impresión </strong>
+                <span>{{ card.props.levelOfImpresion | uppercase }}</span>
+              </p>
+              <p>
+                <strong>Valoración Base </strong>
+                <span class="player-card__info-span">{{
+                  card.baseValoration | number:'1.0-0'
+                }}</span>
+              </p>
+            </section>
+            <section
+              class="player-card__section-info player-card__section-info--justify-center"
+            >
+              <p>
+                <strong>Valoración Total </strong>
+                <span class="player-card__info-span">{{
+                  card.totalValoration | number:'0.0-2'
+                }}</span>
+              </p>
+            </section>
+            <section class="container-button">
+              <button class="button button--secondary"  data-testid="backButton" (click)="goCardPage()">
+                Volver
+              </button>
+              <button class="button button--primary" (click)="requestFigurita()">Solicitar</button>
+            </section>
+          </footer>
         </section>
-      </section>
-      <footer class="player-card__body">
-        <section
-          class="player-card__section-info player-card__section-info--justify-between"
-        >
-          <p>
-            <strong>Nivel de Impresión</strong>
-            <span>Bajo</span>
-          </p>
-          <p>
-            <strong>Valoración Base</strong>
-            <span class="player-card__info-span">102</span>
-          </p>
-        </section>
-        <section
-          class="player-card__section-info player-card__section-info--justify-center"
-        >
-          <p>
-            <strong>Valoración Total</strong>
-            <span class="player-card__info-span">124</span>
-          </p>
-        </section>
-        <section class="container-button">
-          <button class="button button--secondary">Volver</button>
-          <button class="button button--primary">Solicitar</button>
-        </section>
-      </footer>
-    </section>
-  </article>
-</div>
+      </article>
+  </section>
+</article>
 <script
   src="https://kit.fontawesome.com/007d112e2a.js"
   crossorigin="anonymous"

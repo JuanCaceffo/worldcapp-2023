@@ -7,7 +7,7 @@ import { LoginComponent } from './pages/login/login.component'
 import { CardSearchComponent } from './pages/card-search/card-search.component'
 import { StoreSearchComponent } from './pages/store-search/store-search.component'
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'figuritas', component: CardSearchComponent },
   { path: 'detalle-figurita/:id', component: CardDetailsComponent },

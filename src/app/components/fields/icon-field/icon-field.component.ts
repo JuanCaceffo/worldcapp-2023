@@ -7,10 +7,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   templateUrl: './icon-field.component.html',
   styleUrls: ['../field.component.css', './icon-field.component.css']
 })
-export class IconFieldComponent extends InputFieldComponent implements IconFieldProps {
+export class IconFieldComponent
+  extends InputFieldComponent
+  implements IconFieldProps
+{
   @Input() icon = 'fas fa-thumbs-up'
   @Input() buttonOn = false
   @Output() onchangeIcon = new EventEmitter<string[]>()
+<<<<<<< HEAD
   @Output() emitter = new EventEmitter<string>()
 
   onChangeIconEvent(data:string[]): void {      
@@ -24,4 +28,12 @@ export class IconFieldComponent extends InputFieldComponent implements IconField
 
   iconCSS = (): string => 'field__icon ' + this.icon
 
+=======
+
+  onChangeIconEvent(data: string[]): void {
+    this.onchangeIcon.emit(data)
+  }
+
+  iconCSS = (): string => 'field__icon ' + this.icon
+>>>>>>> development
 }

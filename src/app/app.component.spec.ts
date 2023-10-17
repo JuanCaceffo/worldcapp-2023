@@ -1,13 +1,13 @@
-import { TestBed } from '@angular/core/testing'
-import { RouterTestingModule } from '@angular/router/testing'
-import { AppComponent } from './app.component'
+import {TestBed} from '@angular/core/testing'
+import {RouterTestingModule} from '@angular/router/testing'
+import {AppComponent} from './app.component'
 import './app.module'
-import { BaseFilterComponent } from './components/filter/baseFilter.component'
-import { VariantFilterComponent } from './components/filter/variantFilter/variantFilter.component'
-import { SortedByFilterComponent } from './components/filter/sortedByFilter/sortedByFilter.component'
-import { HeaderComponent } from './components/header/header.component'
-import { LogoComponent } from './components/logo/logo.component'
-import { FooterComponent } from './components/footer/footer.component'
+import {BaseFilterComponent} from './components/filter/base-filter.component'
+import {VariantFilterComponent} from './components/filter/variant-filter/variant-filter.component'
+import {SortedByFilterComponent} from './components/filter/sorted-by-filter/sorted-by-filter.component'
+import {HeaderComponent} from './components/header/header.component'
+import {LogoComponent} from './components/logo/logo.component'
+import {FooterComponent} from './components/footer/footer.component'
 
 describe('AppComponent', () => {
   beforeEach(() =>
