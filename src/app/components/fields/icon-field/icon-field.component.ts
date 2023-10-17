@@ -14,7 +14,6 @@ export class IconFieldComponent
   @Input() icon = 'fas fa-thumbs-up'
   @Input() buttonOn = false
   @Output() onchangeIcon = new EventEmitter<string[]>()
-<<<<<<< HEAD
   @Output() emitter = new EventEmitter<string>()
 
   onChangeIconEvent(data:string[]): void {      
@@ -28,12 +27,4 @@ export class IconFieldComponent
 
   iconCSS = (): string => 'field__icon ' + this.icon
 
-=======
-
-  onChangeIconEvent(data: string[]): void {
-    this.onchangeIcon.emit(data)
-  }
-
-  iconCSS = (): string => 'field__icon ' + this.icon
->>>>>>> development
 }
