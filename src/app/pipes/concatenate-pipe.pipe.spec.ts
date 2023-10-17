@@ -1,6 +1,4 @@
-/* tslint:disable:no-unused-variable */
-
-import { ConcatenatePipe } from './concatenate-pipe.pipe'
+import {ConcatenatePipe} from './concatenate-pipe.pipe'
 
 describe('Pipe: ConcatenatePipee', () => {
   it('create an instance', () => {

@@ -17,6 +17,10 @@ export class Figurita {
     return new Date(this.props.birth)
   }
 
+  get ifIsLeader() {
+    return this.props.isLeader ? 'Es lider' : 'No es lider'
+  }
+
   get baseValoration() {
     return (
       INITIAL_VALUE *
@@ -35,7 +39,7 @@ export class Figurita {
   }
 
   get multiplierImpresion() {
-    return this.props.levelOfImpresion === 'low' ? 1.0 : 0.85
+    return this.props.levelOfImpresion === 'bajo' ? 1.0 : 0.85
   }
 
   get totalValoration() {

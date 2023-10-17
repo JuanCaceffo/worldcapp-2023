@@ -1,4 +1,5 @@
 import {MockedRegistredUsers} from 'src/app/mocks/user.mock'
+import {Figurita} from 'src/app/models/cards/figurita.model'
 import {userLoginDTO} from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 
@@ -17,5 +18,13 @@ export class UserService {
 
     //simulacion de un retorno de estado
     return this.userLogedID ? 200 : 404
+  }
+
+  figuritaRequest(figurita: Figurita) {
+    MockedRegistredUsers.forEach((user) => {
+      user.userID === this.userLogedID
+        ? user.figuritasList?.push(figurita.props)
+        : console.error('problema')
+    })
   }
 }
