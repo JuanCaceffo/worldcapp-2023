@@ -1,3 +1,4 @@
+import {UserLoginDTO} from 'src/app/dtos/user.dto'
 import {UserService} from 'src/app/services/user-service/user.service'
 import {Component} from '@angular/core'
 import {Title} from '@angular/platform-browser'
@@ -16,8 +17,7 @@ export class LoginComponent {
   ) {}
   inputData!: string[]
   validLogin = false
-  user = ''
-  password = ''
+  data: UserLoginDTO = {userName: '', password: ''}
 
   ngOnInit() {
     this.titleService.setTitle('Inicio de Sesión')
@@ -25,20 +25,16 @@ export class LoginComponent {
 
   onInputData(datos: string[]) {
     if (datos[1] == 'user') {
-      this.user = datos[0]
+      this.data.userName = datos[0]
     }
     if (datos[1] == 'password') {
-      this.password = datos[0]
+      this.data.password = datos[0]
     }
-    console.log(this.user, this.password)
   }
 
   async submit() {
     try {
-      await this.userService.login({
-        userName: this.user,
-        password: this.password
-      })
+      await this.userService.login(this.data)
       this.router.navigate(['/figuritas'])
     } catch (error) {
       //TODO: manejar el tipo de error que llega del back
