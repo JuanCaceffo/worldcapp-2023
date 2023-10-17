@@ -9,12 +9,7 @@ describe('Icon Field Component', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [
-        FieldComponent,
-        IconFieldComponent,
-        InputFieldComponent,
-        FieldLabelComponent
-      ]
+      declarations: [FieldComponent, IconFieldComponent ,InputFieldComponent, FieldLabelComponent]
     }).compileComponents()
   }))
 
