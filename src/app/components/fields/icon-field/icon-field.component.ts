@@ -12,11 +12,28 @@ export class IconFieldComponent
   implements IconFieldProps
 {
   @Input() icon = 'fas fa-thumbs-up'
+  @Input() buttonOn = false
   @Output() onchangeIcon = new EventEmitter<string[]>()
+<<<<<<< HEAD
+  @Output() emitter = new EventEmitter<string>()
+
+  onChangeIconEvent(data:string[]): void {      
+    this.value = data[0]
+    this.onchangeIcon.emit(data)
+  }
+
+  clickAction(){
+    this.emitter.emit(this.value)
+  }
+
+  iconCSS = (): string => 'field__icon ' + this.icon
+
+=======
 
   onChangeIconEvent(data: string[]): void {
     this.onchangeIcon.emit(data)
   }
 
   iconCSS = (): string => 'field__icon ' + this.icon
+>>>>>>> development
 }

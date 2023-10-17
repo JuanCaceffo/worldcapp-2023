@@ -15,4 +15,8 @@ export class CardService {
     if (!card) return
     return Figurita.fromJson(card)
   }
+
+  // search(key: string, endpoint: string){
+  //   TODO pensar si hacemos mockitos o no y nos mandamos de lleno al cableado
+  // }
 }

@@ -2,6 +2,7 @@
   <div roundedElement shadedElement class="field__container">
     <input 
       [(ngModel)]="value"
+      (input)="onChangeInputEvent()"
       (keyup.enter)="onChangeInputEvent()"
       [ngClass]="{'field--error': error !== ''}"       
       [type]="type"
