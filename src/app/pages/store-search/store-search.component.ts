@@ -9,7 +9,7 @@ import {CardMarketService} from 'src/app/services/card-market-service/card-marke
   styleUrls: ['./store-search.component.css']
 })
 export class StoreSearchComponent {
-  marketCards!: PickupPoint[]
+  marketCards: Array<PickupPoint> = []
 
   constructor(
     private titleService: Title,

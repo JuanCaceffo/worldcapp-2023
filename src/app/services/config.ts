@@ -1,1 +1,1 @@
-export const DATE_FORMATE = 'DD/MM/YYYY'
+export const API_URL = 'http://localhost:9000'

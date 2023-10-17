@@ -9,6 +9,8 @@ import {FieldLabelComponent} from 'src/app/components/fields/field-label/field-l
 import {FormsModule} from '@angular/forms'
 import {SortedByFilterComponent} from 'src/app/components/filter/sorted-by-filter/sorted-by-filter.component'
 import {ControlFieldComponent} from 'src/app/components/fields/control-field/control-field.component'
+import {FullAddressPipe} from 'src/app/pipes/full-address.pipe'
+import {HttpClientModule} from '@angular/common/http'
 
 describe('StoreSearchComponent', () => {
   let component: StoreSearchComponent
@@ -24,9 +26,10 @@ describe('StoreSearchComponent', () => {
         IconFieldComponent,
         InputFieldComponent,
         FieldLabelComponent,
-        ControlFieldComponent
+        ControlFieldComponent,
+        FullAddressPipe
       ],
-      imports: [FormsModule]
+      imports: [FormsModule, HttpClientModule]
     })
     fixture = TestBed.createComponent(StoreSearchComponent)
     component = fixture.componentInstance

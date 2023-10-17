@@ -5,6 +5,8 @@ import {CardMarketComponent} from './card-market.component'
 import {mockedCardMarket} from 'src/app/mocks/card-market.mock'
 import {getByTestId} from 'src/app/helpers/test.helper'
 import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
+import {FullAddressPipe} from 'src/app/pipes/full-address.pipe'
+import {HttpClientModule} from '@angular/common/http'
 
 describe('CardMarketComponent', () => {
   let component: CardMarketComponent
@@ -12,7 +14,8 @@ describe('CardMarketComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [CardMarketComponent]
+      declarations: [CardMarketComponent, FullAddressPipe],
+      imports: [HttpClientModule]
     }).compileComponents()
   }))
 
@@ -36,9 +39,9 @@ describe('CardMarketComponent', () => {
     const price = getByTestId(fixture, 'price-market-card')
 
     expect(title.textContent).toBe('Test Mock 1')
-    expect(address.textContent).toBe('Calle falsa 123')
+    expect(address.textContent).toBe('Calle Falsa 11')
     expect(geoLocation.textContent).toBe('3')
-    expect(distance.textContent).toBe('2')
+    expect(distance.textContent).toBe('2.00')
     expect(stock.textContent).toBe('2')
     expect(price.textContent).toBe('1')
   })
@@ -47,15 +50,14 @@ describe('CardMarketComponent', () => {
     const pending = getByTestId(fixture, 'pending-market-card')
 
     expect(pending.textContent).toBe('Pedidos Pendientes')
-    component.marketCard.props.pendingOrders = false
+    component.marketCard.props.pendientes = false
     fixture.detectChanges()
 
     expect(pending.textContent).toBe('')
   })
 
-  // //TODO: Se podría hacer el test de los iconos (dependiendo que tipo de market se recibe)
   it('Ingresa un punto de venta de un respectivo tipo y se visualiza el icono correctamente', () => {
-    const icon = getByTestId(fixture, 'super-market-card')
+    const icon = getByTestId(fixture, 'kiosko-market-card')
 
     expect(icon).toBeTruthy()
   })
