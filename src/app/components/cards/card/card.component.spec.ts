@@ -3,8 +3,8 @@ import {RouterTestingModule} from '@angular/router/testing'
 import {CardComponent} from './card.component'
 import {ConcatenatePipe} from 'src/app/pipes/concatenate-pipe.pipe'
 import {getByTestId} from 'src/app/helpers/test.helper'
-import {Figurita} from 'src/app/data/models/cards/Figurita'
-import {mockCardData} from 'src/app/data/mocks/MockedCardDTO'
+import {Figurita} from 'src/app/models/cards/figurita.model'
+import {mockCardData} from 'src/app/mocks/card.mock'
 
 describe('Card Component', () => {
   let component: CardComponent
