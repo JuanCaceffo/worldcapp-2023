@@ -1,7 +1,5 @@
 import {figuritaDTO} from '../../dtos/figurita.dto'
 
-const INITIAL_VALUE = 100
-
 export class Figurita {
   constructor(public props: figuritaDTO) {}
 
@@ -23,7 +21,7 @@ export class Figurita {
 
   get baseValoration() {
     return (
-      INITIAL_VALUE *
+      this.props.initialValue *
       this.multiplierOnFire *
       this.multiplierEvenNumber *
       this.multiplierImpresion
