@@ -18,6 +18,7 @@ export interface InputFieldProps extends FieldProps {
 
 export interface IconFieldProps extends InputFieldProps {
   icon: string
+  buttonOn?: boolean
 }
 
 export interface SelectFieldProps extends FieldProps {

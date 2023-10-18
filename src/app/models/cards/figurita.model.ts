@@ -1,3 +1,4 @@
+import {UserService} from 'src/app/services/user-service/user.service'
 import {figuritaDTO} from '../../dtos/figurita.dto'
 
 export class Figurita {
@@ -5,6 +6,10 @@ export class Figurita {
 
   static fromJson(cardJSON: figuritaDTO): Figurita {
     return new Figurita(cardJSON)
+  }
+
+  get isOwner() {
+    return this.props.ownerID === UserService.userLogedID
   }
 
   get isWorldChampion() {
