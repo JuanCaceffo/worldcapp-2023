@@ -10,9 +10,9 @@ export class CardMarketComponent {
   @Input() inputMarketCard!: PickupPoint
   marketCard!: PickupPoint
 
+  getGeoLocalization() {}
+
   ngOnInit() {
     this.marketCard = this.inputMarketCard
   }
-
-  //TODO: Devolver el tipo de class (Kiosko, libreria o supermercado) desde el back
 }

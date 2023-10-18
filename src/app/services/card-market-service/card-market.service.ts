@@ -14,10 +14,12 @@ export class CardMarketService {
   marketCards!: PickupPointDTO[]
 
   async getAllCards(): Promise<PickupPoint[]> {
+    //TODO:Enviar correctamente el id de usuario
     const pickupPoint$ = this.httpClient.get<PickupPointDTO[]>(
-      `${API_URL}/puntosDeVenta/`
+      `${API_URL}/puntosDeVenta/?userId=0`
     )
     const pickupPointJSON = await lastValueFrom(pickupPoint$)
+    console.log(pickupPointJSON)
     return pickupPointJSON.map((pup) => PickupPoint.fromJson(pup))
   }
 }
