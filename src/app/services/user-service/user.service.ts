@@ -6,6 +6,8 @@ import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 
+export const USER_KEY_STORAGE = 'userLogedID'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +21,7 @@ export class UserService {
       userData
     )
     const userId = await lastValueFrom(response$)
-    UserService.userLogedID = userId.userLogedID
+    sessionStorage.setItem(USER_KEY_STORAGE, userId.userLogedID.toString())
   }
 
   figuritaRequest(figurita: Figurita) {
