@@ -50,6 +50,8 @@ import {DIRECTIVES} from './directives/directives'
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
+import {ProfileInfoComponent} from './components/profile-info/profile-info.component'
+import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import {HttpClientModule} from '@angular/common/http'
     LoginComponent,
     StoreSearchComponent,
     UserProfileComponent,
+    // Profile Page Component
+    NavbarProfileComponent,
     // Fields
     ControlFieldComponent,
     FieldLabelComponent,
@@ -85,6 +89,7 @@ import {HttpClientModule} from '@angular/common/http'
     SelectFieldComponent,
     // Form
     FormComponent,
+    ProfileInfoComponent,
     // Directives
     DIRECTIVES,
     // Pipe
