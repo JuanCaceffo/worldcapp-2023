@@ -10,15 +10,15 @@ export class Figurita {
   }
 
   get isWorldChampion() {
-    return this.props.worldCups > 0
+    return this.props.copasDelMundo > 0
   }
 
   get birth() {
-    return new Date(this.props.birth)
+    return new Date(this.props.fechaNac)
   }
 
   get ifIsLeader() {
-    return this.props.isLeader ? 'Es lider' : 'No es lider'
+    return this.props.esLider ? 'Es lider' : 'No es lider'
   }
 
   get baseValoration() {
@@ -31,23 +31,23 @@ export class Figurita {
   }
 
   get multiplierEvenNumber() {
-    return this.props.figureNumber! % 2 === 0 ? 1.1 : 1.0
+    return this.props.numero! % 2 === 0 ? 1.1 : 1.0
   }
 
   get multiplierOnFire() {
-    return this.props.isOnfire ? 1.2 : 1.0
+    return this.props.onFire ? 1.2 : 1.0
   }
 
   get multiplierImpresion() {
-    return this.props.levelOfImpresion === 'bajo' ? 1.0 : 0.85
+    return this.props.nivelImpresion === 'bajo' ? 1.0 : 0.85
   }
 
   get totalValoration() {
-    return this.baseValoration + this.props.playerValoration
+    return this.baseValoration + this.props.valoracion
   }
 
   // AGREGADO POR PABLO SI ESTA OK BORRAR EL COMMENT
   get imageURL(): string {
-    return `assets/images/card-img-${this.props.cardID}.jpg`
+    return `assets/images/card-img-${this.props.id}.jpg`
   }
 }

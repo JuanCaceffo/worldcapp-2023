@@ -11,7 +11,7 @@ export class CardService {
   }
 
   getCardById(id: number): Figurita | undefined {
-    const card = mockCardData.find((card) => card.cardID == id)
+    const card = mockCardData.find((card) => card.id == id)
     if (!card) return
     return Figurita.fromJson(card)
   }

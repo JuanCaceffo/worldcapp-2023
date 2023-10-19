@@ -27,7 +27,8 @@
             "styles": [
               "src/styles.css",
               "src/app/styles/layout/layout.css",
-              "src/app/styles/commons/commons.css"
+              "src/app/styles/commons/commons.css",
+              "src/app/styles/input/input.css"
             ],
             "scripts": []
           },

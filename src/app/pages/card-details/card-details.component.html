@@ -5,18 +5,18 @@
         <section class="player-card__content">
           <header class="player-card__header detail-card__header">
             <h2 class="detail-card__header-title">
-              {{ card.props.name | concatenate : card.props.surname | titlecase}}
+              {{ card.props.nombre | concatenate : card.props.apellido | titlecase}}
             </h2>
             <h3>
               <small class="detail-card__header-subtitle"
-                >(de {{ card.props.owner }})</small
+                >(de {{ card.props.duenio }})</small
               >
             </h3>
             <div class="detail-card__atributtes">
               <h2><i class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i></h2>
-              <h2><i class="fas fa-fire fa-sm" *ngIf="card.props.isOnfire"></i></h2>
+              <h2><i class="fas fa-fire fa-sm" *ngIf="card.props.onFire"></i></h2>
               <h2>
-                <i class="fas fa-id-badge fa-sm"></i>{{ card.props.figureNumber }}
+                <i class="fas fa-id-badge fa-sm"></i>{{ card.props.numero }}
               </h2>
             </div>
           </header>
@@ -24,7 +24,7 @@
             <section class="player-card__img">
               <img
                 [src]="card.imageURL"
-                [alt]="card.props.name | concatenate : card.props.surname"
+                [alt]="card.props.nombre | concatenate : card.props.apellido"
               />
             </section>
             <section class="player-card__body">
@@ -35,7 +35,7 @@
                   <i class="fa-solid fa-weight-scale fa-sm"></i>
                   <strong> Peso: </strong>
                   <span class="player-card__info-span"
-                    >{{ card.props.weight }} KG</span
+                    >{{ card.props.peso }} KG</span
                   >
                 </p>
                 <p>
@@ -43,7 +43,7 @@
                   <i class="fas fa-person fa-sm"></i>
                   <strong>Altura: </strong>
                   <span class="player-card__info-span"
-                    >{{ card.props.height }} metros</span
+                    >{{ card.props.altura }} metros</span
                   >
                 </p>
               </section>
@@ -53,8 +53,8 @@
                 <p>
                   <strong>Nacimiento: </strong>
                   <span
-                    >{{ card.props.birth | date : 'dd-MM-yyyy' }} ({{
-                      card.props.age
+                    >{{ card.props.fechaNac | date : 'dd-MM-yyyy' }} ({{
+                      card.props.edad
                     }}
                     años)</span
                   >
@@ -66,14 +66,14 @@
                 <p>
                   <strong>Casaca: </strong>
                   <span class="player-card__info-span">{{
-                    card.props.shirtNumber
+                    card.props.nroCamiseta
                   }}</span>
                 </p>
                 <p>
                   <strong>Selección:</strong>
                   <span class="player-card__info-span"
-                    >{{ card.props.nationalTeam }} (<i class="fa-solid fa-trophy"></i>
-                    {{ card.props.worldCups }})</span
+                    >{{ card.props.seleccion }} (<i class="fa-solid fa-trophy"></i>
+                    {{ card.props.copasDelMundo }})</span
                   >
                 </p>
               </section>
@@ -83,14 +83,14 @@
                 <p>
                   <strong>Año debut: </strong>
                   <span class="player-card__info-span">{{
-                    card.props.debutYear
+                    card.props.anioDebut
                   }}</span>
                 </p>
                 <p>
-                  {{ card.props.confederation | uppercase }} (<i
+                  {{ card.props.confederacion | uppercase }} (<i
                     class="fa-solid fa-trophy"
                   ></i>
-                  {{ card.props.confederationWorldCups }})
+                  {{ card.props.confederacionCopas }})
                 </p>
               </section>
               <section
@@ -98,7 +98,7 @@
               >
                 <p>
                   <strong>Posición: </strong>
-                  <span class="player-card__info-span">{{ card.props.positon }}</span>
+                  <span class="player-card__info-span">{{ card.props.posicion }}</span>
                 </p>
                 <p>
                   <strong>{{ card.ifIsLeader }}</strong>
@@ -111,7 +111,7 @@
                   <strong
                     >COTIZACION:
                     {{
-                      card.props.quote | currency : 'EUR' : 'symbol' : '0.0-2'
+                      card.props.cotizacion | currency : 'EUR' : 'symbol' : '0.0-2'
                     }}</strong
                   >
                 </p>
@@ -124,7 +124,7 @@
             >
               <p>
                 <strong>Nivel de Impresión </strong>
-                <span>{{ card.props.levelOfImpresion | uppercase }}</span>
+                <span>{{ card.props.nivelImpresion | uppercase }}</span>
               </p>
               <p>
                 <strong>Valoración Base </strong>

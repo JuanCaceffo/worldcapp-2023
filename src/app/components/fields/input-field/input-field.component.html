@@ -1,3 +1,4 @@
+  <!-- <div class="field__wrapper"> -->
   <app-field-label [label]="label" />
   <div roundedElement shadedElement class="field__container">
     <input 
@@ -20,3 +21,13 @@
     <ng-content></ng-content>
   </div>
   <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span>
+<!-- </div> -->
+
+<!-- 
+[(ngModel)]="value"
+[ngClass]="{'field--error': error !== ''}"
+inputElement 
+roundedElement  
+-->
+
+
