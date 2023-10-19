@@ -42,9 +42,9 @@ export class CardDetailsComponent implements OnInit {
   }
 
   //TODO cambiar los alert por una notificaion copada
-  requestFigurita() {
+  async requestFigurita() {
     try {
-      this.userService.figuritaRequest(this.card)
+      await this.userService.figuritaRequest(this.card)
       //si sale bien navega y notifica
       this.goCardPage()
       alert('La solicitud se completo con exito')
