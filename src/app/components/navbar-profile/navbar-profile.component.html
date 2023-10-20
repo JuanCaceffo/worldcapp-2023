@@ -1,26 +1,14 @@
 <nav class="form-info__nav">
   <ul class="navbar__buttons">
     <li class="button--icon button--disabled">
-      <a class="button__link" href="#">
-        <i class="fa-solid fa-chevron-left" style="color:var(--typeface-color)"></i>
-      </a>
-    </li>        
-    <li class="button--tab-on">
-      <a class="button__link" href="/src/components/profile-user/profile-user.html">Información General</a>
+      <button class="button__link fa-solid fa-chevron-left"></button>
     </li>
-    <li class="button--tab-off">
-      <a class="button__link" href="/src/components/profile-user/duplicate-stickers.html">Figuritas Repetidas</a>
-    </li>    
-    <li class="button--tab-off">
-      <a class="button__link" href="/src/components/profile-user/missing-stickers.html">Figuritas Faltantes</a>
-    </li> 
+    <li [routerLink]="['/perfil/perfil-usuario']" class="button--tab-on">Información General</li>
+    <li [routerLink]="['/perfil/figuritas-repetidas']" class="button--tab-off">Figuritas Repetidas</li>
+    <li [routerLink]="['/perfil/figuritas-faltantes']" class="button--tab-off">Figuritas Faltantes</li>
     <li class="button--icon">
-      <a class="button__link" href="/html/src/components/profile-user/duplicate-stickers.html">
-        <i class="fa-solid fa-chevron-right"></i>
-      </a>
+      <button class="button__link fa-solid fa-chevron-right"></button>
     </li>
   </ul>
-</nav>      
-<ng-content select="selector">
-  
-</ng-content>
+</nav>
+<router-outlet></router-outlet>
