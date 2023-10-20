@@ -1,4 +1,4 @@
-import {UserService} from 'src/app/services/user-service/user.service'
+import {USER_KEY_STORAGE} from 'src/app/services/user-service/user.service'
 import {figuritaDTO} from '../../dtos/figurita.dto'
 
 export class Figurita {
@@ -9,7 +9,8 @@ export class Figurita {
   }
 
   get isOwner() {
-    return this.props.ownerID === UserService.userLogedID
+    const userLogedID = sessionStorage.getItem(USER_KEY_STORAGE) ?? -1
+    return this.props.ownerID == userLogedID
   }
 
   get isWorldChampion() {

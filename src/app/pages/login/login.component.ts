@@ -21,6 +21,7 @@ export class LoginComponent {
 
   ngOnInit() {
     this.titleService.setTitle('Inicio de Sesión')
+    sessionStorage.clear()
   }
 
   onInputData(datos: string[]) {
