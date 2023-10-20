@@ -10,7 +10,6 @@
 }
 
 .form-info,
-.form-info__nav,
 .form-info__body,
 .form-info__actions{
   display: flex;
@@ -19,9 +18,6 @@
   justify-content: center;
 }
 
-.form-info__nav{
-  border: none;
-}
 
 .form-info{
   /*Layout*/
@@ -44,9 +40,6 @@
   border-radius: var(--border-radius-md);
 }
 
-.form-info__nav .button__link i{
-  color: var(--text-color)
-}
 
 .form-info__actions {
   /*Layout*/
@@ -70,36 +63,6 @@
   padding-top: var(--box-padding);
 }
 
-.form-info__nav .button--tab-on {
-  /*Layout*/
-  min-width: 65vw;
-  /*Typeface*/
-  font-size: 1.6em;
-  /*Visual*/
-  cursor: default;  
-}
-
-.form-info__nav .button--tab-off {
-  display: none;
-}
-
-.form-info__nav .button--tab-on {
-  /*Layout*/
-  min-width: 65vw;
-  /*Typeface*/
-  font-size: 1.6em;
-  /*Visual*/
-  cursor: default;
-}
-
-.form-info__nav i {
-  /*Layout*/
-  padding: 1em;
-  /*Typeface*/
-  font-size: 1.5em;
-  /*Visual*/
-  color: var(--text-color);
-}
 
 .form-info__actions .button--primary, 
 .form-info__actions .button--secondary {
@@ -147,7 +110,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .form-info{
     margin-top: 0;
   }
@@ -156,17 +119,4 @@
     border-radius: 0 0 var(--box-padding) var(--box-padding);
   }
   
-  .form-info__nav .button--tab-on,
-  .form-info__nav .button--tab-off {
-    min-width: 20vw;
-    cursor: pointer;
-  }
-  
-  .form-info__nav .button--icon {
-    display: none;
-  }  
-
-  .form-info__nav .button--tab-off  {
-    display: inline;
-  }  
 }
