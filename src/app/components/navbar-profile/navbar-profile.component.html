@@ -1,14 +1,17 @@
 <nav class="form-info__nav">
-  <ul class="navbar__buttons">
-    <li class="button--icon button--disabled">
-      <button class="button__link fa-solid fa-chevron-left"></button>
+  <ul class="form-info__buttons">
+    <button *ngIf="!!buttonNavigate.urlLeftBtn" [routerLink]="[buttonNavigate.urlLeftBtn]" class="button--icon fa-solid fa-chevron-left"></button>
+    <li
+      *ngFor="let prop of listProps"
+      [routerLink]="[prop.url]"
+      routerLinkActive
+      #rla="routerLinkActive"
+      class="{{
+        'button ' + (rla.isActive ? 'button--tab-on' : 'button--tab-off')
+      }}"
+    >
+      {{ prop.content }}
     </li>
-    <li [routerLink]="['/perfil/perfil-usuario']" class="button--tab-on">Información General</li>
-    <li [routerLink]="['/perfil/figuritas-repetidas']" class="button--tab-off">Figuritas Repetidas</li>
-    <li [routerLink]="['/perfil/figuritas-faltantes']" class="button--tab-off">Figuritas Faltantes</li>
-    <li class="button--icon">
-      <button class="button__link fa-solid fa-chevron-right"></button>
-    </li>
+    <button *ngIf="!!buttonNavigate.urlRightBtn" [routerLink]="[buttonNavigate.urlRightBtn]" class="button--icon fa-solid fa-chevron-right"></button>
   </ul>
 </nav>
-<router-outlet></router-outlet>
