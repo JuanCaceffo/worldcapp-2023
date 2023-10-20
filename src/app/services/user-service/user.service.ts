@@ -1,5 +1,4 @@
 import {HttpClient} from '@angular/common/http'
-import {MockedRegistredUsers} from 'src/app/mocks/user.mock'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserLoginResponseDTO, UserLoginDTO} from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
@@ -22,11 +21,13 @@ export class UserService {
     UserService.userLogedID = userId.userLogedID
   }
 
-  figuritaRequest(figurita: Figurita) {
-    MockedRegistredUsers.forEach((user) => {
-      user.userID === UserService.userLogedID
-        ? user.figuritasList?.push(figurita.props)
-        : console.error('problema')
-    })
+  async figuritaRequest(figurita: Figurita) {
+    await lastValueFrom(
+      this.httpClient.patch(`${API_URL}/user/request-figurita`, {
+        userLogedID: UserService.userLogedID,
+        requestedUserID: figurita.props.ownerID,
+        requestedFiguID: figurita.props.cardID
+      })
+    )
   }
 }
