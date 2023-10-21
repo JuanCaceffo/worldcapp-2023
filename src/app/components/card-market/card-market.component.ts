@@ -10,9 +10,22 @@ export class CardMarketComponent {
   @Input() inputMarketCard!: PickupPoint
   marketCard!: PickupPoint
 
-  getGeoLocalization() {}
-
   ngOnInit() {
     this.marketCard = this.inputMarketCard
+    this.getGeoLocalization()
+  }
+
+  /*
+  Transforma la geoLocalizacion recibida en x: n.nnnn, y: m.mmmm
+  */
+  getGeoLocalization() {
+    const geoLocation = this.marketCard.props.direccion.ubiGeografica.toString()
+    const regex: RegExp = /-?\d+\.\d+/g
+
+    const coords = geoLocation.match(regex) ?? []
+    const transformCoords = coords.map((coord) => parseFloat(coord).toFixed(4))
+    const [coordX, coordY] = transformCoords
+
+    return `x: ${coordX}, y: ${coordY}`
   }
 }

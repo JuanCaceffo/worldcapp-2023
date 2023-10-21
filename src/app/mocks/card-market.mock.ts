@@ -3,15 +3,15 @@ import {PickupPointDTO} from 'src/app/dtos/pickup-point.dto'
 export const mockedCardMarket: Array<PickupPointDTO> = [
   {
     id: 1,
+    nombre: 'Test Mock 1',
     direccion: {
       calle: 'Calle falsa',
       altura: 11,
-      distancia: 2,
-      geoLocalizacion: 3
+      ubiGeografica: 'x: 2.1234, y: 54.1234'
     },
+    distancia: 2,
     stockSobres: 2,
     precioSobres: 1,
-    nombre: 'Test Mock 1',
     pendientes: true,
     tipoPuntoDeVenta: 'Kioscos'
   },
@@ -20,9 +20,9 @@ export const mockedCardMarket: Array<PickupPointDTO> = [
     direccion: {
       calle: 'Alpatacal',
       altura: 123,
-      distancia: 2,
-      geoLocalizacion: 3
+      ubiGeografica: 'x: 21.1234, y: 4.1234'
     },
+    distancia: 2,
     stockSobres: 2,
     precioSobres: 1,
     nombre: 'Test Mock 2',
@@ -34,9 +34,9 @@ export const mockedCardMarket: Array<PickupPointDTO> = [
     direccion: {
       calle: 'Urquiza',
       altura: 1231,
-      distancia: 12,
-      geoLocalizacion: 12
+      ubiGeografica: 'x: 22.1234, y: 54.1234'
     },
+    distancia: 12,
     stockSobres: 12,
     precioSobres: 1,
     nombre: 'Test Mock 3',
@@ -48,9 +48,9 @@ export const mockedCardMarket: Array<PickupPointDTO> = [
     direccion: {
       calle: 'av. Libertador',
       altura: 3500,
-      distancia: 5,
-      geoLocalizacion: 5
+      ubiGeografica: 'x: 2.1234, y: 52.1214'
     },
+    distancia: 5,
     stockSobres: 5,
     precioSobres: 5,
     nombre: 'Test Mock 4',
@@ -62,9 +62,9 @@ export const mockedCardMarket: Array<PickupPointDTO> = [
     direccion: {
       calle: 'av. Figeroa Alcorta',
       altura: 12,
-      distancia: 1,
-      geoLocalizacion: 1
+      ubiGeografica: 'x: 21.3334, y: 4.1234'
     },
+    distancia: 1,
     stockSobres: 1,
     precioSobres: 1,
     nombre: 'Test Mock 5',
@@ -76,9 +76,9 @@ export const mockedCardMarket: Array<PickupPointDTO> = [
     direccion: {
       calle: 'Lascano',
       altura: 545,
-      distancia: 2,
-      geoLocalizacion: 2
+      ubiGeografica: 'x: 44.2224, y: 5.1224'
     },
+    distancia: 2,
     stockSobres: 2,
     precioSobres: 2,
     nombre: 'Test Mock 6',

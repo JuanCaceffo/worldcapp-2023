@@ -19,7 +19,6 @@ export class CardMarketService {
       `${API_URL}/puntosDeVenta/?userId=0`
     )
     const pickupPointJSON = await lastValueFrom(pickupPoint$)
-    console.log(pickupPointJSON)
     return pickupPointJSON.map((pup) => PickupPoint.fromJson(pup))
   }
 }

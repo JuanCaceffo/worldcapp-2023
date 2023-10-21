@@ -5,7 +5,7 @@ export interface PickupPointDTO {
   direccion: {
     altura: number
     calle: string
-    ubiGeografica: number
+    ubiGeografica: string
   }
   distancia: number
   stockSobres: number
