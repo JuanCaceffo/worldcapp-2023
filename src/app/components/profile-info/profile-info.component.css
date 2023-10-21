@@ -45,7 +45,7 @@
   /*Layout*/
   width: 100%;
   align-items: center;
-  padding: var(--box-padding);
+  padding: var(--box-padding) 0;
   gap: 0.6em;
   /*Visual*/
   background-color: var(--color-clear-dark);
@@ -60,14 +60,15 @@
 .form-info__body .form__title{
   /*Layout*/
   width: 100%;
-  padding-top: var(--box-padding);
+  font-size: 1.8em;
+  padding: 0.5em 1em;
 }
 
 
 .form-info__actions .button--primary, 
 .form-info__actions .button--secondary {
   /*Layout*/
-  flex-basis: 100%;
+  flex-grow: 1;
 }
 
 .form-info__actions .button--circle {
@@ -92,7 +93,7 @@
 
 .button--primary,
 .button--secondary {
-    padding: var(--box-padding)
+  padding: var(--box-padding)
 }
 @media (min-width: 600px) {
   .form-info__actions{

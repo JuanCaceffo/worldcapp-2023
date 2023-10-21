@@ -1,12 +1,6 @@
 <form class="form-info" autocomplete="off">       
-  <article class="form-info__body">
-    <h2 class="form__title">Información general</h2>
-    <!--  -->
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Nombre</label>
-      <input name="primary" class="form__input--primary" type="text"  />
-    </section>
-
+  <fieldset class="form-info__body">
+    <legend class="form__title">Información general</legend>
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="userName">Nombre</label>          
@@ -14,72 +8,91 @@
         <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->          
     </section>
 
-    <!--  -->
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Apellido</label>
-      <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Apellido" />
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong">Apellido</label>
+        <input class="field__input rounded shaded" type="text" placeholder="Ingrese Apellido" />
     </section>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Correo electrónico</label>
-      <input name="primary" class="form__input--primary" type="email" placeholder="Ingrese Correo" />
-    </section>      
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Fecha de nacimiento</label>
-      <input name="secondary" class="form__input--primary" type="date" placeholder="Ingrese Fecha de Nacimiento" />
+
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong">Correo electrónico</label>
+        <input class="field__input rounded shaded" type="email" placeholder="Ingrese Correo" />
     </section>
-    <h2 class="form__title">Dirección</h2>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Provincia</label>
-      <select class="form__select">
+
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong">Fecha de nacimiento</label>
+        <input class="field__input rounded shaded" type="date" />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Dirección</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Provincia</label>
+      <select class="field__select rounded shaded">
         <option>Seleccione una opción</option>
         <option>Opción 1</option>
         <option>Opción 2</option>
         <option>Opción 3</option>
       </select>
-    </section>      
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Localidad</label>
-      <select class="form__select">
-        <option>Seleccione una opción</option>
-        <option>Opción 1</option>
-        <option>Opción 2</option>
-        <option>Opción 3</option>
-      </select>
-    </section>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Calle</label>
-      <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Calle" />
-    </section>      
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Altura</label>
-      <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Altura" />
-    </section>
-    <h2 class="form__title">Ubicación Geográfica</h2>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Latitud</label>
-      <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Latitud" />
-    </section>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Longitud</label>
-      <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Longitud" />
-    </section>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Cercanía máxima intercambio</label>
-      <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Distancia Máxima" />
-    </section>
-    <h2 class="form__title">Criterio para el intercambio</h2>
-    <section class="form__row form__row--2col">
-      <label class="form__row-subtitle">Criterio</label>
-      <select class="form__select">
+    </section>  
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Localidad</label>
+      <select class="field__select rounded shaded">
         <option>Seleccione una opción</option>
         <option>Opción 1</option>
         <option>Opción 2</option>
         <option>Opción 3</option>
       </select>
     </section>
-  </article>
-  <footer class="form-info__actions">
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Calle</label>
+      <input class="field__input rounded shaded" type="text" placeholder="Ingrese Calle" />
+    </section>    
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Altura</label>
+      <input class="field__input rounded shaded" type="number" min="0" placeholder="Ingrese Altura" />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Ubicación Geográfica</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Latitud</label>
+      <input class="field__input rounded shaded" type="number" placeholder="Ingrese Latitud" />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Longitud</label>
+      <input class="field__input rounded shaded" type="number" placeholder="Ingrese Longitud" />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Cercanía máxima intercambio</label>
+      <input class="field__input rounded shaded" type="number" min="0" placeholder="Ingrese Distancia Máxima" />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Criterio para el intercambio</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Criterio</label>
+      <select class="field__select rounded shaded">
+        <option>Seleccione una opción</option>
+        <option>Opción 1</option>
+        <option>Opción 2</option>
+        <option>Opción 3</option>
+      </select>
+    </section>
+  </fieldset>
+  
+  <section class="form-info__actions">
     <button class="button--secondary">Resetear</button>
     <button class="button--primary">Guardar</button>
-  </footer>
+  </section>
 </form>
