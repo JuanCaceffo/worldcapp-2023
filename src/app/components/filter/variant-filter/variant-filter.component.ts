@@ -5,7 +5,6 @@ import {Component, Input} from '@angular/core'
   selector: 'app-variantFilter',
   templateUrl: './variant-filter.component.html',
   styleUrls: [
-    '../../../styles/input/input.css',
     '../base-filter.component.css',
     './variant-filter.component.css'
   ]

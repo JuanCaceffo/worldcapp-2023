@@ -7,7 +7,7 @@ type FilterType = VariantFilterComponent | SortedByFilterComponent
 @Component({
   selector: 'app-baseFilter',
   templateUrl: './base-filter.component.html',
-  styleUrls: ['../../styles/input/input.css', './base-filter.component.css']
+  styleUrls: ['./base-filter.component.css']
 })
 export class BaseFilterComponent {
   @ContentChild('childFilter') childFilter!: FilterType

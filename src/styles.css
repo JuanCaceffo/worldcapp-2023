@@ -82,5 +82,3 @@ html {
 .fas--highlighted {
   color: var(--color-focus);
 }
-
-@import url('app/styles/button/button.css');

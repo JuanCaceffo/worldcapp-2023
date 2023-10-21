@@ -5,19 +5,50 @@
         <app-logo/>
       </section>
       <section class="form-login__content">
-        <h2 class="form__row-title">Usuario</h2>
+        <div class="field">
+          <label class="field__label field__label--strong" for="userName">Usuario</label>          
+            <div shadedElement class="field__container rounded shadow">
+              <input 
+                [(ngModel)]="data.userName"
+                id="userName"
+                class="field__input field__input--iconized rounded"      
+                type="text"
+                name="login"                
+                tabindex  ="0"
+                data-testid="userInput"
+              />
+              <i iconElement class="field__icon fas fa-user" ></i>
+            </div>
+            <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->          
+        </div>
+        <div class="field">
+          <label class="field__label field__label--strong" for="userName">Contraseña</label>
+          
+            <div shadedElement class="field__container rounded shadow">
+              <input 
+                [(ngModel)]="data.password"
+                id="userName"
+                class="field__input field__input--iconized rounded"      
+                type="password"
+                name="login"                
+                tabindex  ="1"
+                data-testid="passwordInput"          
+              />
+              <i iconElement class="field__icon fas fa-key" ></i>
+            </div>
+            <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->
+          
+        </div>
+       
         <section class="form__row">
-          <app-icon-field rounded shaded icon="fas fa-user" (onchangeIcon)="onInputData($event)" name="user" data-testid="userInput"></app-icon-field>
-        </section>
-        <h2 class="form__row-title">Contraseña</h2>
-        <section class="form__row">
-          <app-icon-field rounded shaded icon="fas fa-key" type="password" (onchangeIcon)="onInputData($event)" name="password" data-testid="passwordInput"></app-icon-field>
+          <!-- <app-icon-field rounded shaded icon="fas fa-key" type="password" (onchangeIcon)="onInputData($event)" name="password" data-testid="passwordInput"></app-icon-field> -->
         </section>
         <div *ngIf="errorMsg" class="error-msg" data-testid="errorMessage">{{errorMsg}} </div>  
       </section>
       <section class="form-login__actions">
-        <button class="button button--large button--primary button--font-md" data-testid="loginButton" (click)="submit()" >Ingresar</button>
+        <button class="button button--large button--primary button--font-md" tabindex="2" data-testid="loginButton" (click)="submit()" >Ingresar</button>
       </section>
     </form>
   </section>
 </div>
+

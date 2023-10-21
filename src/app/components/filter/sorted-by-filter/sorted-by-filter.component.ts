@@ -3,7 +3,6 @@ import {Component} from '@angular/core'
   selector: 'app-sortedByFilter',
   templateUrl: './sorted-by-filter.component.html',
   styleUrls: [
-    '../../../styles/input/input.css',
     './sorted-by-filter.component.css'
   ]
 })
