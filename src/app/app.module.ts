@@ -30,7 +30,6 @@ import {CardDetailsComponent} from './pages/card-details/card-details.component'
 import {CardSearchComponent} from './pages/card-search/card-search.component'
 import {LoginComponent} from './pages/login/login.component'
 import {StoreSearchComponent} from './pages/store-search/store-search.component'
-import {UserProfileComponent} from './pages/user-profile/user-profile.component'
 
 // Field inputs components
 import {ControlFieldComponent} from './components/fields/control-field/control-field.component'
@@ -50,6 +49,8 @@ import {DIRECTIVES} from './directives/directives'
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
+import {ProfileInfoComponent} from './components/profile-info/profile-info.component'
+import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import {HttpClientModule} from '@angular/common/http'
     CardSearchComponent,
     LoginComponent,
     StoreSearchComponent,
-    UserProfileComponent,
+    // Profile Page Component
+    NavbarProfileComponent,
     // Fields
     ControlFieldComponent,
     FieldLabelComponent,
@@ -85,6 +87,7 @@ import {HttpClientModule} from '@angular/common/http'
     SelectFieldComponent,
     // Form
     FormComponent,
+    ProfileInfoComponent,
     // Directives
     DIRECTIVES,
     // Pipe

@@ -5,6 +5,7 @@ import {PickupPointDTO} from 'src/app/dtos/pickup-point.dto'
 // import {mockedCardMarket} from 'src/app/mocks/card-market.mock'
 import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
 import {API_URL} from '../config'
+import {UserService} from '../user-service/user.service'
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class CardMarketService {
 
   async getAllCards(): Promise<PickupPoint[]> {
     const pickupPoint$ = this.httpClient.get<PickupPointDTO[]>(
-      `${API_URL}/puntosDeVenta/`
+      `${API_URL}/puntosDeVenta/?userId=${UserService.userLogedID}`
     )
     const pickupPointJSON = await lastValueFrom(pickupPoint$)
     return pickupPointJSON.map((pup) => PickupPoint.fromJson(pup))

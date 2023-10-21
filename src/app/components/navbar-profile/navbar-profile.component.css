@@ -1,0 +1,49 @@
+.form-info__nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  border: none;
+}
+.form-info__buttons {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.form-info__nav .button--tab-on {
+  /*Layout*/
+  min-width: 65vw;
+  /*Visual*/
+  cursor: default;  
+}
+
+.form-info__nav .button--tab-off {
+  display: none;
+}
+
+.form-info__nav .button--icon {
+  /*Typeface*/
+  font-size: 1.5em;
+  /*Visual*/
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+}
+
+@media (width >= 769px) {
+  
+  .form-info__nav .button--tab-on,
+  .form-info__nav .button--tab-off {
+    min-width: 20vw;
+    cursor: pointer;
+  }
+  
+  .form-info__nav .button--icon {
+    display: none;
+  }  
+
+  .form-info__nav .button--tab-off  {
+    display: inline;
+  }  
+}
