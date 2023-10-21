@@ -2,6 +2,7 @@
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
 import {NavbarProfileComponent} from './navbar-profile.component'
+import {RouterTestingModule} from '@angular/router/testing'
 
 describe('NavbarProfileComponent', () => {
   let component: NavbarProfileComponent
@@ -9,6 +10,7 @@ describe('NavbarProfileComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [NavbarProfileComponent]
     }).compileComponents()
   }))
