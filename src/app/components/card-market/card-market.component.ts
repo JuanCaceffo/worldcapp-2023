@@ -12,7 +12,20 @@ export class CardMarketComponent {
 
   ngOnInit() {
     this.marketCard = this.inputMarketCard
+    this.getGeoLocalization()
   }
 
-  //TODO: Devolver el tipo de class (Kiosko, libreria o supermercado) desde el back
+  /*
+  Transforma la geoLocalizacion recibida en x: n.nnnn, y: m.mmmm
+  */
+  getGeoLocalization() {
+    const geoLocation = this.marketCard.props.direccion.ubiGeografica.toString()
+    const regex: RegExp = /-?\d+\.\d+/g
+
+    const coords = geoLocation.match(regex) ?? []
+    const transformCoords = coords.map((coord) => parseFloat(coord).toFixed(4))
+    const [coordX, coordY] = transformCoords
+
+    return `x: ${coordX}, y: ${coordY}`
+  }
 }

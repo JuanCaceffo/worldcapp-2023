@@ -3,11 +3,11 @@ export interface PickupPointDTO {
   nombre: string
   tipoPuntoDeVenta: string
   direccion: {
-    calle: string
     altura: number
-    distancia: number
-    geoLocalizacion: number
+    calle: string
+    ubiGeografica: string
   }
+  distancia: number
   stockSobres: number
   pendientes: boolean
   precioSobres: number

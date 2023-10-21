@@ -1,5 +1,5 @@
-import {USER_KEY_STORAGE} from 'src/app/services/user-service/user.service'
 import {figuritaDTO} from '../../dtos/figurita.dto'
+import {getUserId} from 'src/app/helpers/getUserId'
 
 export class Figurita {
   constructor(public props: figuritaDTO) {}
@@ -9,7 +9,7 @@ export class Figurita {
   }
 
   get isOwner() {
-    const userLogedID = sessionStorage.getItem(USER_KEY_STORAGE) ?? -1
+    const userLogedID = getUserId()
     return this.props.ownerID == userLogedID
   }
 

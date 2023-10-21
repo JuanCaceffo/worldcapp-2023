@@ -40,13 +40,13 @@ describe('CardMarketComponent', () => {
 
     expect(title.textContent).toBe('Test Mock 1')
     expect(address.textContent).toBe('Calle Falsa 11')
-    expect(geoLocation.textContent).toBe('3')
-    expect(distance.textContent).toBe('2.00')
+    expect(geoLocation.textContent).toBe('x: 2.1234, y: 54.1234')
+    expect(distance.textContent).toBe('2.00m')
     expect(stock.textContent).toBe('2')
-    expect(price.textContent).toBe('1')
+    expect(price.textContent).toBe('€1')
   })
 
-  it('Ingresa un punto de venta y verifica el correcto funcionamiento de pedidos pendientes', () => {
+  it('Ingresa un punto de venta y verifica el correcto funcionamiento de pedidos pendientes', async () => {
     const pending = getByTestId(fixture, 'pending-market-card')
 
     expect(pending.textContent).toBe('Pedidos Pendientes')
