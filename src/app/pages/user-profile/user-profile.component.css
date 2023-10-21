@@ -1,0 +1,8 @@
+.home__aside{
+  padding: 2rem 0;
+}
+@media (width >= 769px) {
+  .home__aside{
+    padding: 1rem;
+  }
+}

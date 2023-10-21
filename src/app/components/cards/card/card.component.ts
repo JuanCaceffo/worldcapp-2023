@@ -1,4 +1,3 @@
-import {UserService} from 'src/app/services/user-service/user.service'
 import {Component, Input, OnInit} from '@angular/core'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 
@@ -8,7 +7,7 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  constructor(public userService: UserService) {}
+  constructor() {}
   ngOnInit() {}
   @Input() card!: Figurita
 }

@@ -1,30 +1,35 @@
-import {MockedRegistredUsers} from 'src/app/mocks/user.mock'
+import {HttpClient} from '@angular/common/http'
 import {Figurita} from 'src/app/models/cards/figurita.model'
-import {userLoginDTO} from 'src/app/dtos/user.dto'
+import {UserLoginResponseDTO, UserLoginDTO} from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
+import {API_URL} from '../config'
+import {lastValueFrom} from 'rxjs'
+
+export const USER_KEY_STORAGE = 'userLogedID'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor() {}
-  userLogedID?: number
+  constructor(private httpClient: HttpClient) {}
+  static userLogedID?: number
 
-  login(userData: userLoginDTO) {
-    this.userLogedID = MockedRegistredUsers.find((userJSON) => {
-      userJSON.userName === userData.userName &&
-        userJSON.password === userData.password
-    })?.userID
-
-    //simulacion de un retorno de estado
-    return this.userLogedID ? 200 : 404
+  async login(userData: UserLoginDTO) {
+    const response$ = this.httpClient.post<UserLoginResponseDTO>(
+      `${API_URL}/user/login`,
+      userData
+    )
+    const userId = await lastValueFrom(response$)
+    sessionStorage.setItem(USER_KEY_STORAGE, userId.userLogedID.toString())
   }
 
-  figuritaRequest(figurita: Figurita) {
-    MockedRegistredUsers.forEach((user) => {
-      user.userID === this.userLogedID
-        ? user.figuritasList?.push(figurita.props)
-        : console.error('problema')
-    })
+  async figuritaRequest(figurita: Figurita) {
+    await lastValueFrom(
+      this.httpClient.patch(`${API_URL}/user/request-figurita`, {
+        userLogedID: UserService.userLogedID,
+        requestedUserID: figurita.props.ownerID,
+        requestedFiguID: figurita.props.cardID
+      })
+    )
   }
 }

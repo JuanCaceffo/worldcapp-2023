@@ -18,7 +18,7 @@ export class InputFieldComponent extends FieldComponent implements InputFieldPro
 
   onChangeInputEvent() {
     this.onchangeInput.emit([this.value, this.name])       
-  } 
+  }
   
   errorMessage = (): string => {
     this.validateErrorMessage()

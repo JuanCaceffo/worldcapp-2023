@@ -1,0 +1,17 @@
+<nav class="form-info__nav">
+  <ul class="form-info__buttons">
+    <button *ngIf="!!buttonNavigate.urlLeftBtn" [routerLink]="[buttonNavigate.urlLeftBtn]" class="button--icon fa-solid fa-chevron-left"></button>
+    <li
+      *ngFor="let prop of listProps"
+      [routerLink]="[prop.url]"
+      routerLinkActive
+      #rla="routerLinkActive"
+      class="{{
+        'button ' + (rla.isActive ? 'button--tab-on' : 'button--tab-off')
+      }}"
+    >
+      {{ prop.content }}
+    </li>
+    <button *ngIf="!!buttonNavigate.urlRightBtn" [routerLink]="[buttonNavigate.urlRightBtn]" class="button--icon fa-solid fa-chevron-right"></button>
+  </ul>
+</nav>

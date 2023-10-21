@@ -41,9 +41,16 @@ export class CardDetailsComponent implements OnInit {
     this.router.navigate(['/figuritas'])
   }
 
-  requestFigurita() {
-    this.userService.figuritaRequest(this.card)
-    //si todo sale bien navega
-    this.goCardPage()
+  //TODO cambiar los alert por una notificaion copada
+  async requestFigurita() {
+    try {
+      await this.userService.figuritaRequest(this.card)
+      //si sale bien navega y notifica
+      this.goCardPage()
+      alert('La solicitud se completo con exito')
+    } catch (error) {
+      //TODO: validar tipo de error
+      alert('no se realizo la soli o se rompio el sv jeje')
+    }
   }
 }

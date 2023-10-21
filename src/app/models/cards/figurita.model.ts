@@ -1,12 +1,16 @@
 import {figuritaDTO} from '../../dtos/figurita.dto'
-
-const INITIAL_VALUE = 100
+import {getUserId} from 'src/app/helpers/getUserId'
 
 export class Figurita {
   constructor(public props: figuritaDTO) {}
 
   static fromJson(cardJSON: figuritaDTO): Figurita {
     return new Figurita(cardJSON)
+  }
+
+  get isOwner() {
+    const userLogedID = getUserId()
+    return this.props.ownerID == userLogedID
   }
 
   get isWorldChampion() {
@@ -23,7 +27,7 @@ export class Figurita {
 
   get baseValoration() {
     return (
-      INITIAL_VALUE *
+      this.props.initialValue *
       this.multiplierOnFire *
       this.multiplierEvenNumber *
       this.multiplierImpresion
