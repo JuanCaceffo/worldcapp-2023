@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {UserService} from 'src/app/services/user-service/user.service'
+import {Component, OnInit} from '@angular/core'
+import {Figurita} from 'src/app/models/cards/figurita.model'
 
 @Component({
   selector: 'app-profile-missing-figus',
@@ -6,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-missing-figus.component.css']
 })
 export class ProfileMissingFigusComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor(private userService: UserService) {}
+  ngOnInit() {}
+  listMissinCards!: Figurita[]
 }
