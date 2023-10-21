@@ -6,6 +6,7 @@ interface buttonNaviagateType {
   urlRightBtn?: string
   urlLeftBtn?: string
 }
+
 @Component({
   selector: 'app-navbar-profile',
   templateUrl: './navbar-profile.component.html',
@@ -16,17 +17,19 @@ export class NavbarProfileComponent implements OnInit {
 
   ngOnInit() {}
 
-  //TODO: buscar una forma mas cheta de laburarlo
-  get buttonNavigate(): buttonNaviagateType {
+  get buttonNavigateUrl(): buttonNaviagateType {
     const actualLink = this.router.url.split('/')[2]
-    if (actualLink == userProfilePaths.info)
-      return {urlRightBtn: userProfilePaths.duplicateFigus}
-    if (actualLink == userProfilePaths.missingFigus)
-      return {urlLeftBtn: userProfilePaths.duplicateFigus}
-    return {
-      urlRightBtn: userProfilePaths.missingFigus,
-      urlLeftBtn: userProfilePaths.info
+
+    const buttonNavigateUrls: {[key: string]: buttonNaviagateType} = {
+      'perfil-usuario': {urlRightBtn: userProfilePaths.duplicateFigus},
+      'figuritas-repetidas': {
+        urlLeftBtn: userProfilePaths.info,
+        urlRightBtn: userProfilePaths.missingFigus
+      },
+      'figuritas-faltantes': {urlLeftBtn: userProfilePaths.duplicateFigus}
     }
+
+    return buttonNavigateUrls[actualLink]
   }
 
   listProps = [
