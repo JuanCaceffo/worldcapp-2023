@@ -2,7 +2,7 @@ import {Router} from '@angular/router'
 import {Component, OnInit} from '@angular/core'
 import {userProfilePaths} from 'src/app/app-routing.module'
 
-interface buttonNaviagateType {
+interface buttonNavigateType {
   urlRightBtn?: string
   urlLeftBtn?: string
 }
@@ -17,10 +17,10 @@ export class NavbarProfileComponent implements OnInit {
 
   ngOnInit() {}
 
-  get buttonNavigateUrl(): buttonNaviagateType {
-    const actualLink = this.router.url.split('/')[2]
+  get buttonNavigateUrl(): buttonNavigateType {
+    const currentLink = this.router.url.split('/')[2]
 
-    const buttonNavigateUrls: {[key: string]: buttonNaviagateType} = {
+    const buttonNavigateUrls: {[key: string]: buttonNavigateType} = {
       'perfil-usuario': {urlRightBtn: userProfilePaths.duplicateFigus},
       'figuritas-repetidas': {
         urlLeftBtn: userProfilePaths.info,
@@ -29,7 +29,7 @@ export class NavbarProfileComponent implements OnInit {
       'figuritas-faltantes': {urlLeftBtn: userProfilePaths.duplicateFigus}
     }
 
-    return buttonNavigateUrls[actualLink]
+    return buttonNavigateUrls[currentLink] || {}
   }
 
   listProps = [
