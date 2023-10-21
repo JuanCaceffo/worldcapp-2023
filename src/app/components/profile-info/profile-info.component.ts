@@ -7,6 +7,6 @@ import {Component, OnInit} from '@angular/core'
 })
 export class ProfileInfoComponent implements OnInit {
   constructor() {}
-
+  lala: string = ''
   ngOnInit() {}
 }

@@ -1,75 +1,85 @@
-  <form class="form-info" autocomplete="off">       
-    <article class="form-info__body">
-      <h2 class="form__title">Información general</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Nombre</label>
-        <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Nombre" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Apellido</label>
-        <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Apellido" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Correo electrónico</label>
-        <input name="primary" class="form__input--primary" type="email" placeholder="Ingrese Correo" />
-      </section>      
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Fecha de nacimiento</label>
-        <input name="secondary" class="form__input--primary" type="date" placeholder="Ingrese Fecha de Nacimiento" />
-      </section>
-      <h2 class="form__title">Dirección</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Provincia</label>
-        <select class="form__select">
-          <option>Seleccione una opción</option>
-          <option>Opción 1</option>
-          <option>Opción 2</option>
-          <option>Opción 3</option>
-        </select>
-      </section>      
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Localidad</label>
-        <select class="form__select">
-          <option>Seleccione una opción</option>
-          <option>Opción 1</option>
-          <option>Opción 2</option>
-          <option>Opción 3</option>
-        </select>
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Calle</label>
-        <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Calle" />
-      </section>      
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Altura</label>
-        <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Altura" />
-      </section>
-      <h2 class="form__title">Ubicación Geográfica</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Latitud</label>
-        <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Latitud" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Longitud</label>
-        <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Longitud" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Distancia máxima de cercanía para intercambio</label>
-        <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Distancia Máxima" />
-      </section>
-      <h2 class="form__title">Criterio para el intercambio</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Criterio</label>
-        <select class="form__select">
-          <option>Seleccione una opción</option>
-          <option>Opción 1</option>
-          <option>Opción 2</option>
-          <option>Opción 3</option>
-        </select>
-      </section>
-    </article>
-    <footer class="form-info__actions">
-      <button class="button--secondary">Resetear</button>
-      <button class="button--primary">Guardar</button>
-    </footer>
-  </form>
+<form class="form-info" autocomplete="off">       
+  <article class="form-info__body">
+    <h2 class="form__title">Información general</h2>
+    <!--  -->
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Nombre</label>
+      <input name="primary" class="form__input--primary" type="text"  />
+    </section>
+
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="userName">Nombre</label>          
+          <input class="field__input rounded shaded" type="text" placeholder="Ingrese Nombre" />            
+        <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->          
+    </section>
+
+    <!--  -->
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Apellido</label>
+      <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Apellido" />
+    </section>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Correo electrónico</label>
+      <input name="primary" class="form__input--primary" type="email" placeholder="Ingrese Correo" />
+    </section>      
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Fecha de nacimiento</label>
+      <input name="secondary" class="form__input--primary" type="date" placeholder="Ingrese Fecha de Nacimiento" />
+    </section>
+    <h2 class="form__title">Dirección</h2>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Provincia</label>
+      <select class="form__select">
+        <option>Seleccione una opción</option>
+        <option>Opción 1</option>
+        <option>Opción 2</option>
+        <option>Opción 3</option>
+      </select>
+    </section>      
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Localidad</label>
+      <select class="form__select">
+        <option>Seleccione una opción</option>
+        <option>Opción 1</option>
+        <option>Opción 2</option>
+        <option>Opción 3</option>
+      </select>
+    </section>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Calle</label>
+      <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Calle" />
+    </section>      
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Altura</label>
+      <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Altura" />
+    </section>
+    <h2 class="form__title">Ubicación Geográfica</h2>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Latitud</label>
+      <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Latitud" />
+    </section>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Longitud</label>
+      <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Longitud" />
+    </section>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Cercanía máxima intercambio</label>
+      <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Distancia Máxima" />
+    </section>
+    <h2 class="form__title">Criterio para el intercambio</h2>
+    <section class="form__row form__row--2col">
+      <label class="form__row-subtitle">Criterio</label>
+      <select class="form__select">
+        <option>Seleccione una opción</option>
+        <option>Opción 1</option>
+        <option>Opción 2</option>
+        <option>Opción 3</option>
+      </select>
+    </section>
+  </article>
+  <footer class="form-info__actions">
+    <button class="button--secondary">Resetear</button>
+    <button class="button--primary">Guardar</button>
+  </footer>
+</form>
