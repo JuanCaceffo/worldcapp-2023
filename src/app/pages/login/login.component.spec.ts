@@ -7,6 +7,7 @@ import {IconFieldComponent} from 'src/app/components/fields/icon-field/icon-fiel
 import {LogoComponent} from 'src/app/components/logo/logo.component'
 import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
+import {getByTestId} from 'src/app/helpers/test.helper'
 
 describe('LoginComponent', () => {
   let component: LoginComponent
@@ -30,18 +31,13 @@ describe('LoginComponent', () => {
     fixture.detectChanges()
   }))
 
-  const getByTestId = (testId: string): HTMLInputElement => {
-    const compiled = fixture.debugElement.nativeElement
-    return compiled.querySelector(`[data-testid="${testId}"]`)
-  }
-
   it('should create', () => {
     expect(component).toBeTruthy()
   })
 
   it('los campos de usuario y contraseña deben estar en pantalla', async () => {
-    const usernameInput: HTMLElement = getByTestId('userInput')
-    const passwordInput: HTMLElement = getByTestId('passwordInput')
+    const usernameInput: HTMLElement = getByTestId(fixture, 'userInput')
+    const passwordInput: HTMLElement = getByTestId(fixture, 'passwordInput')
 
     expect(usernameInput).toBeTruthy()
     expect(passwordInput).toBeTruthy()

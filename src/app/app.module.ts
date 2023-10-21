@@ -30,7 +30,6 @@ import {CardDetailsComponent} from './pages/card-details/card-details.component'
 import {CardSearchComponent} from './pages/card-search/card-search.component'
 import {LoginComponent} from './pages/login/login.component'
 import {StoreSearchComponent} from './pages/store-search/store-search.component'
-import {UserProfileComponent} from './pages/user-profile/user-profile.component'
 
 // Field inputs components
 import {ControlFieldComponent} from './components/fields/control-field/control-field.component'
@@ -79,7 +78,6 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
     CardSearchComponent,
     LoginComponent,
     StoreSearchComponent,
-    UserProfileComponent,
     // Profile Page Component
     NavbarProfileComponent,
     // Fields

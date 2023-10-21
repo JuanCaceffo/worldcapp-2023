@@ -1,5 +1,5 @@
-import {UserService} from 'src/app/services/user-service/user.service'
 import {figuritaDTO} from '../../dtos/figurita.dto'
+import {getUserId} from 'src/app/helpers/getUserId'
 
 export class Figurita {
   constructor(public props: figuritaDTO) {}
@@ -9,7 +9,8 @@ export class Figurita {
   }
 
   get isOwner() {
-    return this.props.ownerID === UserService.userLogedID
+    const userLogedID = getUserId()
+    return this.props.ownerID == userLogedID
   }
 
   get isWorldChampion() {
