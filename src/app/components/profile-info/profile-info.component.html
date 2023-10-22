@@ -1,4 +1,4 @@
-<form class="form-info" autocomplete="off">       
+<form class="form-info" #profileInfoForm="ngForm" (ngSubmit)="onSubmit(profileInfoForm)">       
   <fieldset class="form-info__body">
     <legend class="form__title">Información general</legend>
 
@@ -87,7 +87,7 @@
   </fieldset>
   
   <section class="form-info__actions">
-    <button class="button--secondary">Resetear</button>
-    <button class="button--primary">Guardar</button>
+    <button class="button--secondary" type="reset">Resetear</button>
+    <button class="button--primary" type="submit">Guardar</button>
   </section>
 </form>

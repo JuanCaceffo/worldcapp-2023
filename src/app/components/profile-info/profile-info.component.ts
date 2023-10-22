@@ -1,3 +1,4 @@
+import {NgForm} from '@angular/forms'
 import {criteria, locations} from './../../helpers/getOptionsInfoProfile'
 import {Component} from '@angular/core'
 import {ProfileInfoDTO} from 'src/app/dtos/user.dto'
@@ -14,4 +15,8 @@ export class ProfileInfoComponent {
   provinces: string[] = provinces
   locations: string[] = locations
   criteria: string[] = criteria
+
+  onSubmit(form: NgForm) {
+    console.log(form.form.value)
+  }
 }
