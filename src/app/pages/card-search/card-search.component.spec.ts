@@ -1,22 +1,24 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ComponentFixture, TestBed, fakeAsync } from "@angular/core/testing"
+import { HttpClientModule } from "@angular/common/http"
+import { RouterTestingModule } from "@angular/router/testing"
+import { CardSearchComponent } from "./card-search.component"
+import { BaseFilterComponent } from "src/app/components/filter/base-filter.component"
+import { VariantFilterComponent } from "src/app/components/filter/variant-filter/variant-filter.component"
 
-// import { CardSearchComponent } from './card-search.component'
+describe('Card Search Component', () => {
+  let store: CardSearchComponent
+  let fixture: ComponentFixture<CardSearchComponent>
 
-// describe('CardSearchComponent', () => {
-//   let component: CardSearchComponent
-//   let fixture: ComponentFixture<CardSearchComponent>
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [CardSearchComponent, BaseFilterComponent, VariantFilterComponent]
+    }).compileComponents()
+  }))
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [CardSearchComponent]
-//     })
-//     fixture = TestBed.createComponent(CardSearchComponent)
-//     component = fixture.componentInstance
-//     fixture.detectChanges()
-//   })
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy()
-//   })
-// })
-//
+  it('should create', () => {
+    fixture = TestBed.createComponent(CardSearchComponent)
+    store = fixture.debugElement.componentInstance    
+    expect(store).toBeTruthy()    
+  })
+})
