@@ -27,9 +27,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService
   ) {}
 
-  public errorMsg: string | null = null
-  errors: {[key: string]: string} = {}
-  data: UserLoginDTO = {userName: '', password: ''}
+  errorMsg: string | null = null
+  errors: {[key: string]: string} = {}  
   loginForm!: FormGroup
 
   @Input() defaultErrors: DefaultErrors = {
@@ -83,14 +82,15 @@ export class LoginComponent implements OnInit {
   }
 
   async submitLogin() {
-    if (Object.keys(this.errors).length === 0) {
+    if (Object.keys(this.errors).length === 0) {      
+      const data: UserLoginDTO = {userName: this.name?.value, password: this.password?.value}
+      
       try {
-        await this.userService.login(this.data)
+        await this.userService.login(data)
         this.router.navigate(['/figuritas'])
       } catch (error) {
         //TODO: manejar el tipo de error que llega del back
-        this.errorMsg =
-          'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
+        this.errorMsg = 'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
       }
     }
   }
