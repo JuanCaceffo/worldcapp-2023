@@ -124,6 +124,10 @@
   right: 0;
 }
 
+.field__icon--pointer {
+  cursor: pointer;
+}
+
 .field__icon::before{
   display: flex;
   justify-content: center;
@@ -139,7 +143,7 @@
 }
 
 @media screen and (min-width:769px) {
-  :host-context(.field--search) {    
+  .field--search {    
     max-width: 65%;
     margin: 0 auto;
   }
