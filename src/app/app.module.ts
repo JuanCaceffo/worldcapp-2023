@@ -36,9 +36,6 @@ import {StoreSearchComponent} from './pages/store-search/store-search.component'
 // Form components
 import {FormComponent} from './components/form/form.component'
 
-// Directives
-import {DIRECTIVES} from './directives/directives'
-
 // Pipes
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
@@ -76,8 +73,6 @@ import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile
     // Form
     FormComponent,
     ProfileInfoComponent,
-    // Directives
-    DIRECTIVES,
     // Pipe
     ConcatenatePipe,
     FullAddressPipe
