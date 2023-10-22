@@ -3,24 +3,26 @@
     <legend class="form__title">Información general</legend>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Nombre</label>          
-          <input class="field__input rounded shaded" type="text" placeholder="Ingrese Nombre" />            
-        <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->          
+      <label class="field__label field__label--strong" for="name">Nombre</label>          
+          <input class="field__input rounded shaded" type="text" id="name" name="name" placeholder="Ingrese Nombre"  [(ngModel)]="profileInfo.name" />            
     </section>
 
     <section  class="field field--2col">
-      <label class="field__label field__label--strong">Apellido</label>
-        <input class="field__input rounded shaded" type="text" placeholder="Ingrese Apellido" />
+      <label class="field__label field__label--strong" for="lastName">Apellido</label>
+        <input class="field__input rounded shaded" type="text" id="lastName" name="lastName" placeholder="Ingrese Apellido"  [(ngModel)]="profileInfo.lastName" />
     </section>
 
     <section  class="field field--2col">
-      <label class="field__label field__label--strong">Correo electrónico</label>
-        <input class="field__input rounded shaded" type="email" placeholder="Ingrese Correo" />
+      <label class="field__label field__label--strong" for="email">Correo electrónico</label>
+        <input class="field__input rounded shaded" type="email" id="email" name="email" placeholder="Ingrese Correo"  [(ngModel)]="profileInfo.email" />
     </section>
 
     <section  class="field field--2col">
-      <label class="field__label field__label--strong">Fecha de nacimiento</label>
-        <input class="field__input rounded shaded" type="date" />
+      <label class="field__label field__label--strong" for="birthdate">Fecha de nacimiento</label>
+        <input class="field__input rounded shaded" id="birthdate" name="birthdate" type="date"
+        #inputBirthdate
+        [(ngModel)]="profileInfo.birthdate" 
+        />
     </section>
   </fieldset>
 
@@ -28,8 +30,8 @@
     <legend class="form__title">Dirección</legend>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Provincia</label>
-      <select class="field__select rounded shaded">
+      <label class="field__label field__label--strong" for="province">Provincia</label>
+      <select class="field__select rounded shaded" id="province" name="province"  [(ngModel)]="profileInfo.province" >
         <option>Seleccione una opción</option>
         <option>Opción 1</option>
         <option>Opción 2</option>
@@ -38,8 +40,8 @@
     </section>  
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Localidad</label>
-      <select class="field__select rounded shaded">
+      <label class="field__label field__label--strong" for="location">Localidad</label>
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.location" >
         <option>Seleccione una opción</option>
         <option>Opción 1</option>
         <option>Opción 2</option>
@@ -48,13 +50,13 @@
     </section>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Calle</label>
-      <input class="field__input rounded shaded" type="text" placeholder="Ingrese Calle" />
+      <label class="field__label field__label--strong" for="streetName">Calle</label>
+      <input class="field__input rounded shaded" id="streetName" type="text" name="streetName" placeholder="Ingrese Calle" [(ngModel)]="profileInfo.streetName" />
     </section>    
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Altura</label>
-      <input class="field__input rounded shaded" type="number" min="0" placeholder="Ingrese Altura" />
+      <label class="field__label field__label--strong" for="streetNumber">Altura</label>
+      <input class="field__input rounded shaded" type="number" id="streetNumber" name="streetNumber" min="0" placeholder="Ingrese Altura"  [(ngModel)]="profileInfo.streetNumber" />
     </section>
   </fieldset>
 
@@ -62,18 +64,18 @@
     <legend class="form__title">Ubicación Geográfica</legend>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Latitud</label>
-      <input class="field__input rounded shaded" type="number" placeholder="Ingrese Latitud" />
+      <label class="field__label field__label--strong" for="latitude">Latitud</label>
+      <input class="field__input rounded shaded" type="number" id="latitude" name="latitude" placeholder="Ingrese Latitud"  [(ngModel)]="profileInfo.latitude" />
     </section>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Longitud</label>
-      <input class="field__input rounded shaded" type="number" placeholder="Ingrese Longitud" />
+      <label class="field__label field__label--strong" for="longitude">Longitud</label>
+      <input class="field__input rounded shaded" type="number" id="longitude" name="longitude" placeholder="Ingrese Longitud"  [(ngModel)]="profileInfo.longitude" />
     </section>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Cercanía máxima intercambio</label>
-      <input class="field__input rounded shaded" type="number" min="0" placeholder="Ingrese Distancia Máxima" />
+      <label class="field__label field__label--strong" for="exchangeProximity">Cercanía máxima intercambio</label>
+      <input class="field__input rounded shaded" type="number" min="0" id="exchangeProximity" name="exchangeProximity" placeholder="Ingrese Distancia Máxima"  [(ngModel)]="profileInfo.exchangeProximity" />
     </section>
   </fieldset>
 
@@ -81,8 +83,8 @@
     <legend class="form__title">Criterio para el intercambio</legend>
 
     <section class="field field--2col">
-      <label class="field__label field__label--strong" for="userName">Criterio</label>
-      <select class="field__select rounded shaded">
+      <label class="field__label field__label--strong" for="criteria">Criterio</label>
+      <select class="field__select rounded shaded" id="criteria" name="criteria"  [(ngModel)]="profileInfo.criteria">
         <option>Seleccione una opción</option>
         <option>Opción 1</option>
         <option>Opción 2</option>
