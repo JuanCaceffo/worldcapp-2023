@@ -1,9 +1,6 @@
 import {LoginComponent} from './login.component'
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 import {RouterTestingModule} from '@angular/router/testing'
-import {FieldLabelComponent} from 'src/app/components/fields/field-label/field-label.component'
-import {InputFieldComponent} from 'src/app/components/fields/input-field/input-field.component'
-import {IconFieldComponent} from 'src/app/components/fields/icon-field/icon-field.component'
 import {LogoComponent} from 'src/app/components/logo/logo.component'
 import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
@@ -17,13 +14,7 @@ describe('LoginComponent', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, FormsModule, HttpClientModule],
-      declarations: [
-        LoginComponent,
-        IconFieldComponent,
-        InputFieldComponent,
-        FieldLabelComponent,
-        LogoComponent
-      ]
+      declarations: [LoginComponent, LogoComponent]
     })
     fixture = TestBed.createComponent(LoginComponent)
     component = fixture.componentInstance

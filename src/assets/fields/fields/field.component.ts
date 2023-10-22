@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core'
-import { FieldProps } from 'src/app/interfaces/field'
+import {Component, Input} from '@angular/core'
+import {FieldProps} from 'src/app/interfaces/field'
 
 export type InputType =
   | ''
@@ -21,6 +21,6 @@ export abstract class FieldComponent implements FieldProps {
   @Input() autofocus = 'false'
   @Input() tabindex = '-1'
   @Input('data-testid') testid = ''
-  
+
   constructor() {}
 }
