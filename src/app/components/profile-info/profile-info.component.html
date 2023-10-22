@@ -4,22 +4,49 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="name">Nombre</label>          
-          <input class="field__input rounded shaded" type="text" id="name" name="name" placeholder="Ingrese Nombre"  [(ngModel)]="profileInfo.name" />            
+          <input 
+          class="field__input rounded shaded" 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Ingrese Nombre"  
+          [(ngModel)]="profileInfo.name" 
+          />            
     </section>
 
     <section  class="field field--2col">
       <label class="field__label field__label--strong" for="lastName">Apellido</label>
-        <input class="field__input rounded shaded" type="text" id="lastName" name="lastName" placeholder="Ingrese Apellido"  [(ngModel)]="profileInfo.lastName" />
+        <input 
+        class="field__input rounded shaded" 
+        type="text" 
+        id="lastName" 
+        name="lastName" 
+        placeholder="Ingrese Apellido"  
+        [(ngModel)]="profileInfo.lastName" 
+        />
     </section>
 
     <section  class="field field--2col">
       <label class="field__label field__label--strong" for="email">Correo electrónico</label>
-        <input class="field__input rounded shaded" type="email" id="email" name="email" placeholder="Ingrese Correo"  [(ngModel)]="profileInfo.email" />
+        <input 
+        class="field__input rounded shaded" 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Ingrese Correo"  
+        [(ngModel)]="profileInfo.email" 
+        />
     </section>
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="birthdate">Fecha de nacimiento</label>
-      <input class="field__input rounded shaded" id="birthdate" name="birthdate" type="date" [(ngModel)]="profileInfo.birthdate" />
+      <input 
+      class="field__input rounded shaded" 
+      id="birthdate" 
+      name="birthdate" 
+      type="date" 
+      [(ngModel)]="profileInfo.birthdate" 
+      />
     </section>
     
   </fieldset>
@@ -29,7 +56,8 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="province">Provincia</label>
-      <select class="field__select rounded shaded" id="province" name="province"  [(ngModel)]="profileInfo.province" >
+      <select 
+      class="field__select rounded shaded" id="province" name="province" [(ngModel)]="profileInfo.address.provincia" >
         <option>Seleccione una opción</option>
         <option *ngFor="let province of provinces"> {{province}} </option>
       </select>
@@ -37,7 +65,7 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="location">Localidad</label>
-      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.location" >
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" >
         <option>Seleccione una opción</option>
         <option *ngFor="let location of locations"> {{location}} </option>
         
@@ -46,12 +74,26 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="streetName">Calle</label>
-      <input class="field__input rounded shaded" id="streetName" type="text" name="streetName" placeholder="Ingrese Calle" [(ngModel)]="profileInfo.streetName" />
+      <input 
+      class="field__input rounded shaded" 
+      id="streetName" 
+      type="text" 
+      name="streetName" 
+      placeholder="Ingrese Calle" 
+      [(ngModel)]="profileInfo.address.calle" />
     </section>    
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="streetNumber">Altura</label>
-      <input class="field__input rounded shaded" type="number" id="streetNumber" name="streetNumber" min="0" placeholder="Ingrese Altura"  [(ngModel)]="profileInfo.streetNumber" />
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      id="streetNumber" 
+      name="streetNumber" 
+      min="0" 
+      placeholder="Ingrese Altura"  
+      [(ngModel)]="profileInfo.address.altura" 
+      />
     </section>
   </fieldset>
 
@@ -60,17 +102,39 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="latitude">Latitud</label>
-      <input class="field__input rounded shaded" type="number" id="latitude" name="latitude" placeholder="Ingrese Latitud"  [(ngModel)]="profileInfo.latitude" />
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      id="latitude" 
+      name="latitude" 
+      placeholder="Ingrese Latitud"  
+      [(ngModel)]="profileInfo.address.ubiGeografica.x" 
+      />
     </section>
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="longitude">Longitud</label>
-      <input class="field__input rounded shaded" type="number" id="longitude" name="longitude" placeholder="Ingrese Longitud"  [(ngModel)]="profileInfo.longitude" />
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      id="longitude" 
+      name="longitude" 
+      placeholder="Ingrese Longitud"  
+      [(ngModel)]="profileInfo.address.ubiGeografica.y" 
+      />
     </section>
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="exchangeProximity">Cercanía máxima intercambio</label>
-      <input class="field__input rounded shaded" type="number" min="0" id="exchangeProximity" name="exchangeProximity" placeholder="Ingrese Distancia Máxima"  [(ngModel)]="profileInfo.exchangeProximity" />
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      min="0" 
+      id="exchangeProximity" 
+      name="exchangeProximity" 
+      placeholder="Ingrese Distancia Máxima"  
+      [(ngModel)]="profileInfo.exchangeProximity" 
+      />
     </section>
   </fieldset>
 

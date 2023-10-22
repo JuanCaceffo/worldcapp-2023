@@ -2,6 +2,7 @@
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
 import {ProfileInfoComponent} from './profile-info.component'
+import {FormsModule} from '@angular/forms'
 
 describe('ProfileInfoComponent', () => {
   let component: ProfileInfoComponent
@@ -9,7 +10,8 @@ describe('ProfileInfoComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ProfileInfoComponent]
+      declarations: [ProfileInfoComponent],
+      imports: [FormsModule]
     }).compileComponents()
   }))
 
