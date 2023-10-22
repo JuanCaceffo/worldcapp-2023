@@ -17,13 +17,11 @@
         <input class="field__input rounded shaded" type="email" id="email" name="email" placeholder="Ingrese Correo"  [(ngModel)]="profileInfo.email" />
     </section>
 
-    <section  class="field field--2col">
+    <section class="field field--2col">
       <label class="field__label field__label--strong" for="birthdate">Fecha de nacimiento</label>
-        <input class="field__input rounded shaded" id="birthdate" name="birthdate" type="date"
-        #inputBirthdate
-        [(ngModel)]="profileInfo.birthdate" 
-        />
+      <input class="field__input rounded shaded" id="birthdate" name="birthdate" type="date" [(ngModel)]="profileInfo.birthdate" />
     </section>
+    
   </fieldset>
 
   <fieldset class="form-info__body">
@@ -33,9 +31,7 @@
       <label class="field__label field__label--strong" for="province">Provincia</label>
       <select class="field__select rounded shaded" id="province" name="province"  [(ngModel)]="profileInfo.province" >
         <option>Seleccione una opción</option>
-        <option>Opción 1</option>
-        <option>Opción 2</option>
-        <option>Opción 3</option>
+        <option *ngFor="let province of provinces"> {{province}} </option>
       </select>
     </section>  
 
@@ -43,9 +39,8 @@
       <label class="field__label field__label--strong" for="location">Localidad</label>
       <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.location" >
         <option>Seleccione una opción</option>
-        <option>Opción 1</option>
-        <option>Opción 2</option>
-        <option>Opción 3</option>
+        <option *ngFor="let location of locations"> {{location}} </option>
+        
       </select>
     </section>
 
@@ -86,9 +81,7 @@
       <label class="field__label field__label--strong" for="criteria">Criterio</label>
       <select class="field__select rounded shaded" id="criteria" name="criteria"  [(ngModel)]="profileInfo.criteria">
         <option>Seleccione una opción</option>
-        <option>Opción 1</option>
-        <option>Opción 2</option>
-        <option>Opción 3</option>
+        <option *ngFor="let criterion of criteria"> {{criterion}} </option>
       </select>
     </section>
   </fieldset>

@@ -27,7 +27,7 @@ export const profileInfoUserMock: ProfileInfoDTO = {
   name: 'Facundo',
   lastName: 'Jauretche',
   email: 'el_loquito@test.com',
-  birthdate: '22/12/1990',
+  birthdate: '1990-12-22',
   province: 'Buenos Aires',
   location: '3 de Febrero',
   streetName: 'Calle Falsa',
@@ -35,5 +35,5 @@ export const profileInfoUserMock: ProfileInfoDTO = {
   latitude: 34.12331231,
   longitude: -22.123125807,
   exchangeProximity: 3,
-  criteria: 'TODO'
+  criteria: 'TODO5'
 }

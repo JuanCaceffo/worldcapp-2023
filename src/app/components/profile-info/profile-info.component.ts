@@ -1,5 +1,7 @@
-import {Component, ElementRef, ViewChild} from '@angular/core'
+import {criteria, locations} from './../../helpers/getOptionsInfoProfile'
+import {Component} from '@angular/core'
 import {ProfileInfoDTO} from 'src/app/dtos/user.dto'
+import {provinces} from 'src/app/helpers/getOptionsInfoProfile'
 import {profileInfoUserMock} from 'src/app/mocks/user.mock'
 
 @Component({
@@ -8,8 +10,8 @@ import {profileInfoUserMock} from 'src/app/mocks/user.mock'
   styleUrls: ['./profile-info.component.css']
 })
 export class ProfileInfoComponent {
-  @ViewChild('inputBirthdate') inputElement!: ElementRef
-
-  //TODO: Ingresar desde el back al input la fecha y los selects
   profileInfo: ProfileInfoDTO = profileInfoUserMock
+  provinces: string[] = provinces
+  locations: string[] = locations
+  criteria: string[] = criteria
 }
