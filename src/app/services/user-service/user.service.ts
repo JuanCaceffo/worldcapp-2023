@@ -1,10 +1,14 @@
 import {HttpClient} from '@angular/common/http'
 import {Figurita} from 'src/app/models/cards/figurita.model'
-import {UserLoginResponseDTO, UserLoginDTO} from 'src/app/dtos/user.dto'
+import {
+  UserLoginResponseDTO,
+  UserLoginDTO,
+  ProfileInfoDTO
+} from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
-import {USER_KEY_STORAGE} from 'src/app/helpers/getUserId'
+import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId'
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +34,12 @@ export class UserService {
         requestedFiguID: figurita.props.cardID
       })
     )
+  }
+
+  async getProfileInfo(): Promise<ProfileInfoDTO> {
+    const profileInfo$ = this.httpClient.get<ProfileInfoDTO>(
+      `${API_URL}/user/${getUserId()}/info-profile`
+    )
+    return lastValueFrom(profileInfo$)
   }
 }

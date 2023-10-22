@@ -50,10 +50,12 @@ export const locations: string[] = [
 ]
 
 export const criteria: string[] = [
-  'TODO1',
-  'TODO2',
-  'TODO3',
-  'TODO4',
-  'TODO5',
-  'TODO6'
+  'Desprendido',
+  'Par',
+  'Nacionalista',
+  'Conservador',
+  'Apostador',
+  'Interesado',
+  'Cambiante',
+  'Fanático'
 ]
