@@ -52,10 +52,6 @@
   border: 1px solid var(--color-hot);
 }
 
-.field__input--checkbox{}
-
-.field__input--radio{}
-
 .field__container {
   position: relative;
   overflow: hidden;
