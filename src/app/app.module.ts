@@ -3,6 +3,7 @@ import {AppRoutingModule, routingComponents} from './app-routing.module'
 import {BrowserModule} from '@angular/platform-browser'
 import {FormsModule} from '@angular/forms'
 import {NgModule} from '@angular/core'
+import { ReactiveFormsModule } from '@angular/forms'
 
 // Main Component
 import {AppComponent} from './app.component'
@@ -47,7 +48,7 @@ import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile
 
 @NgModule({
   declarations: [
-    // Angular
+    // Angular    
     routingComponents,
     AppComponent,
     // Base Page Components
@@ -81,7 +82,7 @@ import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile
     ConcatenatePipe,
     FullAddressPipe
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

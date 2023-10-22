@@ -1,7 +1,3 @@
-// export class Validate {
-//   static inputTextRequired = (value: string | undefined | null ) => { 
-    
-//     const trimedValue = value.trim()
-    
-//   }
-// }
+export const error = {
+  REQUIRED: 'Este campo es obligatorio, debe ingresar un valor'
+}

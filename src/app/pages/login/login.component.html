@@ -1,54 +1,57 @@
-<div class="home">  
+<div class="home">
   <section class="home__content">
-    <form class="form-login">
+    <form [formGroup]="loginForm" class="form-login" (ngSubmit)="submitLogin()">
       <section class="form-login__header">
-        <app-logo/>
+        <app-logo />
       </section>
       <section class="form-login__content">
         <div class="field">
-          <label class="field__label field__label--strong" for="userName">Usuario</label>          
-            <div shadedElement class="field__container rounded shadow">
-              <input 
-                [(ngModel)]="data.userName"
-                id="userName"
-                class="field__input field__input--iconized rounded"      
-                type="text"
-                name="login"                
-                tabindex  ="0"
-                data-testid="userInput"
-              />
-              <i iconElement class="field__icon fas fa-user" ></i>              
-            </div>
-            <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->          
+          <label class="field__label field__label--strong" for="name"
+            >Usuario</label
+          >
+          <div class="field__container rounded shadow">
+            <input
+              id="name"                          
+              formControlName="name"              
+              class="field__input field__input--iconized rounded"
+              type="text"
+              autocomplete="off"
+              data-testid="userInput"              
+            />
+            <i iconElement class="field__icon fas fa-user"></i>
+          </div>
+          <span *ngIf="errors['name']" class="field__error">{{getMyError('name', errors['name'])}}</span>
         </div>
         <div class="field">
-          <label class="field__label field__label--strong" for="userName">Contraseña</label>
-          
-            <div shadedElement class="field__container rounded shadow">
-              <input 
-                [(ngModel)]="data.password"
-                id="userName"
-                class="field__input field__input--iconized rounded"      
-                type="password"
-                name="login"                
-                tabindex  ="1"
-                data-testid="passwordInput"          
-              />
-              <i iconElement class="field__icon fas fa-key" ></i>
-            </div>
-            <!-- <span class="field__error" *ngIf="errorMessage()">{{errorMessage()}}</span> -->
-          
+          <label class="field__label field__label--strong" for="password">Contraseña</label>
+          <div class="field__container rounded shadow">
+            <input
+              id="password"              
+              formControlName="password"             
+              class="field__input field__input--iconized rounded"
+              type="password"
+              autocomplete="off"
+              data-testid="passwordInput"                            
+            />
+            <i iconElement class="field__icon fas fa-key"></i>
+          </div>
+          <span *ngIf="errors['password']" class="field__error">{{getMyError('password', errors['password'])}}</span>
         </div>
-       
-        <section class="form__row">
-          <!-- <app-icon-field rounded shaded icon="fas fa-key" type="password" (onchangeIcon)="onInputData($event)" name="password" data-testid="passwordInput"></app-icon-field> -->
-        </section>
-        <div *ngIf="errorMsg" class="error-msg" data-testid="errorMessage">{{errorMsg}} </div>  
+        <div *ngIf="errorMsg" class="error-msg" data-testid="errorMessage">
+          {{ errorMsg }}
+        </div>
       </section>
       <section class="form-login__actions">
-        <button class="button button--large button--primary button--font-md" tabindex="2" data-testid="loginButton" (click)="submit()" >Ingresar</button>
+        <button
+          type="submit"
+          [ngClass]="!loginForm.valid ? 'button--disabled' : 'shadow'"          
+          (click)="formHasErrors()"
+          class="button button--large button--primary button--font-md"
+          data-testid="loginButton"          
+        >
+          Ingresar
+        </button>
       </section>
     </form>
   </section>
 </div>
-
