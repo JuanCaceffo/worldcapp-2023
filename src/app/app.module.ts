@@ -3,6 +3,7 @@ import {AppRoutingModule, routingComponents} from './app-routing.module'
 import {BrowserModule} from '@angular/platform-browser'
 import {FormsModule} from '@angular/forms'
 import {NgModule} from '@angular/core'
+import { ReactiveFormsModule } from '@angular/forms'
 
 // Main Component
 import {AppComponent} from './app.component'
@@ -35,9 +36,6 @@ import {StoreSearchComponent} from './pages/store-search/store-search.component'
 // Form components
 import {FormComponent} from './components/form/form.component'
 
-// Directives
-import {DIRECTIVES} from './directives/directives'
-
 // Pipes
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
@@ -48,7 +46,7 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
 
 @NgModule({
   declarations: [
-    // Angular
+    // Angular    
     routingComponents,
     AppComponent,
     // Base Page Components
@@ -77,13 +75,11 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
     FormComponent,
     FieldsSetInputsComponent,
     ProfileInfoComponent,
-    // Directives
-    DIRECTIVES,
     // Pipe
     ConcatenatePipe,
     FullAddressPipe
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

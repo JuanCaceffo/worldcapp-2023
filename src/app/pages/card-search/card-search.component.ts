@@ -15,7 +15,8 @@ export class CardSearchComponent implements OnInit {
   ) {}
 
   @Input() value!: number[]
-
+  searchValue?: string | null    
+  
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
     this.listCards = this.cardService.getAllCards()
@@ -26,9 +27,9 @@ export class CardSearchComponent implements OnInit {
   }
 
   listCards: Array<Figurita> = []
-
-  // onEnterPressed() {
-  //   const resultado = searchbar.search(this.aBuscar)
-  //   this.value = resultado.map( (elemento) => elemento.cardID )
-  // }
+  
+  clickAction(){ 
+    console.log(this.searchValue)  
+  }
+  
 }

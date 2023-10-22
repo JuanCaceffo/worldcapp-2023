@@ -10,6 +10,7 @@ import {CardMarketService} from 'src/app/services/card-market-service/card-marke
 })
 export class StoreSearchComponent {
   marketCards: Array<PickupPoint> = []
+  searchValue?: string | null
 
   constructor(
     private titleService: Title,
@@ -23,5 +24,9 @@ export class StoreSearchComponent {
 
   async getAllCards() {
     this.marketCards = await this.cardMarketService.getAllCards()
+  }
+
+  clickAction() {
+
   }
 }

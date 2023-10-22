@@ -4,18 +4,67 @@
       Valoración
     </h4>
     <article class="filter__input-group">
-      <section class="filter__container">
-        <!-- <app-input-field type="number" min="0" rounded value="from" label="Desde" [data-testid]="setTestId('inputFrom')" /> -->
+      <section class="filter__container">        
+        <div class="field shadow">
+          <label class="field__label" for="name">
+            Desde
+          </label>
+          <input
+            [(ngModel)]="from"
+            (ngModelChange)="onFromChange($event)"
+            id="name"            
+            class="field__input rounded"
+            type="number"
+            min="0"
+            autocomplete="off"
+            data-testid="inputFrom"
+          />
+        </div>
       </section>
       <section class="filter__container">
-        <!-- <app-input-field type="number" min="0" rounded value="to" label="Hasta" [data-testid]="setTestId('inputTo')" /> -->
+        <div class="field shadow">
+          <label class="field__label" for="name">
+            Hasta
+          </label>
+          <input
+            [(ngModel)]="to"            
+            id="to"            
+            class="field__input rounded"
+            type="number"
+            [min]="min"
+            autocomplete="off"
+            data-testid="inputTo"
+          />
+        </div>        
       </section>
     </article>
     <section class="filter__checkbox">
-      <!-- <app-control-field name="onFire" type="checkbox" value="onFire" [checked]="onFire" label="On Fire" [data-testid]="setTestId('checkboxOnFire')"/> -->
+      <div class="field__control">
+        <input
+          id="onFire"     
+          [(ngModel)]="onFire"          
+          type="checkbox"           
+          [checked]="onFire"
+          data-testid="checkboxOnFire" 
+        />
+        <label class="field__label" for="onFire">
+          On Fire
+        </label>        
+      </div>
     </section>
-      <section class="filter__checkbox">
-        <!-- <app-control-field name="promise" type="checkbox" value="isPromise" [checked]="true" label="Es promesa" [data-testid]="setTestId('checkboxIsPromise')"/> -->
-      </section>
+    <section class="filter__checkbox">
+      <div class="field__control">
+        <input
+          id="isPromise"     
+          [(ngModel)]="isPromise"          
+          type="checkbox"           
+          [checked]="isPromise"
+          data-testid="checkboxIsPromise"
+        />
+        <label class="field__label" for="isPromise">
+          Es Promesa
+        </label>        
+      </div>      
+    </section>
   </section>
 </section>

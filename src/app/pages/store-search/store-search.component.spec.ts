@@ -1,35 +1,24 @@
-// import {ComponentFixture, TestBed} from '@angular/core/testing'
+import { ComponentFixture, TestBed, fakeAsync } from "@angular/core/testing"
+import { StoreSearchComponent } from "./store-search.component"
+import { HttpClientModule } from "@angular/common/http"
+import { RouterTestingModule } from "@angular/router/testing"
+import { LogoComponent } from "src/app/components/logo/logo.component"
+import { LoginComponent } from "../login/login.component"
 
-// import {StoreSearchComponent} from './store-search.component'
-// import {BaseFilterComponent} from 'src/app/components/filter/base-filter.component'
-// import {CardMarketComponent} from 'src/app/components/card-market/card-market.component'
+describe('Login Component', () => {
+  let store: StoreSearchComponent
+  let fixture: ComponentFixture<StoreSearchComponent>
 
-// import {FormsModule} from '@angular/forms'
-// import {SortedByFilterComponent} from 'src/app/components/filter/sorted-by-filter/sorted-by-filter.component'
-// import {FullAddressPipe} from 'src/app/pipes/full-address.pipe'
-// import {HttpClientModule} from '@angular/common/http'
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [LoginComponent, LogoComponent]
+    }).compileComponents()
+  }))
 
-// describe('StoreSearchComponent', () => {
-//   let component: StoreSearchComponent
-//   let fixture: ComponentFixture<StoreSearchComponent>
-
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [
-//         StoreSearchComponent,
-//         BaseFilterComponent,
-//         SortedByFilterComponent,
-//         CardMarketComponent,
-//         FullAddressPipe
-//       ],
-//       imports: [FormsModule, HttpClientModule]
-//     })
-//     fixture = TestBed.createComponent(StoreSearchComponent)
-//     component = fixture.componentInstance
-//     fixture.detectChanges()
-//   })
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy()
-//   })
-// })
+  it('should create', () => {
+    fixture = TestBed.createComponent(StoreSearchComponent)
+    store = fixture.debugElement.componentInstance    
+    expect(store).toBeTruthy()    
+  })
+})
