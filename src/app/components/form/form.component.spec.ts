@@ -6,9 +6,7 @@ describe('CustomField', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [
-        FormComponent
-      ]
+      declarations: [FormComponent]
     }).compileComponents()
   }))
 

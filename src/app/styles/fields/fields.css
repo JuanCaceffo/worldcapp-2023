@@ -5,7 +5,7 @@
   width: 100%;  
 }
 
-.field__input {
+.field__input, .field__select {
   width: 100%;
   min-height: 3.5rem;
   padding-right: 1rem;
@@ -19,6 +19,14 @@
   outline: none;
   
   transition: all var(--transition-time) ease;
+}
+
+.field__select {
+  text-indent: 0.5rem;
+}
+
+.field--2col {
+  width: 100%;
 }
 
 .field--select {
@@ -146,5 +154,9 @@
   .field--search {    
     max-width: 65%;
     margin: 0 auto;
+  }
+
+  .field--2col {
+    width: 48%;
   }
 }

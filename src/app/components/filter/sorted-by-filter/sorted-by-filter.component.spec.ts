@@ -10,9 +10,7 @@ describe('FilterSortedByComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [
-        SortedByFilterComponent,
-      ]
+      declarations: [SortedByFilterComponent]
     })
     fixture = TestBed.createComponent(SortedByFilterComponent)
     component = fixture.componentInstance

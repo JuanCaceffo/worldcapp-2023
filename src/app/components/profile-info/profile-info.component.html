@@ -1,75 +1,93 @@
-  <form class="form-info" autocomplete="off">       
-    <article class="form-info__body">
-      <h2 class="form__title">Información general</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Nombre</label>
-        <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Nombre" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Apellido</label>
-        <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Apellido" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Correo electrónico</label>
-        <input name="primary" class="form__input--primary" type="email" placeholder="Ingrese Correo" />
-      </section>      
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Fecha de nacimiento</label>
-        <input name="secondary" class="form__input--primary" type="date" placeholder="Ingrese Fecha de Nacimiento" />
-      </section>
-      <h2 class="form__title">Dirección</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Provincia</label>
-        <select class="form__select">
-          <option>Seleccione una opción</option>
-          <option>Opción 1</option>
-          <option>Opción 2</option>
-          <option>Opción 3</option>
-        </select>
-      </section>      
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Localidad</label>
-        <select class="form__select">
-          <option>Seleccione una opción</option>
-          <option>Opción 1</option>
-          <option>Opción 2</option>
-          <option>Opción 3</option>
-        </select>
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Calle</label>
-        <input name="primary" class="form__input--primary" type="text" placeholder="Ingrese Calle" />
-      </section>      
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Altura</label>
-        <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Altura" />
-      </section>
-      <h2 class="form__title">Ubicación Geográfica</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Latitud</label>
-        <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Latitud" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Longitud</label>
-        <input name="primary" class="form__input--primary" type="number" placeholder="Ingrese Longitud" />
-      </section>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Distancia máxima de cercanía para intercambio</label>
-        <input name="primary" class="form__input--primary" type="number" min="0" placeholder="Ingrese Distancia Máxima" />
-      </section>
-      <h2 class="form__title">Criterio para el intercambio</h2>
-      <section class="form__row form__row--2col">
-        <label class="form__row-subtitle">Criterio</label>
-        <select class="form__select">
-          <option>Seleccione una opción</option>
-          <option>Opción 1</option>
-          <option>Opción 2</option>
-          <option>Opción 3</option>
-        </select>
-      </section>
-    </article>
-    <footer class="form-info__actions">
-      <button class="button--secondary">Resetear</button>
-      <button class="button--primary">Guardar</button>
-    </footer>
-  </form>
+<form class="form-info" #profileInfoForm="ngForm" (ngSubmit)="onSubmit(profileInfoForm)">       
+  <fieldset class="form-info__body">
+    <legend class="form__title">Información general</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="name">Nombre</label>          
+          <input class="field__input rounded shaded" type="text" id="name" name="name" placeholder="Ingrese Nombre"  [(ngModel)]="profileInfo.name" />            
+    </section>
+
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong" for="lastName">Apellido</label>
+        <input class="field__input rounded shaded" type="text" id="lastName" name="lastName" placeholder="Ingrese Apellido"  [(ngModel)]="profileInfo.lastName" />
+    </section>
+
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong" for="email">Correo electrónico</label>
+        <input class="field__input rounded shaded" type="email" id="email" name="email" placeholder="Ingrese Correo"  [(ngModel)]="profileInfo.email" />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="birthdate">Fecha de nacimiento</label>
+      <input class="field__input rounded shaded" id="birthdate" name="birthdate" type="date" [(ngModel)]="profileInfo.birthdate" />
+    </section>
+    
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Dirección</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="province">Provincia</label>
+      <select class="field__select rounded shaded" id="province" name="province"  [(ngModel)]="profileInfo.province" >
+        <option>Seleccione una opción</option>
+        <option *ngFor="let province of provinces"> {{province}} </option>
+      </select>
+    </section>  
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="location">Localidad</label>
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.location" >
+        <option>Seleccione una opción</option>
+        <option *ngFor="let location of locations"> {{location}} </option>
+        
+      </select>
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="streetName">Calle</label>
+      <input class="field__input rounded shaded" id="streetName" type="text" name="streetName" placeholder="Ingrese Calle" [(ngModel)]="profileInfo.streetName" />
+    </section>    
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="streetNumber">Altura</label>
+      <input class="field__input rounded shaded" type="number" id="streetNumber" name="streetNumber" min="0" placeholder="Ingrese Altura"  [(ngModel)]="profileInfo.streetNumber" />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Ubicación Geográfica</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="latitude">Latitud</label>
+      <input class="field__input rounded shaded" type="number" id="latitude" name="latitude" placeholder="Ingrese Latitud"  [(ngModel)]="profileInfo.latitude" />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="longitude">Longitud</label>
+      <input class="field__input rounded shaded" type="number" id="longitude" name="longitude" placeholder="Ingrese Longitud"  [(ngModel)]="profileInfo.longitude" />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="exchangeProximity">Cercanía máxima intercambio</label>
+      <input class="field__input rounded shaded" type="number" min="0" id="exchangeProximity" name="exchangeProximity" placeholder="Ingrese Distancia Máxima"  [(ngModel)]="profileInfo.exchangeProximity" />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Criterio para el intercambio</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="criteria">Criterio</label>
+      <select class="field__select rounded shaded" id="criteria" name="criteria"  [(ngModel)]="profileInfo.criteria">
+        <option>Seleccione una opción</option>
+        <option *ngFor="let criterion of criteria"> {{criterion}} </option>
+      </select>
+    </section>
+  </fieldset>
+  
+  <section class="form-info__actions">
+    <button class="button--secondary" type="reset">Resetear</button>
+    <button class="button--primary" type="submit">Guardar</button>
+  </section>
+</form>

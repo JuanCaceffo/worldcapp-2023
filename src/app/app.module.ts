@@ -42,6 +42,7 @@ import {FullAddressPipe} from './pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
 import {ProfileInfoComponent} from './components/profile-info/profile-info.component'
 import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
+import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-set-inputs.component'
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile
     NavbarProfileComponent,
     // Form
     FormComponent,
+    FieldsSetInputsComponent,
     ProfileInfoComponent,
     // Pipe
     ConcatenatePipe,
