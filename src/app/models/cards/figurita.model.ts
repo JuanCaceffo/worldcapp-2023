@@ -1,5 +1,6 @@
+
 import {FiguritaDTO} from '../../dtos/figurita.dto'
-import {getUserId} from 'src/app/helpers/getUserId'
+import {getUserId} from 'src/app/helpers/getUserId.helper'
 
 export class Figurita {
   constructor(public props: FiguritaDTO) {}
