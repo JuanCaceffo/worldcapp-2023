@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {ActivatedRoute, Router} from '@angular/router'
 import {Figurita} from 'src/app/models/cards/figurita.model'
-import {CardService} from 'src/app/services/card-service/card.service'
 import {UserService} from 'src/app/services/user-service/user.service'
 
 @Component({
@@ -18,22 +17,21 @@ export class CardDetailsComponent implements OnInit {
     private titleService: Title,
     private route: ActivatedRoute,
     private router: Router,
-    public cardService: CardService,
     public userService: UserService
   ) {}
-  ngOnInit() {
-    this.route.params.subscribe((param) => {
-      const cardID = param['id']
-      const card = this.cardService.getCardById(cardID)
-      if (card) {
-        this.card = card
-        return
+  async ngOnInit() {
+    this.route.params.subscribe(async (param) => {
+      const userID = param['user-id']
+      const cardID = param['card-id']
+      try {
+        this.card = await this.userService.getGiftableFigurita(userID, cardID)
+      } catch (error) {
+        //TODO: arrojar un toast si hay un error y manejar el tipo de error
+        alert('error al traer la card')
+        this.goCardPage()
       }
-      //TODO: manejar error si no se encuentra la figurita
-      console.error('jijijija')
-      this.goCardPage()
     })
-    this.titleService.setTitle('Detalles de TODO:Figurita')
+    this.titleService.setTitle('Detalles figurita')
   }
   card!: Figurita
 

@@ -19,7 +19,7 @@ export const userProfilePaths = {
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'figuritas', component: CardSearchComponent},
-  {path: 'detalle-figurita/:id', component: CardDetailsComponent},
+  {path: 'detalle-figurita/:user-id/:card-id', component: CardDetailsComponent},
   {path: 'sobres', component: StoreSearchComponent},
   {
     path: 'perfil',
