@@ -1,42 +1,24 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing'
+import { ComponentFixture, TestBed, fakeAsync } from "@angular/core/testing"
+import { StoreSearchComponent } from "./store-search.component"
+import { HttpClientModule } from "@angular/common/http"
+import { RouterTestingModule } from "@angular/router/testing"
+import { LogoComponent } from "src/app/components/logo/logo.component"
+import { LoginComponent } from "../login/login.component"
 
-import {StoreSearchComponent} from './store-search.component'
-import {BaseFilterComponent} from 'src/app/components/filter/base-filter.component'
-import {CardMarketComponent} from 'src/app/components/card-market/card-market.component'
-import {IconFieldComponent} from 'src/app/components/fields/icon-field/icon-field.component'
-import {InputFieldComponent} from 'src/app/components/fields/input-field/input-field.component'
-import {FieldLabelComponent} from 'src/app/components/fields/field-label/field-label.component'
-import {FormsModule} from '@angular/forms'
-import {SortedByFilterComponent} from 'src/app/components/filter/sorted-by-filter/sorted-by-filter.component'
-import {ControlFieldComponent} from 'src/app/components/fields/control-field/control-field.component'
-import {FullAddressPipe} from 'src/app/pipes/full-address.pipe'
-import {HttpClientModule} from '@angular/common/http'
-
-describe('StoreSearchComponent', () => {
-  let component: StoreSearchComponent
+describe('Login Component', () => {
+  let store: StoreSearchComponent
   let fixture: ComponentFixture<StoreSearchComponent>
 
-  beforeEach(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        StoreSearchComponent,
-        BaseFilterComponent,
-        SortedByFilterComponent,
-        CardMarketComponent,
-        IconFieldComponent,
-        InputFieldComponent,
-        FieldLabelComponent,
-        ControlFieldComponent,
-        FullAddressPipe
-      ],
-      imports: [FormsModule, HttpClientModule]
-    })
-    fixture = TestBed.createComponent(StoreSearchComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [LoginComponent, LogoComponent]
+    }).compileComponents()
+  }))
 
   it('should create', () => {
-    expect(component).toBeTruthy()
+    fixture = TestBed.createComponent(StoreSearchComponent)
+    store = fixture.debugElement.componentInstance    
+    expect(store).toBeTruthy()    
   })
 })
