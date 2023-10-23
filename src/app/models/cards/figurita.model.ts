@@ -1,4 +1,3 @@
-
 import {FiguritaDTO} from '../../dtos/figurita.dto'
 import {getUserId} from 'src/app/helpers/getUserId.helper'
 
