@@ -28,12 +28,16 @@ export const profileInfoUserMock: ProfileInfoDTO = {
   lastName: 'Jauretche',
   email: 'el_loquito@test.com',
   birthdate: '1990-12-22',
-  province: 'Buenos Aires',
-  location: '3 de Febrero',
-  streetName: 'Calle Falsa',
-  streetNumber: 123,
-  latitude: 34.12331231,
-  longitude: -22.123125807,
+  address: {
+    provincia: 'Buenos Aires',
+    localidad: '3 de Febrero',
+    calle: 'Calle Falsa',
+    altura: 123,
+    ubiGeografica: {
+      x: 34.12331231,
+      y: -22.123125807
+    }
+  },
   exchangeProximity: 3,
-  criteria: 'TODO5'
+  criteria: 'Nacionalista'
 }
