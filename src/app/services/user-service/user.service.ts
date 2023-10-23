@@ -26,8 +26,8 @@ export class UserService {
     await lastValueFrom(
       this.httpClient.patch(`${API_URL}/user/request-figurita`, {
         userLogedID: UserService.userLogedID,
-        requestedUserID: figurita.props.ownerID,
-        requestedFiguID: figurita.props.cardID
+        requestedUserID: figurita.props.idUsuario,
+        requestedFiguID: figurita.props.id
       })
     )
   }

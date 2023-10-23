@@ -15,19 +15,23 @@ export class CardSearchComponent implements OnInit {
   ) {}
 
   @Input() value!: number[]
-  searchValue?: string | null    
+  listCards: Array<Figurita> = []
+  searchValue?: string
   
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
-    this.listCards = this.cardService.getAllCards()
+    this.getAll()
+  }
+
+  async getAll() {
+    this.listCards = await this.cardService.getAllCards()
+    console.log(this.listCards)
   }
 
   enviarDatos(datos: string){
     console.log(datos)
   }
 
-  listCards: Array<Figurita> = []
-  
   clickAction(){ 
     console.log(this.searchValue)  
   }
