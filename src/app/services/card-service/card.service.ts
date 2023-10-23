@@ -12,7 +12,6 @@ import {getUserId} from 'src/app/helpers/getUserId'
 })
 export class CardService {
   constructor(private httpClient: HttpClient) {}
-  figuritas: FiguritaDTO[] = []
 
   async getAllCards(): Promise<Figurita[]> {
     const figuritas = this.httpClient.get<FiguritaDTO[]>(
