@@ -5,7 +5,6 @@ import {ProfileInfoComponent} from './profile-info.component'
 import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
 import {profileInfoUserMock} from 'src/app/mocks/user.mock'
-import {getByTestId} from 'src/app/helpers/test.helper'
 
 describe('ProfileInfoComponent', () => {
   let component: ProfileInfoComponent
