@@ -1,16 +1,16 @@
-import {figuritaDTO} from '../../dtos/figurita.dto'
-import {getUserId} from 'src/app/helpers/getUserId.helper'
+import {FiguritaDTO} from '../../dtos/figurita.dto'
+import {getUserId} from 'src/app/helpers/getUserId'
 
 export class Figurita {
-  constructor(public props: figuritaDTO) {}
+  constructor(public props: FiguritaDTO) {}
 
-  static fromJson(cardJSON: figuritaDTO): Figurita {
+  static fromJson(cardJSON: FiguritaDTO): Figurita {
     return new Figurita(cardJSON)
   }
 
   get isOwner() {
     const userLogedID = getUserId()
-    return this.props.id == userLogedID
+    return this.props.idUsuario == userLogedID
   }
 
   get isWorldChampion() {
@@ -52,6 +52,6 @@ export class Figurita {
 
   // AGREGADO POR PABLO SI ESTA OK BORRAR EL COMMENT
   get imageURL(): string {
-    return `assets/images/card-img-${this.props.id}.jpg`
+    return `assets/images/card-img-${this.props.numero}.jpg`
   }
 }
