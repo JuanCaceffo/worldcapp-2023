@@ -5,14 +5,13 @@ import { HttpClient } from '@angular/common/http'
 import { FiguritaDTO } from 'src/app/dtos/figurita.dto'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
-import { getUserId } from 'src/app/helpers/getUserId.helper'
+import {getUserId} from 'src/app/helpers/getUserId.helper'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
   constructor(private httpClient: HttpClient) {}
-  figuritas: FiguritaDTO[] = []
 
   async getAllCards(): Promise<Figurita[]> {
     const figuritas = this.httpClient.get<FiguritaDTO[]>(
