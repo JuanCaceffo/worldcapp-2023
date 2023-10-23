@@ -22,7 +22,9 @@ export class ProfileInfoComponent {
     this.profileInfo = await this.userService.getProfileInfo()
   }
 
-  onSubmit(form: NgForm) {
-    console.log(form.form.value)
+  async onSubmit(form: NgForm) {
+    //TODO: Manejar errores
+    console.log(form.form.errors)
+    this.profileInfo = await this.userService.editProfileInfo(this.profileInfo)
   }
 }

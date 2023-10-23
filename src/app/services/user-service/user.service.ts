@@ -42,4 +42,14 @@ export class UserService {
     )
     return lastValueFrom(profileInfo$)
   }
+
+  async editProfileInfo(profileInfo: ProfileInfoDTO): Promise<ProfileInfoDTO> {
+    const profileInfo$ = this.httpClient.patch<ProfileInfoDTO>(
+      `${API_URL}/user/${getUserId()}/info-profile`,
+      profileInfo
+    )
+    //TODO: Hacer algo un poco mas amigable y menos molesto (Posible Toast)
+    alert('Se modificó el usuario exitosamente')
+    return lastValueFrom(profileInfo$)
+  }
 }
