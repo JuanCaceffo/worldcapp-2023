@@ -1,28 +1,25 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
-import { ProfileDuplicateFigusComponent } from './profile-duplicate-figus.component';
+import {ProfileDuplicateFigusComponent} from './profile-duplicate-figus.component'
 
 describe('ProfileDuplicateFigusComponent', () => {
-  let component: ProfileDuplicateFigusComponent;
-  let fixture: ComponentFixture<ProfileDuplicateFigusComponent>;
+  let component: ProfileDuplicateFigusComponent
+  let fixture: ComponentFixture<ProfileDuplicateFigusComponent>
 
-  beforeEach(async(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileDuplicateFigusComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [ProfileDuplicateFigusComponent]
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileDuplicateFigusComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(ProfileDuplicateFigusComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
