@@ -1,6 +1,6 @@
-import {TestBed, fakeAsync} from '@angular/core/testing'
-import {RouterTestingModule} from '@angular/router/testing'
-import {FormComponent} from './form.component'
+import { TestBed, fakeAsync } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
+import { FormComponent } from './form.component'
 
 describe('CustomField', () => {
   beforeEach(fakeAsync(() => {

@@ -1,6 +1,18 @@
 <div class="home home--header-on home--2col home--search">
   <section class="home__search">
-    <!-- <app-icon-field rounded shaded icon="fas fa-magnifying-glass" variant="icon-right" class="field--search" [buttonOn]="true" (emitter)="enviarDatos($event)"/> -->
+    <div class="field field--icon-right field--search">      
+      <div class="field__container rounded shadow">
+        <input
+          [(ngModel)]= "searchValue"
+          id="name"                                                  
+          class="field__input field__input--iconized field__input--icon-right rounded"
+          type="text"
+          autocomplete="off"
+          data-testid="userInput"              
+        />
+        <i (click)="clickAction()" class="field__icon field__icon--icon-right field__icon--pointer fas fa-magnifying-glass"></i>
+      </div>      
+    </div>    
   </section>
   <section class="home__aside">
     <app-baseFilter>
