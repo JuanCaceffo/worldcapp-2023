@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http'
 import { FiguritaDTO } from 'src/app/dtos/figurita.dto'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
-import {getUserId} from 'src/app/helpers/getUserId'
+import { getUserId } from 'src/app/helpers/getUserId.helper'
 
 @Injectable({
   providedIn: 'root'
