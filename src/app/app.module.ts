@@ -3,7 +3,7 @@ import {AppRoutingModule, routingComponents} from './app-routing.module'
 import {BrowserModule} from '@angular/platform-browser'
 import {FormsModule} from '@angular/forms'
 import {NgModule} from '@angular/core'
-import { ReactiveFormsModule } from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms'
 
 // Main Component
 import {AppComponent} from './app.component'

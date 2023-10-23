@@ -1,4 +1,5 @@
-import {Component} from '@angular/core'
+import {Component, OnChanges, Output, SimpleChanges} from '@angular/core'
+import { CardSearch } from 'src/app/interfaces/searchCriteria'
 // import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter.model'
 
 @Component({
@@ -9,13 +10,22 @@ import {Component} from '@angular/core'
     './variant-filter.component.css'
   ]
 })
-export class VariantFilterComponent {
+export class VariantFilterComponent implements OnChanges {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['onFire']){ console.log("pepe", this.onFire) }
+  }
+
+  @Output() filtro!: CardSearch
   title = 'Filtros'
   from = 0
   to = 0
   min = 0
   onFire = false
   isPromise = false  
+
+  // toggleOnFire(){
+  //   this.onFire = !this.onFire
+  // }
 
   onFromChange (newValue: number) {    
     this.min = newValue
