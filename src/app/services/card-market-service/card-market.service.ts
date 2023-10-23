@@ -4,7 +4,7 @@ import {lastValueFrom} from 'rxjs'
 import {PickupPointDTO} from 'src/app/dtos/pickup-point.dto'
 import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
 import {API_URL} from '../config'
-import {getUserId} from 'src/app/helpers/getUserId'
+import {getUserId} from 'src/app/helpers/getUserId.helper'
 
 @Injectable({
   providedIn: 'root'

@@ -39,5 +39,5 @@ export const profileInfoUserMock: ProfileInfoDTO = {
     }
   },
   exchangeProximity: 3,
-  criteria: 'TODO5'
+  criteria: 'Nacionalista'
 }

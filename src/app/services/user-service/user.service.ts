@@ -8,7 +8,7 @@ import {
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
-import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId'
+import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
 
 @Injectable({
   providedIn: 'root'
