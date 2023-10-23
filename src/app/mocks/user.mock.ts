@@ -1,5 +1,5 @@
 import {ProfileInfoDTO} from '../dtos/user.dto'
-import {figuritaDTO} from './../dtos/figurita.dto'
+import {FiguritaDTO} from './../dtos/figurita.dto'
 /* esta interfaz nos sirve para mockar la busqueda que se haria
 en el repo de user del backend (se va a ir extendiendo en medida
 de lo necesario*/
@@ -7,7 +7,7 @@ export interface completeUserMock {
   userID: number
   userName: string
   password: string
-  figuritasList?: figuritaDTO[]
+  figuritasList?: FiguritaDTO[]
 }
 
 export const MockedRegistredUsers: completeUserMock[] = [
