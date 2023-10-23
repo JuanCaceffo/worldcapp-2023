@@ -28,4 +28,5 @@ export interface UserInfoDTO {
   username: string
   age: number
   location: string
+  picturePath: string
 }

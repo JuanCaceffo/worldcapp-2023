@@ -45,5 +45,7 @@ export const profileInfoUserMock: UserProfileInfoDTO = {
 export const userInfoMock: UserInfoDTO = {
   username: 'Facundinho',
   age: 26,
-  location: '3 de Febrero'
+  location: '3 de Febrero',
+  picturePath:
+    'https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg'
 }
