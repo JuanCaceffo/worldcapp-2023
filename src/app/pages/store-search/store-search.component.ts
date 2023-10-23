@@ -17,16 +17,14 @@ export class StoreSearchComponent {
     private cardMarketService: CardMarketService
   ) {}
 
-  async ngOnInit() {
+  ngOnInit() {
     this.titleService.setTitle('Sobres')
-    await this.getAllCards()
+    this.getAllCards()
   }
 
   async getAllCards() {
     this.marketCards = await this.cardMarketService.getAllCards()
   }
 
-  clickAction() {
-
-  }
+  clickAction() {}
 }

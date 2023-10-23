@@ -3,12 +3,14 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {
   UserLoginResponseDTO,
   UserLoginDTO,
-  ProfileInfoDTO
+  UserProfileInfoDTO,
+  UserInfoDTO
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
+import {userInfoMock} from 'src/app/mocks/user.mock'
 
 @Injectable({
   providedIn: 'root'
@@ -36,20 +38,26 @@ export class UserService {
     )
   }
 
-  async getProfileInfo(): Promise<ProfileInfoDTO> {
-    const profileInfo$ = this.httpClient.get<ProfileInfoDTO>(
+  async getProfileInfo(): Promise<UserProfileInfoDTO> {
+    const profileInfo$ = this.httpClient.get<UserProfileInfoDTO>(
       `${API_URL}/user/${getUserId()}/info-profile`
     )
     return lastValueFrom(profileInfo$)
   }
 
-  async editProfileInfo(profileInfo: ProfileInfoDTO): Promise<ProfileInfoDTO> {
-    const profileInfo$ = this.httpClient.patch<ProfileInfoDTO>(
+  async editProfileInfo(
+    profileInfo: UserProfileInfoDTO
+  ): Promise<UserProfileInfoDTO> {
+    const profileInfo$ = this.httpClient.patch<UserProfileInfoDTO>(
       `${API_URL}/user/${getUserId()}/info-profile`,
       profileInfo
     )
     //TODO: Hacer algo un poco mas amigable y menos molesto (Posible Toast)
     alert('Se modificó el usuario exitosamente')
     return lastValueFrom(profileInfo$)
+  }
+
+  getUserInfo(): UserInfoDTO {
+    return userInfoMock
   }
 }

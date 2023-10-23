@@ -1,4 +1,4 @@
-import {ProfileInfoDTO} from '../dtos/user.dto'
+import {UserInfoDTO, UserProfileInfoDTO} from '../dtos/user.dto'
 import {FiguritaDTO} from './../dtos/figurita.dto'
 /* esta interfaz nos sirve para mockar la busqueda que se haria
 en el repo de user del backend (se va a ir extendiendo en medida
@@ -23,7 +23,7 @@ export const MockedRegistredUsers: completeUserMock[] = [
   }
 ]
 
-export const profileInfoUserMock: ProfileInfoDTO = {
+export const profileInfoUserMock: UserProfileInfoDTO = {
   name: 'Facundo',
   lastName: 'Jauretche',
   email: 'el_loquito@test.com',
@@ -40,4 +40,10 @@ export const profileInfoUserMock: ProfileInfoDTO = {
   },
   exchangeProximity: 3,
   criteria: 'Nacionalista'
+}
+
+export const userInfoMock: UserInfoDTO = {
+  username: 'Facundinho',
+  age: 26,
+  location: '3 de Febrero'
 }

@@ -1,28 +1,36 @@
-import { Component } from '@angular/core'
+import {Component} from '@angular/core'
+import {UserInfoDTO} from 'src/app/dtos/user.dto'
+import {UserService} from 'src/app/services/user-service/user.service'
 
 @Component({
   selector: 'app-card-user',
   templateUrl: './card-user.component.html',
   styleUrls: ['./card-user.component.css']
 })
-
 export class CardUserComponent {
+  constructor(private userService: UserService) {}
   isEditing = false
   editedUsername: string = ''
-  user = new User()
   LIMIT: number = 20
- 
+  userInfo!: UserInfoDTO
+
+  async ngOnInit() {
+    //this.userInfo = userInfoMock
+    //this.userInfo = await this.userService.getProfileInfo()
+    this.userInfo = this.userService.getUserInfo()
+  }
+
   startEdit() {
     this.isEditing = true
-    this.editedUsername = this.user.username
+    this.editedUsername = this.userInfo.username
     this.deleteUsername()
   }
-  
+
   saveUsername() {
-    this.user.username = this.editedUsername
+    this.userInfo.username = this.editedUsername
     this.isEditing = false
   }
-  
+
   cancelEdit() {
     this.isEditing = false
   }
@@ -31,23 +39,15 @@ export class CardUserComponent {
     this.editedUsername = ''
   }
 
-  inputIsValid():boolean{
+  inputIsValid(): boolean {
     return !this.isEmpty() && this.isUnderTheTop()
   }
 
-  isUnderTheTop():boolean {
-    return this.editedUsername.length <= this.LIMIT 
+  isUnderTheTop(): boolean {
+    return this.editedUsername.length <= this.LIMIT
   }
 
-  isEmpty():boolean {
+  isEmpty(): boolean {
     return !this.editedUsername.trim()
   }
-
-}
-
-export class User {
-  username: string = 'elMuñe'
-  edad: string = '30'
-  ubicacion: string = 'Parque Chas'
-
 }
