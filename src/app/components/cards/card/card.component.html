@@ -3,7 +3,7 @@
     <section class="player-card__img">
       <!-- TODO: ver como implementar la imagen --> 
       <img [src]="card.imageURL"/>
-      <li class="button--icon" *ngIf="card.props.idUsuario === userService.userLogedID">
+      <li class="button--icon" *ngIf="card.isOwner">
         <a class="button__link" href="">
           <i class="fa-solid fa-trash-can"></i>
         </a>

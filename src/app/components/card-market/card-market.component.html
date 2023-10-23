@@ -14,12 +14,12 @@
 
       <dt>
         <b class="card-market__attribute">Ubicacion Geografica: </b>
-        <span class="card-market__attribute-info" data-testid="geolocation-market-card">{{ marketCard.props.direccion.geoLocalizacion }}</span>
+        <span class="card-market__attribute-info" data-testid="geolocation-market-card">{{ getGeoLocalization() }}</span>
       </dt>
 
       <dt>
         <b class="card-market__attribute">Distancia: </b>
-        <span class="card-market__attribute-info" data-testid="distance-market-card">{{ marketCard.props.direccion.distancia | number:'1.2-2'}}</span>
+        <span class="card-market__attribute-info" data-testid="distance-market-card">{{ marketCard.props.distancia | number:'1.2-2'}}m</span>
       </dt>
     </dl>
 
@@ -35,6 +35,6 @@
 
     <dt class="card-market__info price">
       <b class="card-market__attribute">Precio por sobre: </b>
-      <span class="card-market__attribute-info" data-testid="price-market-card">{{ marketCard.props.precioSobres }}</span>
+      <span class="card-market__attribute-info" data-testid="price-market-card">{{ marketCard.props.precioSobres | currency: 'EUR' : 'symbol' : '0.0-2'}}</span>
     </dt>
   </dl>

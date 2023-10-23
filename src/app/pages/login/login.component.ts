@@ -1,64 +1,96 @@
-import {Component} from '@angular/core'
+import {UserLoginDTO} from 'src/app/dtos/user.dto'
+import {UserService} from 'src/app/services/user-service/user.service'
+import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Router} from '@angular/router'
+import {FormControl, FormGroup, Validators} from '@angular/forms'
+
+interface ErrorType {
+  required: string
+  minlength: string
+}
+
+interface DefaultErrors {
+  name: ErrorType
+  password: ErrorType
+}
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  public errorMsg: string | null = null
-  loginData = new LoginData()
-  constructor(private titleService: Title, private router: Router) {}
+export class LoginComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private router: Router,
+    private userService: UserService
+  ) {}
+
+  errorMsg: string | null = null
+  errors: {[key: string]: string} = {}  
+  loginForm!: FormGroup
+
+  @Input() defaultErrors: DefaultErrors = {
+    name: {
+      required: 'Ingrese un nombre de usuario',
+      minlength: 'Intente con un nombre superior a 3 letras'
+    },
+    password: {
+      required: 'Ingrese un password',
+      minlength: 'La contraseña debe tener al menos 4 letras'
+    }
+  }
 
   ngOnInit() {
     this.titleService.setTitle('Inicio de Sesión')
+
+    sessionStorage.clear()
+
+    this.loginForm = new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(4)
+      ])
+    })
   }
 
-  loginDatos(datos: string[]) {
-    this.loginData.onInputData(datos)
-    console.log('estos datos locos:', datos[0])
+  get name() {
+    return this.loginForm.get('name')
   }
 
-  login() {
-    this.loginData.submit()
-    if (this.loginData.validLogin == true) {
-      this.router.navigate(['/figuritas'])
-    } else {
-      this.errorMsg =
-        'Usuario o contraseña ingresados son invalidos! Vuelva a intentar'
-    }
-    this.titleService.setTitle('Página principal - Usuario logueado')
-  }
-}
-export class LoginData {
-  inputData!: string[]
-  validLogin = false
-  users = [
-    {user: 'sol', password: '1234'},
-    {user: 'pablo', password: '5678'},
-    {user: 'juanchi', password: 'cacho'}
-  ]
-  user = ''
-  password = ''
-
-  onInputData(datos: string[]) {
-    if (datos[1] == 'user') {
-      this.user = datos[0]
-    }
-    if (datos[1] == 'password') {
-      this.password = datos[0]
-    }
+  get password() {
+    return this.loginForm.get('password')
   }
 
-  submit() {
-    this.validLogin = false
-    for (const usuario of this.users) {
-      if (usuario.user == this.user) {
-        if (usuario.password == this.password) {
-          this.validLogin = true
-        }
+  getMyError(inputType: string, errorMsg: string) {
+    return this.defaultErrors[inputType as keyof DefaultErrors][errorMsg as keyof ErrorType]
+  }
+
+  formHasErrors() {
+    this.errors = {}
+    Object.keys(this.loginForm.controls).forEach((name) => {
+      const controlErrors = this.loginForm.controls[name].errors
+
+      if (controlErrors) {
+        Object.keys(controlErrors).forEach((key) => {
+          this.errors[name] = key
+        })
+      }
+    })
+  }
+
+  async submitLogin() {
+    if (Object.keys(this.errors).length === 0) {      
+      const data: UserLoginDTO = {userName: this.name?.value, password: this.password?.value}
+      
+      try {
+        await this.userService.login(data)
+        this.router.navigate(['/figuritas'])
+      } catch (error) {
+        //TODO: manejar el tipo de error que llega del back
+        this.errorMsg = 'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
       }
     }
   }

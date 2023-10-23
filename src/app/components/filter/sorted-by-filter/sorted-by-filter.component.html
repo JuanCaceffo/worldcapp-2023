@@ -1,17 +1,7 @@
-<article class="radio-filter">
-  <section>
-    <app-control-field name="radio-filter--option" type="radio" value={{closest}} [checked]="true" label="Menor Distancia" [data-testid]="setTestId('closest')"/>
-  </section>
-
-  <section>
-    <app-control-field name="radio-filter--option" type="radio" value={{cheapest}} [checked]="false" label="Más Barato" [data-testid]="setTestId('cheapest')"/>
-  </section>
-
-  <section>
-    <app-control-field name="radio-filter--option" type="radio" value={{packQuantity}} [checked]="false" label="Más Sobres" [data-testid]="setTestId('pack-quantity')"/>
-  </section>
-
-  <section>
-    <app-control-field name="radio-filter--option" type="radio" value={{closestOnly}} [checked]="false" label="Solo los más cercanos" [data-testid]="setTestId('closestOnly')"/>
-  </section>
+<article class="radio-filter">    
+  <div *ngFor="let opcion of opciones" class="field__control">
+    <label class="field__label">
+      <input type="radio" name="filtro" [(ngModel)]="chosenFilter" [value]="opcion" data-testid="opcion"/> {{opcion}}
+    </label>
+  </div>  
 </article>
