@@ -1,70 +1,77 @@
-<section class="filter__section">
-  <section class="filter__sub-section">
-    <h4 class="filter__title filter__title--secondary" data-testid="valoracion">
-      Valoración
-    </h4>
-    <article class="filter__input-group">
-      <section class="filter__container">        
-        <div class="field shadow">
-          <label class="field__label" for="name">
-            Desde
-          </label>
+<form class="filter" #variantFilter="ngForm" (ngSubmit)="onSubmit()">
+  <h3 class="filter__title filter__title--primary">
+    Filtros
+  </h3>
+  <section class="filter__section">
+    <section class="filter__sub-section">
+      <h4
+        class="filter__title filter__title--secondary"
+        data-testid="valoracion"
+      >
+        Valoración
+      </h4>
+      <article class="filter__input-group">
+        <section class="filter__container">
+          <div class="field shadow">
+            <label class="field__label" for="name"> Desde </label>
+            <input
+              [(ngModel)]="filterData.cotizacionInicial"
+              (ngModelChange)="onSubmit()"
+              id="from"
+              name="from"
+              class="field__input rounded"
+              type="number"
+              min="0"
+              autocomplete="off"
+              data-testid="inputFrom"
+            />
+          </div>
+        </section>
+        <section class="filter__container">
+          <div class="field shadow">
+            <label class="field__label" for="name"> Hasta </label>
+            <input
+              [(ngModel)]="filterData.cotizacionFinal"
+              (ngModelChange)="onSubmit()"
+              id="to"
+              name="to"
+              class="field__input rounded"
+              type="number"
+              [min]="min"
+              autocomplete="off"
+              data-testid="inputTo"
+            />
+          </div>
+        </section>
+      </article>
+      <section class="filter__checkbox">
+        <div class="field__control">
           <input
-            [(ngModel)]="from"
-            (ngModelChange)="onFromChange($event)"
-            id="name"            
-            class="field__input rounded"
-            type="number"
-            min="0"
-            autocomplete="off"
-            data-testid="inputFrom"
+            id="onFire"
+            name="onFire"
+            [(ngModel)]="filterData.onFire"
+            (ngModelChange)="onSubmit()"
+            type="checkbox"
+            [checked]="filterData.onFire"
+            data-testid="checkboxOnFire"
           />
+          <label class="field__label" for="onFire"> On Fire </label>
         </div>
       </section>
-      <section class="filter__container">
-        <div class="field shadow">
-          <label class="field__label" for="name">
-            Hasta
-          </label>
+      <section class="filter__checkbox">
+        <div class="field__control">
           <input
-            [(ngModel)]="to"            
-            id="to"            
-            class="field__input rounded"
-            type="number"
-            [min]="min"
-            autocomplete="off"
-            data-testid="inputTo"
+            id="isPromise"
+            name="isPromise"
+            [(ngModel)]="filterData.esPromesa"
+            (ngModelChange)="onSubmit()"
+            type="checkbox"
+            [checked]="filterData.esPromesa"
+            data-testid="checkboxIsPromise"
           />
-        </div>        
+          <label class="field__label" for="isPromise"> Es Promesa </label>
+        </div>
       </section>
-    </article>
-    <section class="filter__checkbox">
-      <div class="field__control">
-        <input
-          id="onFire"     
-          [(ngModel)]="onFire"          
-          type="checkbox"           
-          [checked]="onFire"
-          data-testid="checkboxOnFire" 
-        />
-        <label class="field__label" for="onFire">
-          On Fire
-        </label>        
-      </div>
-    </section>
-    <section class="filter__checkbox">
-      <div class="field__control">
-        <input
-          id="isPromise"     
-          [(ngModel)]="isPromise"          
-          type="checkbox"           
-          [checked]="isPromise"
-          data-testid="checkboxIsPromise"
-        />
-        <label class="field__label" for="isPromise">
-          Es Promesa
-        </label>        
-      </div>      
     </section>
   </section>
-</section>
+</form>

@@ -17,7 +17,7 @@
         <h2>
           <i data-testid="worldChampion" class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i>
           <i data-testid="onFire" class="fas fa-fire fa-sm" *ngIf="card.props.onFire"></i>
-          <span><i class="fas fa-star fa-sm"></i>{{card.baseValoration | number:'1.0-0'}}</span>
+          <span><i class="fas fa-star fa-sm"></i>{{card.totalValoration | number:'1.0-0'}}</span>
         </h2>
         <p>
           <i class="fa-solid fa-weight-scale fa-sm"></i
