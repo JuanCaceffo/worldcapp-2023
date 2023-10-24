@@ -29,6 +29,7 @@ export class CardUserComponent {
   saveUsername() {
     this.userInfo.username = this.editedUsername
     this.isEditing = false
+    //TODO: Mandarle aca la funcionalidad para que guarde el nombre en el back
   }
 
   cancelEdit() {
