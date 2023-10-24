@@ -10,7 +10,6 @@ import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
-import {userInfoMock} from 'src/app/mocks/user.mock'
 import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
 @Injectable({
@@ -66,7 +65,11 @@ export class UserService {
     return lastValueFrom(profileInfo$)
   }
 
-  getUserInfo(): UserInfoDTO {
-    return userInfoMock
+  getUserInfo(): Promise<UserInfoDTO> {
+    const userInfo$ = this.httpClient.get<UserInfoDTO>(
+      `${API_URL}/user/${getUserId()}/user-info`
+    )
+
+    return lastValueFrom(userInfo$)
   }
 }

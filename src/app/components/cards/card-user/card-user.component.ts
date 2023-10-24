@@ -15,9 +15,8 @@ export class CardUserComponent {
   userInfo!: UserInfoDTO
 
   async ngOnInit() {
-    //this.userInfo = userInfoMock
-    //this.userInfo = await this.userService.getProfileInfo()
-    this.userInfo = this.userService.getUserInfo()
+    this.userInfo = await this.userService.getUserInfo()
+    console.log(this.userInfo.picturePath)
   }
 
   startEdit() {

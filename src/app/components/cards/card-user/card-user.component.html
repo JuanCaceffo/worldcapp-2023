@@ -1,5 +1,5 @@
 <article class="user-card">
-  <img src={{userInfo.picturePath}}  class="user-card__image">
+  <img [src]="userInfo.picturePath" class="user-card__image">
   <section class="user-card__data">
     <section class="user-card__data-name">
       <section class="user-card__editable" *ngIf="!isEditing">
