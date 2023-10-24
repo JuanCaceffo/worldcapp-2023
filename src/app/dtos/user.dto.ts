@@ -5,7 +5,7 @@ export interface UserLoginDTO {
 export interface UserLoginResponseDTO {
   userLogedID: number
 }
-export interface ProfileInfoDTO {
+export interface UserProfileInfoDTO {
   name: string
   lastName: string
   email: string
@@ -22,4 +22,11 @@ export interface ProfileInfoDTO {
   }
   exchangeProximity: number
   criteria: string
+}
+
+export interface UserInfoDTO {
+  username: string
+  age: number
+  location: string
+  picturePath: string
 }
