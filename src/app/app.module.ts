@@ -16,7 +16,6 @@ import {HeaderNavComponent} from './components/header/header-nav/header-nav.comp
 import {LogoComponent} from './components/logo/logo.component'
 
 // Filter components
-import {BaseFilterComponent} from './components/filter/base-filter.component'
 import {SortedByFilterComponent} from './components/filter/sorted-by-filter/sorted-by-filter.component'
 import {VariantFilterComponent} from './components/filter/variant-filter/variant-filter.component'
 
@@ -55,7 +54,6 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
     HeaderNavComponent,
     LogoComponent,
     // Filter Components
-    BaseFilterComponent,
     SortedByFilterComponent,
     VariantFilterComponent,
     // Card Components

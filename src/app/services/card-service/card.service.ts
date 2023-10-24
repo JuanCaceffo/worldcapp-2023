@@ -14,9 +14,9 @@ export class CardService {
   constructor(private httpClient: HttpClient) {}
 
   async getCards(criterio?: CardSearch): Promise<Figurita[]> {
-
+    console.log(criterio)
     const figuritas = this.httpClient.get<FiguritaDTO[]>(
-      `${API_URL}/figuritas/intercambiar/${getUserId()}?${criterio?.onFire}&${criterio?.esPromesa}&${criterio?.cotizacionInicial}&${criterio?.cotizacionFinal}`
+      `${API_URL}/figuritas/intercambiar/${getUserId()}?onFire=${criterio?.onFire}&esPromesa=${criterio?.esPromesa}&cotizacionInicial=${criterio?.cotizacionInicial}&cotizacionFinal=${criterio?.cotizacionFinal}&palabraClave=${criterio?.palabraClave}`
     )
     const figuritasJSON = await lastValueFrom(figuritas)
     return figuritasJSON.map((card) => Figurita.fromJson(card))

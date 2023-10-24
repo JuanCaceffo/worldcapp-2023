@@ -7,7 +7,7 @@ export interface PickUpPointSearch {
 }
 
 export interface CardSearch {
-  palabraClave: string,
+  palabraClave?: string,
   onFire: boolean,
   esPromesa: boolean,
   cotizacionInicial: number,

@@ -1,36 +1,37 @@
-import {Component, OnChanges, Output, SimpleChanges} from '@angular/core'
+import {Component, EventEmitter, Output} from '@angular/core'
 import { CardSearch } from 'src/app/interfaces/searchCriteria'
-// import { VariantFilter } from 'src/app/models/filter/variantFilter/variantFilter.model'
 
 @Component({
   selector: 'app-variantFilter',
   templateUrl: './variant-filter.component.html',
-  styleUrls: [
-    '../base-filter.component.css',
-    './variant-filter.component.css'
-  ]
+  styleUrls: ['./variant-filter.component.css', '../base-filter.component.css']
 })
-export class VariantFilterComponent implements OnChanges {
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['onFire']){ console.log("pepe", this.onFire) }
+export class VariantFilterComponent {
+  filterData = {
+    onFire: false,
+    esPromesa: false,
+    cotizacionInicial: 0,
+    cotizacionFinal: 0
   }
-
-  @Output() filtro!: CardSearch
-  title = 'Filtros'
-  from = 0
-  to = 0
   min = 0
-  onFire = false
-  isPromise = false  
 
-  // toggleOnFire(){
-  //   this.onFire = !this.onFire
+  @Output() emitter = new EventEmitter<CardSearch>()
+
+  // onFromChange (newValue: number) {
+  //   this.min = newValue
+  //   if (newValue > this.filterData.to) {
+  //     this.filterData.to = newValue
+  //   }
   // }
 
-  onFromChange (newValue: number) {    
-    this.min = newValue
-    if ( newValue > this.to) {
-      this.to = newValue      
+  fromToVerificaition() { return this.filterData.cotizacionFinal < this.filterData.cotizacionInicial }
+  setValueMin() { this.min = this.filterData.cotizacionInicial }
+  
+  onSubmit() {
+    if (this.fromToVerificaition()) {
+      this.filterData.cotizacionFinal = this.filterData.cotizacionInicial
     }
+    this.setValueMin()
+    this.emitter.emit(this.filterData)
   }
 }

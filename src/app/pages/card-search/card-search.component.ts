@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
+import { CardSearch } from 'src/app/interfaces/searchCriteria'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {CardService} from 'src/app/services/card-service/card.service'
 
@@ -13,7 +14,14 @@ export class CardSearchComponent implements OnInit {
 
   @Input() value!: number[]
   listCards: Array<Figurita> = []
-  searchValue?: string
+
+  filterData = {
+    palabraClave: "",
+    onFire: false,
+    esPromesa: false,
+    cotizacionInicial: 0,
+    cotizacionFinal: 0
+  }
 
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
@@ -21,14 +29,17 @@ export class CardSearchComponent implements OnInit {
   }
 
   async getAll() {
-    this.listCards = await this.cardService.getCards()
+    this.listCards = await this.cardService.getCards(this.filterData)
   }
 
-  enviarDatos(datos: string) {
-    console.log(datos)
+  enviarDatos(datos: CardSearch) {
+    this.filterData.cotizacionInicial = datos.cotizacionInicial 
+    this.filterData.cotizacionFinal = datos.cotizacionFinal
+    this.filterData.onFire = datos.onFire
+    this.filterData.esPromesa = datos.esPromesa
   }
 
   clickAction() {
-
+    this.getAll()
   }
 }
