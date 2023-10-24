@@ -2,10 +2,6 @@
   padding: 2rem 0;
 }
 .home__content-profile{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
   /*Layout*/
   position: relative;
   padding: 0 var(--box-padding) var(--box-padding);
