@@ -3,6 +3,7 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {
   UserLoginResponseDTO,
   UserLoginDTO,
+  UserFigusListType,
   UserProfileInfoDTO,
   UserInfoDTO
 } from 'src/app/dtos/user.dto'
@@ -38,6 +39,14 @@ export class UserService {
     )
   }
 
+  async getFiguritasList(listType: UserFigusListType): Promise<Figurita[]> {
+    const figuritas$ = this.httpClient.get<FiguritaDTO[]>(
+      `${API_URL}/user/${getUserId()}/lista-figus/${listType}`
+    )
+    const figuritas = await lastValueFrom(figuritas$)
+    return figuritas.map((figuiDTO) => Figurita.fromJson(figuiDTO))
+  }
+
   async getGiftableFigurita(userID: number, cardID: number): Promise<Figurita> {
     const card$ = this.httpClient.get<FiguritaDTO>(
       `${API_URL}/user/get-figurita-intercambio/${userID}/${cardID}`
@@ -50,7 +59,7 @@ export class UserService {
     const profileInfo$ = this.httpClient.get<UserProfileInfoDTO>(
       `${API_URL}/user/${getUserId()}/info-profile`
     )
-    return lastValueFrom(profileInfo$)
+    return await lastValueFrom(profileInfo$)
   }
 
   async editProfileInfo(
