@@ -1,5 +1,6 @@
 import {Component} from '@angular/core'
 import {UserInfoDTO} from 'src/app/dtos/user.dto'
+import {userInfoMock} from 'src/app/mocks/user.mock'
 import {UserService} from 'src/app/services/user-service/user.service'
 
 @Component({
@@ -12,11 +13,11 @@ export class CardUserComponent {
   isEditing = false
   editedUsername: string = ''
   LIMIT: number = 20
-  userInfo!: UserInfoDTO
+  //TODO: Sacar el mock de inicio, para safar mientras de los tests
+  userInfo: UserInfoDTO = userInfoMock
 
   async ngOnInit() {
     this.userInfo = await this.userService.getUserInfo()
-    console.log(this.userInfo.picturePath)
   }
 
   startEdit() {

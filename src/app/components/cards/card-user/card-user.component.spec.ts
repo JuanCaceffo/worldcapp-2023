@@ -1,22 +1,23 @@
-import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
+import {ComponentFixture, TestBed} from '@angular/core/testing'
 import {FormsModule} from '@angular/forms'
 import {CardUserComponent} from './card-user.component'
 import {ConcatenatePipe} from 'src/app/pipes/concatenate-pipe.pipe'
 import {CardComponent} from '../card/card.component'
+import {HttpClientModule} from '@angular/common/http'
 
 describe('CardUserComponent', () => {
   let component: CardUserComponent
   let fixture: ComponentFixture<CardUserComponent>
 
-  beforeEach(fakeAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CardUserComponent, CardComponent, ConcatenatePipe],
-      imports: [FormsModule]
+      imports: [FormsModule, HttpClientModule]
     })
     fixture = TestBed.createComponent(CardUserComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
-  }))
+  })
 
   it('Debe crearse', () => {
     expect(component).toBeTruthy()
@@ -25,19 +26,19 @@ describe('CardUserComponent', () => {
     const initialUsername = fixture.debugElement.nativeElement.querySelector(
       '[data-testid="initialUsername"]'
     )
-    expect(initialUsername.textContent).toBe('elMuñe')
+    expect(initialUsername.textContent).toBe('Facundinho')
   })
   it('Inicialmente tengo como edad del usuario el propio del usuario', () => {
     const initialAge = fixture.debugElement.nativeElement.querySelector(
       '[data-testid="initialAge"]'
     )
-    expect(initialAge.textContent).toContain('30')
+    expect(initialAge.textContent).toContain('26')
   })
   it('Inicialmente tengo como ubicacion de usuario el propio del usuario', () => {
     const initialLocation = fixture.debugElement.nativeElement.querySelector(
       '[data-testid="initialLocation"]'
     )
-    expect(initialLocation.textContent).toContain('Parque Chas')
+    expect(initialLocation.textContent).toContain('3 de Febrero')
   })
   it('Incialmente el input no se encuentra desplegado', () => {
     const inputElement = fixture.debugElement.nativeElement.querySelector(
