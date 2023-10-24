@@ -3,8 +3,9 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {
   UserLoginResponseDTO,
   UserLoginDTO,
-  ProfileInfoDTO,
-  UserFigusListType
+  UserFigusListType,
+  UserProfileInfoDTO,
+  UserInfoDTO
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
@@ -46,20 +47,38 @@ export class UserService {
     return figuritas.map((figuiDTO) => Figurita.fromJson(figuiDTO))
   }
 
-  async getProfileInfo(): Promise<ProfileInfoDTO> {
-    const profileInfo$ = this.httpClient.get<ProfileInfoDTO>(
+  async getGiftableFigurita(userID: number, cardID: number): Promise<Figurita> {
+    const card$ = this.httpClient.get<FiguritaDTO>(
+      `${API_URL}/user/get-figurita-intercambio/${userID}/${cardID}`
+    )
+    const card = await lastValueFrom(card$)
+    return Figurita.fromJson(card)
+  }
+
+  async getProfileInfo(): Promise<UserProfileInfoDTO> {
+    const profileInfo$ = this.httpClient.get<UserProfileInfoDTO>(
       `${API_URL}/user/${getUserId()}/info-profile`
     )
     return await lastValueFrom(profileInfo$)
   }
 
-  async editProfileInfo(profileInfo: ProfileInfoDTO): Promise<ProfileInfoDTO> {
-    const profileInfo$ = this.httpClient.patch<ProfileInfoDTO>(
+  async editProfileInfo(
+    profileInfo: UserProfileInfoDTO
+  ): Promise<UserProfileInfoDTO> {
+    const profileInfo$ = this.httpClient.patch<UserProfileInfoDTO>(
       `${API_URL}/user/${getUserId()}/info-profile`,
       profileInfo
     )
     //TODO: Hacer algo un poco mas amigable y menos molesto (Posible Toast)
     alert('Se modificó el usuario exitosamente')
     return lastValueFrom(profileInfo$)
+  }
+
+  getUserInfo(): Promise<UserInfoDTO> {
+    const userInfo$ = this.httpClient.get<UserInfoDTO>(
+      `${API_URL}/user/${getUserId()}/user-info`
+    )
+
+    return lastValueFrom(userInfo$)
   }
 }

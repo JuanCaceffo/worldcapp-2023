@@ -1,7 +1,7 @@
 import {NgForm} from '@angular/forms'
 import {criteria, locations} from '../../helpers/getOptionsInfoProfile.helper'
 import {Component} from '@angular/core'
-import {ProfileInfoDTO} from 'src/app/dtos/user.dto'
+import {UserProfileInfoDTO} from 'src/app/dtos/user.dto'
 import {provinces} from 'src/app/helpers/getOptionsInfoProfile.helper'
 import {UserService} from 'src/app/services/user-service/user.service'
 
@@ -12,7 +12,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
 })
 export class ProfileInfoComponent {
   constructor(private userService: UserService) {}
-  profileInfo!: ProfileInfoDTO
+  profileInfo!: UserProfileInfoDTO
   provinces: string[] = provinces
   locations: string[] = locations
   criteria: string[] = criteria
