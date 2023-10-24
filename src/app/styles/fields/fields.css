@@ -1,0 +1,162 @@
+.field {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;  
+}
+
+.field__input, .field__select {
+  width: 100%;
+  min-height: 3.5rem;
+  padding-right: 1rem;
+  
+  font-family: inherit;
+  font-size: 1.2em;
+  text-indent: 1rem;
+  
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-clear);
+  outline: none;
+  
+  transition: all var(--transition-time) ease;
+}
+
+.field__select {
+  text-indent: 0.5rem;
+}
+
+.field--2col {
+  width: 100%;
+}
+
+.field--select {
+  margin-top: 1px;
+
+  font-family: inherit;
+  color: var(--text-color-2lighter);
+  text-indent: 0.5rem;
+
+  cursor: pointer;  
+}
+
+.field__input--iconized {
+  text-indent: 3em;  
+}
+
+.field__input--icon-right {
+  text-indent: 1rem;
+  padding-right: 3.2em;
+}
+
+.field__input--underline {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-primary);
+  
+  transition: border-bottom var(--transition-time) ease;
+}
+
+.field__input--error {
+  border: 1px solid var(--color-hot);
+}
+
+.field__container {
+  position: relative;
+  overflow: hidden;
+  margin: 1px;
+  width: 100%;
+}
+
+.field__input:focus {
+  border: 1px solid var(--color-focus);
+}
+
+.field__input::placeholder {  
+  color: var(--text-color-2lighter);
+}
+
+.field__input--underline:focus {
+  border: none;
+  border-bottom: 1px solid var(--color-focus);
+}
+
+.field--error:focus {
+  border: 1px solid var(--color-hot);
+}
+
+.field__label{  
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.field__label--strong {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.field__control{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.field__error {
+  width: 100%;
+  text-align: right;
+  margin-right: 0.2em;
+  font-size: 1.2em;
+  font-weight: 700;  
+  color: var(--color-hot);
+  cursor: default;
+}
+
+.field__icon {  
+  position: absolute;
+  width: 2.8em;
+  height: 100%;
+  left: 0;
+  bottom: 0;  
+  
+  background-color: var(--color-primary);  
+  cursor: text;      
+  
+  transition: background-color var(--transition-time) ease;
+}
+
+.field__icon--focused {
+  background-color: var(--color-focus);
+}
+
+.field__icon--icon-right {  
+  left: unset;
+  right: 0;
+}
+
+.field__icon--pointer {
+  cursor: pointer;
+}
+
+.field__icon::before{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;  
+  color: var(--typeface-color);
+  font-size: 1.4em;  
+}
+
+.field__input:focus + .field__icon {
+  background-color: var(--color-focus)
+}
+
+@media screen and (min-width:769px) {
+  .field--search {    
+    max-width: 65%;
+    margin: 0 auto;
+  }
+
+  .field--2col {
+    width: 48%;
+  }
+}

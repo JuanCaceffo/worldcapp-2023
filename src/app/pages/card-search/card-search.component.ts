@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import { Figurita } from 'src/app/data/models/cards/Figurita'
-import { CardService } from 'src/app/data/services/cardService/Card.service'
+import {Component, Input, OnInit} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {Figurita} from 'src/app/models/cards/figurita.model'
+import {CardService} from 'src/app/services/card-service/card.service'
 
 @Component({
   selector: 'app-card-search',
@@ -9,26 +9,26 @@ import { CardService } from 'src/app/data/services/cardService/Card.service'
   styleUrls: ['./card-search.component.css']
 })
 export class CardSearchComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    public cardService: CardService
-  ) {}
+  constructor(private titleService: Title, public cardService: CardService) {}
 
   @Input() value!: number[]
+  listCards: Array<Figurita> = []
+  searchValue?: string
 
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
-    this.listCards = this.cardService.getAllCards()
+    this.getAll()
   }
 
-  enviarDatos(datos: string){
+  async getAll() {
+    this.listCards = await this.cardService.getCards()
+  }
+
+  enviarDatos(datos: string) {
     console.log(datos)
   }
 
-  listCards: Array<Figurita> = []
+  clickAction() {
 
-  // onEnterPressed() {
-  //   const resultado = searchbar.search(this.aBuscar)
-  //   this.value = resultado.map( (elemento) => elemento.cardID )
-  // }
+  }
 }

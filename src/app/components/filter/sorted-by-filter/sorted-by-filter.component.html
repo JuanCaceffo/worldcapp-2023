@@ -1,0 +1,7 @@
+<article class="radio-filter">    
+  <div *ngFor="let opcion of opciones" class="field__control">
+    <label class="field__label">
+      <input type="radio" name="filtro" [(ngModel)]="chosenFilter" [value]="opcion" data-testid="opcion"/> {{opcion}}
+    </label>
+  </div>  
+</article>

@@ -1,0 +1,35 @@
+import {mockCardData} from 'src/app/mocks/card.mock'
+import {Injectable} from '@angular/core'
+import {Figurita} from 'src/app/models/cards/figurita.model'
+import {HttpClient} from '@angular/common/http'
+import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
+import {API_URL} from '../config'
+import {lastValueFrom} from 'rxjs'
+import {getUserId} from 'src/app/helpers/getUserId.helper'
+import { CardSearch } from 'src/app/interfaces/searchCriteria'
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CardService {
+  constructor(private httpClient: HttpClient) {}
+
+  async getCards(criterio?: CardSearch): Promise<Figurita[]> {
+
+    const figuritas = this.httpClient.get<FiguritaDTO[]>(
+      `${API_URL}/figuritas/intercambiar/${getUserId()}?${criterio?.onFire}&${criterio?.esPromesa}&${criterio?.cotizacionInicial}&${criterio?.cotizacionFinal}`
+    )
+    const figuritasJSON = await lastValueFrom(figuritas)
+    return figuritasJSON.map((card) => Figurita.fromJson(card))
+  }
+
+  getCardById(id: number): Figurita | undefined {
+    const card = mockCardData.find((card) => card.id == id)
+    if (!card) return
+    return Figurita.fromJson(card)
+  }
+
+  // search(key: string, endpoint: string){
+  //   TODO pensar si hacemos mockitos o no y nos mandamos de lleno al cableado
+  // }
+}

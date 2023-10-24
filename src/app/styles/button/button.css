@@ -23,10 +23,16 @@
   box-shadow: var(--box-shadow-xs);
 }
 
-.button--disabled {
-  /*Visual*/
+.button--noevents{
   pointer-events: none;
+}
+
+.button--cursoroff {  
   cursor: not-allowed;
+}
+
+.button--disabled {
+  filter: grayscale(100%) brightness(1.4);
 }
 
 .button--large {
@@ -114,6 +120,7 @@
   /*Visual*/
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   border: none;
+  text-align: center;
 }
 
 .button--tab-off {
@@ -133,8 +140,7 @@
   transform: translateY(-0.3em);
 }
 
-.button--primary:hover {
-  /*Visual*/
+.button--primary:hover {  
   background-color: var(--color-focus);
   border: 1px solid var(--color-focus);
 }
@@ -156,4 +162,9 @@
   /*Visual*/
   background-color: var(--color-tertiary);
   color: var(--typeface-color);
+}
+
+.button--disabled:hover{
+  background-color: var(--color-highligthed);
+  border: 1px solid var(--color-highligthed);
 }

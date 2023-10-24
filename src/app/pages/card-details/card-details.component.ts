@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import { ActivatedRoute, Router } from '@angular/router'
-import { Figurita } from 'src/app/data/models/cards/Figurita'
-import { CardService } from 'src/app/data/services/cardService/Card.service'
+import {Component, OnInit} from '@angular/core'
+import {Title} from '@angular/platform-browser'
+import {ActivatedRoute, Router} from '@angular/router'
+import {Figurita} from 'src/app/models/cards/figurita.model'
+import {CardService} from 'src/app/services/card-service/card.service'
+import {UserService} from 'src/app/services/user-service/user.service'
 
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
-  styleUrls: ['./card-details.component.css']
+  styleUrls: [
+    '../../components/cards/card/card.component.css',
+    './card-details.component.css'
+  ]
 })
 export class CardDetailsComponent implements OnInit {
   constructor(
     private titleService: Title,
     private route: ActivatedRoute,
     private router: Router,
-    public cardService: CardService
+    public cardService: CardService,
+    public userService: UserService
   ) {}
   ngOnInit() {
     this.route.params.subscribe((param) => {
@@ -33,6 +38,19 @@ export class CardDetailsComponent implements OnInit {
   card!: Figurita
 
   goCardPage() {
-    this.router.navigateByUrl('/figuritas')
+    this.router.navigate(['/figuritas'])
+  }
+
+  //TODO cambiar los alert por una notificaion copada
+  async requestFigurita() {
+    try {
+      await this.userService.figuritaRequest(this.card)
+      //si sale bien navega y notifica
+      this.goCardPage()
+      alert('La solicitud se completo con exito')
+    } catch (error) {
+      //TODO: validar tipo de error
+      alert('no se realizo la soli o se rompio el sv jeje')
+    }
   }
 }
