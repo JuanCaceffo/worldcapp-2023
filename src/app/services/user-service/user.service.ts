@@ -38,12 +38,9 @@ export class UserService {
     )
   }
 
-  async getFiguritasList(
-    id: number,
-    listType: UserFigusListType
-  ): Promise<Figurita[]> {
+  async getFiguritasList(listType: UserFigusListType): Promise<Figurita[]> {
     const figuritas$ = this.httpClient.get<FiguritaDTO[]>(
-      `${API_URL}/user/${id}/lista-figus/${listType}`
+      `${API_URL}/user/${getUserId()}/lista-figus/${listType}`
     )
     const figuritas = await lastValueFrom(figuritas$)
     return figuritas.map((figuiDTO) => Figurita.fromJson(figuiDTO))

@@ -8,7 +8,9 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
   styleUrls: ['./profile-missing-figus.component.css']
 })
 export class ProfileMissingFigusComponent implements OnInit {
-  constructor(private userService: UserService) {}
-  ngOnInit() {}
+  constructor(public userService: UserService) {}
+  async ngOnInit() {
+    this.listMissinCards = await this.userService.getFiguritasList('FALTANTES')
+  }
   listMissinCards!: Figurita[]
 }
