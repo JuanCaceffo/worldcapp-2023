@@ -1,9 +1,9 @@
 <article class="user-card">
-  <img src="https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg"  class="user-card__image">
+  <img [src]="userInfo.picturePath" class="user-card__image">
   <section class="user-card__data">
     <section class="user-card__data-name">
       <section class="user-card__editable" *ngIf="!isEditing">
-        <p data-testid="initialUsername">{{ user.username }}</p>
+        <p data-testid="initialUsername">{{ userInfo.username }}</p>
         <button data-testid="edit-button" class="button button--icon button--black" *ngIf="!isEditing" (click)="startEdit()">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
@@ -20,8 +20,8 @@
       </section>
     </section>
     <section class="user-card__personal">
-      <p data-testid="initialAge"><strong>Edad:</strong>{{ user.edad }}</p>
-      <p data-testid="initialLocation"><strong>Ubicacion:</strong>{{ user.ubicacion }}</p>
+      <p data-testid="initialAge"><strong>Edad: </strong>{{ userInfo.age }}</p>
+      <p data-testid="initialLocation"><strong>Ubicacion: </strong>{{ userInfo.location }}</p>
     </section>      
   </section>
 </article>
