@@ -3,12 +3,14 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {
   UserLoginResponseDTO,
   UserLoginDTO,
-  ProfileInfoDTO
+  ProfileInfoDTO,
+  UserFigusListType
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
+import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
 @Injectable({
   providedIn: 'root'
@@ -36,11 +38,22 @@ export class UserService {
     )
   }
 
+  async getFiguritasList(
+    id: number,
+    listType: UserFigusListType
+  ): Promise<Figurita[]> {
+    const figuritas$ = this.httpClient.get<FiguritaDTO[]>(
+      `${API_URL}/user/${id}/lista-figus/${listType}`
+    )
+    const figuritas = await lastValueFrom(figuritas$)
+    return figuritas.map((figuiDTO) => Figurita.fromJson(figuiDTO))
+  }
+
   async getProfileInfo(): Promise<ProfileInfoDTO> {
     const profileInfo$ = this.httpClient.get<ProfileInfoDTO>(
       `${API_URL}/user/${getUserId()}/info-profile`
     )
-    return lastValueFrom(profileInfo$)
+    return await lastValueFrom(profileInfo$)
   }
 
   async editProfileInfo(profileInfo: ProfileInfoDTO): Promise<ProfileInfoDTO> {
