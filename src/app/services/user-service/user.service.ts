@@ -11,6 +11,7 @@ import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
 import {userInfoMock} from 'src/app/mocks/user.mock'
+import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,14 @@ export class UserService {
         requestedFiguID: figurita.props.id
       })
     )
+  }
+
+  async getGiftableFigurita(userID: number, cardID: number): Promise<Figurita> {
+    const card$ = this.httpClient.get<FiguritaDTO>(
+      `${API_URL}/user/get-figurita-intercambio/${userID}/${cardID}`
+    )
+    const card = await lastValueFrom(card$)
+    return Figurita.fromJson(card)
   }
 
   async getProfileInfo(): Promise<UserProfileInfoDTO> {

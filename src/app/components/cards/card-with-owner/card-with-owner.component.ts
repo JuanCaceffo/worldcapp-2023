@@ -13,6 +13,10 @@ export class CardWithOwnerComponent implements OnInit {
   @Input() card!: Figurita
 
   handleClick() {
-    this.router.navigate(['/detalle-figurita', this.card.props.id])
+    this.router.navigate([
+      '/detalle-figurita',
+      this.card.props.idUsuario,
+      this.card.props.id
+    ])
   }
 }
