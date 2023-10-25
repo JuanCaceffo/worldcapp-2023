@@ -10,4 +10,8 @@ export class CardComponent implements OnInit {
   constructor() {}
   ngOnInit() {}
   @Input() card!: Figurita
+
+  handleDelete() {
+    
+  }
 }
