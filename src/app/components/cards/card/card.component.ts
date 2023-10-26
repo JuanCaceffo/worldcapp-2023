@@ -1,4 +1,3 @@
-import {Router} from '@angular/router'
 import {Component, Input, OnInit} from '@angular/core'
 import {UserFigusListType} from 'src/app/dtos/user.dto'
 import {Figurita} from 'src/app/models/cards/figurita.model'
