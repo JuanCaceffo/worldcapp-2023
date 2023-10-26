@@ -49,7 +49,7 @@ export class UserService {
 
   async getGiftableFigurita(userID: number, cardID: number): Promise<Figurita> {
     const card$ = this.httpClient.get<FiguritaDTO>(
-      `${API_URL}/user/get-figurita-intercambio/${userID}/${cardID}`
+      `${API_URL}/user/get-figurita-intercambio/usuario/${userID}/figurita/${cardID}`
     )
     const card = await lastValueFrom(card$)
     return Figurita.fromJson(card)
@@ -80,5 +80,13 @@ export class UserService {
     )
 
     return lastValueFrom(userInfo$)
+  }
+
+  async deleteFigu(id: number, listCardType: UserFigusListType) {
+    await lastValueFrom(
+      this.httpClient.delete(
+        `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
+      )
+    )
   }
 }
