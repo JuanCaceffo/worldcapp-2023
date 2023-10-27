@@ -5,4 +5,9 @@
   .home__aside{
     padding: 1rem;
   }
+  .home__aside__block{
+    position: sticky;
+    top: 12.5em;
+    height: fit-content;
+}
 }
