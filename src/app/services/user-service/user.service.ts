@@ -70,7 +70,6 @@ export class UserService {
       profileInfo
     )
     //TODO: Hacer algo un poco mas amigable y menos molesto (Posible Toast)
-    alert('Se modificó el usuario exitosamente')
     return lastValueFrom(profileInfo$)
   }
 
