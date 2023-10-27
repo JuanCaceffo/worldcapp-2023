@@ -1,14 +1,11 @@
 import {NgForm} from '@angular/forms'
-import {
-  criteria,
-  provincesMocked
-} from '../../helpers/getOptionsInfoProfile.helper'
+import {criteria} from '../../helpers/getOptionsInfoProfile.helper'
 import {Component} from '@angular/core'
 import {UserProfileInfoDTO} from 'src/app/dtos/user.dto'
 import {UserService} from 'src/app/services/user-service/user.service'
 import {ProvinceService} from 'src/app/services/province-service/province.service'
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
-import {profileInfoUserMock} from 'src/app/mocks/user.mock'
+import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
 
 @Component({
   selector: 'app-profile-info',
@@ -21,9 +18,9 @@ export class ProfileInfoComponent {
     private provinceService: ProvinceService
   ) {}
   //Ingresar un mock con valores por defecto
-  profileInfo: UserProfileInfoDTO = profileInfoUserMock
+  profileInfo: UserProfileInfoDTO = initialProfileInfoUserMock
   resetProfileInfo!: UserProfileInfoDTO
-  provinces: ProvinceDTO[] = provincesMocked
+  provinces: ProvinceDTO[] = []
   locations: string[] = []
   criteria: string[] = criteria
 
@@ -31,7 +28,6 @@ export class ProfileInfoComponent {
     this.profileInfo = await this.userService.getProfileInfo()
     this.resetProfileInfo = structuredClone(this.profileInfo)
     this.provinces = await this.provinceService.getProvinces()
-    this.locations = this.getLocations()
   }
 
   async onSubmit(form: NgForm) {
@@ -56,6 +52,6 @@ export class ProfileInfoComponent {
     location === this.profileInfo.address.localidad
 
   getLocations = (): string[] =>
-    this.provinces.find((data) => this.selectedProvince(data.province))!
-      .locations
+    this.provinces.find((data) => this.selectedProvince(data.province))
+      ?.locations ?? []
 }

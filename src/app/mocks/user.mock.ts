@@ -42,6 +42,25 @@ export const profileInfoUserMock: UserProfileInfoDTO = {
   criteria: 'Nacionalista'
 }
 
+export const initialProfileInfoUserMock: UserProfileInfoDTO = {
+  name: '',
+  lastName: '',
+  email: '',
+  birthdate: '',
+  address: {
+    provincia: '',
+    localidad: '',
+    calle: '',
+    altura: 0,
+    ubiGeografica: {
+      x: 0,
+      y: 0
+    }
+  },
+  exchangeProximity: 0,
+  criteria: ''
+}
+
 export const userInfoMock: UserInfoDTO = {
   username: 'Facundinho',
   age: 26,
