@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core'
+import {Router} from '@angular/router'
 import {UserFigusListType} from 'src/app/dtos/user.dto'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserService} from 'src/app/services/user-service/user.service'
@@ -9,16 +10,23 @@ import {UserService} from 'src/app/services/user-service/user.service'
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  constructor(public userService: UserService) {}
+  constructor(public userService: UserService, private router: Router) {}
   ngOnInit() {}
   @Input() card!: Figurita
   @Input() listCardType?: UserFigusListType
 
-  handleDelete() {
+  async handleDelete() {
     if (this.listCardType && this.card.isOwner) {
       try {
-        this.userService.deleteFigu(this.card.props.id, this.listCardType)
-        location.reload()
+        await this.userService.deleteFigu(this.card.props.id, this.listCardType)
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+          this.router.navigate([this.router.url])
+        })
+        /* 
+        Preguntar al profe por que no funciona de esta forma
+        this.router.navigate([currentUrl], {
+          onSameUrlNavigation: 'reload'
+        }) */
       } catch (error) {
         alert('alerta por subnormal')
       }
