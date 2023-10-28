@@ -19,8 +19,9 @@ export class CardComponent implements OnInit {
     if (this.listCardType && this.card.isOwner) {
       try {
         await this.userService.deleteFigu(this.card.props.id, this.listCardType)
-        this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-          this.router.navigate([this.router.url])
+        const currentUrl = this.router.url
+        this.router.navigateByUrl('/').then(() => {
+          this.router.navigate([currentUrl])
         })
         /* 
         Preguntar al profe por que no funciona de esta forma
