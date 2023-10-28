@@ -5,19 +5,18 @@ import {LogoComponent} from 'src/app/components/logo/logo.component'
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import {Router} from '@angular/router'
 import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms'
-import {throwError} from 'rxjs'
 import {AppRoutingModule} from 'src/app/app-routing.module'
+import {getByTestId} from 'src/app/helpers/test.helper'
 import {UserService} from 'src/app/services/user-service/user.service'
+import {httpClientSpy} from './../../services/httpClient-spy/httpClientSpy'
 
 describe('Login Component', () => {
   let login: LoginComponent
   let fixture: ComponentFixture<LoginComponent>
   let routerSpy: jasmine.SpyObj<Router>
-  let httpClientSpy: jasmine.SpyObj<HttpClient>
 
   beforeEach(fakeAsync(() => {
     routerSpy = jasmine.createSpyObj('Router', ['navigate'])
-    httpClientSpy = jasmine.createSpyObj('HttpClient', ['get'])
 
     TestBed.configureTestingModule({
       imports: [
@@ -44,8 +43,9 @@ describe('Login Component', () => {
     login = fixture.debugElement.componentInstance
     expect(login).toBeTruthy()
   })
+
   it('debería navegar a "/figuritas" cuando el usuario y la contraseña son correctos', async () => {
-    const usuarioCorrecto = 'sol'
+    const usuarioCorrecto = 'alejo'
     const contraseñaCorrecta = '123456'
 
     const userService = TestBed.inject(UserService)
@@ -60,15 +60,19 @@ describe('Login Component', () => {
     expect(routerSpy.navigate).toHaveBeenCalledWith(['/figuritas'])
   })
 
-  it('debería manejar errores cuando el inicio de sesión falla', async () => {
-    httpClientSpy.get.and.returnValue(throwError('mensaje de error'))
+  it('Deberia retornar un id cuando el usuario y la contraseña ingresados son correctos', async () => {
+    const usuarioCorrecto = 'alejo'
+    const contraseñaCorrecta = '123456'
+    login.loginForm.setValue({
+      name: usuarioCorrecto,
+      password: contraseñaCorrecta
+    })
 
-    login.loginForm.setValue({name: 'usuario', password: 'contraseña'})
-    await login.submitLogin()
+    getByTestId(fixture, 'loginButton').click()
+    fixture.detectChanges()
 
-    expect(login.errorMsg).toBe(
-      'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
-    )
+    const {userLogedID} = httpClientSpy.post.calls.mostRecent().returnValue
+    expect(userLogedID).toBe('123')
   })
 })
 
