@@ -128,6 +128,13 @@
   position: absolute;
   right: 1em;
   top: 1em;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  padding: 0;
 }
 
 .player-card--trash .button__link{
