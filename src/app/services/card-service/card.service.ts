@@ -16,7 +16,7 @@ export class CardService {
 
   constructor(private httpClient: HttpClient, public cardSearch: CardSearch) {}
 
-  async getCards(): Promise<Figurita[]> {
+  async getCards(): Promise<Figurita[]> {        
     const figuritas = this.httpClient.get<FiguritaDTO[]>(
       `${API_URL}/figuritas/intercambiar/${getUserId()}`, {params: this.mappingHTTP()}
     )
@@ -26,14 +26,10 @@ export class CardService {
   }
 
   mappingHTTP(): HttpParams{
-    const httpParams = new HttpParams()
-    Object.keys(this.cardSearch).forEach((key) => {
-      if (key !== 'min' ){
-        httpParams.set(key, this.cardSearch[key as keyof CardSearchProps])
-        console.log(key, this.cardSearch[key as keyof CardSearchProps])
-      }
-    })
-    console.log(httpParams)
+    let httpParams = new HttpParams()
+    Object.keys(this.cardSearch).forEach( key => {            
+      httpParams = httpParams.set(key, this.cardSearch[key as keyof CardSearchProps].toString())            
+    })    
     return httpParams
   }
 }

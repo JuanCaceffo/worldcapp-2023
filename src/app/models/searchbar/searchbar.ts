@@ -29,15 +29,12 @@ export class CardSearch extends Search implements CardSearchProps {
   esPromesa = false
   cotizacionInicial = 0
   cotizacionFinal = 0
-  min = 0
-
-  fromToVerificaition() { return this.cotizacionFinal < this.cotizacionInicial }
-  setValueMin() { this.min = this.cotizacionInicial }
   
+  fromToVerificaition() { return this.cotizacionFinal < this.cotizacionInicial }
+      
   checkMin(){
     if (this.fromToVerificaition()) {
       this.cotizacionFinal = this.cotizacionInicial
-    }
-    this.setValueMin()
+    }    
   }
 }

@@ -25,7 +25,6 @@ export class CardSearchComponent implements OnInit {
   }
 
   clickAction() {
-    this.getAll()
-    console.log('pepe')
+    this.getAll()    
   }
 }
