@@ -2,7 +2,6 @@ import {TestBed} from '@angular/core/testing'
 import {RouterTestingModule} from '@angular/router/testing'
 import {AppComponent} from './app.component'
 import './app.module'
-import {BaseFilterComponent} from './components/filter/base-filter.component'
 import {VariantFilterComponent} from './components/filter/variant-filter/variant-filter.component'
 import {SortedByFilterComponent} from './components/filter/sorted-by-filter/sorted-by-filter.component'
 import {HeaderComponent} from './components/header/header.component'
@@ -15,7 +14,6 @@ describe('AppComponent', () => {
       imports: [RouterTestingModule],
       declarations: [
         AppComponent,
-        BaseFilterComponent,
         VariantFilterComponent,
         SortedByFilterComponent,
         HeaderComponent,

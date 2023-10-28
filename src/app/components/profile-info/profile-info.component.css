@@ -25,7 +25,6 @@
   min-width: 32rem;
   min-height: 50vh;
   /*Visual*/
-  background-color: var(--color-clear);
   color: var(--text-color);
 }
 

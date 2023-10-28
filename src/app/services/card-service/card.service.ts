@@ -5,24 +5,35 @@ import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 import {getUserId} from 'src/app/helpers/getUserId.helper'
-import { CardSearch } from 'src/app/interfaces/searchCriteria'
+import {HttpParams} from '@angular/common/http'
+import { CardSearch } from 'src/app/models/searchbar/searchbar'
+import { CardSearchProps } from 'src/app/interfaces/searchCriteria'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
-  constructor(private httpClient: HttpClient) {}
 
-  async getCards(criterio?: CardSearch): Promise<Figurita[]> {
+  constructor(private httpClient: HttpClient, public cardSearch: CardSearch) {}
 
+  async getCards(): Promise<Figurita[]> {
     const figuritas = this.httpClient.get<FiguritaDTO[]>(
-      `${API_URL}/figuritas/intercambiar/${getUserId()}?${criterio?.onFire}&${criterio?.esPromesa}&${criterio?.cotizacionInicial}&${criterio?.cotizacionFinal}`
+      `${API_URL}/figuritas/intercambiar/${getUserId()}`, {params: this.mappingHTTP()}
     )
     const figuritasJSON = await lastValueFrom(figuritas)
+    // console.log(figuritasJSON)
     return figuritasJSON.map((card) => Figurita.fromJson(card))
   }
 
-  // search(key: string, endpoint: string){
-  //   TODO pensar si hacemos mockitos o no y nos mandamos de lleno al cableado
-  // }
+  mappingHTTP(): HttpParams{
+    const httpParams = new HttpParams()
+    Object.keys(this.cardSearch).forEach((key) => {
+      if (key !== 'min' ){
+        httpParams.set(key, this.cardSearch[key as keyof CardSearchProps])
+        console.log(key, this.cardSearch[key as keyof CardSearchProps])
+      }
+    })
+    console.log(httpParams)
+    return httpParams
+  }
 }
