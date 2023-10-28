@@ -18,7 +18,6 @@ import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 })
 export class UserService {
   constructor(private httpClient: HttpClient) {}
-  static userLogedID?: number
 
   async login(userData: UserLoginDTO) {
     const response$ = this.httpClient.post<UserLoginResponseDTO>(
@@ -32,7 +31,7 @@ export class UserService {
   async figuritaRequest(figurita: Figurita) {
     await lastValueFrom(
       this.httpClient.patch(`${API_URL}/user/request-figurita`, {
-        userLogedID: UserService.userLogedID,
+        userLogedID: getUserId(),
         requestedUserID: figurita.props.idUsuario,
         requestedFiguID: figurita.props.id
       })
