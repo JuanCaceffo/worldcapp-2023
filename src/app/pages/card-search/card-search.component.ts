@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
-import { CardSearch } from 'src/app/interfaces/searchCriteria'
 import {Figurita} from 'src/app/models/cards/figurita.model'
+import {CardSearch} from 'src/app/models/searchbar/searchbar'
 import {CardService} from 'src/app/services/card-service/card.service'
 
 @Component({
@@ -10,18 +10,10 @@ import {CardService} from 'src/app/services/card-service/card.service'
   styleUrls: ['./card-search.component.css']
 })
 export class CardSearchComponent implements OnInit {
-  constructor(private titleService: Title, public cardService: CardService) {}
+  constructor(private titleService: Title, public cardService: CardService, public cardSearch: CardSearch) {}
 
   @Input() value!: number[]
   listCards: Array<Figurita> = []
-
-  filterData = {
-    palabraClave: "",
-    onFire: false,
-    esPromesa: false,
-    cotizacionInicial: 0,
-    cotizacionFinal: 0
-  }
 
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
@@ -29,17 +21,11 @@ export class CardSearchComponent implements OnInit {
   }
 
   async getAll() {
-    this.listCards = await this.cardService.getCards(this.filterData)
-  }
-
-  enviarDatos(datos: CardSearch) {
-    this.filterData.cotizacionInicial = datos.cotizacionInicial 
-    this.filterData.cotizacionFinal = datos.cotizacionFinal
-    this.filterData.onFire = datos.onFire
-    this.filterData.esPromesa = datos.esPromesa
+    this.listCards = await this.cardService.getCards(this.cardSearch)
   }
 
   clickAction() {
     this.getAll()
+    console.log('pepe')
   }
 }

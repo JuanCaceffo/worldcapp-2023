@@ -15,7 +15,7 @@
           <div class="field shadow">
             <label class="field__label" for="name"> Desde </label>
             <input
-              [(ngModel)]="filterData.cotizacionInicial"
+              [(ngModel)]="cardSearch.cotizacionInicial"
               (ngModelChange)="onSubmit()"
               id="from"
               name="from"
@@ -31,13 +31,12 @@
           <div class="field shadow">
             <label class="field__label" for="name"> Hasta </label>
             <input
-              [(ngModel)]="filterData.cotizacionFinal"
-              (ngModelChange)="onSubmit()"
+              [(ngModel)]="cardSearch.cotizacionFinal"
               id="to"
               name="to"
               class="field__input rounded"
               type="number"
-              [min]="min"
+              [min]="cardSearch.min"
               autocomplete="off"
               data-testid="inputTo"
             />
@@ -49,10 +48,9 @@
           <input
             id="onFire"
             name="onFire"
-            [(ngModel)]="filterData.onFire"
-            (ngModelChange)="onSubmit()"
+            [(ngModel)]="cardSearch.onFire"
             type="checkbox"
-            [checked]="filterData.onFire"
+            [checked]="cardSearch.onFire"
             data-testid="checkboxOnFire"
           />
           <label class="field__label" for="onFire"> On Fire </label>
@@ -63,10 +61,9 @@
           <input
             id="isPromise"
             name="isPromise"
-            [(ngModel)]="filterData.esPromesa"
-            (ngModelChange)="onSubmit()"
+            [(ngModel)]="cardSearch.esPromesa"
             type="checkbox"
-            [checked]="filterData.esPromesa"
+            [checked]="cardSearch.esPromesa"
             data-testid="checkboxIsPromise"
           />
           <label class="field__label" for="isPromise"> Es Promesa </label>

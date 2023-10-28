@@ -1,21 +1,43 @@
-import {mockCardData} from 'src/app/mocks/card.mock'
+import { Injectable } from "@angular/core"
+import { CardSearchProps, OrderBy, StoreSearchProps } from "src/app/interfaces/searchCriteria"
+class Search {
+  palabraClave = ''
 
-export class Searchbar {
-  search(aBuscar: string) {
-    // Object.values(data).forEach((value) => {
-    //   console.log(value)
-    // })
-
-    const buscado = mockCardData.filter((figurita) =>
-      Object.values(figurita).some(
-        (valor) =>
-          typeof valor === 'string' &&
-          valor.toLowerCase().includes(aBuscar.toLowerCase())
-      )
-    )
-    console.log(buscado)
-    return buscado
+  createRequestURL(): string {
+    let url =
+      `?` +
+      Object.keys(this).forEach((key, value) => {
+        ;`${key}=${value}&`
+      })
+    url = url.substring(0,-1)
+    return url
   }
 }
 
-export const searchbar = new Searchbar()
+@Injectable({
+  providedIn: 'root'
+})
+export class StoreSearch extends Search implements StoreSearchProps {
+  opcionElegida = OrderBy.menorDistancia
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CardSearch extends Search implements CardSearchProps {
+  onFire = false
+  esPromesa = false
+  cotizacionInicial = 0
+  cotizacionFinal = 0
+  min = 0
+
+  fromToVerificaition() { return this.cotizacionFinal < this.cotizacionInicial }
+  setValueMin() { this.min = this.cotizacionInicial }
+  
+  checkMin(){
+    if (this.fromToVerificaition()) {
+      this.cotizacionFinal = this.cotizacionInicial
+    }
+    this.setValueMin()
+  }
+}
