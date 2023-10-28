@@ -1,27 +1,22 @@
-// /* tslint:disable:no-unused-variable */
-// import {async, ComponentFixture, TestBed} from '@angular/core/testing'
-// import {By} from '@angular/platform-browser'
-// import {DebugElement} from '@angular/core'
+import { RouterTestingModule } from '@angular/router/testing'
+import { HttpClientModule } from '@angular/common/http'
+import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
+import {SearchbarComponent} from './searchbar.component'
+import { FormsModule } from '@angular/forms'
 
-// import {SearchbarComponent} from './searchbar.component'
+describe('SearchBar Component', () => {
+  let searchbar: SearchbarComponent
+  let fixture: ComponentFixture<SearchbarComponent>
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientModule, FormsModule, RouterTestingModule],
+      declarations: [SearchbarComponent]
+    }).compileComponents()
+    fixture = TestBed.createComponent(SearchbarComponent)
+    searchbar = fixture.componentInstance
+  }))
 
-// describe('SearchbarComponent', () => {
-//   let component: SearchbarComponent
-//   let fixture: ComponentFixture<SearchbarComponent>
-
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [SearchbarComponent]
-//     }).compileComponents()
-//   }))
-
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(SearchbarComponent)
-//     component = fixture.componentInstance
-//     fixture.detectChanges()
-//   })
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy()
-//   })
-// })
+  it('should create', () => {
+    expect(searchbar).toBeTruthy()
+  })
+})
