@@ -44,7 +44,7 @@ import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile
 import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-set-inputs.component'
 
 //Search
-import { SearchbarComponent } from './components/searchbar/searchbar.component'
+import {SearchbarComponent} from './components/searchbar/searchbar.component'
 
 @NgModule({
   declarations: [

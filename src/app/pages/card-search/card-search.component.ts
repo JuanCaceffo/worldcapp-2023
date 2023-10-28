@@ -21,7 +21,7 @@ export class CardSearchComponent implements OnInit {
   }
 
   async getAll() {
-    this.listCards = await this.cardService.getCards(this.cardSearch)
+    this.listCards = await this.cardService.getCards()
   }
 
   clickAction() {
