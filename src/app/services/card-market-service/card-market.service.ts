@@ -24,7 +24,7 @@ export class CardMarketService {
 
   private cardData = () =>
     this.httpClient.get<StoreDto[]>(
-      `${API_URL}/puntosDeVenta/?userId=${getUserId()}`,
+      `${API_URL}/puntosDeVenta/?id=${getUserId()}`,
       {params: this.storeSearch.httpParams()}
     )
 }
