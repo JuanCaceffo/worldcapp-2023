@@ -14,11 +14,9 @@
   .home__aside{
     padding: 1rem;
   }
-  .home__aside__block{
-    position: sticky;
-    top: 12.5em;
-    height: fit-content;
-}
+  .home__aside-block{
+    top: 6.5em;
+  }
 }
 @media (width >= 600px){
   .home__content-profile{

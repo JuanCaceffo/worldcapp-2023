@@ -62,7 +62,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (width >= 769px) {
   .home--2col {
     grid-template-columns: max(20rem, 20vw) auto;
   }
@@ -77,6 +77,12 @@
     grid-template-areas:
       'search search'
       'aside content';
+  }
+
+  .home__aside-block{
+    position: sticky;
+    top: 12.5em;
+    height: fit-content;
   }
 
   .home__search {
