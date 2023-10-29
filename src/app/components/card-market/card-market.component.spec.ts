@@ -41,7 +41,7 @@ describe('CardMarketComponent', () => {
     expect(title.textContent).toBe('Test Mock 1')
     expect(address.textContent).toBe('Calle Falsa 11')
     expect(geoLocation.textContent).toBe('x: 2.1234, y: 54.1234')
-    expect(distance.textContent).toBe('2.00m')
+    expect(distance.textContent).toBe('2.00 Km')
     expect(stock.textContent).toBe('2')
     expect(price.textContent).toBe('€1')
   })

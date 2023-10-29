@@ -1,6 +1,15 @@
 .home__aside{
   padding: 2rem 0;
 }
+.home__content-profile{
+  /*Layout*/
+  position: relative;
+  gap: 0.3em;
+  width: 100%;
+  /*Visual*/
+  background-color: var(--color-clear-dark);
+  border-radius: var(--border-radius-md);
+}
 @media (width >= 769px) {
   .home__aside{
     padding: 1rem;
@@ -10,4 +19,10 @@
     top: 12.5em;
     height: fit-content;
 }
+}
+@media (width >= 600px){
+  .home__content-profile{
+    column-gap: var(--box-padding);
+    justify-content: left;
+  }
 }

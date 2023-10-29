@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Figurita} from 'src/app/models/cards/figurita.model'
+import {CardSearch} from 'src/app/models/searchbar/searchbar'
 import {CardService} from 'src/app/services/card-service/card.service'
 
 @Component({
@@ -9,31 +10,21 @@ import {CardService} from 'src/app/services/card-service/card.service'
   styleUrls: ['./card-search.component.css']
 })
 export class CardSearchComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    public cardService: CardService
-  ) {}
+  constructor(private titleService: Title, public cardService: CardService, public cardSearch: CardSearch) {}
 
   @Input() value!: number[]
   listCards: Array<Figurita> = []
-  searchValue?: string
-  
+
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
     this.getAll()
   }
 
   async getAll() {
-    this.listCards = await this.cardService.getAllCards()
-    console.log(this.listCards)
+    this.listCards = await this.cardService.getCards()
   }
 
-  enviarDatos(datos: string){
-    console.log(datos)
+  clickAction() {
+    this.getAll()    
   }
-
-  clickAction(){ 
-    console.log(this.searchValue)  
-  }
-  
 }

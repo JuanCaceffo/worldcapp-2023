@@ -2,6 +2,7 @@
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
 import {ProfileDuplicateFigusComponent} from './profile-duplicate-figus.component'
+import {HttpClientModule} from '@angular/common/http'
 
 describe('ProfileDuplicateFigusComponent', () => {
   let component: ProfileDuplicateFigusComponent
@@ -9,7 +10,8 @@ describe('ProfileDuplicateFigusComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ProfileDuplicateFigusComponent]
+      declarations: [ProfileDuplicateFigusComponent],
+      imports: [HttpClientModule]
     }).compileComponents()
   }))
 

@@ -42,10 +42,36 @@ export const profileInfoUserMock: UserProfileInfoDTO = {
   criteria: 'Nacionalista'
 }
 
+export const initialProfileInfoUserMock: UserProfileInfoDTO = {
+  name: '',
+  lastName: '',
+  email: '',
+  birthdate: '',
+  address: {
+    provincia: '',
+    localidad: '',
+    calle: '',
+    altura: 0,
+    ubiGeografica: {
+      x: 0,
+      y: 0
+    }
+  },
+  exchangeProximity: 0,
+  criteria: ''
+}
+
 export const userInfoMock: UserInfoDTO = {
   username: 'Facundinho',
   age: 26,
   location: '3 de Febrero',
   picturePath:
     'https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg'
+}
+
+export const initialuserInfoMock: UserInfoDTO = {
+  username: 'Off Line',
+  age: 0,
+  location: '',
+  picturePath: '../../assets/images/user-profile/addPhoto.png'
 }

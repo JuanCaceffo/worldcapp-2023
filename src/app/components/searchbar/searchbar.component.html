@@ -1,0 +1,14 @@
+<div class="field__container rounded shadow">
+  <input
+    [(ngModel)]="cardSearch.palabraClave"
+    id="name"
+    class="field__input field__input--iconized field__input--icon-right rounded"
+    type="text"
+    autocomplete="off"
+    data-testid="userInput"
+  />
+  <i
+    (click)="clickAction()"
+    class="field__icon field__icon--icon-right field__icon--pointer fas fa-magnifying-glass"
+  ></i>
+</div>

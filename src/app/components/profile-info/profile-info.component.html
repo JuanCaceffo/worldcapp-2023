@@ -45,7 +45,9 @@
       class="field__input rounded shaded" 
       id="birthdate" 
       name="birthdate" 
-      type="date" 
+      type="date"
+      #birthDate
+      (change)="updateInfoUser(birthDate.valueAsDate!)"
       [(ngModel)]="profileInfo.birthdate" 
       />
     </section>
@@ -58,17 +60,17 @@
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="province">Provincia</label>
       <select 
-      class="field__select rounded shaded" id="province" name="province" [(ngModel)]="profileInfo.address.provincia" >
+      class="field__select rounded shaded" id="province" name="province" [(ngModel)]="profileInfo.address.provincia" (change)="getLocations()">
         <option>Seleccione una opción</option>
-        <option *ngFor="let province of provinces"> {{province}} </option>
+        <option *ngFor="let province of getProvinces()" [selected]="selectedProvince(province)"> {{province}} </option>
       </select>
     </section>  
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="location">Localidad</label>
-      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" >
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" (change)="updateInfoUser(birthDate.valueAsDate!)">
         <option>Seleccione una opción</option>
-        <option *ngFor="let location of locations"> {{location}} </option>
+        <option *ngFor="let location of getLocations()" [selected]="selectedLocation(location)"> {{location}} </option>
         
       </select>
     </section>
@@ -152,7 +154,7 @@
   </fieldset>
   
   <section class="form-info__actions">
-    <button class="button--secondary" type="reset">Resetear</button>
+    <button class="button--secondary" type="button" (click)="onReset()">Reestablecer</button>
     <button class="button--primary" type="submit">Guardar</button>
   </section>
 </form>

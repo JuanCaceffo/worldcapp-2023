@@ -5,6 +5,8 @@ export interface UserLoginDTO {
 export interface UserLoginResponseDTO {
   userLogedID: number
 }
+export type UserFigusListType = 'FALTANTES' | 'REPETIDAS'
+
 export interface UserProfileInfoDTO {
   name: string
   lastName: string
@@ -29,4 +31,9 @@ export interface UserInfoDTO {
   age: number
   location: string
   picturePath: string
+}
+
+export interface UserUpdateInfoDTO {
+  age: Date
+  location: string
 }

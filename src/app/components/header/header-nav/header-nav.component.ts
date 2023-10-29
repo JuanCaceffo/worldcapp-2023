@@ -16,7 +16,7 @@ export class HeaderNavComponent implements OnInit {
   listProps: Array<listProps> = [
     {content: 'Figuritas', link: '/figuritas'},
     {content: 'Sobres', link: '/sobres'},
-    {content: 'Perfil', link: '/perfil/perfil-usuario'},
+    {content: 'Perfil', link: '/perfil'},
     {classCss: 'fa-solid fa-right-from-bracket fa-rotate-180', link: '/login'}
   ]
 }
