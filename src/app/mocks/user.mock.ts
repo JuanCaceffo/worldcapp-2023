@@ -68,3 +68,10 @@ export const userInfoMock: UserInfoDTO = {
   picturePath:
     'https://www.infobae.com/new-resizer/MQBzwcl--Jgxfm53chAmEYTm6V4=/arc-anglerfish-arc2-prod-infobae/public/PPHDXSRNQKYLGBP6WNPLD6S7DM.jpg'
 }
+
+export const initialuserInfoMock: UserInfoDTO = {
+  username: 'Off Line',
+  age: 0,
+  location: '',
+  picturePath: '../../assets/images/user-profile/addPhoto.png'
+}
