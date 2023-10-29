@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {Router} from '@angular/router'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserService} from 'src/app/services/user-service/user.service'
 
@@ -8,7 +9,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
   styleUrls: ['./profile-duplicate-figus.component.css']
 })
 export class ProfileDuplicateFigusComponent implements OnInit {
-  constructor(public userService: UserService) {}
+  constructor(public userService: UserService, private router: Router) {}
 
   async ngOnInit() {
     this.listDuplicateCards = await this.userService.getFiguritasList(
