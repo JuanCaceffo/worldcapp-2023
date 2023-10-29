@@ -18,6 +18,6 @@ export class CardService {
     const figuritasJSON = await lastValueFrom(this.cardData())    
     return figuritasJSON.map((card) => Figurita.fromJson(card))
   }
-  
+
   private cardData = () => this.httpClient.get<FiguritaDTO[]>(`${API_URL}/figuritas/intercambiar/${getUserId()}`, {params: this.cardSearch.httpParams()})
 }
