@@ -20,4 +20,9 @@
     column-gap: var(--box-padding);
     justify-content: left;
   }
+  .home__aside-block{
+    position: sticky;
+    top: 12.5em;
+    height: fit-content;
+}
 }

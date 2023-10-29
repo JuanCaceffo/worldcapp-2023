@@ -8,3 +8,9 @@
     cursor: default;
     transition: all 400ms ease;
 }
+
+.home__aside-block{
+    position: sticky;
+    top: 12.5em;
+    height: fit-content;
+}
