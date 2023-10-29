@@ -69,7 +69,6 @@ export class UserService {
       `${API_URL}/user/${getUserId()}/info-profile`,
       profileInfo
     )
-    //TODO: Hacer algo un poco mas amigable y menos molesto (Posible Toast)
     return lastValueFrom(profileInfo$)
   }
 
@@ -79,5 +78,13 @@ export class UserService {
     )
 
     return lastValueFrom(userInfo$)
+  }
+
+  async editUsername(userInfo: UserInfoDTO): Promise<UserInfoDTO> {
+    const editInfo$ = this.httpClient.patch<UserInfoDTO>(
+      `${API_URL}/user/${getUserId()}/user-info`,
+      userInfo
+    )
+    return lastValueFrom(editInfo$)
   }
 }

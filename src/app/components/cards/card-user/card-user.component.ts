@@ -26,10 +26,10 @@ export class CardUserComponent {
     this.deleteUsername()
   }
 
-  saveUsername() {
+  async saveUsername() {
     this.userInfo.username = this.editedUsername
     this.isEditing = false
-    //TODO: Mandarle aca la funcionalidad para que guarde el nombre en el back
+    this.userInfo = await this.userService.editUsername(this.userInfo)
   }
 
   cancelEdit() {
