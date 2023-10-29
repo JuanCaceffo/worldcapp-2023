@@ -1,28 +1,23 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
+import {FormsModule} from '@angular/forms'
+import { ErrorToastComponent } from './errorToast.component'
 
-import { ErrorToastComponent } from './errorToast.component';
+describe('FilterVariantComponent', () => {
+  let errorToast: ErrorToastComponent
+  let fixture: ComponentFixture<ErrorToastComponent>
 
-describe('ErrorToastComponent', () => {
-  let component: ErrorToastComponent;
-  let fixture: ComponentFixture<ErrorToastComponent>;
-
-  beforeEach(async(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ErrorToastComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ErrorToastComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+      imports: [FormsModule],
+      declarations: [ErrorToastComponent]
+    }).compileComponents()
+    fixture = TestBed.createComponent(ErrorToastComponent)
+    errorToast = fixture.componentInstance
+    fixture.detectChanges()
+  }))
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(errorToast).toBeTruthy()
+  })
+})
+
