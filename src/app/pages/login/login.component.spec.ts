@@ -60,13 +60,54 @@ describe('Login Component', () => {
     expect(routerSpy.navigate).toHaveBeenCalledWith(['/figuritas'])
   })
 
-  it('Deberia retornar un id cuando el usuario y la contraseña ingresados son correctos', async () => {
-    const usuarioCorrecto = 'alejo'
-    const contraseñaCorrecta = '123456'
-    login.loginForm.setValue({
-      name: usuarioCorrecto,
-      password: contraseñaCorrecta
-    })
+  it('debería aplicar la calse de boton deshabilitado al botón de inicio de sesión cuando el input esté vacío', () => {
+    const userInput = fixture.nativeElement.querySelector(
+      '[data-testid="userInput"]'
+    )
+    const loginButton = fixture.nativeElement.querySelector(
+      '[data-testid="loginButton"]'
+    )
+
+    userInput.value = ''
+    fixture.detectChanges()
+
+    loginButton.click()
+    fixture.detectChanges()
+
+    expect(loginButton.classList.contains('button--disabled')).toBe(true)
+  })
+
+  it('debería llamar a formHasErrors() cuando se hace clic en el botón con un input vacío', () => {
+    const userInput = fixture.nativeElement.querySelector(
+      '[data-testid="userInput"]'
+    )
+    const loginButton = fixture.nativeElement.querySelector(
+      '[data-testid="loginButton"]'
+    )
+
+    userInput.value = ''
+    userInput.dispatchEvent(new Event('input'))
+    fixture.detectChanges()
+
+    spyOn(login, 'formHasErrors')
+
+    loginButton.click()
+    fixture.detectChanges()
+
+    expect(login.formHasErrors).toHaveBeenCalled()
+  })
+
+  it('deberia retornar un id cuando el usuario y la contraseña ingresados son correctos', async () => {
+    const userInput = fixture.nativeElement.querySelector(
+      '[data-testid="userInput"]'
+    )
+
+    const passwordInput = fixture.nativeElement.querySelector(
+      '[data-testid="passworInput"]'
+    )
+    userInput.value = 'alejo'
+    passwordInput.value = '123456'
+    fixture.detectChanges()
 
     getByTestId(fixture, 'loginButton').click()
     fixture.detectChanges()
@@ -75,25 +116,3 @@ describe('Login Component', () => {
     expect(userLogedID).toBe('123')
   })
 })
-
-// it('los campos de usuario y contraseña deben estar en pantalla', fakeAsync(() => {
-//   const usernameInput: HTMLElement = getByTestId(fixture, 'userInput')
-//   const passwordInput: HTMLElement = getByTestId(fixture, 'passwordInput')
-
-//   expect(usernameInput).toBeTruthy()
-//   expect(passwordInput).toBeTruthy()
-// }))
-
-//TODO: mockear servicio
-/* it('con usuario y contraseña correctos se debe dar como valido el login', async () => {
-    const loginButton = getByTestId('loginButton')
-
-    component.data.userName = 'sol'
-    component.data.password = '123456'
-
-    loginButton.click()
-    fixture.detectChanges()
-
-    expect(getByTestId('errorMessage')).toBeTrue()
-  }) */
-// })
