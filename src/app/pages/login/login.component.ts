@@ -4,6 +4,7 @@ import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Router} from '@angular/router'
 import {FormControl, FormGroup, Validators} from '@angular/forms'
+import {mostrarError} from 'src/app/helpers/errorHandler'
 
 interface ErrorType {
   required: string
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   errorMsg: string | null = null
-  errors: {[key: string]: string} = {}  
+  errors: {[key: string]: string} = {}
   loginForm!: FormGroup
 
   @Input() defaultErrors: DefaultErrors = {
@@ -65,7 +66,9 @@ export class LoginComponent implements OnInit {
   }
 
   getMyError(inputType: string, errorMsg: string) {
-    return this.defaultErrors[inputType as keyof DefaultErrors][errorMsg as keyof ErrorType]
+    return this.defaultErrors[inputType as keyof DefaultErrors][
+      errorMsg as keyof ErrorType
+    ]
   }
 
   formHasErrors() {
@@ -81,16 +84,21 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  ERROR_MESSAGE_INGRESOS_INVALIDO =
+    'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
+
   async submitLogin() {
-    if (Object.keys(this.errors).length === 0) {      
-      const data: UserLoginDTO = {userName: this.name?.value, password: this.password?.value}
-      
+    if (Object.keys(this.errors).length === 0) {
+      const data: UserLoginDTO = {
+        userName: this.name?.value,
+        password: this.password?.value
+      }
+
       try {
         await this.userService.login(data)
         this.router.navigate(['/figuritas'])
       } catch (error) {
-        //TODO: manejar el tipo de error que llega del back
-        this.errorMsg = 'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
+        mostrarError(this, error, this.ERROR_MESSAGE_INGRESOS_INVALIDO)
       }
     }
   }

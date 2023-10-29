@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-variable */
-import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing'
+import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 
-import { HeaderNavComponent } from './header-nav.component'
-import { RouterTestingModule } from '@angular/router/testing'
+import {HeaderNavComponent} from './header-nav.component'
+import {RouterTestingModule} from '@angular/router/testing'
 
 describe('HeaderNavComponent', () => {
   let component: HeaderNavComponent

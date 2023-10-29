@@ -14,6 +14,7 @@ import {FooterComponent} from './components/footer/footer.component'
 import {HeaderComponent} from './components/header/header.component'
 import {HeaderNavComponent} from './components/header/header-nav/header-nav.component'
 import {LogoComponent} from './components/logo/logo.component'
+import {ToastMessageComponent} from './components/toast-message/toastMessage/toastMessage.component'
 
 // Filter components
 import {SortedByFilterComponent} from './components/filter/sorted-by-filter/sorted-by-filter.component'
@@ -82,7 +83,8 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     ConcatenatePipe,
     FullAddressPipe,
     // Search
-    SearchbarComponent
+    SearchbarComponent,
+    ToastMessageComponent
   ],
   imports: [
     AppRoutingModule,
