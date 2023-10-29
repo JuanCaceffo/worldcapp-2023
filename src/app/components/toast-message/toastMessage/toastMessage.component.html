@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Toasts</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="toast success" *ngIf="isSuccess()">
+        <div class="container-1">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="container-2">
+            <p>{{titleType}}</p>
+            <p>{{messageType}}</p>
+        </div>
+    </div>
+    <div class="toast error" *ngIf="isError()">
+        <div class="container-1">
+            <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="container-2">
+            <p>{{titleType}}</p>
+            <p>{{messageType}}</p>
+        </div>
+    </div>
+    <div class="toast info" *ngIf="isInfo()">
+        <div class="container-1">
+            <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="container-2">
+            <p>{{titleType}}</p>
+            <p>{{messageType}}</p>
+        </div>
+    </div>
+    <div class="toast alert" *ngIf="isAlert()">
+        <div class="container-1">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="container-2">
+            <p>{{titleType}}</p>
+            <p>{{messageType}}</p>
+        </div>
+    </div>
+  
+</div>
+</body>
+</html>
+   
+

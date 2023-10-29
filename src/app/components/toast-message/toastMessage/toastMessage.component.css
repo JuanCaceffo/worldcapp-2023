@@ -26,13 +26,27 @@ body{
   grid-template-columns: 1.3fr 6fr 0.5fr;
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
+.success{
+  border-left: 8px solid #47D764;
+}
 .error{
   border-left: 8px solid #ff355b;
+}
+.info{
+  border-left: 8px solid #2F86EB;
+}
+.warning{
+  border-left: 8px solid #FFC021;
 }
 .error i{
   color: #ff355b;
 }
-
+.info i{
+  color: #2F86EB;
+}
+.warning i{
+  color: #FFC021;
+}
 .toast:not(:last-child){
   margin-bottom: 50px;
 }
@@ -41,6 +55,9 @@ body{
 } 
 .container-1 i{
   font-size: 35px;
+}
+.success i{
+  color: #47D764;
 }
 .container-2 p:first-child{
   color: #101020;

@@ -3,7 +3,7 @@ import {AppRoutingModule, routingComponents} from './app-routing.module'
 import {BrowserModule} from '@angular/platform-browser'
 import {FormsModule} from '@angular/forms'
 import {NgModule} from '@angular/core'
-import { ReactiveFormsModule } from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms'
 
 // Main Component
 import {AppComponent} from './app.component'
@@ -14,6 +14,7 @@ import {FooterComponent} from './components/footer/footer.component'
 import {HeaderComponent} from './components/header/header.component'
 import {HeaderNavComponent} from './components/header/header-nav/header-nav.component'
 import {LogoComponent} from './components/logo/logo.component'
+import {ToastMessageComponent} from './components/toast-message/toastMessage/toastMessage.component'
 
 // Filter components
 import {BaseFilterComponent} from './components/filter/base-filter.component'
@@ -46,7 +47,7 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
 
 @NgModule({
   declarations: [
-    // Angular    
+    // Angular
     routingComponents,
     AppComponent,
     // Base Page Components
@@ -77,9 +78,16 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
     ProfileInfoComponent,
     // Pipe
     ConcatenatePipe,
-    FullAddressPipe
+    FullAddressPipe,
+    ToastMessageComponent
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
