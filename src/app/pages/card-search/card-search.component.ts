@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core'
+import {Component, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {CardSearch} from 'src/app/models/searchbar/searchbar'
