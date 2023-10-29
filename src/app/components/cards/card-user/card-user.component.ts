@@ -1,6 +1,6 @@
 import {Component} from '@angular/core'
 import {UserInfoDTO} from 'src/app/dtos/user.dto'
-import {userInfoMock} from 'src/app/mocks/user.mock'
+import {initialuserInfoMock} from 'src/app/mocks/user.mock'
 import {UserService} from 'src/app/services/user-service/user.service'
 
 @Component({
@@ -14,10 +14,14 @@ export class CardUserComponent {
   editedUsername: string = ''
   LIMIT: number = 20
   //TODO: Sacar el mock de inicio, para safar mientras de los tests
-  userInfo: UserInfoDTO = userInfoMock
+  userInfo: UserInfoDTO = initialuserInfoMock
 
   async ngOnInit() {
     this.userInfo = await this.userService.getUserInfo()
+    this.userService.data$.subscribe(async (updatedInfo) => {
+      this.userInfo.location = updatedInfo.location
+      this.userInfo.age = this.getAge(updatedInfo.age)
+    })
   }
 
   startEdit() {
@@ -26,10 +30,10 @@ export class CardUserComponent {
     this.deleteUsername()
   }
 
-  saveUsername() {
+  async saveUsername() {
     this.userInfo.username = this.editedUsername
     this.isEditing = false
-    //TODO: Mandarle aca la funcionalidad para que guarde el nombre en el back
+    this.userInfo = await this.userService.editUsername(this.userInfo)
   }
 
   cancelEdit() {
@@ -40,15 +44,21 @@ export class CardUserComponent {
     this.editedUsername = ''
   }
 
-  inputIsValid(): boolean {
-    return !this.isEmpty() && this.isUnderTheTop()
-  }
+  inputIsValid = (): boolean => !this.isEmpty() && this.isUnderTheTop()
 
-  isUnderTheTop(): boolean {
-    return this.editedUsername.length <= this.LIMIT
-  }
+  isUnderTheTop = (): boolean => this.editedUsername.length <= this.LIMIT
 
-  isEmpty(): boolean {
-    return !this.editedUsername.trim()
-  }
+  isEmpty = (): boolean => !this.editedUsername.trim()
+
+  getAge = (date: Date): number =>
+    this.hadBirthday(date)
+      ? new Date().getFullYear() - date.getFullYear()
+      : new Date().getFullYear() - date.getFullYear() - 1
+
+  hadBirthday = (date: Date): boolean =>
+    new Date().getUTCDate() >= date.getUTCDate() &&
+    new Date().getMonth() >= date.getMonth()
+
+  //TODO: Esto luego cambia
+  isOffLine = (): boolean => this.userInfo.username === 'Off Line'
 }

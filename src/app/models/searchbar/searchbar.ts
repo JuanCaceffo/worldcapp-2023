@@ -1,16 +1,16 @@
+import { HttpParams } from "@angular/common/http"
 import { Injectable } from "@angular/core"
 import { CardSearchProps, OrderBy, StoreSearchProps } from "src/app/interfaces/searchCriteria"
 class Search {
   palabraClave = ''
 
-  createRequestURL(): string {
-    let url =
-      `?` +
-      Object.keys(this).forEach((key, value) => {
-        ;`${key}=${value}&`
-      })
-    url = url.substring(0,-1)
-    return url
+  httpParams(): HttpParams{
+    let httpParams = new HttpParams()
+    Object.entries(this).forEach( ([key, value]) => {            
+      httpParams = httpParams.set(key, value.toString())
+      console.log(value)            
+    })    
+    return httpParams
   }
 }
 

@@ -32,3 +32,8 @@ export interface UserInfoDTO {
   location: string
   picturePath: string
 }
+
+export interface UserUpdateInfoDTO {
+  age: Date
+  location: string
+}

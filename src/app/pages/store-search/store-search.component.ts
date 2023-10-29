@@ -1,6 +1,7 @@
 import {Component} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
+import { StoreSearch } from 'src/app/models/searchbar/searchbar'
 import {CardMarketService} from 'src/app/services/card-market-service/card-market.service'
 
 @Component({
@@ -14,17 +15,20 @@ export class StoreSearchComponent {
 
   constructor(
     private titleService: Title,
-    private cardMarketService: CardMarketService
+    private cardMarketService: CardMarketService,
+    public storeSearch: StoreSearch
   ) {}
 
   ngOnInit() {
     this.titleService.setTitle('Sobres')
-    this.getAllCards()
+    this.getAll()
   }
 
-  async getAllCards() {
+  async getAll() {
     this.marketCards = await this.cardMarketService.getAllCards()
   }
 
-  clickAction() {}
+  clickAction() {
+    this.getAll()
+  }
 }
