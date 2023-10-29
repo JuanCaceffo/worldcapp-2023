@@ -82,7 +82,8 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     ConcatenatePipe,
     FullAddressPipe,
     // Search
-    SearchbarComponent
+    SearchbarComponent,
+    ToastMessageComponent
   ],
   imports: [
     AppRoutingModule,
