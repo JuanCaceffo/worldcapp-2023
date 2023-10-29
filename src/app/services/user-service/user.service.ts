@@ -18,7 +18,6 @@ import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 })
 export class UserService {
   constructor(private httpClient: HttpClient) {}
-  static userLogedID?: number
 
   async login(userData: UserLoginDTO) {
     const response$ = this.httpClient.post<UserLoginResponseDTO>(
@@ -32,7 +31,7 @@ export class UserService {
   async figuritaRequest(figurita: Figurita) {
     await lastValueFrom(
       this.httpClient.patch(`${API_URL}/user/request-figurita`, {
-        userLogedID: UserService.userLogedID,
+        userLogedID: getUserId(),
         requestedUserID: figurita.props.idUsuario,
         requestedFiguID: figurita.props.id
       })
@@ -49,7 +48,7 @@ export class UserService {
 
   async getGiftableFigurita(userID: number, cardID: number): Promise<Figurita> {
     const card$ = this.httpClient.get<FiguritaDTO>(
-      `${API_URL}/user/get-figurita-intercambio/${userID}/${cardID}`
+      `${API_URL}/user/get-figurita-intercambio/usuario/${userID}/figurita/${cardID}`
     )
     const card = await lastValueFrom(card$)
     return Figurita.fromJson(card)
@@ -86,5 +85,13 @@ export class UserService {
       userInfo
     )
     return lastValueFrom(editInfo$)
+  }
+
+  async deleteFigu(id: number, listCardType: UserFigusListType) {
+    await lastValueFrom(
+      this.httpClient.delete(
+        `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
+      )
+    )
   }
 }

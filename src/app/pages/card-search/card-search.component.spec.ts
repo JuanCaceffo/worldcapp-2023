@@ -4,6 +4,7 @@ import {RouterTestingModule} from '@angular/router/testing'
 import {CardSearchComponent} from './card-search.component'
 import {VariantFilterComponent} from 'src/app/components/filter/variant-filter/variant-filter.component'
 import {FormsModule} from '@angular/forms'
+import { SearchbarComponent } from 'src/app/components/searchbar/searchbar.component'
 
 describe('Card Search Component', () => {
   let store: CardSearchComponent
@@ -12,7 +13,7 @@ describe('Card Search Component', () => {
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientModule, FormsModule],
-      declarations: [CardSearchComponent, VariantFilterComponent]
+      declarations: [CardSearchComponent, SearchbarComponent,VariantFilterComponent]
     }).compileComponents()
   }))
 

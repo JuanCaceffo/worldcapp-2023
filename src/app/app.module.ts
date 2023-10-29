@@ -43,6 +43,9 @@ import {ProfileInfoComponent} from './components/profile-info/profile-info.compo
 import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
 import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-set-inputs.component'
 
+//Search
+import {SearchbarComponent} from './components/searchbar/searchbar.component'
+
 @NgModule({
   declarations: [
     // Angular    
@@ -75,7 +78,9 @@ import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-se
     ProfileInfoComponent,
     // Pipe
     ConcatenatePipe,
-    FullAddressPipe
+    FullAddressPipe,
+    // Search
+    SearchbarComponent
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],

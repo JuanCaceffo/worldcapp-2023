@@ -1,43 +1,61 @@
-
-  <article class="player-card player-card--trash">
-    <section class="player-card__img">
-      <!-- TODO: ver como implementar la imagen --> 
-      <img [src]="card.imageURL"/>
-      <li class="button--icon" *ngIf="card.isOwner">
-        <a class="button__link" href="">
-          <i class="fa-solid fa-trash-can"></i>
-        </a>
-      </li>
+<article class="player-card player-card--trash">
+  <section class="player-card__img">
+    <!-- TODO: ver como implementar la imagen -->
+    <img [src]="card.imageURL" />
+    <button
+      class="button__link button--icon"
+      *ngIf="card.isOwner"
+      (click)="handleDelete()"
+    >
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
+  </section>
+  <section class="player-card__content">
+    <header class="player-card__header">
+      <!-- TODO: implementar pipes -->
+      <h2>
+        {{ card.props.nombre | concatenate : card.props.apellido | titlecase }}
+      </h2>
+      <h2><i class="fas fa-id-badge fa-sm"></i> {{ card.props.numero }}</h2>
+      <h2>
+        <i
+          data-testid="worldChampion"
+          class="fas fa-trophy fa-sm"
+          *ngIf="card.isWorldChampion"
+        ></i>
+        <i
+          data-testid="onFire"
+          class="fas fa-fire fa-sm"
+          *ngIf="card.props.onFire"
+        ></i>
+        <span
+          ><i class="fas fa-star fa-sm"></i
+          >{{ card.totalValoration | number : '1.0-0' }}</span
+        >
+      </h2>
+      <p>
+        <i class="fa-solid fa-weight-scale fa-sm"></i><strong> Peso:</strong>
+        {{ card.props.peso }}
+      </p>
+      <p>
+        <i class="fas fa-ruler-vertical fa-sm"></i
+        ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong>
+        {{ card.props.edad }}
+        metros
+      </p>
+    </header>
+    <section class="player-card__body">
+      <p><strong>Casaca: </strong>{{ card.props.nroCamiseta }}</p>
+      <p><strong>Nacimiento: </strong>{{ card.birth | date : 'dd-MM-yyyy' }}</p>
+      <p><strong>Selección: </strong> {{ card.props.seleccion | titlecase }}</p>
+      <p><strong>Posición: </strong> {{ card.props.posicion | titlecase }}</p>
+      <h2 class="player-card__body--highlight">
+        COTIZACION:
+        {{ card.props.cotizacion | currency : 'EUR' : 'symbol' : '0.0-2' }}
+      </h2>
     </section>
-    <section class="player-card__content">
-      <header class="player-card__header">
-        <!-- TODO: implementar pipes -->
-        <h2>{{ card.props.nombre | concatenate: card.props.apellido | titlecase}}</h2>
-        <h2><i class="fas fa-id-badge fa-sm"></i> {{card.props.numero}}</h2>
-        <h2>
-          <i data-testid="worldChampion" class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i>
-          <i data-testid="onFire" class="fas fa-fire fa-sm" *ngIf="card.props.onFire"></i>
-          <span><i class="fas fa-star fa-sm"></i>{{card.totalValoration | number:'1.0-0'}}</span>
-        </h2>
-        <p>
-          <i class="fa-solid fa-weight-scale fa-sm"></i
-          ><strong> Peso:</strong> {{card.props.peso}}
-        </p>
-        <p>
-          <i class="fas fa-ruler-vertical fa-sm"></i
-          ><i class="fas fa-person fa-sm"></i><strong> Altura:</strong> {{card.props.edad}}
-          metros
-        </p>
-      </header>
-      <section class="player-card__body">
-        <p><strong>Casaca: </strong>{{card.props.nroCamiseta}}</p>
-        <p><strong>Nacimiento: </strong>{{ card.birth | date:'dd-MM-yyyy' }}</p>
-        <p><strong>Selección: </strong> {{card.props.seleccion | titlecase}}</p>
-        <p><strong>Posición: </strong> {{card.props.posicion | titlecase}}</p>
-        <h2 class="player-card__body--highlight">COTIZACION: {{card.props.cotizacion | currency: 'EUR' : 'symbol' : '0.0-2'}}</h2>
-      </section>
-      <footer class="player-card__footer">
-        <ng-content select="[footer]"></ng-content>
-      </footer>
-    </section>
+    <footer class="player-card__footer">
+      <ng-content select="[footer]"></ng-content>
+    </footer>
+  </section>
 </article>

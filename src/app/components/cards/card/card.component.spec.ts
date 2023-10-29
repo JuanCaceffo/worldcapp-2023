@@ -5,13 +5,14 @@ import {ConcatenatePipe} from 'src/app/pipes/concatenate-pipe.pipe'
 import {getByTestId} from 'src/app/helpers/test.helper'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {mockCardData} from 'src/app/mocks/card.mock'
+import {HttpClientModule} from '@angular/common/http'
 
 describe('Card Component', () => {
   let component: CardComponent
   let fixture: ComponentFixture<CardComponent>
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, HttpClientModule],
       declarations: [CardComponent, ConcatenatePipe]
     }).compileComponents()
     fixture = TestBed.createComponent(CardComponent)

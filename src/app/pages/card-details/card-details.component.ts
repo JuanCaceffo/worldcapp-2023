@@ -19,6 +19,7 @@ export class CardDetailsComponent implements OnInit {
     private router: Router,
     public userService: UserService
   ) {}
+  
   async ngOnInit() {
     this.route.params.subscribe(async (param) => {
       const userID = param['user-id']

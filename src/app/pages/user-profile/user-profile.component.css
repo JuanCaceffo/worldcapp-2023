@@ -4,7 +4,6 @@
 .home__content-profile{
   /*Layout*/
   position: relative;
-  padding: 0 var(--box-padding) var(--box-padding);
   gap: 0.3em;
   width: 100%;
   /*Visual*/
