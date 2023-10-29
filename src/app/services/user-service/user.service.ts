@@ -5,11 +5,12 @@ import {
   UserLoginDTO,
   UserFigusListType,
   UserProfileInfoDTO,
-  UserInfoDTO
+  UserInfoDTO,
+  UserUpdateInfoDTO
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
-import {lastValueFrom} from 'rxjs'
+import {Observable, Subject, lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
 import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
@@ -68,8 +69,6 @@ export class UserService {
       `${API_URL}/user/${getUserId()}/info-profile`,
       profileInfo
     )
-    //TODO: Hacer algo un poco mas amigable y menos molesto (Posible Toast)
-    alert('Se modificó el usuario exitosamente')
     return lastValueFrom(profileInfo$)
   }
 
@@ -81,11 +80,26 @@ export class UserService {
     return lastValueFrom(userInfo$)
   }
 
+  async editUsername(userInfo: UserInfoDTO): Promise<UserInfoDTO> {
+    const editInfo$ = this.httpClient.patch<UserInfoDTO>(
+      `${API_URL}/user/${getUserId()}/user-info`,
+      userInfo
+    )
+    return lastValueFrom(editInfo$)
+  }
+
   async deleteFigu(id: number, listCardType: UserFigusListType) {
     await lastValueFrom(
       this.httpClient.delete(
         `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
       )
     )
+  }
+
+  private dataSubject = new Subject<UserUpdateInfoDTO>()
+  data$: Observable<UserUpdateInfoDTO> = this.dataSubject.asObservable()
+
+  updateInfoUser(userInfo: UserUpdateInfoDTO): void {
+    this.dataSubject.next(userInfo)
   }
 }

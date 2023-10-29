@@ -4,6 +4,7 @@ import {CardUserComponent} from './card-user.component'
 import {ConcatenatePipe} from 'src/app/pipes/concatenate-pipe.pipe'
 import {CardComponent} from '../card/card.component'
 import {HttpClientModule} from '@angular/common/http'
+import {userInfoMock} from 'src/app/mocks/user.mock'
 
 describe('CardUserComponent', () => {
   let component: CardUserComponent
@@ -16,6 +17,7 @@ describe('CardUserComponent', () => {
     })
     fixture = TestBed.createComponent(CardUserComponent)
     component = fixture.componentInstance
+    component.userInfo = userInfoMock
     fixture.detectChanges()
   })
 
