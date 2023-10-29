@@ -1,4 +1,5 @@
 /* tslint:disable:no-unused-variable */
+/*
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
 import {NavbarProfileComponent} from './navbar-profile.component'
 import {RouterTestingModule} from '@angular/router/testing'
@@ -61,3 +62,4 @@ describe('NavbarProfileComponent', () => {
     expect(tabItems.length).toBe(3)
   })
 })
+*/

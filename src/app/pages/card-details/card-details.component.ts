@@ -3,6 +3,7 @@ import {Title} from '@angular/platform-browser'
 import {ActivatedRoute, Router} from '@angular/router'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserService} from 'src/app/services/user-service/user.service'
+import {mostrarError} from 'src/app/helpers/errorHandler'
 
 @Component({
   selector: 'app-card-details',
@@ -19,6 +20,9 @@ export class CardDetailsComponent implements OnInit {
     private router: Router,
     public userService: UserService
   ) {}
+
+  ERROR_MESSAGE_RECIBIR_CARD = 'error al traer la card'
+
   async ngOnInit() {
     this.route.params.subscribe(async (param) => {
       const userID = param['user-id']
@@ -26,8 +30,7 @@ export class CardDetailsComponent implements OnInit {
       try {
         this.card = await this.userService.getGiftableFigurita(userID, cardID)
       } catch (error) {
-        //TODO: arrojar un toast si hay un error y manejar el tipo de error
-        alert('error al traer la card')
+        mostrarError(this, error, this.ERROR_MESSAGE_RECIBIR_CARD)
         this.goCardPage()
       }
     })
@@ -39,7 +42,8 @@ export class CardDetailsComponent implements OnInit {
     this.router.navigate(['/figuritas'])
   }
 
-  //TODO cambiar los alert por una notificaion copada
+  ERROR_MESSAGE_SOLICITUD = 'no se realizo la soli o se rompio el sv jeje'
+
   async requestFigurita() {
     try {
       await this.userService.figuritaRequest(this.card)
@@ -47,8 +51,7 @@ export class CardDetailsComponent implements OnInit {
       this.goCardPage()
       alert('La solicitud se completo con exito')
     } catch (error) {
-      //TODO: validar tipo de error
-      alert('no se realizo la soli o se rompio el sv jeje')
+      mostrarError(this, error, this.ERROR_MESSAGE_SOLICITUD)
     }
   }
 }
