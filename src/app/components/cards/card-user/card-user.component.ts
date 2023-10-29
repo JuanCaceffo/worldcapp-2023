@@ -60,8 +60,8 @@ export class CardUserComponent {
 
     return date.getUTCDate() >= currentDay &&
       date.getMonth() + 1 >= currentMonth
-      ? currentYear - date.getFullYear() + 1
-      : currentYear - date.getFullYear()
+      ? currentYear - date.getFullYear()
+      : currentYear - date.getFullYear() - 1
   }
 
   //TODO: Esto luego cambia
