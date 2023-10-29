@@ -1,0 +1,16 @@
+.add-card-button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  position: sticky;
+  width: fit-content;
+  min-height: unset;
+  padding: 0;
+  z-index: 81;
+  bottom: 1.5em;
+  left: 95%;
+  background-color: transparent;
+  background-color: var(--color-tertiary);
+  font-size: 3em;
+}
