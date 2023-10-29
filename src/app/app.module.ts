@@ -39,16 +39,18 @@ import {FormComponent} from './components/form/form.component'
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
-import {ProfileInfoComponent} from './components/profile-info/profile-info.component'
-import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
 import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-set-inputs.component'
+
+//profile components
+import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
+import {ButtonAddCardComponent} from './components/button-add-card/button-add-card.component'
 
 //Search
 import {SearchbarComponent} from './components/searchbar/searchbar.component'
 
 @NgModule({
   declarations: [
-    // Angular    
+    // Angular
     routingComponents,
     AppComponent,
     // Base Page Components
@@ -71,18 +73,24 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     LoginComponent,
     StoreSearchComponent,
     // Profile Page Component
+    ButtonAddCardComponent,
     NavbarProfileComponent,
     // Form
     FormComponent,
     FieldsSetInputsComponent,
-    ProfileInfoComponent,
     // Pipe
     ConcatenatePipe,
     FullAddressPipe,
     // Search
     SearchbarComponent
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
