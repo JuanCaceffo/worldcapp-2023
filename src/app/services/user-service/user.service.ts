@@ -9,7 +9,7 @@ import {
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
-import {lastValueFrom} from 'rxjs'
+import {Subject, lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
 import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
@@ -93,5 +93,11 @@ export class UserService {
         `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
       )
     )
+  }
+  private dataSubject = new Subject<any>()
+  data$ = this.dataSubject.asObservable()
+  updateInfoUser(username: any, birthDate: Date) {
+    const userInfo = [username, birthDate]
+    this.dataSubject.next(userInfo)
   }
 }

@@ -10,7 +10,7 @@
       </section>
       <section class="user-card__new-name" *ngIf="isEditing">
         <form class="user-card__form">
-          <input #myInput autofocus data-testid="edit-input" name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nuevo nombre..." [(ngModel)]= "editedUsername" [ngClass]="{'invalid-input': !inputIsValid()}" (keyup.escape)="cancelEdit()" />
+          <input autofocus data-testid="edit-input" name="primary" class="form__input--card-user" type="text" placeholder="Ingrese nuevo nombre..." [(ngModel)]= "editedUsername" [ngClass]="{'invalid-input': !inputIsValid()}" (keyup.escape)="cancelEdit()" />
           <button data-testid="save-button" class="button button--icon button--black" (click)="saveUsername()" [disabled]="!inputIsValid()" [ngClass]="{'invalid-button': !inputIsValid()}">
             <i class="fa-solid fa-check"></i>
           </button>

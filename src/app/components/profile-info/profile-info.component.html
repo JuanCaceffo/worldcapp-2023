@@ -45,7 +45,9 @@
       class="field__input rounded shaded" 
       id="birthdate" 
       name="birthdate" 
-      type="date" 
+      type="date"
+      #birthDate
+      (change)="updateInfoUser(birthDate.valueAsDate!)"
       [(ngModel)]="profileInfo.birthdate" 
       />
     </section>
@@ -66,7 +68,7 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="location">Localidad</label>
-      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad">
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" (change)="updateInfoUser(birthDate.valueAsDate!)">
         <option>Seleccione una opción</option>
         <option *ngFor="let location of getLocations()" [selected]="selectedLocation(location)"> {{location}} </option>
         

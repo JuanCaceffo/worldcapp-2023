@@ -54,4 +54,11 @@ export class ProfileInfoComponent {
   getLocations = (): string[] =>
     this.provinces.find((data) => this.selectedProvince(data.province))
       ?.locations ?? []
+
+  updateInfoUser(birthDate: Date) {
+    this.userService.updateInfoUser(
+      this.profileInfo.address.localidad,
+      birthDate
+    )
+  }
 }
