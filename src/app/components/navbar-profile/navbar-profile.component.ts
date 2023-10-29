@@ -18,7 +18,7 @@ export class NavbarProfileComponent implements OnInit {
   ngOnInit() {}
 
   get buttonNavigateUrl(): buttonNavigateType {
-    const currentLink = this.router.url.split('/')[2]
+    const currentLink = this.router.url.toString().split('/')[2]
 
     const buttonNavigateUrls: {[key: string]: buttonNavigateType} = {
       'perfil-usuario': {urlRightBtn: userProfilePaths.duplicateFigus},
