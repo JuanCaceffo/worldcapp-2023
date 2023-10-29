@@ -13,7 +13,7 @@ export function mostrarError(
   } else if (error.status >= 500) {
     errorMessage =
       'Hubo un error al realizar la operación. Consulte al administrador del sistema.'
-  } else if (error.status >= 400 && error.status <= 500) {
+  } else if (error.status >= 400 && error.status < 500) {
     errorMessage =
       customErrorMessage ||
       'Se ha producido un error en la solicitud. Por favor, verifique los datos proporcionados y vuelva a intentarlo.'
