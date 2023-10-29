@@ -15,7 +15,6 @@ export class CardSearchComponent implements OnInit {
     public cardService: CardService,
     public cardSearch: CardSearch
   ) {}
-  /*  @Input() getListCards: () => Figurita[] */
   listCards: Array<Figurita> = []
 
   ngOnInit() {
