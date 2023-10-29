@@ -98,7 +98,7 @@ export class LoginComponent implements OnInit {
         await this.userService.login(data)
         this.router.navigate(['/figuritas'])
       } catch (error) {
-        mostrarError(this, error, this.ERROR_MESSAGE_INGRESOS_INVALIDO)
+        mostrarError(this, error)
       }
     }
   }
