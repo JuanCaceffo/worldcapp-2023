@@ -1,7 +1,7 @@
 import {NgForm} from '@angular/forms'
 import {criteria} from '../../helpers/getOptionsInfoProfile.helper'
 import {Component} from '@angular/core'
-import {UserProfileInfoDTO} from 'src/app/dtos/user.dto'
+import {UserProfileInfoDTO, UserUpdateInfoDTO} from 'src/app/dtos/user.dto'
 import {UserService} from 'src/app/services/user-service/user.service'
 import {ProvinceService} from 'src/app/services/province-service/province.service'
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
@@ -56,9 +56,10 @@ export class ProfileInfoComponent {
       ?.locations ?? []
 
   updateInfoUser(birthDate: Date) {
-    this.userService.updateInfoUser(
-      this.profileInfo.address.localidad,
-      birthDate
-    )
+    const infoUser: UserUpdateInfoDTO = {
+      location: this.profileInfo.address.localidad,
+      age: birthDate
+    }
+    this.userService.updateInfoUser(infoUser)
   }
 }

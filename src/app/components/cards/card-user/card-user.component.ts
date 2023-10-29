@@ -19,9 +19,8 @@ export class CardUserComponent {
   async ngOnInit() {
     this.userInfo = await this.userService.getUserInfo()
     this.userService.data$.subscribe(async (updatedInfo) => {
-      const [location, age] = updatedInfo
-      this.userInfo.location = location
-      this.userInfo.age = this.getAge(age)
+      this.userInfo.location = updatedInfo.location
+      this.userInfo.age = this.getAge(updatedInfo.age)
     })
   }
 
@@ -51,18 +50,14 @@ export class CardUserComponent {
 
   isEmpty = (): boolean => !this.editedUsername.trim()
 
-  getAge(date: Date) {
-    const currentDate = new Date()
+  getAge = (date: Date): number =>
+    this.hadBirthday(date)
+      ? new Date().getFullYear() - date.getFullYear()
+      : new Date().getFullYear() - date.getFullYear() - 1
 
-    const currentDay = currentDate.getUTCDate()
-    const currentMonth = currentDate.getMonth() + 1
-    const currentYear = currentDate.getFullYear()
-
-    return date.getUTCDate() >= currentDay &&
-      date.getMonth() + 1 >= currentMonth
-      ? currentYear - date.getFullYear()
-      : currentYear - date.getFullYear() - 1
-  }
+  hadBirthday = (date: Date): boolean =>
+    new Date().getUTCDate() >= date.getUTCDate() &&
+    new Date().getMonth() >= date.getMonth()
 
   //TODO: Esto luego cambia
   isOffLine = (): boolean => this.userInfo.username === 'Off Line'

@@ -5,11 +5,12 @@ import {
   UserLoginDTO,
   UserFigusListType,
   UserProfileInfoDTO,
-  UserInfoDTO
+  UserInfoDTO,
+  UserUpdateInfoDTO
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
-import {Subject, lastValueFrom} from 'rxjs'
+import {Observable, Subject, lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
 import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
@@ -94,10 +95,11 @@ export class UserService {
       )
     )
   }
-  private dataSubject = new Subject<any>()
-  data$ = this.dataSubject.asObservable()
-  updateInfoUser(username: any, birthDate: Date) {
-    const userInfo = [username, birthDate]
+
+  private dataSubject = new Subject<UserUpdateInfoDTO>()
+  data$: Observable<UserUpdateInfoDTO> = this.dataSubject.asObservable()
+
+  updateInfoUser(userInfo: UserUpdateInfoDTO): void {
     this.dataSubject.next(userInfo)
   }
 }
