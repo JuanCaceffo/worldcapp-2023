@@ -13,7 +13,7 @@ export function mostrarError(component: any, error: any): void {
       'Hubo un error al realizar la operación. Consulte al administrador del sistema.'
   } else if (originalError.status >= 400 && originalError.status < 500) {
     errorMessage =
-      error.message ||
+      errorMessage ||
       'Se ha producido un error en la solicitud. Por favor, verifique los datos proporcionados y vuelva a intentarlo.'
   }
 

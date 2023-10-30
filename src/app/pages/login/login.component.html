@@ -20,7 +20,7 @@
             />
             <i iconElement class="field__icon fas fa-user"></i>
           </div>
-          <span *ngIf="errors['name']" class="field__error">{{getMyError('name', errors['name'])}}</span>
+          <span *ngIf="inputErrors['name']" class="field__error">{{getMyError('name', inputErrors['name'])}}</span>
         </div>
         <div class="field">
           <label class="field__label field__label--strong" for="password">Contraseña</label>
@@ -35,11 +35,9 @@
             />
             <i iconElement class="field__icon fas fa-key"></i>
           </div>
-          <span *ngIf="errors['password']" class="field__error">{{getMyError('password', errors['password'])}}</span>
+          <span *ngIf="inputErrors['password']" class="field__error">{{getMyError('password', inputErrors['password'])}}</span>
         </div>
-        <div *ngIf="errorMsg" class="error-msg" data-testid="errorMessage">
-          {{ errorMsg }}
-        </div>
+        <app-toastMessage *ngIf="hasBackErrors()" [message]="errors[0]" titleType="error"/>
       </section>
       <section class="form-login__actions">
         <button

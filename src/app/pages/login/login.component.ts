@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService
   ) {}
 
-  errorMsg: string | null = null
-  errors: {[key: string]: string} = {}
+  errors: string[] = []
+  inputErrors: {[key: string]: string} = {}
   loginForm!: FormGroup
 
   @Input() defaultErrors: DefaultErrors = {
@@ -72,16 +72,20 @@ export class LoginComponent implements OnInit {
   }
 
   formHasErrors() {
-    this.errors = {}
+    this.inputErrors = {}
     Object.keys(this.loginForm.controls).forEach((name) => {
       const controlErrors = this.loginForm.controls[name].errors
 
       if (controlErrors) {
         Object.keys(controlErrors).forEach((key) => {
-          this.errors[name] = key
+          this.inputErrors[name] = key
         })
       }
     })
+  }
+
+  hasBackErrors() {
+    return !!this.errors.length
   }
 
   ERROR_MESSAGE_INGRESOS_INVALIDO =
