@@ -23,7 +23,6 @@ import {VariantFilterComponent} from './components/filter/variant-filter/variant
 // Card Components
 import {CardComponent} from './components/cards/card/card.component'
 import {CardUserComponent} from './components/cards/card-user/card-user.component'
-import {CardWithOwnerComponent} from './components/cards/card-with-owner/card-with-owner.component'
 import {CardMarketComponent} from './components/card-market/card-market.component'
 
 // Pages
@@ -65,7 +64,6 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     // Card Components
     CardComponent,
     CardUserComponent,
-    CardWithOwnerComponent,
     CardMarketComponent,
     // Pages
     CardAddComponent,

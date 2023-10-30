@@ -1,4 +1,4 @@
-<article class="player-card player-card--trash">
+<article class="player-card player-card--trash" (click)="emitOnClicked()">
   <section class="player-card__img">
     <!-- TODO: ver como implementar la imagen -->
     <img [src]="card.imageURL" />
@@ -54,8 +54,8 @@
         {{ card.props.cotizacion | currency : 'EUR' : 'symbol' : '0.0-2' }}
       </h2>
     </section>
-    <footer class="player-card__footer">
-      <ng-content select="[footer]"></ng-content>
+    <footer *ngIf="!card.isOwner" class="player-card__footer">
+      <h3>CEDIDA POR: {{card.props.duenio}}</h3>
     </footer>
   </section>
 </article>

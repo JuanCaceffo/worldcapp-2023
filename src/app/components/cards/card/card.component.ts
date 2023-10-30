@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core'
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
 import {Router} from '@angular/router'
 import {UserFigusListType} from 'src/app/dtos/user.dto'
 import {Figurita} from 'src/app/models/cards/figurita.model'
@@ -14,6 +14,11 @@ export class CardComponent implements OnInit {
   ngOnInit() {}
   @Input() card!: Figurita
   @Input() listCardType?: UserFigusListType
+  @Output() onClicked = new EventEmitter<Figurita>()
+
+  emitOnClicked() {
+    this.onClicked.emit(this.card)
+  }
 
   async handleDelete() {
     if (this.listCardType && this.card.isOwner) {

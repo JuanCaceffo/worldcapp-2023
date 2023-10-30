@@ -1,7 +1,8 @@
+import {Router} from '@angular/router'
 import {Component, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Figurita} from 'src/app/models/cards/figurita.model'
-import { cardFilter } from 'src/app/models/searchbar/searchbar'
+import {cardFilter} from 'src/app/models/searchbar/searchbar'
 import {CardService} from 'src/app/services/card-service/card.service'
 
 @Component({
@@ -12,7 +13,8 @@ import {CardService} from 'src/app/services/card-service/card.service'
 export class CardSearchComponent implements OnInit {
   constructor(
     private titleService: Title,
-    public cardService: CardService,    
+    public cardService: CardService,
+    private router: Router
   ) {}
   listCards: Array<Figurita> = []
   filter = cardFilter
@@ -22,8 +24,12 @@ export class CardSearchComponent implements OnInit {
     this.getAll()
   }
 
-  ngOnDestroy() {
-    this.filter.resetFilter()
+  handleClick(card: Figurita) {
+    this.router.navigate([
+      '/detalle-figurita',
+      card.props.idUsuario,
+      card.props.id
+    ])
   }
 
   async getAll() {
