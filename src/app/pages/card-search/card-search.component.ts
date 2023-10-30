@@ -1,5 +1,5 @@
 import {Router} from '@angular/router'
-import {Component, OnInit} from '@angular/core'
+import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {cardFilter} from 'src/app/models/searchbar/searchbar'
@@ -18,10 +18,12 @@ export class CardSearchComponent implements OnInit {
   ) {}
   listCards: Array<Figurita> = []
   filter = cardFilter
+  @Input() handleClicked: (card: Figurita) => void = this.handleClick
+  @Input() getAllFigus: () => Promise<void> = this.getAll
 
   ngOnInit() {
     this.titleService.setTitle('Figuritas')
-    this.getAll()
+    this.getAllFigus()
   }
 
   handleClick(card: Figurita) {
