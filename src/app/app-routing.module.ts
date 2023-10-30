@@ -36,7 +36,7 @@ export const routes: Routes = [
       }
     ]
   },
-  {path: 'agregar-figuritas', component: CardAddComponent},
+  {path: 'agregar-figuritas/:figus-list-type', component: CardAddComponent},
   {path: '**', redirectTo: 'login', pathMatch: 'full'}
 ]
 @NgModule({
