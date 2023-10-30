@@ -85,7 +85,6 @@
       placeholder="Ingrese Calle" 
       [(ngModel)]="profileInfo.address.calle" />
     </section>    
-
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="streetNumber">Altura</label>
       <input 
@@ -157,4 +156,6 @@
     <button class="button--secondary" type="button" (click)="onReset()">Reestablecer</button>
     <button class="button--primary" type="submit">Guardar</button>
   </section>
+
+  <app-toastMessage *ngIf="hasBackErrors"  titleType="error" [message]="errors[0]"/>
 </form>

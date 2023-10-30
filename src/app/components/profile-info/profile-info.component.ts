@@ -6,6 +6,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
 import {ProvinceService} from 'src/app/services/province-service/province.service'
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
 import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
+import {mostrarError} from 'src/app/helpers/errorHandler'
 
 @Component({
   selector: 'app-profile-info',
@@ -23,18 +24,27 @@ export class ProfileInfoComponent {
   provinces: ProvinceDTO[] = []
   locations: string[] = []
   criteria: string[] = criteria
-
+  errors: string[] = []
   async ngOnInit() {
-    this.profileInfo = await this.userService.getProfileInfo()
-    this.resetProfileInfo = structuredClone(this.profileInfo)
-    this.provinces = await this.provinceService.getProvinces()
+    try {
+      this.profileInfo = await this.userService.getProfileInfo()
+      this.resetProfileInfo = structuredClone(this.profileInfo)
+      this.provinces = await this.provinceService.getProvinces()
+    } catch (e) {
+      mostrarError(this, e)
+    }
   }
 
   async onSubmit(form: NgForm) {
     //TODO: Manejar errores
     console.log(form.form.errors)
-    this.profileInfo = await this.userService.editProfileInfo(this.profileInfo)
-    alert('Se modificó el usuario exitosamente')
+    try {
+      this.profileInfo = await this.userService.editProfileInfo(
+        this.profileInfo
+      )
+    } catch (e) {
+      mostrarError(this, e)
+    }
   }
 
   onReset() {
@@ -61,5 +71,9 @@ export class ProfileInfoComponent {
       age: birthDate
     }
     this.userService.updateInfoUser(infoUser)
+  }
+
+  get hasBackErrors() {
+    return !!this.errors.length
   }
 }
