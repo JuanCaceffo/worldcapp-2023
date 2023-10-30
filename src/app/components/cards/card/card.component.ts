@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
       try {
         await this.userService.deleteFigu(this.card.props.id, this.listCardType)
         const currentUrl = this.router.url
-        this.router.navigateByUrl('/').then(() => {
+        this.router.navigateByUrl('/perfil').then(() => {
           this.router.navigate([currentUrl])
         })
         /* 
