@@ -40,6 +40,10 @@ export class CardDetailsComponent implements OnInit {
     this.router.navigate(['/figuritas'])
   }
 
+  get hasBackErrors() {
+    return !!this.errors.length
+  }
+
   async requestFigurita() {
     try {
       await this.userService.figuritaRequest(this.card)
