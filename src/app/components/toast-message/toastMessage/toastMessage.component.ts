@@ -1,13 +1,14 @@
-import {Component} from '@angular/core'
+import {Component, Input} from '@angular/core'
 
+type notifyTypes = 'error' | 'success' | 'info' | 'alert'
 @Component({
   selector: 'app-toastMessage',
   templateUrl: './toastMessage.component.html',
   styleUrls: ['./toastMessage.component.css']
 })
 export class ToastMessageComponent {
-  titleType: string = ''
-  messageType: string = ''
+  @Input() titleType!: notifyTypes
+  @Input() message!: string
 
   isError() {
     return this.titleType === 'error'

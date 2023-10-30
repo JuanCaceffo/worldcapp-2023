@@ -15,10 +15,8 @@
     padding: 1rem;
   }
   .home__aside-block{
-    position: sticky;
-    top: 12.5em;
-    height: fit-content;
-}
+    top: 6.5em;
+  }
 }
 @media (width >= 600px){
   .home__content-profile{

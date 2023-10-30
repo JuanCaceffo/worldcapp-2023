@@ -1,13 +1,12 @@
 <div class="home home--header-on home--2col home--search">
   <section class="home__search">
-    <app-searchbar (buttonClick)="getAll()"/>
+    <app-searchbar (buttonClick)="getAll()" [searchCriteria]="filter"/>
   </section>
   <section class="home__aside">
-    <div class="home__aside-block">
-        <app-variantFilter />
-    </div>
+    <app-variantFilter class="home__aside-block"/>
   </section>
-  <section class="home__content home__content--grid">    
-    <app-cardWithOwner [card]="card" *ngFor="let card of listCards"/>
-  </section>  
+  <section class="home__content home__content--grid">
+    <app-cardWithOwner [card]="card" *ngFor="let card of listCards" />
+    <div class="no-results" *ngIf="listCards.length == 0">No se encontraron resultados</div>
+  </section>
 </div>

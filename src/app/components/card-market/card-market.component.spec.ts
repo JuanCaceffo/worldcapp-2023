@@ -1,12 +1,11 @@
 /* tslint:disable:no-unused-variable */
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
-
 import {CardMarketComponent} from './card-market.component'
 import {mockedCardMarket} from 'src/app/mocks/card-market.mock'
 import {getByTestId} from 'src/app/helpers/test.helper'
-import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
 import {FullAddressPipe} from 'src/app/pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
+import {Market} from 'src/app/models/market/market.model'
 
 describe('CardMarketComponent', () => {
   let component: CardMarketComponent
@@ -22,7 +21,7 @@ describe('CardMarketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardMarketComponent)
     component = fixture.componentInstance
-    component.inputMarketCard = new PickupPoint(mockedCardMarket[0])
+    component.inputMarketCard = new Market(mockedCardMarket[0])
     fixture.detectChanges()
   })
 

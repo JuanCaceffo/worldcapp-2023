@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {of} from 'rxjs'
 import {API_URL} from '../config'
-import {Figurita} from 'src/app/models/cards/figurita.model'
-import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
 import {UserLoginDTO} from 'src/app/dtos/user.dto'
 import {UserLoginResponseDTO} from 'src/app/dtos/user.dto'
 

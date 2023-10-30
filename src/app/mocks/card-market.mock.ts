@@ -1,6 +1,6 @@
-import {PickupPointDTO} from 'src/app/dtos/pickup-point.dto'
+import {MarketDTO} from 'src/app/dtos/market.dto'
 
-export const mockedCardMarket: Array<PickupPointDTO> = [
+export const mockedCardMarket: Array<MarketDTO> = [
   {
     id: 1,
     nombre: 'Test Mock 1',

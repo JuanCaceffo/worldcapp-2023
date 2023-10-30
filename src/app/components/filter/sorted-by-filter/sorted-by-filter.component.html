@@ -3,7 +3,7 @@
   <article class="radio-filter">
     <div *ngFor="let option of options" class="field__control">
       <label class="field__label">
-        <input type="radio" name="filtro" [(ngModel)]="storeSearch.opcionElegida" [value]="option" [attr.data-testid]="normalizedOption(option)"/> {{option}}        
+        <input type="radio" name="filtro" [(ngModel)]="filter.opcionElegida" [value]="option" [attr.data-testid]="normalizedOption(option)"/> {{option}}        
       </label>
     </div>
   </article>  

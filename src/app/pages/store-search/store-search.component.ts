@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
 import {Title} from '@angular/platform-browser'
-import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
-import { StoreSearch } from 'src/app/models/searchbar/searchbar'
+import { Market } from 'src/app/models/market/market.model'
+import { marketFilter } from 'src/app/models/searchbar/searchbar'
 import {CardMarketService} from 'src/app/services/card-market-service/card-market.service'
 
 @Component({
@@ -10,22 +10,24 @@ import {CardMarketService} from 'src/app/services/card-market-service/card-marke
   styleUrls: ['./store-search.component.css']
 })
 export class StoreSearchComponent {
-  marketCards: Array<PickupPoint> = []
-  searchValue?: string | null
-
   constructor(
     private titleService: Title,
-    private cardMarketService: CardMarketService,
-    public storeSearch: StoreSearch
+    private cardMarketService: CardMarketService,    
   ) {}
+  marketCards: Array<Market> = []
+  filter = marketFilter
 
   ngOnInit() {
     this.titleService.setTitle('Sobres')
     this.getAll()
   }
 
+  ngOnDestroy() {
+    this.filter.resetFilter()
+  }
+
   async getAll() {
-    this.marketCards = await this.cardMarketService.getAllCards()
+    this.marketCards = await this.cardMarketService.getCards()
   }
 
   clickAction() {

@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService
   ) {}
 
-  errorMsg: string | null = null
-  errors: {[key: string]: string} = {}
+  errors: string[] = []
+  inputErrors: {[key: string]: string} = {}
   loginForm!: FormGroup
 
   @Input() defaultErrors: DefaultErrors = {
@@ -72,20 +72,21 @@ export class LoginComponent implements OnInit {
   }
 
   formHasErrors() {
-    this.errors = {}
+    this.inputErrors = {}
     Object.keys(this.loginForm.controls).forEach((name) => {
       const controlErrors = this.loginForm.controls[name].errors
 
       if (controlErrors) {
         Object.keys(controlErrors).forEach((key) => {
-          this.errors[name] = key
+          this.inputErrors[name] = key
         })
       }
     })
   }
 
-  ERROR_MESSAGE_INGRESOS_INVALIDO =
-    'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
+  hasBackErrors() {
+    return !!this.errors.length
+  }
 
   async submitLogin() {
     if (Object.keys(this.errors).length === 0) {
@@ -98,7 +99,7 @@ export class LoginComponent implements OnInit {
         await this.userService.login(data)
         this.router.navigate(['/figuritas'])
       } catch (error) {
-        mostrarError(this, error, this.ERROR_MESSAGE_INGRESOS_INVALIDO)
+        mostrarError(this, error)
       }
     }
   }

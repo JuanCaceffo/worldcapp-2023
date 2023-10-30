@@ -1,4 +1,4 @@
-import {CardSearch} from 'src/app/models/searchbar/searchbar'
+import {cardFilter} from 'src/app/models/searchbar/searchbar'
 import {Component} from '@angular/core'
 
 @Component({
@@ -7,9 +7,9 @@ import {Component} from '@angular/core'
   styleUrls: ['./variant-filter.component.css', '../base-filter.component.css']
 })
 export class VariantFilterComponent {
-  constructor(public cardSearch: CardSearch) {}
+  filter = cardFilter
 
   onSubmit() {
-    this.cardSearch.checkMin()
+    this.filter.checkMin()
   }
 }

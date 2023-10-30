@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core'
-import { CardSearch } from 'src/app/models/searchbar/searchbar'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { CardSearch, StoreSearch } from 'src/app/models/searchbar/searchbar'
 
 @Component({
   selector: 'app-searchbar',
@@ -7,8 +7,7 @@ import { CardSearch } from 'src/app/models/searchbar/searchbar'
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent {
-
-  constructor(public cardSearch: CardSearch) {}
+  @Input() searchCriteria?: StoreSearch | CardSearch  
   @Output() buttonClick = new EventEmitter<void>()
 
   clickAction() {
