@@ -22,6 +22,10 @@ export class CardSearchComponent implements OnInit {
     this.getAll()
   }
 
+  ngOnDestroy() {
+    this.filter.resetFilter()
+  }
+
   async getAll() {
     this.listCards = await this.cardService.getCards()
   }

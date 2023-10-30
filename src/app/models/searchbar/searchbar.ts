@@ -11,10 +11,19 @@ class Search {
     })    
     return httpParams
   }
+
+  resetFilter() {
+    this.palabraClave = ""
+  }
 }
 
 export class StoreSearch extends Search implements StoreSearchProps {
   opcionElegida = OrderBy.menorDistancia
+
+  override resetFilter() {
+    super.resetFilter()
+    this.opcionElegida = OrderBy.menorDistancia
+  }
 }
 
 export class CardSearch extends Search implements CardSearchProps {
@@ -22,6 +31,14 @@ export class CardSearch extends Search implements CardSearchProps {
   esPromesa = false
   cotizacionInicial = 0
   cotizacionFinal = 0
+
+  override resetFilter() {
+    super.resetFilter()
+    this.onFire = false
+    this.esPromesa = false
+    this.cotizacionInicial = 0
+    this.cotizacionFinal = 0
+  }
   
   fromToVerificaition() { return this.cotizacionFinal < this.cotizacionInicial }
       
