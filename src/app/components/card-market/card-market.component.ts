@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core'
-import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
+import { Market } from 'src/app/models/market/market.model'
 
 @Component({
   selector: 'app-card-market',
@@ -7,8 +7,8 @@ import {PickupPoint} from 'src/app/models/pickup-point/pickup-point.model'
   styleUrls: ['./card-market.component.css']
 })
 export class CardMarketComponent {
-  @Input() inputMarketCard!: PickupPoint
-  marketCard!: PickupPoint
+  @Input() inputMarketCard!: Market
+  marketCard!: Market
 
   ngOnInit() {
     this.marketCard = this.inputMarketCard

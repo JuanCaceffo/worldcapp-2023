@@ -1,11 +1,11 @@
 import {Pipe, PipeTransform} from '@angular/core'
-import {PickupPointDTO} from '../dtos/pickup-point.dto'
+import { MarketDTO } from '../dtos/market.dto'
 
 @Pipe({
   name: 'fullAddress'
 })
 export class FullAddressPipe implements PipeTransform {
-  transform(pickupPoint: PickupPointDTO): string {
+  transform(pickupPoint: MarketDTO): string {
     return `${pickupPoint.direccion.calle} ${pickupPoint.direccion.altura}`
   }
 }

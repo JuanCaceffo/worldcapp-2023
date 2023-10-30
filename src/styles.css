@@ -82,3 +82,9 @@ html {
 .fas--highlighted {
   color: var(--color-focus);
 }
+
+.no-results {
+  font-size: 2em;
+  color: var(--text-color-medium);
+  font-weight: 800;
+}

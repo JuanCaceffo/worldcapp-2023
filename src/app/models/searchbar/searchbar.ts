@@ -1,5 +1,4 @@
 import { HttpParams } from "@angular/common/http"
-import { Injectable } from "@angular/core"
 import { CardSearchProps, OrderBy, StoreSearchProps } from "src/app/interfaces/searchCriteria"
 class Search {
   palabraClave = ''
@@ -14,16 +13,10 @@ class Search {
   }
 }
 
-@Injectable({
-  providedIn: 'root'
-})
 export class StoreSearch extends Search implements StoreSearchProps {
   opcionElegida = OrderBy.menorDistancia
 }
 
-@Injectable({
-  providedIn: 'root'
-})
 export class CardSearch extends Search implements CardSearchProps {
   onFire = false
   esPromesa = false
@@ -38,3 +31,7 @@ export class CardSearch extends Search implements CardSearchProps {
     }    
   }
 }
+
+
+export const marketFilter = new StoreSearch()
+export const cardFilter = new CardSearch()

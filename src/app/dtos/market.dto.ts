@@ -1,4 +1,4 @@
-export interface PickupPointDTO {
+export interface MarketDTO {
   id: number
   nombre: string
   tipoPuntoDeVenta: string
