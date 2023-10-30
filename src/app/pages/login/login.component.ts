@@ -88,9 +88,6 @@ export class LoginComponent implements OnInit {
     return !!this.errors.length
   }
 
-  ERROR_MESSAGE_INGRESOS_INVALIDO =
-    'Usuario o contraseña ingresados son inválidos! Vuelva a intentarlo'
-
   async submitLogin() {
     if (Object.keys(this.errors).length === 0) {
       const data: UserLoginDTO = {
