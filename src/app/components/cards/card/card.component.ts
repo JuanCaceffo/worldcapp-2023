@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
 import {Router} from '@angular/router'
-import {UserFigusListType} from 'src/app/dtos/user.dto'
+import {FigusListType} from 'src/app/dtos/figurita.dto'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserService} from 'src/app/services/user-service/user.service'
 
@@ -13,7 +13,7 @@ export class CardComponent implements OnInit {
   constructor(public userService: UserService, private router: Router) {}
   ngOnInit() {}
   @Input() card!: Figurita
-  @Input() listCardType?: UserFigusListType
+  @Input() listCardType?: FigusListType
   @Output() onClicked = new EventEmitter<Figurita>()
 
   emitOnClicked() {

@@ -1,28 +1,30 @@
 export interface FiguritaDTO {
-  numero: number,
-  id: number,
-  onFire: boolean,
-  nivelImpresion: string,
+  numero: number
+  id: number
+  onFire: boolean
+  nivelImpresion: string
   //jugador
-  nombre: string,
-  apellido: string,
-  peso: number,
-  promesa: boolean,
-  altura: number,
-  nroCamiseta: number,
-  fechaNac: string,
-  edad: number,
-  seleccion: string,
-  valorBase: number,
-  posicion: string,
-  cotizacion: number,
-  anioDebut: number,
-  copasDelMundo: number,
-  confederacion: string,
-  confederacionCopas: number,
-  esLider: boolean,
-  valoracion: number,
+  nombre: string
+  apellido: string
+  peso: number
+  promesa: boolean
+  altura: number
+  nroCamiseta: number
+  fechaNac: string
+  edad: number
+  seleccion: string
+  valorBase: number
+  posicion: string
+  cotizacion: number
+  anioDebut: number
+  copasDelMundo: number
+  confederacion: string
+  confederacionCopas: number
+  esLider: boolean
+  valoracion: number
   //duenio
-  duenio: string,
+  duenio: string
   idUsuario: number
 }
+
+export type FigusListType = 'FALTANTES' | 'REPETIDAS'

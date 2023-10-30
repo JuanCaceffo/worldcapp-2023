@@ -3,7 +3,6 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {
   UserLoginResponseDTO,
   UserLoginDTO,
-  UserFigusListType,
   UserProfileInfoDTO,
   UserInfoDTO,
   UserUpdateInfoDTO
@@ -12,7 +11,7 @@ import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {Observable, Subject, lastValueFrom} from 'rxjs'
 import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
-import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
+import {FiguritaDTO, FigusListType} from 'src/app/dtos/figurita.dto'
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +38,7 @@ export class UserService {
     )
   }
 
-  async getFiguritasList(listType: UserFigusListType): Promise<Figurita[]> {
+  async getFiguritasList(listType: FigusListType): Promise<Figurita[]> {
     const figuritas$ = this.httpClient.get<FiguritaDTO[]>(
       `${API_URL}/user/${getUserId()}/lista-figus/${listType}`
     )
@@ -88,7 +87,7 @@ export class UserService {
     return lastValueFrom(editInfo$)
   }
 
-  async deleteFigu(id: number, listCardType: UserFigusListType) {
+  async deleteFigu(id: number, listCardType: FigusListType) {
     await lastValueFrom(
       this.httpClient.delete(
         `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`

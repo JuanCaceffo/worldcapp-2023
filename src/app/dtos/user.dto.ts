@@ -5,7 +5,6 @@ export interface UserLoginDTO {
 export interface UserLoginResponseDTO {
   userLogedID: number
 }
-export type UserFigusListType = 'FALTANTES' | 'REPETIDAS'
 
 export interface UserProfileInfoDTO {
   name: string
