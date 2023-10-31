@@ -58,6 +58,7 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     HeaderComponent,
     HeaderNavComponent,
     LogoComponent,
+    ToastMessageComponent,
     // Filter Components
     SortedByFilterComponent,
     VariantFilterComponent,

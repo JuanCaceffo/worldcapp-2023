@@ -5,6 +5,7 @@ import {ProfileInfoComponent} from './profile-info.component'
 import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
 import {profileInfoUserMock} from 'src/app/mocks/user.mock'
+import {ToastMessageComponent} from '../toast-message/toastMessage/toastMessage.component'
 
 describe('ProfileInfoComponent', () => {
   let component: ProfileInfoComponent
@@ -12,7 +13,7 @@ describe('ProfileInfoComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ProfileInfoComponent],
+      declarations: [ProfileInfoComponent, ToastMessageComponent],
       imports: [FormsModule, HttpClientModule]
     }).compileComponents()
   }))

@@ -14,7 +14,7 @@
   .home__aside{
     padding: 1rem;
   }
-  .home__aside-block{
+  .home__aside .home__aside-block{
     top: 6.5em;
   }
 }
@@ -23,4 +23,9 @@
     column-gap: var(--box-padding);
     justify-content: left;
   }
+  .home__aside-block{
+    position: sticky;
+    top: 12.5em;
+    height: fit-content;
+}
 }

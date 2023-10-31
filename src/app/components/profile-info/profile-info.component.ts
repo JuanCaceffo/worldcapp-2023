@@ -6,6 +6,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
 import {ProvinceService} from 'src/app/services/province-service/province.service'
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
 import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
+import {mostrarError} from 'src/app/helpers/errorHandler'
 
 @Component({
   selector: 'app-profile-info',
@@ -23,24 +24,37 @@ export class ProfileInfoComponent {
   provinces: ProvinceDTO[] = []
   locations: string[] = []
   criteria: string[] = criteria
-
+  errors: string[] = []
+  message: string = ''
   async ngOnInit() {
-    this.profileInfo = await this.userService.getProfileInfo()
-    this.resetProfileInfo = structuredClone(this.profileInfo)
-    this.provinces = await this.provinceService.getProvinces()
+    try {
+      this.profileInfo = await this.userService.getProfileInfo()
+      this.resetProfileInfo = structuredClone(this.profileInfo)
+      this.provinces = await this.provinceService.getProvinces()
+    } catch (e) {
+      mostrarError(this, e)
+    }
   }
 
   async onSubmit(form: NgForm) {
-    //TODO: Manejar errores
-    console.log(form.form.errors)
-    this.profileInfo = await this.userService.editProfileInfo(this.profileInfo)
-    alert('Se modificó el usuario exitosamente')
+    try {
+      if (form.valid) {
+        this.profileInfo = await this.userService.editProfileInfo(
+          this.profileInfo
+        )
+        this.showMessage('Se edito el usuario correctamente')
+      } else {
+        mostrarError(this, 'Complete todos los campos del formulario')
+      }
+    } catch (e) {
+      mostrarError(this, e)
+    }
   }
 
   onReset() {
     console.log(this.profileInfo.address.provincia)
     this.profileInfo = structuredClone(this.resetProfileInfo)
-    alert('Se reestableció el usuario exitosamente')
+    this.showMessage('Se reestableció el usuario exitosamente')
   }
 
   getProvinces = (): string[] => this.provinces.map((data) => data.province)
@@ -60,6 +74,22 @@ export class ProfileInfoComponent {
       location: this.profileInfo.address.localidad,
       age: birthDate
     }
-    this.userService.updateInfoUser(infoUser)
+    try {
+      this.userService.updateInfoUser(infoUser)
+    } catch (e) {
+      mostrarError(this, e)
+    }
+  }
+
+  hasBackErrors() {
+    return !!this.errors.length
+  }
+
+  //TODO: Implementar globalmente
+  showMessage(message: string) {
+    this.message = message
+    setInterval(() => {
+      this.message = ''
+    }, 3000)
   }
 }

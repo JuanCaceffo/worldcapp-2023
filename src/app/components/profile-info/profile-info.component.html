@@ -11,6 +11,7 @@
           name="name" 
           placeholder="Ingrese Nombre"  
           [(ngModel)]="profileInfo.name" 
+          required
           />            
     </section>
 
@@ -24,6 +25,7 @@
         placeholder="Ingrese Apellido"
         data-testid="lastName"
         [(ngModel)]="profileInfo.lastName" 
+        required
         />
     </section>
 
@@ -36,6 +38,7 @@
         name="email" 
         placeholder="Ingrese Correo"  
         [(ngModel)]="profileInfo.email" 
+        required
         />
     </section>
 
@@ -48,7 +51,8 @@
       type="date"
       #birthDate
       (change)="updateInfoUser(birthDate.valueAsDate!)"
-      [(ngModel)]="profileInfo.birthdate" 
+      [(ngModel)]="profileInfo.birthdate"
+      required
       />
     </section>
     
@@ -60,7 +64,7 @@
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="province">Provincia</label>
       <select 
-      class="field__select rounded shaded" id="province" name="province" [(ngModel)]="profileInfo.address.provincia" (change)="getLocations()">
+      class="field__select rounded shaded" id="province" name="province" [(ngModel)]="profileInfo.address.provincia" (change)="getLocations()" required>
         <option>Seleccione una opción</option>
         <option *ngFor="let province of getProvinces()" [selected]="selectedProvince(province)"> {{province}} </option>
       </select>
@@ -68,7 +72,7 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="location">Localidad</label>
-      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" (change)="updateInfoUser(birthDate.valueAsDate!)">
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" (change)="updateInfoUser(birthDate.valueAsDate!)" required >
         <option>Seleccione una opción</option>
         <option *ngFor="let location of getLocations()" [selected]="selectedLocation(location)"> {{location}} </option>
         
@@ -83,9 +87,10 @@
       type="text" 
       name="streetName" 
       placeholder="Ingrese Calle" 
-      [(ngModel)]="profileInfo.address.calle" />
+      [(ngModel)]="profileInfo.address.calle" 
+      required 
+      />
     </section>    
-
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="streetNumber">Altura</label>
       <input 
@@ -96,6 +101,7 @@
       min="0" 
       placeholder="Ingrese Altura"  
       [(ngModel)]="profileInfo.address.altura" 
+      required
       />
     </section>
   </fieldset>
@@ -112,6 +118,7 @@
       name="latitude" 
       placeholder="Ingrese Latitud"  
       [(ngModel)]="profileInfo.address.ubiGeografica.x" 
+      required
       />
     </section>
 
@@ -124,6 +131,7 @@
       name="longitude" 
       placeholder="Ingrese Longitud"  
       [(ngModel)]="profileInfo.address.ubiGeografica.y" 
+      required
       />
     </section>
 
@@ -137,6 +145,7 @@
       name="exchangeProximity" 
       placeholder="Ingrese Distancia Máxima"  
       [(ngModel)]="profileInfo.exchangeProximity" 
+      required
       />
     </section>
   </fieldset>
@@ -146,7 +155,7 @@
 
     <section class="field field--2col">
       <label class="field__label field__label--strong" for="criteria">Criterio</label>
-      <select class="field__select rounded shaded" id="criteria" name="criteria"  [(ngModel)]="profileInfo.criteria">
+      <select class="field__select rounded shaded" id="criteria" name="criteria"  [(ngModel)]="profileInfo.criteria" required>
         <option>Seleccione una opción</option>
         <option *ngFor="let criterion of criteria"> {{criterion}} </option>
       </select>
@@ -157,4 +166,7 @@
     <button class="button--secondary" type="button" (click)="onReset()">Reestablecer</button>
     <button class="button--primary" type="submit">Guardar</button>
   </section>
+
+  <app-toastMessage *ngIf="hasBackErrors()"  titleType="error" [message]="errors[0]"/>
+  <app-toastMessage *ngIf="message" titleType="success" [message]="message"/>
 </form>
