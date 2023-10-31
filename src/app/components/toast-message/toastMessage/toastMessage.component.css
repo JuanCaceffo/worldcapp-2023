@@ -1,18 +1,9 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  border: none;
-  font-family: "Poppins",sans-serif;
-  font-size: 14px;
-}
-body{
-  background-color: #f9f9f9;
-}
+
 .wrapper{
   width: 380px;
   position: fixed;
   animation: move 0.5s ease forwards;
+
 }
 .toast{
   width: 100%;
@@ -23,6 +14,7 @@ body{
   display: grid;
   grid-template-columns: 1.3fr 6fr 0.5fr;
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  z-index: 1000;
 }
 .success{
   border-left: 8px solid #47D764;
