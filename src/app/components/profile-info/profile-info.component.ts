@@ -25,6 +25,7 @@ export class ProfileInfoComponent {
   locations: string[] = []
   criteria: string[] = criteria
   errors: string[] = []
+  message: string = ''
   async ngOnInit() {
     try {
       this.profileInfo = await this.userService.getProfileInfo()
@@ -36,12 +37,15 @@ export class ProfileInfoComponent {
   }
 
   async onSubmit(form: NgForm) {
-    //TODO: Manejar errores
-    console.log(form.form.errors)
     try {
-      this.profileInfo = await this.userService.editProfileInfo(
-        this.profileInfo
-      )
+      if (form.valid) {
+        this.profileInfo = await this.userService.editProfileInfo(
+          this.profileInfo
+        )
+        this.showMessage('Se edito el usuario correctamente')
+      } else {
+        mostrarError(this, 'Complete todos los campos del formulario')
+      }
     } catch (e) {
       mostrarError(this, e)
     }
@@ -50,7 +54,7 @@ export class ProfileInfoComponent {
   onReset() {
     console.log(this.profileInfo.address.provincia)
     this.profileInfo = structuredClone(this.resetProfileInfo)
-    alert('Se reestableció el usuario exitosamente')
+    this.showMessage('Se reestableció el usuario exitosamente')
   }
 
   getProvinces = (): string[] => this.provinces.map((data) => data.province)
@@ -70,10 +74,22 @@ export class ProfileInfoComponent {
       location: this.profileInfo.address.localidad,
       age: birthDate
     }
-    this.userService.updateInfoUser(infoUser)
+    try {
+      this.userService.updateInfoUser(infoUser)
+    } catch (e) {
+      mostrarError(this, e)
+    }
   }
 
-  get hasBackErrors() {
+  hasBackErrors() {
     return !!this.errors.length
+  }
+
+  //TODO: Implementar globalmente
+  showMessage(message: string) {
+    this.message = message
+    setInterval(() => {
+      this.message = ''
+    }, 3000)
   }
 }
