@@ -2,10 +2,12 @@
 export function mostrarError(component: any, error: any): void {
   const errorResponse = error.error
 
+  console.log(errorResponse)
+
   let errorMessage = ''
   if (typeof error === 'string') {
     errorMessage = error
-  } else if (!errorResponse.status) {
+  } else if (!errorResponse) {
     errorMessage =
       'No hay conexión con el backend, revise si el servidor remoto está levantado.'
   } else if (errorResponse.status >= 500) {

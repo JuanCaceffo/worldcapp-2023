@@ -5,7 +5,8 @@ import {
   UserLoginDTO,
   UserProfileInfoDTO,
   UserInfoDTO,
-  UserUpdateInfoDTO
+  UserUpdateInfoDTO,
+  UserAddFigu
 } from 'src/app/dtos/user.dto'
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
@@ -92,6 +93,17 @@ export class UserService {
       this.httpClient.delete(
         `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
       )
+    )
+  }
+
+  async addFigurita(figuID: number, listCardType: FigusListType) {
+    const body: UserAddFigu = {
+      userLogedID: getUserId(),
+      FiguID: figuID,
+      figuList: listCardType
+    }
+    await lastValueFrom(
+      this.httpClient.patch(`${API_URL}/user/agregar-figurita`, body)
     )
   }
 
