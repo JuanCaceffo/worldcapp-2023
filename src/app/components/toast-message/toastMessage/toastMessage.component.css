@@ -11,7 +11,7 @@ body{
 }
 .wrapper{
   width: 380px;
-  position: absolute;
+  position: fixed;
   animation: move 0.5s ease forwards;
 }
 .toast{

@@ -14,7 +14,7 @@
   .home__aside{
     padding: 1rem;
   }
-  .home__aside-block{
+  .home__aside .home__aside-block{
     top: 6.5em;
   }
 }
