@@ -6,15 +6,8 @@ import {CardAddComponent} from './pages/card-add/card-add.component'
 import {LoginComponent} from './pages/login/login.component'
 import {CardSearchComponent} from './pages/card-search/card-search.component'
 import {StoreSearchComponent} from './pages/store-search/store-search.component'
-import {ProfileMissingFigusComponent} from './components/profile-missing-figus/profile-missing-figus.component'
-import {ProfileDuplicateFigusComponent} from './components/profile-duplicate-figus/profile-duplicate-figus.component'
 import {ProfileInfoComponent} from './components/profile-info/profile-info.component'
-
-export const userProfilePaths = {
-  info: 'perfil-usuario',
-  duplicateFigus: 'figuritas-repetidas',
-  missingFigus: 'figuritas-faltantes'
-}
+import {ProfileFigusComponent} from './components/profile-figus/profile-figus.component'
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -25,14 +18,10 @@ export const routes: Routes = [
     path: 'perfil',
     component: UserProfileComponent,
     children: [
-      {path: userProfilePaths.info, component: ProfileInfoComponent},
+      {path: 'perfil-usuario', component: ProfileInfoComponent},
       {
-        path: userProfilePaths.duplicateFigus,
-        component: ProfileDuplicateFigusComponent
-      },
-      {
-        path: userProfilePaths.missingFigus,
-        component: ProfileMissingFigusComponent
+        path: 'figuritas/:figus-list-type',
+        component: ProfileFigusComponent
       }
     ]
   },
@@ -52,7 +41,6 @@ export const routingComponents = [
   StoreSearchComponent,
   UserProfileComponent,
   ProfileInfoComponent,
-  ProfileDuplicateFigusComponent,
-  ProfileMissingFigusComponent,
+  ProfileFigusComponent,
   CardAddComponent
 ]

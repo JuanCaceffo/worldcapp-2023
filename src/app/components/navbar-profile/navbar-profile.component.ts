@@ -1,6 +1,11 @@
 import {Router} from '@angular/router'
 import {Component, OnInit} from '@angular/core'
-import {userProfilePaths} from 'src/app/app-routing.module'
+
+const userProfilePaths = {
+  info: 'perfil-usuario',
+  duplicateFigus: 'figuritas/REPETIDAS',
+  missingFigus: 'figuritas/FALTANTES'
+}
 
 interface buttonNavigateType {
   urlRightBtn?: string
@@ -18,15 +23,17 @@ export class NavbarProfileComponent implements OnInit {
   ngOnInit() {}
 
   get buttonNavigateUrl(): buttonNavigateType {
-    const currentLink = this.router.url.toString().split('/')[2]
+    //Obtengo el ultimo valor despues de una / del url que me indica la pagina en la que estoy parado
+    const currentLink = this.router.url.toString().split('/').pop() ?? ''
 
+    //objeto que devuelve path a donde debe navegar cada flecha dependiendo de la pagina donde esta parado
     const buttonNavigateUrls: {[key: string]: buttonNavigateType} = {
       'perfil-usuario': {urlRightBtn: userProfilePaths.duplicateFigus},
-      'figuritas-repetidas': {
+      REPETIDAS: {
         urlLeftBtn: userProfilePaths.info,
         urlRightBtn: userProfilePaths.missingFigus
       },
-      'figuritas-faltantes': {urlLeftBtn: userProfilePaths.duplicateFigus}
+      FALTANTES: {urlLeftBtn: userProfilePaths.duplicateFigus}
     }
 
     return buttonNavigateUrls[currentLink] || {}
