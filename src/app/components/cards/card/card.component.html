@@ -54,7 +54,7 @@
         {{ card.props.cotizacion | currency : 'EUR' : 'symbol' : '0.0-2' }}
       </h2>
     </section>
-    <footer *ngIf="!card.isOwner" class="player-card__footer">
+    <footer *ngIf="!card.isOwner && card.hasAssignedUser" class="player-card__footer">
       <h3>CEDIDA POR: {{card.props.duenio}}</h3>
     </footer>
   </section>

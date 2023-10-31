@@ -9,8 +9,11 @@ export class Figurita {
   }
 
   get isOwner() {
-    const userLogedID = getUserId()
-    return this.props.idUsuario == userLogedID
+    return this.props.idUsuario === getUserId()
+  }
+
+  get hasAssignedUser() {
+    return this.props.idUsuario > -1
   }
 
   get isWorldChampion() {
