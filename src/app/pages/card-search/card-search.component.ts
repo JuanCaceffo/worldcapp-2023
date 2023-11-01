@@ -2,7 +2,7 @@ import {Router} from '@angular/router'
 import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Figurita} from 'src/app/models/cards/figurita.model'
-import {cardFilter} from 'src/app/models/searchbar/searchbar'
+import {CardSearch} from 'src/app/models/searchbar/searchbar'
 import {CardService} from 'src/app/services/card-service/card.service'
 
 @Component({
@@ -16,7 +16,8 @@ export class CardSearchComponent implements OnInit {
     public cardService: CardService,
     private router: Router
   ) {}
-  filter = cardFilter
+  filter = new CardSearch()
+  
   @Input() handleClicked = (card: Figurita) => {
     this.router.navigate([
       '/detalle-figurita',
@@ -25,7 +26,7 @@ export class CardSearchComponent implements OnInit {
     ])
   }
   @Input() instanceFigus = async () => {
-    this.listCards = await this.cardService.getCards()
+    this.listCards = await this.cardService.getCards(this.filter)
   }
   @Input() listCards: Array<Figurita> = []
 

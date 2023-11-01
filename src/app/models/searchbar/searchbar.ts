@@ -48,7 +48,3 @@ export class CardSearch extends Search implements CardSearchProps {
     }    
   }
 }
-
-
-export const marketFilter = new StoreSearch()
-export const cardFilter = new CardSearch()

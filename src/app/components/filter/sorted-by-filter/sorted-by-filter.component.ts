@@ -1,6 +1,6 @@
-import {Component} from '@angular/core'
+import {Component, Input} from '@angular/core'
 import { toParam } from 'src/app/helpers/string'
-import { marketFilter } from 'src/app/models/searchbar/searchbar'
+import { StoreSearch } from 'src/app/models/searchbar/searchbar'
 
 @Component({
   selector: 'app-sortedByFilter',
@@ -8,7 +8,7 @@ import { marketFilter } from 'src/app/models/searchbar/searchbar'
   styleUrls: ['./sorted-by-filter.component.css','../base-filter.component.css']
 })
 export class SortedByFilterComponent {  
-  filter = marketFilter
+  @Input() filter = new StoreSearch
   
   options = [
     'Menor Distancia',
