@@ -22,10 +22,6 @@ export class StoreSearchComponent {
     this.getAll()
   }
 
-  ngOnDestroy() {
-    this.filter.resetFilter()
-  }
-
   async getAll() {
     this.marketCards = await this.cardMarketService.getCards(this.filter)
   }

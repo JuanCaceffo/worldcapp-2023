@@ -25,6 +25,7 @@ export class CardSearchComponent implements OnInit {
       card.props.id
     ])
   }
+  
   @Input() instanceFigus = async () => {
     this.listCards = await this.cardService.getCards(this.filter)
   }
