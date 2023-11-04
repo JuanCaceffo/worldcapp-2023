@@ -8,7 +8,7 @@ class Search {
     let httpParams = new HttpParams()
     Object.entries(this).forEach( ([key, value]) => {            
       httpParams = httpParams.set(key, value.toString())
-      console.log(value)            
+      
     })    
     return httpParams
   }

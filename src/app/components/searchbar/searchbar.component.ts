@@ -10,7 +10,7 @@ export class SearchbarComponent {
   @Input() filter?: StoreSearch | CardSearch  
   @Output() buttonClick = new EventEmitter<void>()  
 
-  clickAction() {
+  clickAction() {    
     this.buttonClick.emit()
   }
 }

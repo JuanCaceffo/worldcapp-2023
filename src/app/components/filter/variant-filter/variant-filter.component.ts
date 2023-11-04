@@ -11,5 +11,5 @@ export class VariantFilterComponent {
 
   onSubmit() {
     this.filter.checkMin()
-  }
+  }  
 }
