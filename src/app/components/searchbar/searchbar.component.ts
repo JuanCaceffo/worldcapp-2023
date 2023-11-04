@@ -7,8 +7,8 @@ import { CardSearch, StoreSearch } from 'src/app/models/searchbar/searchbar'
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent {
-  @Input() searchCriteria?: StoreSearch | CardSearch  
-  @Output() buttonClick = new EventEmitter<void>()
+  @Input() filter?: StoreSearch | CardSearch  
+  @Output() buttonClick = new EventEmitter<void>()  
 
   clickAction() {
     this.buttonClick.emit()

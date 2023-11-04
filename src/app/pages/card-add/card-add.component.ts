@@ -6,6 +6,7 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
 import {FigusListType} from 'src/app/dtos/figurita.dto'
 import {mostrarError} from 'src/app/helpers/errorHandler'
+import { CardSearch } from 'src/app/models/searchbar/searchbar'
 
 @Component({
   selector: 'app-card-add',
@@ -30,9 +31,10 @@ export class CardAddComponent {
   listCardType!: FigusListType
   listCards: Figurita[] = []
   errors: string[] = []
+  filter = new CardSearch()
 
   async getAll() {
-    this.listCards = await this.cardService.getCollectibleFigus()
+    this.listCards = await this.cardService.getCollectibleFigus(this.filter)
   }
 
   async addCard(card: Figurita) {

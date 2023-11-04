@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
 import {Title} from '@angular/platform-browser'
-import { Market } from 'src/app/models/market/market.model'
-import { marketFilter } from 'src/app/models/searchbar/searchbar'
+import {Market} from 'src/app/models/market/market.model'
+import {StoreSearch} from 'src/app/models/searchbar/searchbar'
 import {CardMarketService} from 'src/app/services/card-market-service/card-market.service'
 
 @Component({
@@ -15,19 +15,15 @@ export class StoreSearchComponent {
     private cardMarketService: CardMarketService,    
   ) {}
   marketCards: Array<Market> = []
-  filter = marketFilter
+  filter = new StoreSearch
 
   ngOnInit() {
     this.titleService.setTitle('Sobres')
     this.getAll()
   }
 
-  ngOnDestroy() {
-    this.filter.resetFilter()
-  }
-
   async getAll() {
-    this.marketCards = await this.cardMarketService.getCards()
+    this.marketCards = await this.cardMarketService.getCards(this.filter)
   }
 
   clickAction() {
