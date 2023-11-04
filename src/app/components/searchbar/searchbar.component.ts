@@ -8,7 +8,7 @@ import { CardSearch, StoreSearch } from 'src/app/models/searchbar/searchbar'
 })
 export class SearchbarComponent {
   @Input() filter?: StoreSearch | CardSearch  
-  @Output() buttonClick = new EventEmitter<void>()
+  @Output() buttonClick = new EventEmitter<void>()  
 
   clickAction() {
     this.buttonClick.emit()
