@@ -3,8 +3,8 @@ import {Component, OnInit} from '@angular/core'
 
 const userProfilePaths = {
   info: 'perfil-usuario',
-  duplicateFigus: 'figuritas/REPETIDAS',
-  missingFigus: 'figuritas/FALTANTES'
+  duplicateFigus: 'figuritas-repetidas',
+  missingFigus: 'figuritas-faltantes'
 }
 
 interface buttonNavigateType {
@@ -29,11 +29,11 @@ export class NavbarProfileComponent implements OnInit {
     //objeto que devuelve path a donde debe navegar cada flecha dependiendo de la pagina donde esta parado
     const buttonNavigateUrls: {[key: string]: buttonNavigateType} = {
       'perfil-usuario': {urlRightBtn: userProfilePaths.duplicateFigus},
-      REPETIDAS: {
+      'figuritas-repetidas': {
         urlLeftBtn: userProfilePaths.info,
         urlRightBtn: userProfilePaths.missingFigus
       },
-      FALTANTES: {urlLeftBtn: userProfilePaths.duplicateFigus}
+      'figuritas-faltantes': {urlLeftBtn: userProfilePaths.duplicateFigus}
     }
 
     return buttonNavigateUrls[currentLink] || {}
