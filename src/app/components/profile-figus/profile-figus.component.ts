@@ -2,7 +2,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
 import {Component, OnInit} from '@angular/core'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
-import {FigusListType} from 'src/app/dtos/figurita.dto'
+import {DataProfileFigus} from 'src/app/app-routing.module'
 
 @Component({
   selector: 'app-profile-figus',
@@ -12,15 +12,24 @@ import {FigusListType} from 'src/app/dtos/figurita.dto'
 export class ProfileFigusComponent implements OnInit {
   constructor(public userService: UserService, private route: ActivatedRoute) {}
   async ngOnInit() {
-    this.route.params.subscribe(async (param) => {
-      this.figusListType = param['figus-list-type'] as FigusListType
-      console.log(this.figusListType)
-
-      this.listMissinCards = await this.userService.getFiguritasList(
-        this.figusListType
-      )
+    this.route.data.subscribe((data) => {
+      this.routeData = data as DataProfileFigus
     })
+    await this.populateListCards()
   }
-  figusListType!: FigusListType
-  listMissinCards!: Figurita[]
+  listCards!: Figurita[]
+  routeData!: DataProfileFigus
+
+  async populateListCards() {
+    this.listCards = await this.routeData.getFigus(this.userService)
+  }
+
+  async handelDelete(cardID: number) {
+    try {
+      await this.routeData.deleteFigu(this.userService, cardID)
+      await this.populateListCards()
+    } catch (error) {
+      alert('alerta por subnormal')
+    }
+  }
 }

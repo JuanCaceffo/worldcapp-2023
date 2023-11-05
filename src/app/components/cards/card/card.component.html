@@ -5,7 +5,7 @@
     <button
       class="button__link button--icon"
       *ngIf="card.isOwner"
-      (click)="handleDelete()"
+      (click)="emitOnClickDelete()"
     >
       <i class="fa-solid fa-trash-can"></i>
     </button>
