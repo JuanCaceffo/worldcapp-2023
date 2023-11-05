@@ -13,29 +13,14 @@ export class CardComponent implements OnInit {
   constructor(public userService: UserService, private router: Router) {}
   ngOnInit() {}
   @Input() card!: Figurita
-  @Input() listCardType?: FigusListType
   @Output() onClicked = new EventEmitter<Figurita>()
+  @Output() onClickDelete = new EventEmitter<number>()
 
   emitOnClicked() {
     this.onClicked.emit(this.card)
   }
 
-  async handleDelete() {
-    if (this.listCardType && this.card.isOwner) {
-      try {
-        await this.userService.deleteFigu(this.card.props.id, this.listCardType)
-        const currentUrl = this.router.url
-        this.router.navigateByUrl('/perfil').then(() => {
-          this.router.navigate([currentUrl])
-        })
-        /* 
-        Preguntar al profe por que no funciona de esta forma
-        this.router.navigate([currentUrl], {
-          onSameUrlNavigation: 'reload'
-        }) */
-      } catch (error) {
-        alert('alerta por subnormal')
-      }
-    }
+  emitOnClickDelete() {
+    this.onClickDelete.emit(this.card.props.id)
   }
 }
