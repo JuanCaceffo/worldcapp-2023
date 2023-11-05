@@ -2,6 +2,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
 import {Component, OnInit} from '@angular/core'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
+import {DataProfileFigus} from 'src/app/app-routing.module'
 
 @Component({
   selector: 'app-profile-figus',
@@ -11,9 +12,20 @@ import {ActivatedRoute} from '@angular/router'
 export class ProfileFigusComponent implements OnInit {
   constructor(public userService: UserService, private route: ActivatedRoute) {}
   async ngOnInit() {
-    this.route.data.subscribe(async (data) => {
-      this.listCards = await data['obtenerFigus'](this.userService)
+    this.route.data.subscribe((data) => {
+      this.routeData = data as DataProfileFigus
     })
+    this.listCards = await this.routeData.getFigus(this.userService)
   }
   listCards!: Figurita[]
+  routeData!: DataProfileFigus
+
+  async handelDelete(cardID: number) {
+    try {
+      await this.routeData.deleteFigu(this.userService, cardID)
+      this.listCards = this.listCards.filter((figu) => figu.props.id !== cardID)
+    } catch (error) {
+      alert('alerta pro subnormal')
+    }
+  }
 }

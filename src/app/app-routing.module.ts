@@ -11,18 +11,25 @@ import {ProfileFigusComponent} from './components/profile-figus/profile-figus.co
 import {UserService} from './services/user-service/user.service'
 import {Figurita} from './models/cards/figurita.model'
 
-type DataProfileFigus = {
-  obtenerFigus: (userService: UserService) => Promise<Figurita[]>
+export type DataProfileFigus = {
+  getFigus: (userService: UserService) => Promise<Figurita[]>
+  deleteFigu: (userService: UserService, cardID: number) => void
 }
 const dataProfileDuplicateFigus: DataProfileFigus = {
-  obtenerFigus: async (userService: UserService) => {
+  getFigus: async (userService: UserService) => {
     return userService.getDuplicateFiguritas()
+  },
+  deleteFigu: (userService: UserService, cardID: number) => {
+    userService.deleteFiguRepe(cardID)
   }
 }
 
 const dataProfileMissingFigus: DataProfileFigus = {
-  obtenerFigus: async (userService: UserService) => {
+  getFigus: async (userService: UserService) => {
     return userService.getMissingFigus()
+  },
+  deleteFigu: (userService: UserService, cardID: number) => {
+    userService.deleteFiguFaltante(cardID)
   }
 }
 
