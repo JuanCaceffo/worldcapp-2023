@@ -2,7 +2,7 @@ import {HttpClient} from '@angular/common/http'
 import {Injectable} from '@angular/core'
 import {lastValueFrom} from 'rxjs'
 import {API_URL} from '../config'
-import {getUserId} from 'src/app/helpers/getUserId.helper'
+import {getUserId} from 'src/app/helpers/userSessionStorage.helper'
 import {Market} from 'src/app/models/market/market.model'
 import {MarketDTO} from 'src/app/dtos/market.dto'
 import {StoreSearch} from 'src/app/models/searchbar/searchbar'
@@ -11,11 +11,9 @@ import {StoreSearch} from 'src/app/models/searchbar/searchbar'
   providedIn: 'root'
 })
 export class CardMarketService {
-  constructor(
-    private httpClient: HttpClient,    
-  ) {} 
+  constructor(private httpClient: HttpClient) {}
 
-  async getCards(filter:StoreSearch): Promise<Market[]> {
+  async getCards(filter: StoreSearch): Promise<Market[]> {
     const marketJSON = await lastValueFrom(this.cardData(filter))
     return marketJSON.map((pup) => Market.fromJson(pup))
   }
