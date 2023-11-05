@@ -88,23 +88,35 @@ export class UserService {
     return lastValueFrom(editInfo$)
   }
 
-  async deleteFigu(id: number, listCardType: FigusListType) {
-    await lastValueFrom(
-      this.httpClient.delete(
-        `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
-      )
+  deleteFigu(path: string) {
+    return lastValueFrom(this.httpClient.delete(path))
+  }
+
+  async deleteFiguRepe(figuID: number) {
+    await this.deleteFigu(
+      `${API_URL}/user/${getUserId()}/eliminar-figu-repe/${figuID}`
+    )
+  }
+  async deleteFiguFaltante(figuID: number) {
+    await this.deleteFigu(
+      `${API_URL}/user/${getUserId()}/eliminar-figu-faltante/${figuID}`
     )
   }
 
-  async addFigurita(figuID: number, listCardType: FigusListType) {
+  addFigu(path: string, figuID: number) {
     const body: UserAddFigu = {
       userLogedID: getUserId(),
-      FiguID: figuID,
-      figuList: listCardType
+      FiguID: figuID
     }
-    await lastValueFrom(
-      this.httpClient.patch(`${API_URL}/user/agregar-figurita`, body)
-    )
+    return lastValueFrom(this.httpClient.patch(path, body))
+  }
+
+  async addFiguritaFaltante(figuID: number) {
+    await this.addFigu(`${API_URL}/user/agregar-figurita-repetida`, figuID)
+  }
+
+  async addFiguritaRepetida(figuID: number) {
+    await this.addFigu(`${API_URL}/user/agregar-figurita-faltante`, figuID)
   }
 
   private dataSubject = new Subject<UserUpdateInfoDTO>()

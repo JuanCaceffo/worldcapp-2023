@@ -42,5 +42,4 @@ export interface UserUpdateInfoDTO {
 export interface UserAddFigu {
   userLogedID: number
   FiguID: number
-  figuList: FigusListType
 }
