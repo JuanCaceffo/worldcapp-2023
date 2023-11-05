@@ -32,9 +32,6 @@ import {CardSearchComponent} from './pages/card-search/card-search.component'
 import {LoginComponent} from './pages/login/login.component'
 import {StoreSearchComponent} from './pages/store-search/store-search.component'
 
-// Form components
-import {FormComponent} from './components/form/form.component'
-
 // Pipes
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
@@ -74,8 +71,6 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     // Profile Page Component
     ButtonAddCardComponent,
     NavbarProfileComponent,
-    // Form
-    FormComponent,    
     // Pipe
     ConcatenatePipe,
     FullAddressPipe,
