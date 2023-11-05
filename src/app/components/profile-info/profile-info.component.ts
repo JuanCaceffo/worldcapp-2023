@@ -6,7 +6,6 @@ import {UserService} from 'src/app/services/user-service/user.service'
 import {ProvinceService} from 'src/app/services/province-service/province.service'
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
 import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
-import {mostrarError} from 'src/app/helpers/errorHandler'
 import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 
 @Component({
@@ -30,12 +29,12 @@ export class ProfileInfoComponent {
   message: string = ''
   async ngOnInit() {
     try {
-      this.notifierService.notify('it is work', 'info')
       this.profileInfo = await this.userService.getProfileInfo()
       this.resetProfileInfo = structuredClone(this.profileInfo)
       this.provinces = await this.provinceService.getProvinces()
     } catch (e) {
-      mostrarError(this, e)
+      // mostrarError(this, e)
+      this.notifierService.notifiyError(e)
     }
   }
 
@@ -45,16 +44,16 @@ export class ProfileInfoComponent {
         this.profileInfo = await this.userService.editProfileInfo(
           this.profileInfo
         )
-        // this.showMessage('Se edito el usuario correctamente')
-        this.notifierService.notify(
-          'Se edito el usuario correctamente',
-          'success'
-        )
+        this.notifierService.notifySucess('Se edito el usuario correctamente')
       } else {
-        mostrarError(this, 'Complete todos los campos del formulario')
+        // mostrarError(this, 'Complete todos los campos del formulario')
+        this.notifierService.notifiyError(
+          'Complete todos los campos del formulario'
+        )
       }
     } catch (e) {
-      mostrarError(this, e)
+      // mostrarError(this, e)
+      this.notifierService.notifiyError(e)
     }
   }
 
@@ -84,7 +83,8 @@ export class ProfileInfoComponent {
     try {
       this.userService.updateInfoUser(infoUser)
     } catch (e) {
-      mostrarError(this, e)
+      // mostrarError(this, e)
+      this.notifierService.notifiyError(e)
     }
   }
 

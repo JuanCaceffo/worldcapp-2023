@@ -20,14 +20,6 @@ export class AppComponent {
 
   isLoginPage = (): boolean => this.router.url === '/login'
 
-  notify(message: string, type: notifyTypes) {
-    this.message = message
-    this.messageType = type
-    setInterval(() => {
-      this.message = ''
-    }, 3500)
-  }
-
   ngOnInit() {
     this.notifierService.getNotifyObservable().subscribe(({message, type}) => {
       this.message = message
