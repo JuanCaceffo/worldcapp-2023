@@ -15,17 +15,21 @@ export class ProfileFigusComponent implements OnInit {
     this.route.data.subscribe((data) => {
       this.routeData = data as DataProfileFigus
     })
-    this.listCards = await this.routeData.getFigus(this.userService)
+    await this.populateListCards()
   }
   listCards!: Figurita[]
   routeData!: DataProfileFigus
 
+  async populateListCards() {
+    this.listCards = await this.routeData.getFigus(this.userService)
+  }
+
   async handelDelete(cardID: number) {
     try {
       await this.routeData.deleteFigu(this.userService, cardID)
-      this.listCards = this.listCards.filter((figu) => figu.props.id !== cardID)
+      await this.populateListCards()
     } catch (error) {
-      alert('alerta pro subnormal')
+      alert('alerta por subnormal')
     }
   }
 }
