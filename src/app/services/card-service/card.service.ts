@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http'
 import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
-import {getUserId} from 'src/app/helpers/getUserId.helper'
+import {getUserId} from 'src/app/helpers/userSessionStorage.helper'
 import {CardSearch} from 'src/app/models/searchbar/searchbar'
 
 @Injectable({

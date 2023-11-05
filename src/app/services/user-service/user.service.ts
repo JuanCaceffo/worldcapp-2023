@@ -11,7 +11,10 @@ import {
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {Observable, Subject, lastValueFrom} from 'rxjs'
-import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
+import {
+  USER_KEY_STORAGE,
+  getUserId
+} from 'src/app/helpers/userSessionStorage.helper'
 import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
 @Injectable({
