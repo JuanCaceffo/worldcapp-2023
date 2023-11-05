@@ -80,10 +80,10 @@ export class ProfileInfoComponent {
       location: this.profileInfo.address.localidad,
       age: birthDate
     }
-    try {
-      this.userService.updateInfoUser(infoUser)
-    } catch (e) {
-      this.notifierService.notify(e, 'error')
-    }
+    this.userService.updateInfoUser(infoUser)
+    this.notifierService.notify(
+      'Se pudo generar una modificación en el perfil del usuario',
+      'info'
+    )
   }
 }
