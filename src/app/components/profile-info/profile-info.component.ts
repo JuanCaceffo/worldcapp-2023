@@ -17,7 +17,7 @@ export class ProfileInfoComponent {
   constructor(
     private userService: UserService,
     private provinceService: ProvinceService,
-    public notifierService: NotifierService
+    private notifierService: NotifierService
   ) {}
   //Ingresar un mock con valores por defecto
   profileInfo: UserProfileInfoDTO = initialProfileInfoUserMock
@@ -33,8 +33,7 @@ export class ProfileInfoComponent {
       this.resetProfileInfo = structuredClone(this.profileInfo)
       this.provinces = await this.provinceService.getProvinces()
     } catch (e) {
-      // mostrarError(this, e)
-      this.notifierService.notifiyError(e)
+      this.notifierService.notify(e, 'error')
     }
   }
 
@@ -44,23 +43,24 @@ export class ProfileInfoComponent {
         this.profileInfo = await this.userService.editProfileInfo(
           this.profileInfo
         )
-        this.notifierService.notifySucess('Se edito el usuario correctamente')
+        this.notifierService.notify(
+          'Se edito el usuario correctamente',
+          'success'
+        )
       } else {
-        // mostrarError(this, 'Complete todos los campos del formulario')
-        this.notifierService.notifiyError(
-          'Complete todos los campos del formulario'
+        this.notifierService.notify(
+          'Complete todos los campos del formulario',
+          'error'
         )
       }
     } catch (e) {
-      // mostrarError(this, e)
-      this.notifierService.notifiyError(e)
+      this.notifierService.notify(e, 'error')
     }
   }
 
   onReset() {
-    console.log(this.profileInfo.address.provincia)
     this.profileInfo = structuredClone(this.resetProfileInfo)
-    // this.showMessage('Se reestableció el usuario exitosamente')
+    this.notifierService.notify('Los datos fueron reestablecidos', 'alert')
   }
 
   getProvinces = (): string[] => this.provinces.map((data) => data.province)
@@ -83,12 +83,7 @@ export class ProfileInfoComponent {
     try {
       this.userService.updateInfoUser(infoUser)
     } catch (e) {
-      // mostrarError(this, e)
-      this.notifierService.notifiyError(e)
+      this.notifierService.notify(e, 'error')
     }
-  }
-
-  hasBackErrors() {
-    return !!this.errors.length
   }
 }

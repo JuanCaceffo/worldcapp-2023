@@ -5,8 +5,8 @@ import {Title} from '@angular/platform-browser'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
 import {FigusListType} from 'src/app/dtos/figurita.dto'
-import {mostrarError} from 'src/app/helpers/errorHandler'
-import { CardSearch } from 'src/app/models/searchbar/searchbar'
+import {CardSearch} from 'src/app/models/searchbar/searchbar'
+import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 
 @Component({
   selector: 'app-card-add',
@@ -18,7 +18,8 @@ export class CardAddComponent {
     private titleService: Title,
     private cardService: CardService,
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private notifierService: NotifierService
   ) {}
 
   ngOnInit() {
@@ -40,9 +41,9 @@ export class CardAddComponent {
   async addCard(card: Figurita) {
     await this.userService.addFigurita(card.props.id, this.listCardType)
     try {
-      alert('figurita agregada con exito')
-    } catch (error) {
-      mostrarError(this, error)
+      this.notifierService.notify('figurita agregada con exito', 'success')
+    } catch (e) {
+      this.notifierService.notify(e, 'error')
     }
   }
 }
