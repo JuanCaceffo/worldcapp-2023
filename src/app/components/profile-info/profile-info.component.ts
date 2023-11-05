@@ -7,6 +7,7 @@ import {ProvinceService} from 'src/app/services/province-service/province.servic
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
 import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
 import {mostrarError} from 'src/app/helpers/errorHandler'
+import {USER_LAST_PROFILE_NAVIGATE_KEY} from 'src/app/helpers/userSessionStorage.helper'
 
 @Component({
   selector: 'app-profile-info',
@@ -34,6 +35,7 @@ export class ProfileInfoComponent {
     } catch (e) {
       mostrarError(this, e)
     }
+    sessionStorage.setItem(USER_LAST_PROFILE_NAVIGATE_KEY, 'perfil-usuario')
   }
 
   async onSubmit(form: NgForm) {

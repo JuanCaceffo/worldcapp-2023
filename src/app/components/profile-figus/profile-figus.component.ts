@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
 import {DataProfileFigus} from 'src/app/app-routing.module'
+import {USER_LAST_PROFILE_NAVIGATE_KEY} from 'src/app/helpers/userSessionStorage.helper'
 
 @Component({
   selector: 'app-profile-figus',
@@ -16,6 +17,10 @@ export class ProfileFigusComponent implements OnInit {
       this.routeData = data as DataProfileFigus
     })
     await this.populateListCards()
+    this.route.url.subscribe((url) => {
+      const path = url.pop()?.path ?? 'perfil-usuario'
+      sessionStorage.setItem(USER_LAST_PROFILE_NAVIGATE_KEY, path)
+    })
   }
   listCards!: Figurita[]
   routeData!: DataProfileFigus
