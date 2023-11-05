@@ -30,7 +30,7 @@ export class ProfileInfoComponent {
   async ngOnInit() {
     try {
       this.profileInfo = await this.userService.getProfileInfo()
-      this.resetProfileInfo = structuredClone(this.profileInfo)
+      this.saveLastProfile()
       this.provinces = await this.provinceService.getProvinces()
     } catch (e) {
       this.notifierService.notify(e, 'error')
@@ -40,6 +40,7 @@ export class ProfileInfoComponent {
   async onSubmit(form: NgForm) {
     try {
       if (form.valid) {
+        this.saveLastProfile()
         this.profileInfo = await this.userService.editProfileInfo(
           this.profileInfo
         )
@@ -60,6 +61,13 @@ export class ProfileInfoComponent {
 
   onReset() {
     this.profileInfo = structuredClone(this.resetProfileInfo)
+
+    const infoUser: UserUpdateInfoDTO = {
+      location: this.profileInfo.address.localidad,
+      age: new Date(this.profileInfo.birthdate)
+    }
+
+    this.userService.updateInfoUser(infoUser)
     this.notifierService.notify('Los datos fueron reestablecidos', 'alert')
   }
 
@@ -85,5 +93,8 @@ export class ProfileInfoComponent {
       'Se pudo generar una modificación en el perfil del usuario',
       'info'
     )
+  }
+  saveLastProfile() {
+    this.resetProfileInfo = structuredClone(this.profileInfo)
   }
 }

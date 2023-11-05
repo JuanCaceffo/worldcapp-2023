@@ -55,10 +55,15 @@ export class CardUserComponent {
       ? new Date().getFullYear() - date.getFullYear()
       : new Date().getFullYear() - date.getFullYear() - 1
 
-  hadBirthday = (date: Date): boolean =>
-    new Date().getUTCDate() >= date.getUTCDate() &&
-    new Date().getMonth() >= date.getMonth()
+  isSameMonth = (date: Date) => new Date().getUTCMonth() === date.getUTCMonth()
+  isPastMonth = (date: Date) => new Date().getUTCMonth() > date.getUTCMonth()
+  isPastDay = (date: Date) => new Date().getUTCDate() >= date.getUTCDate()
 
-  //TODO: Esto luego cambia
+  hadBirthday = (date: Date): boolean =>
+    this.isSameMonth(date)
+      ? this.isPastDay(date)
+      : this.isPastMonth(date) ||
+        (this.isPastMonth(date) && this.isPastDay(date))
+
   isOffLine = (): boolean => this.userInfo.username === 'Off Line'
 }
