@@ -10,10 +10,13 @@ import {ProfileInfoComponent} from './components/profile-info/profile-info.compo
 import {ProfileFigusComponent} from './components/profile-figus/profile-figus.component'
 import {UserService} from './services/user-service/user.service'
 import {Figurita} from './models/cards/figurita.model'
+import {CardSearch} from './models/searchbar/searchbar'
+import {CardService} from './services/card-service/card.service'
 
 export type DataProfileFigus = {
   getFigus: (userService: UserService) => Promise<Figurita[]>
   deleteFigu: (userService: UserService, cardID: number) => void
+  pathAddCollectibleFigus: string
 }
 const dataProfileDuplicateFigus: DataProfileFigus = {
   getFigus: async (userService: UserService) => {
@@ -21,15 +24,40 @@ const dataProfileDuplicateFigus: DataProfileFigus = {
   },
   deleteFigu: (userService: UserService, cardID: number) => {
     userService.deleteFiguRepe(cardID)
-  }
+  },
+  pathAddCollectibleFigus: 'agregar-figuritas-repetidas'
 }
-
 const dataProfileMissingFigus: DataProfileFigus = {
-  getFigus: async (userService: UserService) => {
+  getFigus: (userService: UserService) => {
     return userService.getMissingFigus()
   },
   deleteFigu: (userService: UserService, cardID: number) => {
     userService.deleteFiguFaltante(cardID)
+  },
+  pathAddCollectibleFigus: 'agregar-figuritas-faltantes'
+}
+
+export type DataCardAddProfile = {
+  getFigus: (
+    cardService: CardService,
+    filter: CardSearch
+  ) => Promise<Figurita[]>
+  onClickCard: (card: Figurita, userService: UserService) => Promise<void>
+}
+const dataAddDuplicateCards: DataCardAddProfile = {
+  getFigus: (cardService: CardService, filter: CardSearch) => {
+    return cardService.getCollectibleDuplicateFigus(filter)
+  },
+  onClickCard: (card: Figurita, userService: UserService) => {
+    return userService.addFiguritaRepetida(card.props.id)
+  }
+}
+const dataAddMissingCards: DataCardAddProfile = {
+  getFigus: (cardService: CardService, filter: CardSearch) => {
+    return cardService.getCollectibleMissingFigus(filter)
+  },
+  onClickCard: (card: Figurita, userService: UserService) => {
+    return userService.addFiguritaFaltante(card.props.id)
   }
 }
 
@@ -55,7 +83,16 @@ export const routes: Routes = [
       }
     ]
   },
-  {path: 'agregar-figuritas/:figus-list-type', component: CardAddComponent},
+  {
+    path: 'agregar-figuritas-faltantes',
+    component: CardAddComponent,
+    data: dataAddMissingCards
+  },
+  {
+    path: 'agregar-figuritas-repetidas',
+    component: CardAddComponent,
+    data: dataAddDuplicateCards
+  },
   {path: '**', redirectTo: 'login', pathMatch: 'full'}
 ]
 @NgModule({
