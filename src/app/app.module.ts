@@ -39,7 +39,6 @@ import {FormComponent} from './components/form/form.component'
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
-import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-set-inputs.component'
 
 //profile components
 import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
@@ -76,8 +75,7 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     ButtonAddCardComponent,
     NavbarProfileComponent,
     // Form
-    FormComponent,
-    FieldsSetInputsComponent,
+    FormComponent,    
     // Pipe
     ConcatenatePipe,
     FullAddressPipe,

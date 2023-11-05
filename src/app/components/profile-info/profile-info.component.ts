@@ -26,6 +26,7 @@ export class ProfileInfoComponent {
   criteria: string[] = criteria
   errors: string[] = []
   message: string = ''
+  
   async ngOnInit() {
     try {
       this.profileInfo = await this.userService.getProfileInfo()
