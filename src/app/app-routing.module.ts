@@ -8,6 +8,23 @@ import {CardSearchComponent} from './pages/card-search/card-search.component'
 import {StoreSearchComponent} from './pages/store-search/store-search.component'
 import {ProfileInfoComponent} from './components/profile-info/profile-info.component'
 import {ProfileFigusComponent} from './components/profile-figus/profile-figus.component'
+import {UserService} from './services/user-service/user.service'
+import {Figurita} from './models/cards/figurita.model'
+
+type DataProfileFigus = {
+  obtenerFigus: (userService: UserService) => Promise<Figurita[]>
+}
+const dataProfileDuplicateFigus: DataProfileFigus = {
+  obtenerFigus: async (userService: UserService) => {
+    return userService.getDuplicateFiguritas()
+  }
+}
+
+const dataProfileMissingFigus: DataProfileFigus = {
+  obtenerFigus: async (userService: UserService) => {
+    return userService.getMissingFigus()
+  }
+}
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -20,8 +37,14 @@ export const routes: Routes = [
     children: [
       {path: 'perfil-usuario', component: ProfileInfoComponent},
       {
-        path: 'figuritas/:figus-list-type',
-        component: ProfileFigusComponent
+        path: 'figuritas-repetidas',
+        component: ProfileFigusComponent,
+        data: dataProfileDuplicateFigus
+      },
+      {
+        path: 'figuritas-faltantes',
+        component: ProfileFigusComponent,
+        data: dataProfileMissingFigus
       }
     ]
   },

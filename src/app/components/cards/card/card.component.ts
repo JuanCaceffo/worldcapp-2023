@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
 import {Router} from '@angular/router'
-import {FigusListType} from 'src/app/dtos/figurita.dto'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserService} from 'src/app/services/user-service/user.service'
 
