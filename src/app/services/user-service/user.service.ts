@@ -122,11 +122,11 @@ export class UserService {
   }
 
   async addFiguritaFaltante(figuID: number) {
-    await this.addFigu(`${API_URL}/user/agregar-figurita-repetida`, figuID)
+    await this.addFigu(`${API_URL}/user/agregar-figurita-faltante`, figuID)
   }
 
   async addFiguritaRepetida(figuID: number) {
-    await this.addFigu(`${API_URL}/user/agregar-figurita-faltante`, figuID)
+    await this.addFigu(`${API_URL}/user/agregar-figurita-repetida`, figuID)
   }
 
   private dataSubject = new Subject<UserUpdateInfoDTO>()
