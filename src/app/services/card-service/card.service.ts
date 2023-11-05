@@ -5,7 +5,7 @@ import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 import {API_URL} from '../config'
 import {lastValueFrom} from 'rxjs'
 import {getUserId} from 'src/app/helpers/getUserId.helper'
-import { CardSearch } from 'src/app/models/searchbar/searchbar'
+import {CardSearch} from 'src/app/models/searchbar/searchbar'
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +20,26 @@ export class CardService {
     return figuritasJSON.map((card) => Figurita.fromJson(card))
   }
 
-  async getCollectibleFigus(filter: CardSearch): Promise<Figurita[]> {
+  async getCollectibleDuplicateFigus(filter: CardSearch): Promise<Figurita[]> {
+    return this.getCollectibeFigus(
+      `${API_URL}/figuritas/figus-repetidas-agregables`,
+      filter
+    )
+  }
+
+  async getCollectibleMissingFigus(filter: CardSearch): Promise<Figurita[]> {
+    return this.getCollectibeFigus(
+      `${API_URL}/figuritas/figus-faltantes-agregables/user/${getUserId()}`,
+      filter
+    )
+  }
+
+  private async getCollectibeFigus(path: string, filter: CardSearch) {
     const figusJSON = await lastValueFrom(
-      this.cardData(`${API_URL}/figuritas/figus-agregables`, filter)
+      this.cardData(
+        `${API_URL}/figuritas/figus-faltantes-agregables/user/${getUserId()}`,
+        filter
+      )
     )
     return figusJSON.map((card) => Figurita.fromJson(card))
   }
