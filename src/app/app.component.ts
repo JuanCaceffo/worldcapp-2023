@@ -1,5 +1,7 @@
 import {Component} from '@angular/core'
 import {Router} from '@angular/router'
+import {notifyTypes} from './components/toast-message/toastMessage/toastMessage.component'
+import {NotifierService} from './services/notifier-service/notifier.service'
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,32 @@ import {Router} from '@angular/router'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'world-capp-front'
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private notifierService: NotifierService
+  ) {}
 
-  isLoginPage(): boolean {
-    return this.router.url === '/login'
+  title = 'world-capp-front'
+  message!: string
+  messageType: notifyTypes = 'info'
+
+  isLoginPage = (): boolean => this.router.url === '/login'
+
+  notify(message: string, type: notifyTypes) {
+    this.message = message
+    this.messageType = type
+    setInterval(() => {
+      this.message = ''
+    }, 3500)
+  }
+
+  ngOnInit() {
+    this.notifierService.getNotifyObservable().subscribe(({message, type}) => {
+      this.message = message
+      this.messageType = type
+      setInterval(() => {
+        this.message = ''
+      }, 3500)
+    })
   }
 }

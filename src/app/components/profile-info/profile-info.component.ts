@@ -7,6 +7,7 @@ import {ProvinceService} from 'src/app/services/province-service/province.servic
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
 import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
 import {mostrarError} from 'src/app/helpers/errorHandler'
+import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 
 @Component({
   selector: 'app-profile-info',
@@ -16,7 +17,8 @@ import {mostrarError} from 'src/app/helpers/errorHandler'
 export class ProfileInfoComponent {
   constructor(
     private userService: UserService,
-    private provinceService: ProvinceService
+    private provinceService: ProvinceService,
+    public notifierService: NotifierService
   ) {}
   //Ingresar un mock con valores por defecto
   profileInfo: UserProfileInfoDTO = initialProfileInfoUserMock
@@ -28,6 +30,7 @@ export class ProfileInfoComponent {
   message: string = ''
   async ngOnInit() {
     try {
+      this.notifierService.notify('it is work', 'info')
       this.profileInfo = await this.userService.getProfileInfo()
       this.resetProfileInfo = structuredClone(this.profileInfo)
       this.provinces = await this.provinceService.getProvinces()
@@ -42,7 +45,11 @@ export class ProfileInfoComponent {
         this.profileInfo = await this.userService.editProfileInfo(
           this.profileInfo
         )
-        this.showMessage('Se edito el usuario correctamente')
+        // this.showMessage('Se edito el usuario correctamente')
+        this.notifierService.notify(
+          'Se edito el usuario correctamente',
+          'success'
+        )
       } else {
         mostrarError(this, 'Complete todos los campos del formulario')
       }
@@ -54,7 +61,7 @@ export class ProfileInfoComponent {
   onReset() {
     console.log(this.profileInfo.address.provincia)
     this.profileInfo = structuredClone(this.resetProfileInfo)
-    this.showMessage('Se reestableció el usuario exitosamente')
+    // this.showMessage('Se reestableció el usuario exitosamente')
   }
 
   getProvinces = (): string[] => this.provinces.map((data) => data.province)
@@ -83,13 +90,5 @@ export class ProfileInfoComponent {
 
   hasBackErrors() {
     return !!this.errors.length
-  }
-
-  //TODO: Implementar globalmente
-  showMessage(message: string) {
-    this.message = message
-    setInterval(() => {
-      this.message = ''
-    }, 3000)
   }
 }
