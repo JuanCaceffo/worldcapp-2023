@@ -1,6 +1,7 @@
 import {Component} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Router} from '@angular/router'
+import {getPathLastProfileNavigate} from 'src/app/helpers/userSessionStorage.helper'
 
 @Component({
   selector: 'app-user-profile',
@@ -12,6 +13,6 @@ export class UserProfileComponent {
 
   ngOnInit() {
     this.titleService.setTitle('Perfil de Usuario')
-    this.router.navigate([`/perfil/perfil-usuario`])
+    this.router.navigate([`/perfil/${getPathLastProfileNavigate()}`])
   }
 }

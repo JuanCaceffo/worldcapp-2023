@@ -11,8 +11,11 @@ import {
 import {Injectable} from '@angular/core'
 import {API_URL} from '../config'
 import {Observable, Subject, lastValueFrom} from 'rxjs'
-import {USER_KEY_STORAGE, getUserId} from 'src/app/helpers/getUserId.helper'
-import {FiguritaDTO, FigusListType} from 'src/app/dtos/figurita.dto'
+import {
+  USER_KEY_STORAGE,
+  getUserId
+} from 'src/app/helpers/userSessionStorage.helper'
+import {FiguritaDTO} from 'src/app/dtos/figurita.dto'
 
 @Injectable({
   providedIn: 'root'
@@ -39,12 +42,22 @@ export class UserService {
     )
   }
 
-  async getFiguritasList(listType: FigusListType): Promise<Figurita[]> {
-    const figuritas$ = this.httpClient.get<FiguritaDTO[]>(
-      `${API_URL}/user/${getUserId()}/lista-figus/${listType}`
-    )
+  async getFiguritas(path: string) {
+    const figuritas$ = this.httpClient.get<FiguritaDTO[]>(path)
     const figuritas = await lastValueFrom(figuritas$)
     return figuritas.map((figuiDTO) => Figurita.fromJson(figuiDTO))
+  }
+
+  async getDuplicateFiguritas(): Promise<Figurita[]> {
+    return this.getFiguritas(
+      `${API_URL}/user/${getUserId()}/lista-figus-repetidas`
+    )
+  }
+
+  async getMissingFigus(): Promise<Figurita[]> {
+    return this.getFiguritas(
+      `${API_URL}/user/${getUserId()}/lista-figus-faltantes`
+    )
   }
 
   async getGiftableFigurita(userID: number, cardID: number): Promise<Figurita> {
@@ -88,23 +101,35 @@ export class UserService {
     return lastValueFrom(editInfo$)
   }
 
-  async deleteFigu(id: number, listCardType: FigusListType) {
-    await lastValueFrom(
-      this.httpClient.delete(
-        `${API_URL}/user/${getUserId()}/figurita/${id}/lista-figus/${listCardType}`
-      )
+  deleteFigu(path: string) {
+    return lastValueFrom(this.httpClient.delete(path))
+  }
+
+  async deleteFiguRepe(figuID: number) {
+    await this.deleteFigu(
+      `${API_URL}/user/${getUserId()}/eliminar-figu-repe/${figuID}`
+    )
+  }
+  async deleteFiguFaltante(figuID: number) {
+    await this.deleteFigu(
+      `${API_URL}/user/${getUserId()}/eliminar-figu-faltante/${figuID}`
     )
   }
 
-  async addFigurita(figuID: number, listCardType: FigusListType) {
+  addFigu(path: string, figuID: number) {
     const body: UserAddFigu = {
       userLogedID: getUserId(),
-      FiguID: figuID,
-      figuList: listCardType
+      FiguID: figuID
     }
-    await lastValueFrom(
-      this.httpClient.patch(`${API_URL}/user/agregar-figurita`, body)
-    )
+    return lastValueFrom(this.httpClient.patch(path, body))
+  }
+
+  async addFiguritaFaltante(figuID: number) {
+    await this.addFigu(`${API_URL}/user/agregar-figurita-faltante`, figuID)
+  }
+
+  async addFiguritaRepetida(figuID: number) {
+    await this.addFigu(`${API_URL}/user/agregar-figurita-repetida`, figuID)
   }
 
   private dataSubject = new Subject<UserUpdateInfoDTO>()

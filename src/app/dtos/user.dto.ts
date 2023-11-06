@@ -1,5 +1,3 @@
-import {FigusListType} from './figurita.dto'
-
 export interface UserLoginDTO {
   userName: string
   password: string
@@ -42,5 +40,4 @@ export interface UserUpdateInfoDTO {
 export interface UserAddFigu {
   userLogedID: number
   FiguID: number
-  figuList: FigusListType
 }
