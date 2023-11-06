@@ -6,7 +6,7 @@ import {UserService} from 'src/app/services/user-service/user.service'
 import {ProvinceService} from 'src/app/services/province-service/province.service'
 import {ProvinceDTO} from 'src/app/dtos/province.dto'
 import {initialProfileInfoUserMock} from 'src/app/mocks/user.mock'
-import {mostrarError} from 'src/app/helpers/errorHandler'
+import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 import {USER_LAST_PROFILE_NAVIGATE_KEY} from 'src/app/helpers/userSessionStorage.helper'
 
 @Component({
@@ -17,7 +17,8 @@ import {USER_LAST_PROFILE_NAVIGATE_KEY} from 'src/app/helpers/userSessionStorage
 export class ProfileInfoComponent {
   constructor(
     private userService: UserService,
-    private provinceService: ProvinceService
+    private provinceService: ProvinceService,
+    private notifierService: NotifierService
   ) {}
   //Ingresar un mock con valores por defecto
   profileInfo: UserProfileInfoDTO = initialProfileInfoUserMock
@@ -31,10 +32,10 @@ export class ProfileInfoComponent {
   async ngOnInit() {
     try {
       this.profileInfo = await this.userService.getProfileInfo()
-      this.resetProfileInfo = structuredClone(this.profileInfo)
+      this.saveLastProfile()
       this.provinces = await this.provinceService.getProvinces()
     } catch (e) {
-      mostrarError(this, e)
+      this.notifierService.notify(e, 'error')
     }
     sessionStorage.setItem(USER_LAST_PROFILE_NAVIGATE_KEY, 'perfil-usuario')
   }
@@ -42,22 +43,35 @@ export class ProfileInfoComponent {
   async onSubmit(form: NgForm) {
     try {
       if (form.valid) {
+        this.saveLastProfile()
         this.profileInfo = await this.userService.editProfileInfo(
           this.profileInfo
         )
-        this.showMessage('Se edito el usuario correctamente')
+        this.notifierService.notify(
+          'Se edito el usuario correctamente',
+          'success'
+        )
       } else {
-        mostrarError(this, 'Complete todos los campos del formulario')
+        this.notifierService.notify(
+          'Complete todos los campos del formulario',
+          'error'
+        )
       }
     } catch (e) {
-      mostrarError(this, e)
+      this.notifierService.notify(e, 'error')
     }
   }
 
   onReset() {
-    console.log(this.profileInfo.address.provincia)
     this.profileInfo = structuredClone(this.resetProfileInfo)
-    this.showMessage('Se reestableció el usuario exitosamente')
+
+    const infoUser: UserUpdateInfoDTO = {
+      location: this.profileInfo.address.localidad,
+      age: new Date(this.profileInfo.birthdate)
+    }
+
+    this.userService.updateInfoUser(infoUser)
+    this.notifierService.notify('Los datos fueron reestablecidos', 'alert')
   }
 
   getProvinces = (): string[] => this.provinces.map((data) => data.province)
@@ -77,22 +91,13 @@ export class ProfileInfoComponent {
       location: this.profileInfo.address.localidad,
       age: birthDate
     }
-    try {
-      this.userService.updateInfoUser(infoUser)
-    } catch (e) {
-      mostrarError(this, e)
-    }
+    this.userService.updateInfoUser(infoUser)
+    this.notifierService.notify(
+      'Se pudo generar una modificación en el perfil del usuario',
+      'info'
+    )
   }
-
-  hasBackErrors() {
-    return !!this.errors.length
-  }
-
-  //TODO: Implementar globalmente
-  showMessage(message: string) {
-    this.message = message
-    setInterval(() => {
-      this.message = ''
-    }, 3000)
+  saveLastProfile() {
+    this.resetProfileInfo = structuredClone(this.profileInfo)
   }
 }

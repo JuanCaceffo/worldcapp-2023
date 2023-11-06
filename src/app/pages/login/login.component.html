@@ -37,7 +37,6 @@
           </div>
           <span *ngIf="inputErrors['password']" class="field__error">{{getMyError('password', inputErrors['password'])}}</span>
         </div>
-        <app-toastMessage *ngIf="hasBackErrors()" [message]="errors[0]" titleType="error"/>
       </section>
       <section class="form-login__actions">
         <button

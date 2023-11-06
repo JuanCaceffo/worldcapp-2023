@@ -4,7 +4,7 @@ import {Component, Input, OnInit} from '@angular/core'
 import {Title} from '@angular/platform-browser'
 import {Router} from '@angular/router'
 import {FormControl, FormGroup, Validators} from '@angular/forms'
-import {mostrarError} from 'src/app/helpers/errorHandler'
+import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 
 interface ErrorType {
   required: string
@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private titleService: Title,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private notifierService: NotifierService
   ) {}
 
   errors: string[] = []
@@ -84,10 +85,6 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  hasBackErrors() {
-    return !!this.errors.length
-  }
-
   async submitLogin() {
     if (Object.keys(this.errors).length === 0) {
       const data: UserLoginDTO = {
@@ -98,8 +95,8 @@ export class LoginComponent implements OnInit {
       try {
         await this.userService.login(data)
         this.router.navigate(['/figuritas'])
-      } catch (error) {
-        mostrarError(this, error)
+      } catch (e) {
+        this.notifierService.notify(e, 'error')
       }
     }
   }

@@ -43,6 +43,7 @@ import {ButtonAddCardComponent} from './components/button-add-card/button-add-ca
 
 //Search
 import {SearchbarComponent} from './components/searchbar/searchbar.component'
+import {NotifierService} from './services/notifier-service/notifier.service'
 
 @NgModule({
   declarations: [
@@ -85,7 +86,7 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component'
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [NotifierService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

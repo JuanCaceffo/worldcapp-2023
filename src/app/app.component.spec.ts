@@ -7,6 +7,7 @@ import {SortedByFilterComponent} from './components/filter/sorted-by-filter/sort
 import {HeaderComponent} from './components/header/header.component'
 import {LogoComponent} from './components/logo/logo.component'
 import {FooterComponent} from './components/footer/footer.component'
+import {ToastMessageComponent} from './components/toast-message/toastMessage/toastMessage.component'
 
 describe('AppComponent', () => {
   beforeEach(() =>
@@ -18,7 +19,8 @@ describe('AppComponent', () => {
         SortedByFilterComponent,
         HeaderComponent,
         LogoComponent,
-        FooterComponent
+        FooterComponent,
+        ToastMessageComponent
       ]
     })
   )

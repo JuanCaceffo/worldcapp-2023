@@ -3,7 +3,7 @@ import {Title} from '@angular/platform-browser'
 import {ActivatedRoute, Router} from '@angular/router'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {UserService} from 'src/app/services/user-service/user.service'
-import {mostrarError} from 'src/app/helpers/errorHandler'
+import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 
 @Component({
   selector: 'app-card-details',
@@ -18,7 +18,8 @@ export class CardDetailsComponent implements OnInit {
     private titleService: Title,
     private route: ActivatedRoute,
     private router: Router,
-    public userService: UserService
+    public userService: UserService,
+    private notifierService: NotifierService
   ) {}
   async ngOnInit() {
     this.route.params.subscribe(async (param) => {
@@ -26,8 +27,8 @@ export class CardDetailsComponent implements OnInit {
       const cardID = param['card-id']
       try {
         this.card = await this.userService.getGiftableFigurita(userID, cardID)
-      } catch (error) {
-        mostrarError(this, error)
+      } catch (e) {
+        this.notifierService.notify(e, 'error')
         this.goCardPage()
       }
     })
@@ -40,18 +41,17 @@ export class CardDetailsComponent implements OnInit {
     this.router.navigate(['/figuritas'])
   }
 
-  get hasBackErrors() {
-    return !!this.errors.length
-  }
-
   async requestFigurita() {
     try {
       await this.userService.figuritaRequest(this.card)
       //si sale bien navega y notifica
       this.goCardPage()
-      alert('La solicitud se completo con exito')
-    } catch (error) {
-      mostrarError(this, error)
+      this.notifierService.notify(
+        'La solicitud se completo con exito',
+        'success'
+      )
+    } catch (e) {
+      this.notifierService.notify(e, 'error')
     }
   }
 }

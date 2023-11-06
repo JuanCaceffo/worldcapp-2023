@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core'
 
-type notifyTypes = 'error' | 'success' | 'info' | 'alert'
+export type notifyTypes = 'error' | 'success' | 'info' | 'alert'
 @Component({
   selector: 'app-toastMessage',
   templateUrl: './toastMessage.component.html',
@@ -10,19 +10,11 @@ export class ToastMessageComponent {
   @Input() titleType!: notifyTypes
   @Input() message!: string
 
-  isError() {
-    return this.titleType === 'error'
-  }
+  isError = () => this.titleType === 'error'
 
-  isSuccess() {
-    return this.titleType === 'success'
-  }
+  isSuccess = () => this.titleType === 'success'
 
-  isInfo() {
-    return this.titleType === 'info'
-  }
+  isInfo = () => this.titleType === 'info'
 
-  isAlert() {
-    return this.titleType === 'alert'
-  }
+  isAlert = () => this.titleType === 'alert'
 }

@@ -3,7 +3,7 @@ import {CardService} from './../../services/card-service/card.service'
 import {Component} from '@angular/core'
 import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
-import {mostrarError} from 'src/app/helpers/errorHandler'
+import {NotifierService} from 'src/app/services/notifier-service/notifier.service'
 import {CardSearch} from 'src/app/models/searchbar/searchbar'
 import {DataCardAddProfile} from 'src/app/app-routing.module'
 
@@ -16,7 +16,8 @@ export class CardAddComponent {
   constructor(
     private cardService: CardService,
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private notifierService: NotifierService
   ) {}
 
   ngOnInit() {
@@ -40,9 +41,9 @@ export class CardAddComponent {
     try {
       await this.routeData.onClickCard(card, this.userService)
       await this.getAll()
-      alert('figurita agregada con exito')
-    } catch (error) {
-      mostrarError(this, error)
+      this.notifierService.notify('figurita agregada con exito', 'success')
+    } catch (e) {
+      this.notifierService.notify(e, 'error')
     }
   }
 }
