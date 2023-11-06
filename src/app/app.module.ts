@@ -32,14 +32,10 @@ import {CardSearchComponent} from './pages/card-search/card-search.component'
 import {LoginComponent} from './pages/login/login.component'
 import {StoreSearchComponent} from './pages/store-search/store-search.component'
 
-// Form components
-import {FormComponent} from './components/form/form.component'
-
 // Pipes
 import {ConcatenatePipe} from './pipes/concatenate-pipe.pipe'
 import {FullAddressPipe} from './pipes/full-address.pipe'
 import {HttpClientModule} from '@angular/common/http'
-import {FieldsSetInputsComponent} from './components/fields-set-inputs/fields-set-inputs.component'
 
 //profile components
 import {NavbarProfileComponent} from './components/navbar-profile/navbar-profile.component'
@@ -76,9 +72,6 @@ import {NotifierService} from './services/notifier-service/notifier.service'
     // Profile Page Component
     ButtonAddCardComponent,
     NavbarProfileComponent,
-    // Form
-    FormComponent,
-    FieldsSetInputsComponent,
     // Pipe
     ConcatenatePipe,
     FullAddressPipe,

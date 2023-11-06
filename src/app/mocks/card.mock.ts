@@ -9,7 +9,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 1,
     idUsuario: 1,
-    numero: 22,
+    numero: 1,
     onFire: true,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'bajo',
@@ -35,7 +35,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 2,
     idUsuario: 1,
-    numero: 10,
+    numero: 2,
     onFire: false,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
@@ -62,7 +62,7 @@ export const mockCardData: Array<FiguritaDTO> =
     id: 3,
     idUsuario: 2,
     onFire: true,
-    numero: 7,
+    numero: 3,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
     promesa: false,
@@ -87,7 +87,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 4,
     idUsuario: 1,
-    numero: 14,
+    numero: 4,
     onFire: false,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
@@ -139,7 +139,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 6,
     idUsuario: 1,
-    numero: 11,
+    numero: 6,
     onFire: false,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
@@ -165,7 +165,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 7,
     idUsuario: 1,
-    numero: 8,
+    numero: 7,
     onFire: true,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
@@ -191,7 +191,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 9,
     idUsuario: 1,
-    numero: 15,
+    numero: 9,
     onFire: true,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
@@ -217,7 +217,7 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 10,
     idUsuario: 1,
-    numero: 6,
+    numero: 10,
     onFire: false,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
@@ -243,14 +243,14 @@ export const mockCardData: Array<FiguritaDTO> =
   {
     id: 11,
     idUsuario: 1,
-    numero: 9,
+    numero: 11,
     onFire: true,
     valorBase: INITIAL_VALUE,
     nivelImpresion: 'alto',
     promesa: false,
     peso: 72,
     nombre: 'Virgil',
-    apellido: 'van Dijk',
+    apellido: 'Can Dijk',
     nroCamiseta: 4,
     fechaNac: '1991-07-08',
     edad: 30,

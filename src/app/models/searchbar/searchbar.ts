@@ -5,12 +5,11 @@ class Search {
   palabraClave = ''
 
   httpParams(): HttpParams{
-    let httpParams = new HttpParams()
+    let httpParams$ = new HttpParams()
     Object.entries(this).forEach( ([key, value]) => {            
-      httpParams = httpParams.set(key, value.toString())
-      console.log(value)            
+      httpParams$ = httpParams$.set(key, value.toString())      
     })    
-    return httpParams
+    return httpParams$
   }
 }
 

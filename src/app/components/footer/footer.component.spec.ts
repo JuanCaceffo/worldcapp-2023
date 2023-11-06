@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing'
-
 import {FooterComponent} from './footer.component'
 import {LogoComponent} from '../logo/logo.component'
+import { getByTestId } from 'src/app/helpers/test.helper'
 
 describe('FooterComponent', () => {
   let component: FooterComponent
@@ -21,12 +21,22 @@ describe('FooterComponent', () => {
   })
 
   it('debería navegar a la URL correcta cuando se hace clic en un botón', fakeAsync(() => {
-    const buttonElements = fixture.nativeElement.querySelectorAll('button')
+    const buttonElements = getByTestId(fixture, 'facebook')
     spyOn(component, 'gotoURL')
 
-    buttonElements[0].click()
+    buttonElements.click()
     fixture.detectChanges()
 
     expect(component.gotoURL).toHaveBeenCalledWith('https://www.facebook.com')
+  }))
+
+  it('debería navegar a la URL correcta cuando se hace clic en un botón', fakeAsync(() => {
+    const buttonElements = getByTestId(fixture, 'instagram')
+    spyOn(component, 'gotoURL')
+
+    buttonElements.click()
+    fixture.detectChanges()
+
+    expect(component.gotoURL).toHaveBeenCalledWith('https://www.instagram.com')
   }))
 })

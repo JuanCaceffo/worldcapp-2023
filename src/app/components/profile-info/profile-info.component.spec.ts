@@ -21,8 +21,7 @@ describe('ProfileInfoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfileInfoComponent)
     component = fixture.componentInstance
-    component.profileInfo = profileInfoUserMock
-    fixture.detectChanges()
+    component.profileInfo = profileInfoUserMock      
   })
 
   it('should create', () => {

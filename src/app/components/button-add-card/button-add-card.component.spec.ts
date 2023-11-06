@@ -1,28 +1,23 @@
-/* tslint:disable:no-unused-variable */
-import {async, ComponentFixture, TestBed} from '@angular/core/testing'
-
-import {ButtonAddCardComponent} from './button-add-card.component'
-import { FormsModule } from '@angular/forms'
-import { RouterTestingModule } from '@angular/router/testing'
+import { ComponentFixture, fakeAsync, TestBed } from "@angular/core/testing"
+import { FormsModule } from "@angular/forms"
+import { ButtonAddCardComponent } from "./button-add-card.component"
+import { RouterTestingModule } from "@angular/router/testing"
 
 describe('ButtonAddCardComponent', () => {
-  let component: ButtonAddCardComponent
+  let button: ButtonAddCardComponent
   let fixture: ComponentFixture<ButtonAddCardComponent>
-
-  beforeEach(async(() => {
+  
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ButtonAddCardComponent],
-      imports: [FormsModule, RouterTestingModule]
-    }).compileComponents()
+      imports: [FormsModule, RouterTestingModule],
+      declarations: [ButtonAddCardComponent]
+    }).compileComponents()    
+    //Arrage
+    fixture = TestBed.createComponent(ButtonAddCardComponent)
+    button = fixture.componentInstance
   }))
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonAddCardComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
-
   it('should create', () => {
-    expect(component).toBeTruthy()
+    expect(button).toBeTruthy()
   })
 })
