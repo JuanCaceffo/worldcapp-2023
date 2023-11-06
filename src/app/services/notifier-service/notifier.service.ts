@@ -15,6 +15,7 @@ export class NotifierService {
   private notifySubject = new Subject<INotifier>()
 
   notify(message: any, type: notifyTypes) {
+    console.log(message)
     if (this.isErrorCaught(message, type)) {
       if (message.status === 0) {
         message =
@@ -23,8 +24,9 @@ export class NotifierService {
         message =
           'Hubo un error al realizar la operación. Consulte al administrador del sistema.'
       } else if (message.error.status >= 400) {
-        message =
-          'Se ha producido un error en la solicitud. Por favor, verifique los datos proporcionados y vuelva a intentarlo.'
+        message = message.error.message as
+          | string
+          | 'Se ha producido un error en la solicitud. Por favor, verifique los datos proporcionados y vuelva a intentarlo.'
       }
     }
     this.notifySubject.next({message, type})
