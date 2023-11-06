@@ -14,7 +14,9 @@ export const usuarioLoginStub: UserLoginDTO = {
 
 export const usuarioLoginResponseStub: UserLoginResponseDTO = {userLogedID: 123}
 
-export const httpClientSpy = jasmine.createSpyObj('HttpClient', ['post'])
+export const httpClientSpy = jasmine.createSpyObj('HttpClient', ['get', 'post'])
+
+// Spy de login de usuario
 httpClientSpy.post
   .withArgs(`${API_URL}/user/login`, usuarioLoginStub)
   .and.returnValue(of(usuarioLoginResponseStub))

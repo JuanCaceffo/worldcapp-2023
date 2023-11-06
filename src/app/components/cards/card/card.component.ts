@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
+import {Component, EventEmitter, Input, Output} from '@angular/core'
 import {Router} from '@angular/router'
 import {FigusListType} from 'src/app/dtos/figurita.dto'
 import {Figurita} from 'src/app/models/cards/figurita.model'
@@ -9,15 +9,18 @@ import {UserService} from 'src/app/services/user-service/user.service'
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   constructor(public userService: UserService, private router: Router) {}
-  ngOnInit() {}
   @Input() card!: Figurita
-  @Input() listCardType?: FigusListType
+  @Input() listCardType?: FigusListType  
   @Output() onClicked = new EventEmitter<Figurita>()
 
   emitOnClicked() {
     this.onClicked.emit(this.card)
+  }
+  
+  getTestId() {
+    return `card-${this.card.id}`
   }
 
   async handleDelete() {

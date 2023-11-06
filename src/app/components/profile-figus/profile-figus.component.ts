@@ -14,7 +14,7 @@ export class ProfileFigusComponent implements OnInit {
   async ngOnInit() {
     this.route.params.subscribe(async (param) => {
       this.figusListType = param['figus-list-type'] as FigusListType
-      console.log(this.figusListType)
+      //console.log(this.figusListType)
 
       this.listMissinCards = await this.userService.getFiguritasList(
         this.figusListType

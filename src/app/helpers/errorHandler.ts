@@ -2,7 +2,7 @@
 export function mostrarError(component: any, error: any): void {
   const errorResponse = error.error
 
-  console.log(errorResponse)
+  //console.log(errorResponse)
 
   let errorMessage = ''
   if (typeof error === 'string') {

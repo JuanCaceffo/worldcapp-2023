@@ -1,4 +1,4 @@
-<article class="player-card player-card--trash" (click)="emitOnClicked()">
+<article class="player-card player-card--trash" (click)="emitOnClicked()" [attr.data-testid]="getTestId()">
   <section class="player-card__img">
     <!-- TODO: ver como implementar la imagen -->
     <img [src]="card.imageURL" />

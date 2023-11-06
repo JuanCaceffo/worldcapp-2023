@@ -26,7 +26,7 @@ export class UserService {
       userData
     )
     const userId = await lastValueFrom(response$)
-    sessionStorage.setItem(USER_KEY_STORAGE, userId.userLogedID.toString())
+    sessionStorage.setItem(USER_KEY_STORAGE, userId.userLogedID.toString())    
   }
 
   async figuritaRequest(figurita: Figurita) {

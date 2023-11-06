@@ -6,8 +6,12 @@ export class Figurita {
 
   static fromJson(cardJSON: FiguritaDTO): Figurita {
     return new Figurita(cardJSON)
-  }
+  } 
 
+  get id() { return this.props.id }
+  
+  get ownerId() { return this.props.idUsuario }
+  
   get isOwner() {
     return this.props.idUsuario === getUserId()
   }

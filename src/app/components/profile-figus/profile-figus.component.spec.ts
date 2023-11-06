@@ -1,6 +1,4 @@
-/* tslint:disable:no-unused-variable */
-import {async, ComponentFixture, TestBed} from '@angular/core/testing'
-
+import {ComponentFixture, fakeAsync, TestBed} from '@angular/core/testing'
 import {ProfileFigusComponent} from './profile-figus.component'
 import {ButtonAddCardComponent} from '../button-add-card/button-add-card.component'
 import {RouterTestingModule} from '@angular/router/testing'
@@ -11,13 +9,12 @@ describe('ProfileFigusComponent', () => {
   let component: ProfileFigusComponent
   let fixture: ComponentFixture<ProfileFigusComponent>
 
-  beforeEach(async(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ProfileFigusComponent, ButtonAddCardComponent],
       imports: [
         FormsModule,
         HttpClientModule,
-        RouterTestingModule,
         RouterTestingModule
       ]
     }).compileComponents()
@@ -25,8 +22,7 @@ describe('ProfileFigusComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfileFigusComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
+    component = fixture.componentInstance    
   })
 
   it('should create', () => {

@@ -6,7 +6,7 @@ import {Figurita} from 'src/app/models/cards/figurita.model'
 import {ActivatedRoute} from '@angular/router'
 import {FigusListType} from 'src/app/dtos/figurita.dto'
 import {mostrarError} from 'src/app/helpers/errorHandler'
-import { CardSearch } from 'src/app/models/searchbar/searchbar'
+import {CardSearch} from 'src/app/models/searchbar/searchbar'
 
 @Component({
   selector: 'app-card-add',
@@ -25,7 +25,7 @@ export class CardAddComponent {
     this.titleService.setTitle('Agregar Figuritas')
     this.route.params.subscribe((param) => {
       this.listCardType = param['figus-list-type'] as FigusListType
-      console.log(this.listCardType)
+      //console.log(this.listCardType)
     })
   }
   listCardType!: FigusListType
