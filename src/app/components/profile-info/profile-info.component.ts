@@ -1,4 +1,3 @@
-import {NgForm} from '@angular/forms'
 import {criteria} from '../../helpers/getOptionsInfoProfile.helper'
 import {Component} from '@angular/core'
 import {UserProfileInfoDTO, UserUpdateInfoDTO} from 'src/app/dtos/user.dto'
@@ -28,7 +27,7 @@ export class ProfileInfoComponent {
   criteria: string[] = criteria
   errors: string[] = []
   message: string = ''
-  
+
   async ngOnInit() {
     try {
       this.profileInfo = await this.userService.getProfileInfo()
@@ -40,23 +39,16 @@ export class ProfileInfoComponent {
     sessionStorage.setItem(USER_LAST_PROFILE_NAVIGATE_KEY, 'perfil-usuario')
   }
 
-  async onSubmit(form: NgForm) {
+  async onSubmit() {
     try {
-      if (form.valid) {
-        this.saveLastProfile()
-        this.profileInfo = await this.userService.editProfileInfo(
-          this.profileInfo
-        )
-        this.notifierService.notify(
-          'Se edito el usuario correctamente',
-          'success'
-        )
-      } else {
-        this.notifierService.notify(
-          'Complete todos los campos del formulario',
-          'error'
-        )
-      }
+      this.saveLastProfile()
+      this.profileInfo = await this.userService.editProfileInfo(
+        this.profileInfo
+      )
+      this.notifierService.notify(
+        'Se edito el usuario correctamente',
+        'success'
+      )
     } catch (e) {
       this.notifierService.notify(e, 'error')
     }

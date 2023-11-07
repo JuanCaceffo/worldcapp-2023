@@ -7,7 +7,7 @@ interface INotifier {
   message: string
   type: notifyTypes
 }
-
+const MAX_ERROR_LENGTH = 50
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +15,6 @@ export class NotifierService {
   private notifySubject = new Subject<INotifier>()
 
   notify(message: any, type: notifyTypes) {
-    console.log(message)
     if (this.isErrorCaught(message, type)) {
       if (message.status === 0) {
         message =
@@ -24,7 +23,10 @@ export class NotifierService {
         message =
           'Hubo un error al realizar la operación. Consulte al administrador del sistema.'
       } else if (message.error.status >= 400) {
-        message = message.error.message
+        message =
+          message.error.message.length < MAX_ERROR_LENGTH
+            ? message.error.message
+            : 'Se ha producido un error en la solicitud. Por favor, verifique los datos proporcionados y vuelva a intentarlo.'
       }
     }
     this.notifySubject.next({message, type})
