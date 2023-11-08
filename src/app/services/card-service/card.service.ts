@@ -20,24 +20,10 @@ export class CardService {
     return figuritasJSON.map((card) => Figurita.fromJson(card))
   }
 
-  async getCollectibleDuplicateFigus(filter: CardSearch): Promise<Figurita[]> {
-    return this.getCollectibeFigus(
-      `${API_URL}/figuritas/figus-repetidas-agregables`,
-      filter
-    )
-  }
-
-  async getCollectibleMissingFigus(filter: CardSearch): Promise<Figurita[]> {
-    return this.getCollectibeFigus(
-      `${API_URL}/figuritas/figus-faltantes-agregables/user/${getUserId()}`,
-      filter
-    )
-  }
-
-  private async getCollectibeFigus(path: string, filter: CardSearch) {
+  async getCollectibeFigus(filter: CardSearch) {
     const figusJSON = await lastValueFrom(
       this.cardData(
-        `${API_URL}/figuritas/figus-faltantes-agregables/user/${getUserId()}`,
+        `${API_URL}/figuritas/figus-agregables/user/${getUserId()}`,
         filter
       )
     )
