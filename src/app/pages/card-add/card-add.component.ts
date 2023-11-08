@@ -31,10 +31,7 @@ export class CardAddComponent {
   routeData!: DataCardAddProfile
 
   getAll = async () => {
-    this.listCards = await this.routeData.getFigus(
-      this.cardService,
-      this.filter
-    )
+    this.listCards = await this.cardService.getCollectibeFigus(this.filter)
   }
 
   addCard = async (card: Figurita) => {
