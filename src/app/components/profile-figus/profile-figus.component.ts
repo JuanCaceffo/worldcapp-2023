@@ -29,22 +29,12 @@ export class ProfileFigusComponent implements OnInit {
     this.listCards = await this.routeData.getFigus(this.userService)
   }
 
-  removeFiguFromList(cardID: number) {
-    let indexToDelete = this.listCards.findIndex(
-      (figu) => figu.props.id === cardID
-    )
-    if (indexToDelete >= 0) {
-      this.listCards = [
-        ...this.listCards.slice(0, indexToDelete),
-        ...this.listCards.slice((indexToDelete += 1), this.listCards.length)
-      ]
-    }
-  }
-
   async handelDelete(cardID: number) {
     try {
       await this.routeData.deleteFigu(this.userService, cardID)
-      this.removeFiguFromList(cardID)
+      setTimeout(async () => {
+        await this.populateListCards()
+      }, 1)
     } catch (error) {
       alert('alerta por subnormal')
     }

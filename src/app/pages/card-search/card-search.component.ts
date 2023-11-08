@@ -16,8 +16,8 @@ export class CardSearchComponent implements OnInit {
     public cardService: CardService,
     private router: Router
   ) {}
-  filter = new CardSearch()
-  
+  @Input() filter = new CardSearch()
+
   @Input() handleCardClicked = (card: Figurita) => {
     this.router.navigate([
       '/detalle-figurita',
@@ -25,11 +25,11 @@ export class CardSearchComponent implements OnInit {
       card.props.id
     ])
   }
-  
+
   @Input() instanceFigus = async () => {
     this.listCards = await this.cardService.getCards(this.filter)
   }
-  
+
   @Input() listCards: Array<Figurita> = []
 
   ngOnInit() {
