@@ -1,0 +1,170 @@
+.button {
+  /*Layout*/
+  min-width: 10rem;
+  padding: 0 var(--box-padding);
+  /*Typeface*/
+  font-size: 1.3em;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  line-height: 4.4rem;
+  /*Visual*/
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button--animated {
+  /*Animations*/
+  transition: all 400ms ease;
+}
+
+.button--shadows {
+  /*Visual*/
+  box-shadow: var(--box-shadow-xs);
+}
+
+.button--noevents{
+  pointer-events: none;
+}
+
+.button--cursoroff {  
+  cursor: not-allowed;
+}
+
+.button--disabled {
+  filter: grayscale(100%) brightness(1.4);
+}
+
+.button--large {
+  min-width: 15rem;
+}
+
+.button--scalable {
+  width: 100%;
+}
+
+.button--font-md {
+  font-size: 1.5em;
+}
+
+.button--font-xl {
+  font-size: 1.8em;
+}
+
+.button--font-2xl {
+  font-size: 3em;
+}
+
+.button--primary {
+  /*Visual*/
+  border: 1px solid var(--color-highligthed);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-highligthed);
+  color: var(--typeface-color);
+}
+
+.button--secondary {
+  /*Visual*/
+  border: 1px solid var(--color-highligthed);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-focus-lighter);
+  color: var(--color-highligthed);
+}
+
+.button--icon {
+  /*Layout*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  padding: 0;
+  /*Typeface*/    
+  color: var(--typeface-color);
+}
+
+.button--icon i{
+  padding-top: 1px;
+}
+
+.button--circle {
+  /*Visual*/
+  background-color: var(--color-primary);
+}
+
+.button--text {
+  /*Visual*/
+  color: var(--typeface-color);
+  /*Layout*/
+  padding: 0.1em;
+}
+
+.button--black{
+  color: var(--text-color);
+}
+
+.button--tab-on {
+  /*Typeface*/
+  font-size: 1.4em;
+  /*Visual*/
+  background-color: var(--color-clear-dark);
+  color: var(--color-primary);
+}
+
+.button--tab-on,
+.button--tab-off {
+  /*Layout*/
+  min-width: 16rem;
+  /*Visual*/
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+  border: none;
+  text-align: center;
+}
+
+.button--tab-off {
+  /*Visual*/
+  background-color: var(--color-clear-2dark);
+  color: var(--text-color-lighter);
+}
+
+/*Hover Actions*/
+.button--shadows:hover {
+  /*Visual*/
+  box-shadow: var(--box-shadow-md);
+}
+
+.button--animated:hover {
+  /*Layout*/
+  transform: translateY(-0.3em);
+}
+
+.button--primary:hover {  
+  background-color: var(--color-focus);
+  border: 1px solid var(--color-focus);
+}
+
+.button--secondary:hover {
+  /*Visual*/
+  background-color: var(--color-focus);
+  border: 1px solid var(--color-focus);
+  color: var(--color-clear);
+}
+
+.button--text:hover,
+.button--icon:hover {
+  /*Visual*/
+  color: var(--color-tertiary);
+}
+
+.button--circle:hover {
+  /*Visual*/
+  background-color: var(--color-tertiary);
+  color: var(--typeface-color);
+}
+
+.button--disabled:hover{
+  background-color: var(--color-highligthed);
+  border: 1px solid var(--color-highligthed);
+}

@@ -1,0 +1,60 @@
+  .filter__sub-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+    align-items: center;
+    padding-top: 1em;
+  } 
+  
+  .filter__input-group {
+    display: flex;
+    gap: 1.2em;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .filter__container {
+    flex-grow: 1;
+  }
+  
+  .filter__container-input {
+    width: 100%;
+  }
+  
+  /* Se eligió una medida intermedia para hacer el cambio por decisiones de diseño */
+  @media screen and (min-width: 630px) and (max-width: 768px) {
+    .filter__title--secondary {
+      width: 5.5em;
+      flex-grow: 0;
+      justify-self: center
+    }
+  
+    .filter__container {
+      flex-grow: 0;
+      width: 8.5em;
+    }
+  
+    .filter__checkbox {
+      align-self: center;
+    }
+  
+    .filter__sub-section {
+      flex-grow: 1;
+      justify-content: center;
+    }
+  
+    .filter__sub-section--grow {
+      flex-grow: 1;
+    }
+  
+    .filter__section {
+      display: flex;
+    }
+  
+    .filter__input-group {
+      display: flex;
+      gap: 1em;
+      flex-grow: 0;
+      width: min-content;
+    }
+  }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<article class="home home--header-on">
+  <section class="home__content home__content--grid">
+      <article class="player-card">
+        <section class="player-card__content">
+          <header class="player-card__header detail-card__header">
+            <h2 class="detail-card__header-title">
+              {{ card.props.nombre | concatenate : card.props.apellido | titlecase}}
+            </h2>
+            <h3>
+              <small class="detail-card__header-subtitle"
+                >(de {{ card.props.duenio }})</small
+              >
+            </h3>
+            <div class="detail-card__atributtes">
+              <h2><i class="fas fa-trophy fa-sm" *ngIf="card.isWorldChampion" ></i></h2>
+              <h2><i class="fas fa-fire fa-sm" *ngIf="card.props.onFire"></i></h2>
+              <h2>
+                <i class="fas fa-id-badge fa-sm"></i>{{ card.props.numero }}
+              </h2>
+            </div>
+          </header>
+          <section class="player-card__container">
+            <section class="player-card__img">
+              <img
+                [src]="card.imageURL"
+                [alt]="card.props.nombre | concatenate : card.props.apellido"
+              />
+            </section>
+            <section class="player-card__body">
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <i class="fa-solid fa-weight-scale fa-sm"></i>
+                  <strong> Peso: </strong>
+                  <span class="player-card__info-span"
+                    >{{ card.props.peso }} KG</span
+                  >
+                </p>
+                <p>
+                  <i class="fas fa-ruler-vertical fa-sm"></i>
+                  <i class="fas fa-person fa-sm"></i>
+                  <strong>Altura: </strong>
+                  <span class="player-card__info-span"
+                    >{{ card.props.altura }} metros</span
+                  >
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-center"
+              >
+                <p>
+                  <strong>Nacimiento: </strong>
+                  <span
+                    >{{ card.props.fechaNac | date : 'dd-MM-yyyy' }} ({{
+                      card.props.edad
+                    }}
+                    años)</span
+                  >
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <strong>Casaca: </strong>
+                  <span class="player-card__info-span">{{
+                    card.props.nroCamiseta
+                  }}</span>
+                </p>
+                <p>
+                  <strong>Selección:</strong>
+                  <span class="player-card__info-span"
+                    >{{ card.props.seleccion }} (<i class="fa-solid fa-trophy"></i>
+                    {{ card.props.copasDelMundo }})</span
+                  >
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <strong>Año debut: </strong>
+                  <span class="player-card__info-span">{{
+                    card.props.anioDebut
+                  }}</span>
+                </p>
+                <p>
+                  {{ card.props.confederacion | uppercase }} (<i
+                    class="fa-solid fa-trophy"
+                  ></i>
+                  {{ card.props.confederacionCopas }})
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-between"
+              >
+                <p>
+                  <strong>Posición: </strong>
+                  <span class="player-card__info-span">{{ card.props.posicion }}</span>
+                </p>
+                <p>
+                  <strong>{{ card.ifIsLeader }}</strong>
+                </p>
+              </section>
+              <section
+                class="player-card__section-info player-card__section-info--justify-center"
+              >
+                <p>
+                  <strong
+                    >COTIZACION:
+                    {{
+                      card.props.cotizacion| currency : 'EUR' : 'symbol' : '1.0-0'
+                    }}</strong
+                  >
+                </p>
+              </section>
+            </section>
+          </section>
+          <footer class="player-card__body">
+            <section
+              class="player-card__section-info player-card__section-info--justify-between"
+            >
+              <p>
+                <strong>Nivel de Impresión </strong>
+                <span>{{ card.props.nivelImpresion | uppercase }}</span>
+              </p>
+              <p>
+                <strong>Valoración Base </strong>
+                <span class="player-card__info-span">{{
+                  card.baseValoration | number:'1.0-0'
+                }}</span>
+              </p>
+            </section>
+            <section
+              class="player-card__section-info player-card__section-info--justify-center"
+            >
+              <p>
+                <strong>Valoración Total </strong>
+                <span class="player-card__info-span">{{
+                  card.totalValoration | number:'0.0-2'
+                }}</span>
+              </p>
+            </section>
+            <section class="container-button">
+              <button class="button button--secondary"  data-testid="backButton" (click)="goCardPage()">
+                Volver
+              </button>
+              <button class="button button--primary" (click)="requestFigurita()">Solicitar</button>
+            </section>
+          </footer>
+        </section>
+      </article>
+  </section>
+</article>
+<script
+  src="https://kit.fontawesome.com/007d112e2a.js"
+  crossorigin="anonymous"
+></script>

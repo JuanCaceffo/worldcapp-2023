@@ -1,0 +1,10 @@
+<form class="filter">
+  <h3 class="filter__title filter__title--primary">Ordenar Por</h3>
+  <article class="radio-filter">
+    <div *ngFor="let option of options" class="field__control">
+      <label class="field__label">
+        <input type="radio" name="filtro" [(ngModel)]="filter.opcionElegida" [value]="option" [attr.data-testid]="normalizedOption(option)"/> {{option}}        
+      </label>
+    </div>
+  </article>  
+</form>

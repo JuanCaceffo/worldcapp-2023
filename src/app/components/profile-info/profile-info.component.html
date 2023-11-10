@@ -1,0 +1,169 @@
+<form class="form-info" (ngSubmit)="onSubmit()">       
+  <fieldset class="form-info__body">
+    <legend class="form__title">Información general</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="name">Nombre</label>          
+          <input 
+          class="field__input rounded shaded" 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Ingrese Nombre"  
+          [(ngModel)]="profileInfo.name" 
+          required
+          />            
+    </section>
+
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong" for="lastName">Apellido</label>
+        <input 
+        class="field__input rounded shaded" 
+        type="text" 
+        id="lastName" 
+        name="lastName" 
+        placeholder="Ingrese Apellido"
+        data-testid="lastName"
+        [(ngModel)]="profileInfo.lastName" 
+        required
+        />
+    </section>
+
+    <section  class="field field--2col">
+      <label class="field__label field__label--strong" for="email">Correo electrónico</label>
+        <input 
+        class="field__input rounded shaded" 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Ingrese Correo"  
+        [(ngModel)]="profileInfo.email" 
+        required
+        />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="birthdate">Fecha de nacimiento</label>
+      <input 
+      class="field__input rounded shaded" 
+      id="birthdate" 
+      name="birthdate" 
+      type="date"
+      #birthDate
+      (change)="updateInfoUser(birthDate.valueAsDate!)"
+      [(ngModel)]="profileInfo.birthdate"
+      required
+      />
+    </section>
+    
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Dirección</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="province">Provincia</label>
+      <select 
+      class="field__select rounded shaded" id="province" name="province" [(ngModel)]="profileInfo.address.provincia" (change)="getLocations()" required>
+        <option>Seleccione una opción</option>
+        <option *ngFor="let province of getProvinces()" [selected]="selectedProvince(province)"> {{province}} </option>
+      </select>
+    </section>  
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="location">Localidad</label>
+      <select class="field__select rounded shaded" id="location" name="location"  [(ngModel)]="profileInfo.address.localidad" (change)="updateInfoUser(birthDate.valueAsDate!)" required >
+        <option>Seleccione una opción</option>
+        <option *ngFor="let location of getLocations()" [selected]="selectedLocation(location)"> {{location}} </option>
+        
+      </select>
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="streetName">Calle</label>
+      <input 
+      class="field__input rounded shaded" 
+      id="streetName" 
+      type="text" 
+      name="streetName" 
+      placeholder="Ingrese Calle" 
+      [(ngModel)]="profileInfo.address.calle" 
+      required 
+      />
+    </section>    
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="streetNumber">Altura</label>
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      id="streetNumber" 
+      name="streetNumber" 
+      min="0" 
+      placeholder="Ingrese Altura"  
+      [(ngModel)]="profileInfo.address.altura" 
+      required
+      />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Ubicación Geográfica</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="latitude">Latitud</label>
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      id="latitude" 
+      name="latitude" 
+      placeholder="Ingrese Latitud"  
+      [(ngModel)]="profileInfo.address.ubiGeografica.x" 
+      required
+      />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="longitude">Longitud</label>
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      id="longitude" 
+      name="longitude" 
+      placeholder="Ingrese Longitud"  
+      [(ngModel)]="profileInfo.address.ubiGeografica.y" 
+      required
+      />
+    </section>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="exchangeProximity">Cercanía máxima intercambio</label>
+      <input 
+      class="field__input rounded shaded" 
+      type="number" 
+      min="0" 
+      id="exchangeProximity" 
+      name="exchangeProximity" 
+      placeholder="Ingrese Distancia Máxima"  
+      [(ngModel)]="profileInfo.exchangeProximity" 
+      required
+      />
+    </section>
+  </fieldset>
+
+  <fieldset class="form-info__body">
+    <legend class="form__title">Criterio para el intercambio</legend>
+
+    <section class="field field--2col">
+      <label class="field__label field__label--strong" for="criteria">Criterio</label>
+      <select class="field__select rounded shaded" id="criteria" name="criteria"  [(ngModel)]="profileInfo.criteria" required>
+        <option>Seleccione una opción</option>
+        <option *ngFor="let criterion of criteria"> {{criterion}} </option>
+      </select>
+    </section>
+  </fieldset>
+  
+  <section class="form-info__actions">
+    <button class="button--secondary" type="button" (click)="onReset()">Reestablecer</button>
+    <button class="button--primary" type="submit">Guardar</button>
+  </section>
+</form>

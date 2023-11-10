@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <link rel="stylesheet" href="./filter.css">
+</head>
+
+<body>
+  <form class="filter">
+    <h3 class="filter__title filter__title--primary">Filtros</h3>
+    <section class="filter__section">
+      <section class="filter__sub-section">
+        <h4 class="filter__title filter__title--secondary">Valoración</h4>
+        <section class="filter__input-group">
+          <div class="filter__container">
+            <label class="form__row-subtitle" for="">Desde</label>
+            <input class="form__input--primary input filter__container-input" type="number" min="0"
+            placeholder="Desde">
+          </div>
+          <div class="filter__container">
+            <label class="form__row-subtitle" for="">Hasta</label>
+            <input class="form__input--primary input filter__container-input" type="number" min="0"
+            placeholder="Hasta">
+          </div>
+        </section>
+        <div>
+          <input id="onFire" type="checkbox">
+          <label for="onFire">On fire</label>
+        </div>
+      </section>
+      <section class="filter__sub-section filter__sub-section--grow">
+        <div class="filter__checkbox">
+          <input id="promise" type="checkbox">
+          <label for="promise">Es promesa</label>
+        </div>
+      </section>
+    </section>
+  </form>
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

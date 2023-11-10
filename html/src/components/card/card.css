@@ -1,0 +1,142 @@
+@import url("../../../src/components/commons/button/button.css");
+
+.container-card,
+.player-card,
+.player-card__content,
+.player-card__header,
+.player-card__body,
+.player-card__body--highlight,
+.player-card__footer {
+  display: flex;
+}
+
+.container-card,
+.player-card,
+.player-card__content,
+.player-card__footer {
+  flex-direction: column;
+}
+
+.container-card,
+.player-card {
+  width: 100%;
+}
+
+.player-card,
+.player-card__body--highlight,
+.player-card__footer {
+  align-items: center;
+}
+
+.container-card {
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.player-card {  
+  overflow: hidden;
+  min-width: 29em;
+  max-width: 30em;
+  margin: 0 auto;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--box-shadow);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.player-card:hover {
+  box-shadow: var(--box-shadow-xl);
+  transform: translateY(-3%);
+}
+
+.player-card__img {
+  position: relative;
+  display: inline-block;
+}
+
+.player-card__img img {
+  max-height: 20em;
+}
+
+.player-card__content {
+  background-color: var(--color-clear);
+  border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+  margin-top: calc(-1*var(--border-radius-xl));
+  z-index: 80;
+}
+
+.player-card__header,
+.player-card__body {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 1.5em;
+}
+
+.player-card__header,
+.player-card__body,
+.player-card__footer {
+  padding: var(--box-padding);
+}
+
+.player-card__header {
+  box-shadow: var(--box-shadow);
+}
+
+.player-card__header h2 {
+  padding-bottom: 0.5em;
+}
+
+.player-card__header h2:nth-child(1) {
+  flex-basis: 50%;
+}
+
+.player-card__header h2:nth-child(3) {
+  flex-basis: 30%;
+  text-align: right;
+}
+
+.player-card__header i {
+  color: var(--color-primary);
+  padding-left: 0.1em;
+}
+
+.player-card__header .fas.fa-star {
+  color: var(--color-focus);
+}
+
+.player-card__header .fas.fa-fire {
+  color: var(--color-hot);
+}
+
+.player-card__body p:nth-child(even) {
+  flex-basis: 60%;
+  text-align: right;
+}
+
+.player-card__body--highlight {
+  margin: 0 auto;
+  font-weight: 800;
+  padding-top: var(--box-padding);
+}
+
+.player-card__footer {
+  justify-content: center;
+  font-size: 1.2em;
+  background-image: var(--card-bg-gradient);
+  padding-top: 0em;
+}
+
+.player-card--trash .button--icon {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.player-card--trash .button__link{
+  font-size: 1.5em;
+  color: var(--typeface-color);
+}
+
+.player-card--trash .button__link:hover {
+  color: var(--color-hot);
+}

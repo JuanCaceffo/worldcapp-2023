@@ -1,0 +1,13 @@
+@import url('../button/button.css');
+
+.container{
+  background-color: var(--color-secondary);
+  width: 50rem;
+  height: 5rem;
+}
+
+.navbar__buttons{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+} 

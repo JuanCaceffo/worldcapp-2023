@@ -1,0 +1,4 @@
+<app-header *ngIf="!isLoginPage()" />
+<router-outlet></router-outlet>
+<app-toastMessage *ngIf="message" [titleType]="messageType" [message]="message"/>
+<app-footer />

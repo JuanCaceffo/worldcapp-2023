@@ -1,0 +1,26 @@
+<!doctype html>
+
+<header class="header-main">
+  <section class="header-main__logo">
+    <app-logo />
+  </section>
+  <section class="header-main__navbar-container">
+    <button
+      data-testid="button-mobile-open"
+      class="header-main__button-mobile button button--icon fa-solid fa-bars"
+      (click)="onDropDown()"
+      *ngIf="!isDropDown"
+    ></button>
+    <nav
+      data-testid="navbar"
+      class="header-main__navbar"
+      [ngClass]="{ 'header-main__menu-active': isDropDown }"
+    >
+      <button
+        (click)="onDropDown()"
+        class="header-main__button-mobile button button--icon fa-solid fa-xmark"
+      ></button>
+      <app-header-nav class="header-main__list-buttons" [isDropDown]="isDropDown"/>
+    </nav>
+  </section>
+</header>

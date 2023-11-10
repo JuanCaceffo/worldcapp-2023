@@ -1,0 +1,82 @@
+@import url('../commons/button/button.css');
+@import url('../commons/logo/logo.css');
+@import url('../commons/input/input.css');
+
+.form-login,
+.form-login__header,
+.form-login__content,
+.form-login__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.form-login,
+.form-login__content {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-login {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3em;
+  max-width: 40rem;
+  height: 100vh;
+  background-color: var(--color-clear-medium);
+}
+
+.form-login__header {
+  width: 100%;
+  font-size: 3.5em;
+}
+.form-login__header .logo{
+  color: var(--color-primary);
+  font-size: 1.2em;
+  margin-bottom: -0.5em;
+}
+
+.form-login__content {
+  gap: 0.3em;
+  max-width: 70%;
+}
+
+.form-login__content .form__row-title {
+  width: 100%;
+  color: var(--text-color-medium);
+  padding-top: 1em;
+  font-weight: 600;
+}
+
+.form__row-title{
+  font-size: 1.2em;
+}
+
+.form-login__actions {
+  display: flex;
+  width: 70%;
+}
+
+.form-login__actions .button--primary {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width:401px) {
+  .form-login {
+    border-radius: var(--border-radius-md);
+    height: fit-content;
+    padding-bottom: 4em;
+    box-shadow: var(--box-shadow-md);
+  }
+  .form-login__header .logo{
+    color: var(--typeface-color);
+    font-size: inherit;
+    margin-bottom: 0;
+  }  
+
+  .form-login__header {
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    padding: var(--box-padding);
+    background-image: var(--gradient-primary);
+    box-shadow: var(--box-shadow);
+  }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <link rel="stylesheet" href="card-search-to-add.css">
+  <title>Búsqueda de figuritas</title>
+</head>
+
+<body>
+  <div class="wrapper wrapper--search"> <!--Borrar wrapper--search si tu web no tiene search-->
+    <section class="wrapper__header">
+      <header class="header-main">
+        <section class="header-main__logo">
+          <figure class="logo">
+            <img class="logo__img" src="/html/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+            <section class="logo__text">
+              <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                class="logo__last-part">capp</span>
+            </section>
+          </figure>
+        </section>
+        <section class="header-main__navbar">
+          <section class="header-main__web">
+            <nav class="navbar--tabs">
+              <ul class="navbar__buttons">
+                <li class="button--text"><a class="button__link button__link--active" href="">Figuritas</a></li>
+                <li class="button--text"><a class="button__link" href="">Sobres</a></li>
+                <li class="button--text"><a class="button__link" href="">Perfil</a></li>
+                <li class="button--icon"><a class="button__link" href=""><i
+                      class="fa-solid fa-right-from-bracket"></i></a></li>
+              </ul>
+            </nav>
+          </section>
+          <section class="header-main__mobile">
+            <div class="button--icon">
+              <a class="button__link" href="">
+                <i class="fa-solid fa-bars"></i>
+              </a>
+            </div>
+          </section>
+        </section>
+      </header>
+    </section>
+
+    <section class="wrapper__search">
+      <form class="form form--search" autocomplete="off">
+        <section class="form__row">
+          <input name="search" class="form__input--icon-right" type="text" placeholder="Buscar:" />
+          <i class="form__icon--right fa-solid fa-magnifying-glass"></i>
+        </section>
+      </form>
+    </section>
+
+    <section class="wrapper__aside">
+      <form class="filter">
+        <h3 class="filter__title filter__title--primary">Filtros</h3>
+        <section class="filter__section">
+          <section class="filter__sub-section">
+            <h4 class="filter__title filter__title--secondary">Valoración</h4>
+            <section class="filter__input-group">
+              <div class="filter__container">
+                <label class="form__row-subtitle" for="">Desde</label>
+                <input class="form__input--primary input filter__container-input" type="number" min="0"
+                placeholder="Desde">
+              </div>
+              <div class="filter__container">
+                <label class="form__row-subtitle" for="">Hasta</label>
+                <input class="form__input--primary input filter__container-input" type="number" min="0"
+                placeholder="Hasta">
+              </div>
+            </section>
+            <div>
+              <input id="onFire" type="checkbox">
+              <label for="onFire">On fire</label>
+            </div>
+          </section>
+          <section class="filter__sub-section filter__sub-section--grow">
+            <div class="filter__checkbox">
+              <input id="promise" type="checkbox">
+              <label for="promise">Es promesa</label>
+            </div>
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <section class="wrapper__main-content">
+      <div class="grid-container">
+        <article class="player-card">
+          <section class="player-card__img">
+            <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+          </section>
+          <section class="player-card__content">
+            <header class="player-card__header">
+              <h2>Gonzalo  Martinez</h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+              <h2>
+                <i class="fas fa-trophy fa-sm"></i><i class="fas fa-fire fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                124
+              </h2>
+              <p>
+                <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+              </p>
+              <p>
+                <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                  Altura:</strong> 1.7 metros
+              </p>
+            </header>
+            <section class="player-card__body">
+              <p><strong>Casaca:</strong> 10</p>
+              <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
+              <p><strong>Selección:</strong> Argentina</p>
+              <p><strong>Posición:</strong> Mediocampista</p>
+              <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+            </section>
+            <footer class="player-card__footer">
+              <h2>CEDIDA POR:</h2>
+              <p>JUAN "CACHO" CACHEFFO</p>
+            </footer>
+          </section>
+        </article>
+        <article class="player-card">
+          <section class="player-card__img">
+            <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+          </section>
+          <section class="player-card__content">
+            <header class="player-card__header">
+              <h2>Gonzalo  Martinez</h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+              <h2>
+                <i class="fas fa-trophy fa-sm"></i><i class="fas fa-fire fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                124
+              </h2>
+              <p>
+                <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+              </p>
+              <p>
+                <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                  Altura:</strong> 1.7 metros
+              </p>
+            </header>
+            <section class="player-card__body">
+              <p><strong>Casaca:</strong> 10</p>
+              <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
+              <p><strong>Selección:</strong> Argentina</p>
+              <p><strong>Posición:</strong> Mediocampista</p>
+              <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+            </section>
+            <footer class="player-card__footer">
+              <h2>CEDIDA POR:</h2>
+              <p>JUAN "CACHO" CACHEFFO</p>
+            </footer>
+          </section>
+        </article>
+        <article class="player-card">
+          <section class="player-card__img">
+            <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+          </section>
+          <section class="player-card__content">
+            <header class="player-card__header">
+              <h2>Gonzalo  Martinez</h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+              <h2>
+                <i class="fas fa-trophy fa-sm"></i><i class="fas fa-fire fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                124
+              </h2>
+              <p>
+                <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+              </p>
+              <p>
+                <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                  Altura:</strong> 1.7 metros
+              </p>
+            </header>
+            <section class="player-card__body">
+              <p><strong>Casaca:</strong> 10</p>
+              <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
+              <p><strong>Selección:</strong> Argentina</p>
+              <p><strong>Posición:</strong> Mediocampista</p>
+              <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+            </section>
+            <footer class="player-card__footer">
+              <h2>CEDIDA POR:</h2>
+              <p>JUAN "CACHO" CACHEFFO</p>
+            </footer>
+          </section>
+        </article>
+        <article class="player-card">
+          <section class="player-card__img">
+            <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+          </section>
+          <section class="player-card__content">
+            <header class="player-card__header">
+              <h2>Gonzalo  Martinez</h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+              <h2>
+                <i class="fas fa-trophy fa-sm"></i><i class="fas fa-fire fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                124
+              </h2>
+              <p>
+                <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+              </p>
+              <p>
+                <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                  Altura:</strong> 1.7 metros
+              </p>
+            </header>
+            <section class="player-card__body">
+              <p><strong>Casaca:</strong> 10</p>
+              <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
+              <p><strong>Selección:</strong> Argentina</p>
+              <p><strong>Posición:</strong> Mediocampista</p>
+              <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+            </section>
+            <footer class="player-card__footer">
+              <h2>CEDIDA POR:</h2>
+              <p>JUAN "CACHO" CACHEFFO</p>
+            </footer>
+          </section>
+        </article>
+        <article class="player-card">
+          <section class="player-card__img">
+            <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+          </section>
+          <section class="player-card__content">
+            <header class="player-card__header">
+              <h2>Gonzalo  Martinez</h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+              <h2>
+                <i class="fas fa-trophy fa-sm"></i><i class="fas fa-fire fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                124
+              </h2>
+              <p>
+                <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+              </p>
+              <p>
+                <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                  Altura:</strong> 1.7 metros
+              </p>
+            </header>
+            <section class="player-card__body">
+              <p><strong>Casaca:</strong> 10</p>
+              <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
+              <p><strong>Selección:</strong> Argentina</p>
+              <p><strong>Posición:</strong> Mediocampista</p>
+              <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+            </section>
+            <footer class="player-card__footer">
+              <h2>CEDIDA POR:</h2>
+              <p>JUAN "CACHO" CACHEFFO</p>
+            </footer>
+          </section>
+        </article>
+        <article class="player-card">
+          <section class="player-card__img">
+            <img src="/html/src/images/pity.png" alt="Gonzalo  Martinez" />
+          </section>
+          <section class="player-card__content">
+            <header class="player-card__header">
+              <h2>Gonzalo  Martinez</h2>
+              <h2><i class="fas fa-id-badge fa-sm"></i> 22</h2>
+              <h2>
+                <i class="fas fa-trophy fa-sm"></i><i class="fas fa-fire fa-sm"></i><i class="fas fa-star fa-sm"></i>
+                124
+              </h2>
+              <p>
+                <i class="fa-solid fa-weight-scale fa-sm"></i></i><strong> Peso:</strong> 85 kilos
+              </p>
+              <p>
+                <i class="fas fa-ruler-vertical fa-sm"></i><i class="fas fa-person fa-sm"></i></i><strong></i>
+                  Altura:</strong> 1.7 metros
+              </p>
+            </header>
+            <section class="player-card__body">
+              <p><strong>Casaca:</strong> 10</p>
+              <p><strong>Nacimiento:</strong> 13/06/93 (30 años)</p>
+              <p><strong>Selección:</strong> Argentina</p>
+              <p><strong>Posición:</strong> Mediocampista</p>
+              <h2 class="player-card__body--highlight">COTIZACION: EU 28.000.000</h2>
+            </section>
+            <footer class="player-card__footer">
+              <h2>CEDIDA POR:</h2>
+              <p>JUAN "CACHO" CACHEFFO</p>
+            </footer>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrapper__footer">
+      <footer class="footer-main">
+        <div class="footer-main__navbar">
+          <nav class="navbar--icon">
+            <ul class="navbar__buttons">
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="button--circle">
+                <a class="button__link" href="">
+                  <i class="fa-brands fa-at"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-main__logo">
+          <figure class="logo">
+            <img class="logo__img" src="/html/src/images/logo-icon.png" alt="WorldCapp Logotipo"></img>
+            <section class="logo__text">
+              <span class="logo__first-part">world</span><span class="logo-center-dot">.</span><span
+                class="logo__last-part">capp</span>
+            </section>
+          </figure>
+        </div>
+      </footer>
+    </section>
+  </div>
+  <script src="https://kit.fontawesome.com/007d112e2a.js" crossorigin="anonymous"></script>
+</body>
+</html>

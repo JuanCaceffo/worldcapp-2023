@@ -1,0 +1,151 @@
+@import url("card.css");
+@import url("../../../src/components/commons/button/button.css");
+
+.wrapper__main-content.wrapper__main-content--no-aside{
+  overflow-y: unset;
+  padding: 0;
+}
+
+.detail-card__header {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8em;
+  background-image: var(--card-bg-gradient);
+}
+
+.detail-card__header-title {
+  padding: 0.25em 0;
+}
+
+.detail-card__header-subtitle {
+  font-size: 0.65em;
+}
+
+.detail-card__atributtes {
+  display: flex;
+  justify-content: center;
+}
+
+/* =================================================================================== */
+/* ===== Re-asignación de clases para quitar o cambiar comportamientos heredados ===== */
+/* =================================================================================== */
+.player-card:hover {
+  transform: translateY(0%);
+}
+
+.player-card__header h2 {
+  padding-bottom: 0;
+}
+
+.player-card__header h2:first-child {
+  flex-basis: 0%;
+}
+
+.player-card__container {
+  padding: 1em;
+  border-bottom: 1px solid var(--text-color-medium);
+}
+
+.player-card__body {
+  border-bottom: 1px solid var(--raisin-black);
+  display: block;
+}
+
+.player-card__body p {
+  padding-top: 0.5em;
+  font-size: 1.3em;
+}
+
+.player-card__body p:nth-child(even) {
+  text-align: start;
+}
+
+.player-card__body p:nth-child(even) {
+  flex-basis: 50%;
+}
+
+.player-card__footer {
+  display: flex;
+}
+
+.player-card-footer__section {
+  font-size: 1.3em;
+  align-self: self-start;
+}
+
+.player-card__content {
+  width: 100%;
+}
+
+.container-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  font-size: inherit;
+  height: 4.6em;
+}
+
+@media screen and (min-width: 401px) {
+  .player-card {
+    max-width: 70vw;
+  }
+
+  .player-card__container {
+    display: flex;
+  }
+
+  .player-card__img {
+    width: 70%;
+  }
+
+  .player-card__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0.5em;
+  }
+
+  .player-card__body {
+    width: 100%;
+  }
+
+  .player-card__section-info {
+    display: flex;
+    padding: 1em 0;
+  }
+
+  .player-card__section-info--justify-between {
+    justify-content: space-between;
+  }
+
+  .player-card__section-info--justify-center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .player-card__info-span {
+    display: inline-block;
+  }
+
+  .container-button {
+    flex-wrap: nowrap;
+    justify-content: space-around
+  }
+
+  .button {
+    max-width: 10em;
+  }
+  @media screen and (max-height:700px){
+    .player-card {
+      font-size: 8px;
+    }
+  }
+}
