@@ -20,7 +20,7 @@ export class CardMarketService {
 
   private cardData = (filter: StoreSearch) =>
     this.httpClient.get<MarketDTO[]>(
-      `${API_URL}/puntosDeVenta/${getUserId()}`,
+      `${API_URL}/puntos-de-venta/usuario/${getUserId()}`,
       {params: filter.httpParams()}
     )
 }

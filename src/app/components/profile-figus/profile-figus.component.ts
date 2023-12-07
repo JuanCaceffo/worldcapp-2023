@@ -34,7 +34,7 @@ export class ProfileFigusComponent implements OnInit {
       await this.routeData.deleteFigu(this.userService, cardID)
       setTimeout(async () => {
         await this.populateListCards()
-      }, 1)
+      }, 2)
     } catch (error) {
       alert('alerta por subnormal')
     }
