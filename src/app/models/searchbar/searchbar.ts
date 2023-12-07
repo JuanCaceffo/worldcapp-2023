@@ -11,7 +11,7 @@ class Search {
   httpParams(): HttpParams {
     let httpParams$ = new HttpParams()
     Object.entries(this).forEach(([key, value]) => {
-      httpParams$ = httpParams$.set(key, value ? value.toString() : '')
+      httpParams$ = httpParams$.set(key, value)
     })
     return httpParams$
   }
