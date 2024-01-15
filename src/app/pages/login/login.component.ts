@@ -50,8 +50,8 @@ export class LoginComponent implements OnInit {
     sessionStorage.clear()
 
     this.loginForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      password: new FormControl('', [
+      name: new FormControl('juanceto01', [Validators.required, Validators.minLength(3)]),
+      password: new FormControl('12345', [
         Validators.required,
         Validators.minLength(4)
       ])
